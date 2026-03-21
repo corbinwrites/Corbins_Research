@@ -1,3 +1,36 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+
+:root[saved-theme="light"] {
+  --study-banner: linear-gradient(135deg, rgba(122, 77, 33, 0.1), rgba(75, 106, 79, 0.1));
+}
+
+:root[saved-theme="dark"] {
+  --study-banner: linear-gradient(135deg, rgba(216, 161, 93, 0.12), rgba(143, 178, 146, 0.12));
+}
+
+.page-header,
+article h1 {
+  letter-spacing: -0.02em;
+}
+
+article img {
+  border-radius: 1rem;
+}
+
+.hero-card {
+  background: var(--study-banner);
+  border: 1px solid var(--lightgray);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.hero-card p:last-child {
+  margin-bottom: 0;
+}
+
+.callout[data-callout="reading-path"] {
+  border-left: 0.3rem solid var(--secondary);
+}
