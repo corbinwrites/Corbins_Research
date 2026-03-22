@@ -1,0 +1,12 @@
+# Dependency and cache directories
+node_modules/
+__pycache__/
+
+# Local archive and backup content
+Archived_Vault_Content/
+Corbin_Personal_backup_*/
+vault_seed/
+
+# Local-only secrets and release artifacts
+Secrets/
+obsidian-bible-linker-release/
