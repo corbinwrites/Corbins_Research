@@ -1,17 +1,20 @@
 {
   "name": "gmail-cli",
   "version": "1.0.0",
-  "description": "",
+  "description": "Local Gmail CLI driven from an already signed-in Chrome session",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "status": "node index.js status",
+    "tax-search": "node index.js tax-search",
+    "search": "node index.js search"
   },
-  "keywords": [],
+  "keywords": [
+    "gmail",
+    "cli",
+    "chrome",
+    "applescript"
+  ],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
-  "dependencies": {
-    "@google-cloud/local-auth": "^3.0.1",
-    "googleapis": "^171.4.0"
-  }
+  "type": "commonjs"
 }
