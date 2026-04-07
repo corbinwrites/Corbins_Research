@@ -1,12 +1,13 @@
-# Dependency and cache directories
-node_modules/
+# Local agent and cache directories
+.claude/
+.gemini/
 __pycache__/
 
-# Local archive and backup content
-Archived_Vault_Content/
-Corbin_Personal_backup_*/
-vault_seed/
+# Generated artifacts and disposable local runtime state
+artifacts/
 
-# Local-only secrets and release artifacts
-Secrets/
-obsidian-bible-linker-release/
+# Archived backups and seeds
+archives/
+
+# Local-only secrets
+secrets/
