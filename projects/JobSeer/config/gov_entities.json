@@ -1,0 +1,17 @@
+[
+  {"id":"sj", "name":"City of San Jose","sector":"municipal","ats_type":"neogov","ats_slug":"cityofsanjose","career_url":"https://www.governmentjobs.com/careers/cityofsanjose"},
+  {"id":"sc", "name":"City of Santa Clara","sector":"municipal","ats_type":"neogov","ats_slug":"santaclaracity","career_url":"https://www.governmentjobs.com/careers/santaclaracity"},
+  {"id":"sn", "name":"City of Sunnyvale","sector":"municipal","ats_type":"neogov","ats_slug":"sunnyvale","career_url":"https://www.governmentjobs.com/careers/sunnyvale"},
+  {"id":"mv", "name":"City of Mountain View","sector":"municipal","ats_type":"neogov","ats_slug":"mountainview","career_url":"https://www.governmentjobs.com/careers/mountainview"},
+  {"id":"pa", "name":"City of Palo Alto","sector":"municipal","ats_type":"neogov","ats_slug":"paloalto","career_url":"https://www.governmentjobs.com/careers/paloalto"},
+  {"id":"fr", "name":"City of Fremont","sector":"municipal","ats_type":"neogov","ats_slug":"cityoffremont","career_url":"https://www.governmentjobs.com/careers/cityoffremont"},
+  {"id":"ok", "name":"City of Oakland","sector":"municipal","ats_type":"neogov","ats_slug":"oaklandca","career_url":"https://www.governmentjobs.com/careers/oaklandca"},
+  {"id":"scc", "name":"Santa Clara County","sector":"county","ats_type":"neogov","ats_slug":"scccounty","career_url":"https://www.governmentjobs.com/careers/scccounty"},
+  {"id":"alc", "name":"Alameda County","sector":"county","ats_type":"neogov","ats_slug":"alamedacountyhr","career_url":"https://www.governmentjobs.com/careers/alamedacountyhr"},
+  {"id":"vta", "name":"VTA","sector":"special_district","ats_type":"neogov","ats_slug":"vta","career_url":"https://www.governmentjobs.com/careers/vta"},
+  {"id":"vw", "name":"Valley Water","sector":"special_district","ats_type":"neogov","ats_slug":"valleywater","career_url":"https://www.governmentjobs.com/careers/valleywater"},
+  {"id":"bart", "name":"BART","sector":"special_district","ats_type":"neogov","ats_slug":"bart","career_url":"https://www.governmentjobs.com/careers/bart"},
+  {"id":"caltrain", "name":"Caltrain","sector":"special_district","ats_type":"neogov","ats_slug":"caltrain","career_url":"https://www.governmentjobs.com/careers/caltrain"},
+  {"id":"ca_state", "name":"State of California","sector":"state","ats_type":"calcareers","ats_slug":null,"career_url":"https://www.calcareers.ca.gov"},
+  {"id":"fed", "name":"Federal - Bay Area","sector":"federal","ats_type":"usajobs","ats_slug":null,"career_url":"https://www.usajobs.gov"}
+]

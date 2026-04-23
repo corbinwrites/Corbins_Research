@@ -2,8 +2,44 @@ import Papa from "papaparse";
 import { CsvTransactionRow, ParsedCsvTransaction } from "../types";
 
 function parseLocalDate(input: string): Date {
-  const [month, day, year] = input.split("/").map(Number);
-  return new Date(year, month - 1, day);
+  const value = input.trim();
+  const isoMatch = value.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (isoMatch) {
+    const [, yearText, monthText, dayText] = isoMatch;
+    const year = Number(yearText);
+    const month = Number(monthText);
+    const day = Number(dayText);
+    const parsed = new Date(year, month - 1, day);
+
+    if (
+      parsed.getFullYear() === year &&
+      parsed.getMonth() === month - 1 &&
+      parsed.getDate() === day
+    ) {
+      return parsed;
+    }
+
+    return new Date(Number.NaN);
+  }
+
+  const usMatch = value.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+  if (usMatch) {
+    const [, monthText, dayText, yearText] = usMatch;
+    const year = Number(yearText);
+    const month = Number(monthText);
+    const day = Number(dayText);
+    const parsed = new Date(year, month - 1, day);
+
+    if (
+      parsed.getFullYear() === year &&
+      parsed.getMonth() === month - 1 &&
+      parsed.getDate() === day
+    ) {
+      return parsed;
+    }
+  }
+
+  return new Date(Number.NaN);
 }
 
 function toMonthKey(date: Date): string {
