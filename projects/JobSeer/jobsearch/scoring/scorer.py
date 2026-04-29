@@ -1,24 +1,22 @@
-import os
 import json
+import os  # Re-add os import
 import time
+
 try:
     import tomllib
 except ImportError:
     import tomli as tomllib
-from pathlib import Path
-from datetime import datetime, timedelta, timezone
-from typing import Literal, Optional
+from datetime import UTC, datetime
+from typing import Literal
 
 from google import genai
 from google.genai import types
 from pydantic import BaseModel
 from sqlite_utils import Database
-from dotenv import load_dotenv
 
+from jobsearch import PROJECT_ROOT
 from jobsearch.db import insert_score
 from jobsearch.utils.text import pre_filter_job, truncate_words
-
-load_dotenv()
 
 SYSTEM_PROMPT = """
 You are a precise job-fit evaluator. Return ONLY valid JSON — no preamble,
@@ -73,7 +71,13 @@ class ScoreResponse(BaseModel):
 
 
 def utcnow_iso() -> str:
-    return datetime.now(timezone.utc).isoformat()
+    return datetime.now(UTC).isoformat()
+
+
+def resolve_project_root():
+    from jobsearch import resolve_project_root as _resolve_project_root
+
+    return _resolve_project_root()
 
 
 class Scorer:
@@ -83,6 +87,7 @@ class Scorer:
         scoring = self.settings.get("scoring", {})
         self.cache_ttl_hours = scoring.get("cache_ttl_hrs", 24)
         self.max_description_words = scoring.get("max_description_words", 1500)
+        self.model_name = self._resolve_model_name(scoring.get("model"))
 
         api_key = os.getenv("GOOGLE_API_KEY") or os.getenv("GEMINI_API_KEY")
         if not api_key:
@@ -90,35 +95,41 @@ class Scorer:
                 "GOOGLE_API_KEY or GEMINI_API_KEY not set. Get a free key at https://aistudio.google.com/"
             )
         self.client = genai.Client(api_key=api_key)
-        self.model_name = "gemini-1.5-flash"
 
     def _load_settings(self) -> dict:
-        path = Path("config/settings.toml")
+        path = PROJECT_ROOT / "config" / "settings.toml"
         if not path.exists():
             return {}
         with path.open("rb") as f:
             return tomllib.load(f)
 
+    def _resolve_model_name(self, configured_model: str | None) -> str:
+        env_model = os.getenv("JOBSEER_SCORING_MODEL")
+        candidate = env_model or configured_model or "gemini-2.5-flash"
+        if candidate.startswith("gemini-"):
+            return candidate
+        return "gemini-2.5-flash"
+
     def get_profile(self) -> str:
-        path = Path("config/profile.md")
+        path = PROJECT_ROOT / "config" / "profile.md"
         if not path.exists():
             return "Candidate seeking Staff PM / Director roles in Bay Area."
         with path.open("r", encoding="utf-8") as f:
             return f.read()
 
-    def score_job(self, job: dict) -> Optional[dict]:
+    def score_job(self, job: dict, force: bool = False) -> dict | None:
         job_id = job["id"]
 
-        # Skip if scored recently - ALWAYS use parameterized queries
-        existing = list(self.db.query(
-            """SELECT * FROM scores
-               WHERE job_id = ?
-                 AND scored_at > ?
-               ORDER BY scored_at DESC LIMIT 1""",
-            [job_id, (datetime.now(timezone.utc) - timedelta(hours=self.cache_ttl_hours)).isoformat()]
-        ))
-        if existing:
-            return existing[0]
+        if not force:
+            # Skip if any score exists for this job (append-only)
+            existing = list(
+                self.db.query(
+                    "SELECT id FROM scores WHERE job_id = ? ORDER BY scored_at DESC LIMIT 1",
+                    [job_id],
+                )
+            )
+            if existing:
+                return None
 
         # Pre-filter before hitting the API
         if not pre_filter_job(job["title"], job.get("description_md", "") or ""):
@@ -141,6 +152,7 @@ class Scorer:
         )
 
         try:
+            # Use `generate_content` for model interaction
             response = self.client.models.generate_content(
                 model=self.model_name,
                 contents=prompt,
@@ -151,6 +163,7 @@ class Scorer:
                 ),
             )
 
+            # The API might return content directly as parsed if schema is used, or as text.
             if response.parsed:
                 score_data = response.parsed.model_dump()
             else:
@@ -174,21 +187,28 @@ class Scorer:
             return None
 
 
-def score_all_jobs(db: Database) -> int:
+def score_all_jobs(db: Database, force: bool = False) -> int:
     scorer = Scorer(db)
-    # Re-fetch with join to get company name if needed
-    jobs = list(db.query(
-        """SELECT j.*, c.name as company_name FROM jobs j
-           JOIN companies c ON j.company_id = c.id
-           LEFT JOIN scores s ON j.id = s.job_id
-           WHERE s.id IS NULL
-              OR s.scored_at < ?""",
-        [(datetime.now(timezone.utc) - timedelta(hours=scorer.cache_ttl_hours)).isoformat()]
-    ))
+    query = """
+        SELECT j.*, c.name as company_name
+        FROM jobs j
+        JOIN companies c ON j.company_id = c.id
+    """
+    params: list[str] = []
+    if not force:
+        # Only select jobs that have NO scores (append-only logic)
+        query += """
+        WHERE NOT EXISTS (
+            SELECT 1 FROM scores s WHERE s.job_id = j.id
+        )
+        """
+    # If force is true, we select all jobs and re-score_job will handle it
+
+    jobs = list(db.query(query, params))
 
     scored_count = 0
     for job in jobs:
-        result = scorer.score_job(job)
+        result = scorer.score_job(job, force=force)
         if result:
             scored_count += 1
         time.sleep(1.0)  # Gemini free tier rate limit buffer
@@ -196,6 +216,6 @@ def score_all_jobs(db: Database) -> int:
     return scored_count
 
 
-def score_all_new_jobs(db: Database) -> int:
+def score_all_new_jobs(db: Database, force: bool = False) -> int:
     """Backward-compatible alias for older callers."""
-    return score_all_jobs(db)
+    return score_all_jobs(db, force=force)

@@ -80,13 +80,28 @@ CREATE TABLE IF NOT EXISTS skip_log (
 def get_db(path: Optional[Path] = None) -> Database:
     """Get a connection to the SQLite database."""
     db_path = path or DEFAULT_DB_PATH
-    return Database(str(db_path))
+    db = Database(str(db_path))
+    _apply_migrations(db)
+    return db
 
 def init_db(path: Optional[Path] = None):
     """Initialize the database with the schema."""
     db = get_db(path)
     db.conn.executescript(SCHEMA)
+    _apply_migrations(db)
     db.conn.commit()
+
+
+def _column_exists(db: Database, table_name: str, column_name: str) -> bool:
+    rows = list(db.query(f"PRAGMA table_info({table_name})"))
+    return any(row["name"] == column_name for row in rows)
+
+
+def _apply_migrations(db: Database):
+    """Apply lightweight schema migrations for existing local databases."""
+    if "scores" in db.table_names() and not _column_exists(db, "scores", "recommendation_label"):
+        db.conn.execute("ALTER TABLE scores ADD COLUMN recommendation_label TEXT")
+        db.conn.commit()
 
 def upsert_company(db: Database, company_data: Dict[str, Any]):
     """Upsert a company into the database."""
@@ -109,7 +124,7 @@ def insert_score(db: Database, score_data: Dict[str, Any]):
     """Insert a score for a job."""
     if "scored_at" not in score_data:
         score_data["scored_at"] = datetime.utcnow().isoformat()
-    db["scores"].insert(score_data)
+    db["scores"].insert(score_data) # Plain insert, not upsert
     db.conn.commit()
 
 def log_skip(db: Database, skip_data: Dict[str, Any]):
@@ -125,3 +140,18 @@ def get_job_by_id(db: Database, job_id: str) -> Optional[Dict[str, Any]]:
         return db["jobs"].get(job_id)
     except Exception:
         return None
+
+
+def get_score_history(db: Database, job_id: str) -> List[Dict[str, Any]]:
+    """Fetch all score rows for a job, newest first."""
+    return list(
+        db.query(
+            """
+            SELECT id, score, recommendation_label, reasoning, gaps, model, scored_at
+            FROM scores
+            WHERE job_id = ?
+            ORDER BY scored_at DESC, id DESC
+            """,
+            [job_id],
+        )
+    )

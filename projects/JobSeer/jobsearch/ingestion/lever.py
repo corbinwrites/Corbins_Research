@@ -1,39 +1,33 @@
-from typing import List, Dict, Any
+from typing import Any
+
 from jobsearch.ingestion.base import BaseIngester
-from jobsearch.models import Job
-from jobsearch.utils.http import get_client
 from jobsearch.utils.text import clean_description
-from sqlite_utils import Database
-import hashlib
+
 
 class LeverIngester(BaseIngester):
-    def fetch(self, company: Dict[str, Any]) -> List[Dict[str, Any]]:
+    def fetch(self, company: dict[str, Any]) -> list[dict[str, Any]]:
         slug = company.get("ats_slug")
         if not slug:
             return []
-        
+
         url = f"https://api.lever.co/v0/postings/{slug}?mode=json"
-        with get_client() as client:
-            try:
-                response = client.get(url)
-                response.raise_for_status()
-                data = response.json()
-            except Exception as e:
-                self.log_skip_reason(company["id"], None, f"Lever fetch error: {e}", url)
-                return []
+        try:
+            data = self.fetch_json(url, headers={"Accept": "application/json"})
+        except Exception as e:
+            self.log_skip_reason(company["id"], None, f"Lever fetch error: {e}", url)
+            return []
 
         results = []
         for item in data:
             try:
                 external_id = str(item["id"])
-                # Generate unique ID based on company and external ID
-                job_id = hashlib.md5(f"{company['id']}:{external_id}".encode()).hexdigest()
-                
+                job_id = self.stable_job_id(company["id"], external_id)
+
                 apply_url, resolved = self.validate_apply_url(
-                    item.get("hostedUrl"), 
+                    item.get("hostedUrl"),
                     fallback=company.get("career_url")
                 )
-                
+
                 job = {
                     "id": job_id,
                     "company_id": company["id"],
@@ -51,5 +45,5 @@ class LeverIngester(BaseIngester):
             except Exception as e:
                 self.log_skip_reason(company["id"], str(item.get("id")), f"Lever parsing error: {e}", None)
                 continue
-                
+
         return results

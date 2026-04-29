@@ -1,30 +1,29 @@
 from textual.app import ComposeResult
 from textual.screen import ModalScreen
-from textual.widgets import Footer, Header, Static
-
+from textual.widgets import Header, Footer, Static, Label
+from textual.containers import Container, Vertical
+from textual.binding import Binding
 
 class HelpScreen(ModalScreen):
-    BINDINGS = [("escape", "dismiss", "Close"), ("q", "dismiss", "Close")]
+    BINDINGS = [
+        Binding("escape", "dismiss", "Close Help"),
+    ]
+
+    def __init__(self, title: str, help_text_lines: list[str]):
+        super().__init__()
+        self.title = title
+        self.help_text_lines = help_text_lines
 
     def compose(self) -> ComposeResult:
-        yield Header()
-        yield Static(
-            "\n".join(
-                [
-                    "JobSeer Help",
-                    "",
-                    "f  Fetch jobs and score",
-                    "p  Open pipeline",
-                    "Enter  Open selected job",
-                    "o  Open apply URL",
-                    "c  Copy apply URL",
-                    "a  Mark applied",
-                    "s  Skip job",
-                    "q / Esc  Close or quit",
-                ]
-            )
-        )
+        with Container(id="help-dialog"):
+            yield Label(self.title, classes="help-title")
+            with Vertical(id="help-content"):
+                for line in self.help_text_lines:
+                    yield Static(line)
         yield Footer()
 
     def action_dismiss(self) -> None:
         self.app.pop_screen()
+
+    def on_mount(self) -> None:
+        self.query_one("#help-dialog").border_title = "Help"
