@@ -41,6 +41,27 @@ var FORM_CONFIG = {
     "greater_or_equal",
     "has_any_value"
   ],
+  emailRoleSections: {
+    "Admin Lead":             ["summary", "requester", "setup", "tech", "hospitality", "childcare", "communications", "media", "safety", "additional"],
+    "Admin - Setup Lead":     ["summary", "requester", "setup", "hospitality"],
+    "Tech Lead":              ["summary", "requester", "tech"],
+    "Tech - Sound Lead":      ["summary", "requester", "tech"],
+    "Tech - Projection Lead": ["summary", "requester", "tech"],
+    "Tech - Livestream Lead": ["summary", "requester", "tech"],
+    "Tech - Stage and Strike":["summary", "requester", "tech"],
+    "Tech - Scheduling":      ["summary", "requester", "tech"],
+    "Music Lead":             ["summary", "requester", "tech"],
+    "Children's Ministries":  ["summary", "requester", "childcare", "communications"],
+    "Safety":                 ["summary", "requester", "safety", "additional"],
+    "Media Lead":             ["summary", "requester", "media"],
+    "Social Media Lead":      ["summary", "requester", "communications"],
+    "Planning Center Events": ["summary", "requester", "communications"],
+    "Student's Ministries":   ["summary", "requester", "communications"],
+    "College Lead":           ["summary", "requester", "communications"],
+    "Young Adults Lead":      ["summary", "requester", "communications"],
+    "40s Plus":               ["summary", "requester", "communications"]
+  },
+  defaultEmailSections: ["summary", "requester", "setup", "tech", "childcare", "communications", "additional"],
   currentHeaders: {
     eventName: "What's the name of your event?",
     contactName: "Who is the main contact for this event",
@@ -512,15 +533,18 @@ function buildEmailBody_(match, answers) {
     ""
   ];
 
-  lines = lines.concat(buildEventSummaryLines_(answers));
+  lines = lines.concat(buildEventSummaryLines_(answers, match.role.role));
   return lines.join("\n");
 }
 
-function buildEventSummaryLines_(answers) {
+function buildEventSummaryLines_(answers, roleName) {
+  var sections = getSectionsForRole_(roleName || "");
   var lines = [];
+
+  // "summary" — always shown; if missing from a role's list it still renders
+  // (Event Summary and Requester are never omitted)
   var eventSummary = [
     buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.eventName, "Event Name"),
-    buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.eventDate, "Event Date"),
     buildEventTimeLine_(answers),
     buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.location, "Location"),
     buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.attendance, "Estimated Attendance")
@@ -530,40 +554,86 @@ function buildEventSummaryLines_(answers) {
   var requester = [
     buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.contactName, "Contact Name"),
     buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.contactEmail, "Contact Email"),
-    buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.requestingMinistry, "Requesting Ministry / Team"),
-    buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.eventOwner, "Event Owner / Primary Ministry")
+    buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.requestingMinistry, "Requesting Ministry / Team")
   ];
   appendSection_(lines, "Requester", requester);
 
-  var supportRequests = [
-    buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.setupSupport, "Setup Support Needed"),
-    buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.setupDetails, "Setup Details"),
-    buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.roomLayout, "Room Layout Changes Needed"),
-    buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.childcare, "Childcare Needed"),
-    buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.hospitality, "Hospitality Support Needed"),
-    buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.safetyNotes, "Special Safety Considerations"),
-    buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.anyTechSupport, "Any Tech Support Needed?"),
-    buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.techRoles, "Tech Roles Needed"),
-    buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.liveMusic, "Live Music Or Worship Support Needed"),
-    buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.mediaCapture, "Media Capture Needed")
-  ];
-  appendSection_(lines, "Support Requests", supportRequests);
+  // "setup"
+  if (sections.indexOf("setup") !== -1) {
+    var setupFields = [
+      buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.setupSupport, "Setup Support Needed"),
+      buildMultilineField_(answers, FORM_CONFIG.canonicalQuestions.setupDetails, "Setup Details"),
+      buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.roomLayout, "Room Layout Changes Needed"),
+      buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.checkIn, "Check-In Or Registration Needed")
+    ];
+    appendSection_(lines, "Setup", setupFields);
+  }
 
-  var communications = [
-    buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.targetMinistries, "Target Ministries For Announcement"),
-    buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.planningCenter, "Planning Center Event Posting Needed"),
-    buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.socialMedia, "Social Media Promotion Needed"),
-    buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.announcementDetails, "Announcement Details"),
-    buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.registrationDeadline, "Registration Deadline (if applicable)")
-  ];
-  appendSection_(lines, "Communications", communications);
+  // "hospitality"
+  if (sections.indexOf("hospitality") !== -1) {
+    var hospFields = [
+      buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.hospitality, "Hospitality Support Needed")
+    ];
+    appendSection_(lines, "Hospitality", hospFields);
+  }
 
-  var additionalDetails = [
-    buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.audience, "Who Is This Event For?"),
-    buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.eventType, "Event Type"),
-    buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.additionalDetails, "Additional Details We Should Know")
-  ];
-  appendSection_(lines, "Additional Details", additionalDetails);
+  // "tech"
+  if (sections.indexOf("tech") !== -1) {
+    var techFields = [
+      buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.anyTechSupport, "Any Tech Support Needed?"),
+      buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.techRoles, "Tech Roles Needed"),
+      buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.liveMusic, "Live Music Or Worship Support Needed"),
+      buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.mediaCapture, "Media Capture Needed")
+    ];
+    appendSection_(lines, "Tech Needs", techFields);
+  }
+
+  // "childcare"
+  if (sections.indexOf("childcare") !== -1) {
+    var childcareFields = [
+      buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.childcare, "Childcare Needed")
+    ];
+    appendSection_(lines, "Childcare", childcareFields);
+  }
+
+  // "safety"
+  if (sections.indexOf("safety") !== -1) {
+    var safetyFields = [
+      buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.attendance, "Estimated Attendance"),
+      buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.safetyNotes, "Special Safety Considerations")
+    ];
+    appendSection_(lines, "Safety Notes", safetyFields);
+  }
+
+  // "communications"
+  if (sections.indexOf("communications") !== -1) {
+    var commFields = [
+      buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.targetMinistries, "Target Ministries For Announcement"),
+      buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.planningCenter, "Planning Center Event Posting Needed"),
+      buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.socialMedia, "Social Media Promotion Needed"),
+      buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.announcementDetails, "Announcement Details"),
+      buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.registrationDeadline, "Registration Deadline (if applicable)")
+    ];
+    appendSection_(lines, "Communications", commFields);
+  }
+
+  // "media"
+  if (sections.indexOf("media") !== -1) {
+    var mediaFields = [
+      buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.mediaCapture, "Media Capture Needed")
+    ];
+    appendSection_(lines, "Media", mediaFields);
+  }
+
+  // "additional" — only for roles that need it (Admin Lead, Safety)
+  if (sections.indexOf("additional") !== -1) {
+    var addFields = [
+      buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.audience, "Who Is This Event For?"),
+      buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.eventType, "Event Type"),
+      buildMultilineField_(answers, FORM_CONFIG.canonicalQuestions.additionalDetails, "Additional Details We Should Know")
+    ];
+    appendSection_(lines, "Additional Details", addFields);
+  }
 
   return lines;
 }
@@ -770,7 +840,7 @@ function buildCanonicalAnswers_(rawAnswers) {
       hasTextValue_(rawAnswers[FORM_CONFIG.currentHeaders.chairNotes])
     )
   );
-  answers[FORM_CONFIG.canonicalQuestions.setupDetails] = joinNonEmpty_([
+  answers[FORM_CONFIG.canonicalQuestions.setupDetails] = joinLines_([
     prefixedValue_("Self lock/unlock", rawAnswers[FORM_CONFIG.currentHeaders.selfLockup]),
     prefixedValue_("Tables required", rawAnswers[FORM_CONFIG.currentHeaders.tables]),
     prefixedValue_("Chair setup", rawAnswers[FORM_CONFIG.currentHeaders.chairs]),
@@ -835,7 +905,7 @@ function buildCanonicalAnswers_(rawAnswers) {
     FORM_CONFIG.currentHeaders.announcementDetails,
     FORM_CONFIG.canonicalQuestions.announcementDetails
   );
-  answers[FORM_CONFIG.canonicalQuestions.additionalDetails] = joinNonEmpty_([
+  answers[FORM_CONFIG.canonicalQuestions.additionalDetails] = joinLines_([
     prefixedValue_("Purpose", rawAnswers[FORM_CONFIG.currentHeaders.eventPurpose]),
     prefixedValue_("Date details", rawAnswers[FORM_CONFIG.currentHeaders.dateDetails]),
     prefixedValue_("Food needed", rawAnswers[FORM_CONFIG.currentHeaders.foodNeeded]),
@@ -1104,6 +1174,14 @@ function getAnswerOrPlaceholder_(answers, key) {
   return answers[key] || "(not provided)";
 }
 
+function getSectionsForRole_(roleName) {
+  var sectionMap = FORM_CONFIG.emailRoleSections;
+  if (sectionMap && sectionMap[roleName]) {
+    return sectionMap[roleName];
+  }
+  return FORM_CONFIG.defaultEmailSections;
+}
+
 function getAnswerOrBlank_(answers, key) {
   return String(answers[key] || "").trim();
 }
@@ -1111,6 +1189,23 @@ function getAnswerOrBlank_(answers, key) {
 function buildFieldLine_(answers, key, label) {
   var value = getAnswerOrBlank_(answers, key);
   return value ? label + ": " + value : "";
+}
+
+function buildMultilineField_(answers, key, label) {
+  var value = getAnswerOrBlank_(answers, key);
+  if (!value) {
+    return "";
+  }
+  var parts = value.split("\n").filter(function(p) {
+    return p.trim() !== "";
+  });
+  if (parts.length === 0) {
+    return "";
+  }
+  if (parts.length === 1) {
+    return label + ": " + parts[0];
+  }
+  return label + ":\n  " + parts.join("\n  ");
 }
 
 function buildEventTimeLine_(answers) {
@@ -1184,6 +1279,12 @@ function joinNonEmpty_(values) {
   return values.filter(function(value) {
     return normalizeString_(value) !== "";
   }).join(" | ");
+}
+
+function joinLines_(values) {
+  return values.filter(function(v) {
+    return normalizeString_(v) !== "";
+  }).join("\n");
 }
 
 function prefixedValue_(label, value) {
