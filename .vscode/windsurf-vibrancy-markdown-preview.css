@@ -1,0 +1,40 @@
+html,
+body,
+.vscode-body,
+.markdown-body {
+	background: #1e1e1e !important;
+	color: var(--vscode-editor-foreground, #d4d4d4) !important;
+}
+
+html {
+	min-height: 100%;
+}
+
+body {
+	min-height: 100vh;
+	box-sizing: border-box;
+}
+
+body::before {
+	content: "";
+	position: fixed;
+	inset: 0;
+	z-index: -1;
+	background: #1e1e1e;
+}
+
+.markdown-body {
+	min-height: 100vh;
+}
+
+.markdown-body pre,
+.markdown-body code,
+.markdown-body table,
+.markdown-body blockquote {
+	background-color: rgba(20, 20, 20, 0.96) !important;
+}
+
+.markdown-body pre {
+	border-radius: 4px;
+	padding: 12px 14px;
+}

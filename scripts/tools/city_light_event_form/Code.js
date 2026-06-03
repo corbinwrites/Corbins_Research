@@ -545,6 +545,7 @@ function buildEventSummaryLines_(answers, roleName) {
   // (Event Summary and Requester are never omitted)
   var eventSummary = [
     buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.eventName, "Event Name"),
+    buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.eventDate, "Event Date"),
     buildEventTimeLine_(answers),
     buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.location, "Location"),
     buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.attendance, "Estimated Attendance")
