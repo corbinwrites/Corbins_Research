@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const { chromium } = require("../playwright-cli/node_modules/playwright");
+const { chromium } = require("../../projects/playwright-cli/node_modules/playwright");
 
 async function waitForSaved(page) {
   await page.waitForFunction(() => {

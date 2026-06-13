@@ -87,10 +87,13 @@ var FORM_CONFIG = {
     additionalRooms: "This event will require additional rooms",
     worshipRequest: "Request corporate worship through music?",
     avRequest: "Request A/V at the event (Speakers, Projection, and Livestream)",
+    anyTechSupport: "Any Tech Support Needed?",
+    techRoles: "Tech Roles Needed",
     techProjection: "Which of the following will you need at your event? [Slides (Projector, Screens)]",
     techSound: "Which of the following will you need at your event? [Sound (speakers, mics, recorded music)]",
     techLiveMusic: "Which of the following will you need at your event? [Live Music (Piano, guitar, cajon, etc.)]",
     techLivestream: "Which of the following will you need at your event? [Livestream]",
+    livestreamLink: "YouTube Livestream Link",
     techAudioRecording: "Which of the following will you need at your event? [Audio recording]",
     techVideoRecording: "Which of the following will you need at your event? [Video recording]",
     techStage: "Which of the following will you need at your event? [A stage]",
@@ -133,6 +136,7 @@ var FORM_CONFIG = {
     safetyNotes: "Special Safety Considerations",
     anyTechSupport: "Any Tech Support Needed?",
     techRoles: "Tech Roles Needed",
+    livestreamLink: "YouTube Livestream Link",
     liveMusic: "Live Music Or Worship Support Needed",
     mediaCapture: "Media Capture Needed",
     planningCenter: "Planning Center Event Posting Needed",
@@ -153,6 +157,28 @@ var FORM_CONFIG = {
       "Projection",
       "Livestream",
       "Stage and Strike"
+    ]
+  },
+  aliases: {
+    anyTechSupport: [
+      "Any Tech Support Needed?",
+      "Request A/V at the event (Speakers, Projection, and Livestream)"
+    ],
+    techRoles: [
+      "Tech Roles Needed",
+      "Which tech roles are required?",
+      "Tech Needs",
+      "Which of the following will you need at your event?"
+    ],
+    livestreamLink: [
+      "YouTube Livestream Link",
+      "YouTube Live Link",
+      "YouTube Link",
+      "Livestream Link",
+      "Live Stream Link",
+      "Live Stream URL",
+      "Livestream URL",
+      "Stream Link"
     ]
   }
 };
@@ -583,6 +609,7 @@ function buildEventSummaryLines_(answers, roleName) {
     var techFields = [
       buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.anyTechSupport, "Any Tech Support Needed?"),
       buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.techRoles, "Tech Roles Needed"),
+      buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.livestreamLink, "YouTube Livestream Link"),
       buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.liveMusic, "Live Music Or Worship Support Needed"),
       buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.mediaCapture, "Media Capture Needed")
     ];
@@ -871,12 +898,16 @@ function buildCanonicalAnswers_(rawAnswers) {
   answers[FORM_CONFIG.canonicalQuestions.safetyNotes] = "";
   answers[FORM_CONFIG.canonicalQuestions.anyTechSupport] = toYesNo_(
     anyTrue_(
-      isYesValue_(rawAnswers[FORM_CONFIG.currentHeaders.avRequest]),
+      isYesValue_(firstAnswerByKeys_(rawAnswers, FORM_CONFIG.aliases.anyTechSupport)),
       hasTextValue_(buildCurrentTechRoles_(rawAnswers)),
       isYesValue_(rawAnswers[FORM_CONFIG.currentHeaders.worshipRequest])
     )
   );
   answers[FORM_CONFIG.canonicalQuestions.techRoles] = buildCurrentTechRoles_(rawAnswers);
+  answers[FORM_CONFIG.canonicalQuestions.livestreamLink] = firstAnswerByKeys_(
+    rawAnswers,
+    FORM_CONFIG.aliases.livestreamLink
+  );
   answers[FORM_CONFIG.canonicalQuestions.liveMusic] = toYesNo_(
     anyTrue_(
       isYesValue_(rawAnswers[FORM_CONFIG.currentHeaders.worshipRequest]),
@@ -1254,9 +1285,18 @@ function firstAnswer_(answers) {
   return "";
 }
 
+function firstAnswerByKeys_(answers, keys) {
+  for (var i = 0; i < keys.length; i++) {
+    if (answers[keys[i]]) {
+      return answers[keys[i]];
+    }
+  }
+  return "";
+}
+
 function isYesValue_(value) {
   var normalized = normalizeString_(value);
-  return normalized === "yes" || normalized === "true";
+  return normalized === "yes" || normalized === "true" || normalized === "y" || normalized === "1";
 }
 
 function hasTextValue_(value) {
@@ -1321,24 +1361,45 @@ function buildDietarySummary_(answers) {
 
 function buildCurrentTechRoles_(answers) {
   var roles = [];
+  var selectedRoles = toNormalizedArray_(firstAnswerByKeys_(answers, FORM_CONFIG.aliases.techRoles));
 
-  if (isYesValue_(answers[FORM_CONFIG.currentHeaders.techSound])) {
+  if (
+    isYesValue_(answers[FORM_CONFIG.currentHeaders.techSound]) ||
+    arrayIncludesNormalizedText_(selectedRoles, "sound")
+  ) {
     roles.push("Sound");
   }
-  if (isYesValue_(answers[FORM_CONFIG.currentHeaders.techProjection])) {
+  if (
+    isYesValue_(answers[FORM_CONFIG.currentHeaders.techProjection]) ||
+    arrayIncludesNormalizedText_(selectedRoles, "projection") ||
+    arrayIncludesNormalizedText_(selectedRoles, "slides") ||
+    arrayIncludesNormalizedText_(selectedRoles, "projector") ||
+    arrayIncludesNormalizedText_(selectedRoles, "screens")
+  ) {
     roles.push("Projection");
   }
-  if (isYesValue_(answers[FORM_CONFIG.currentHeaders.techLivestream])) {
+  if (
+    isYesValue_(answers[FORM_CONFIG.currentHeaders.techLivestream]) ||
+    arrayIncludesNormalizedText_(selectedRoles, "livestream") ||
+    arrayIncludesNormalizedText_(selectedRoles, "live stream") ||
+    arrayIncludesNormalizedText_(selectedRoles, "youtube livestream") ||
+    arrayIncludesNormalizedText_(selectedRoles, "youtube live")
+  ) {
     roles.push("Livestream");
   }
   if (
     isYesValue_(answers[FORM_CONFIG.currentHeaders.techStage]) ||
-    isYesValue_(answers[FORM_CONFIG.currentHeaders.techPulpit])
+    isYesValue_(answers[FORM_CONFIG.currentHeaders.techPulpit]) ||
+    arrayIncludesNormalizedText_(selectedRoles, "stage and strike") ||
+    arrayIncludesNormalizedText_(selectedRoles, "stage") ||
+    arrayIncludesNormalizedText_(selectedRoles, "pulpit") ||
+    arrayIncludesNormalizedText_(selectedRoles, "music stand") ||
+    arrayIncludesNormalizedText_(selectedRoles, "music stands")
   ) {
     roles.push("Stage and Strike");
   }
 
-  return roles.join(", ");
+  return dedupeStrings_(roles).join(", ");
 }
 
 function toNormalizedArray_(value) {
@@ -1347,7 +1408,7 @@ function toNormalizedArray_(value) {
   }
 
   return String(value)
-    .split(",")
+    .split(/[,|;\n]/)
     .map(function(entry) { return normalizeString_(entry); })
     .filter(function(entry) { return entry !== ""; });
 }
@@ -1355,6 +1416,16 @@ function toNormalizedArray_(value) {
 function arrayContainsNormalized_(values, target) {
   for (var i = 0; i < values.length; i++) {
     if (values[i] === target) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function arrayIncludesNormalizedText_(values, target) {
+  var normalizedTarget = normalizeString_(target);
+  for (var i = 0; i < values.length; i++) {
+    if (values[i] === normalizedTarget || values[i].indexOf(normalizedTarget) !== -1) {
       return true;
     }
   }
