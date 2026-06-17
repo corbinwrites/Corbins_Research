@@ -82,13 +82,18 @@ function ensureEightWeekBuffer() {
     var SPREADSHEET_ID = '1z2rRPxpydv9HMc8WqJ8ciyEf-P6KtRdCFxm8iyPdpb8';
     var SHEET_NAME = 'Livestream Links';
 
+    Logger.log('Starting ensureEightWeekBuffer execution...');
+
     // ── 1. Get access token ───────────────────────────────────────────────
     var props        = PropertiesService.getScriptProperties();
     var clientId     = props.getProperty('YT_CLIENT_ID');
     var clientSecret = props.getProperty('YT_CLIENT_SECRET');
     var refreshToken = props.getProperty('YT_REFRESH_TOKEN');
 
-    // Mute HTTP exceptions here so we can throw a clear error if token fetch fails (e.g. 401 Unauthorized)
+    if (!clientId || !clientSecret || !refreshToken) {
+      throw new Error("Missing OAuth credentials in Script Properties (YT_CLIENT_ID, YT_CLIENT_SECRET, or YT_REFRESH_TOKEN).");
+    }
+
     var tokenResp = UrlFetchApp.fetch('https://oauth2.googleapis.com/token', {
       method: 'post',
       contentType: 'application/x-www-form-urlencoded',
@@ -105,8 +110,9 @@ function ensureEightWeekBuffer() {
 
     var accessToken = JSON.parse(tokenResp.getContentText()).access_token;
     var authHeader  = { Authorization: 'Bearer ' + accessToken };
+    Logger.log('OAuth access token successfully retrieved.');
 
-    // ── 2. Read existing Video IDs from the sheet ─────────────────────────
+    // ── 2. Read existing Video IDs and dates from the sheet ─────────────────────────
     var ss          = SpreadsheetApp.openById(SPREADSHEET_ID);
     var sheet       = ss.getSheetByName(SHEET_NAME);
     if (!sheet) {
@@ -115,10 +121,25 @@ function ensureEightWeekBuffer() {
 
     var data        = sheet.getDataRange().getValues(); // [[title, time, url, videoId], ...]
     var existingIds = {};
+    var existingSheetDates = {}; // 'YYYY-MM-DD' => true
     for (var i = 1; i < data.length; i++) { // skip header row
-      var vid = data[i][3]; // column D = Video ID
-      if (vid) existingIds[String(vid).trim()] = true;
+      var row = data[i];
+      var timeVal = row[1]; // column B = Scheduled Time
+      var vid = row[3]; // column D = Video ID
+      
+      if (vid) {
+        existingIds[String(vid).trim()] = true;
+      }
+      
+      if (timeVal) {
+        var dateObj = (timeVal instanceof Date) ? timeVal : new Date(timeVal);
+        if (!isNaN(dateObj.getTime())) {
+          var dateKey = dateObj.toISOString().substring(0, 10);
+          existingSheetDates[dateKey] = true;
+        }
+      }
     }
+    Logger.log('Read ' + (data.length - 1) + ' rows from the sheet. Found ' + Object.keys(existingSheetDates).length + ' unique scheduled dates.');
 
     // ── 3. Build the list of 8 target Sundays ────────────────────────────
     var now = new Date();
@@ -131,8 +152,9 @@ function ensureEightWeekBuffer() {
       sunday.setHours(10, 0, 0, 0); // 10:00 AM local
       targets.push(sunday);
     }
+    Logger.log('Target Sundays calculated: ' + targets.map(function(d) { return d.toDateString(); }).join(', '));
 
-    // ── 4. Also read scheduled times from YouTube to catch streams not ───
+    // ── 4. Read scheduled times from YouTube to catch streams not ───
     // yet written to the sheet (belt-and-suspenders dedup) ───────────
     var ytResp = UrlFetchApp.fetch(
       'https://www.googleapis.com/youtube/v3/liveBroadcasts' +
@@ -154,6 +176,7 @@ function ensureEightWeekBuffer() {
         }
       });
     }
+    Logger.log('Retrieved ' + (ytData.items ? ytData.items.length : 0) + ' upcoming streams from YouTube API.');
 
     // ── 5. Loop over targets — create only missing ones ───────────────────
     var description =
@@ -161,10 +184,15 @@ function ensureEightWeekBuffer() {
       'Give to us: https://citylightbible.churchcenter.com/giving\n' +
       'Watch past sermons: https://www.citylightbible.org/sermons';
 
+    var createdCount = 0;
+
     targets.forEach(function(sunday) {
       var dateKey = sunday.toISOString().substring(0, 10);
-      if (existingYtTimes[dateKey]) {
-        Logger.log('Already exists on YouTube for ' + dateKey + ' — skipping');
+      var formattedDate = Utilities.formatDate(sunday, Session.getScriptTimeZone(), 'M/d/yyyy h:mm:ss a');
+      
+      // De-duplicate check against BOTH YouTube API and Sheet dates
+      if (existingYtTimes[dateKey] || existingSheetDates[dateKey]) {
+        Logger.log('Already exists for ' + dateKey + ' (YouTube: ' + !!existingYtTimes[dateKey] + ', Sheet: ' + !!existingSheetDates[dateKey] + ') — skipping');
         return;
       }
 
@@ -173,6 +201,8 @@ function ensureEightWeekBuffer() {
       var yy = String(sunday.getFullYear()).slice(-2);
       var title = m + '/' + d + '/' + yy + ' Sunday Service at City Light Bible Church';
       var scheduledStart = sunday.toISOString();
+
+      Logger.log('Creating stream for date ' + dateKey + ': "' + title + '"');
 
       // 5a. Create liveBroadcast
       var broadcastBody = {
@@ -191,6 +221,7 @@ function ensureEightWeekBuffer() {
           headers: authHeader, payload: JSON.stringify(broadcastBody),
           muteHttpExceptions: true }
       );
+      
       var broadcast = JSON.parse(broadcastResp.getContentText());
       if (!broadcast.id) {
         throw new Error('ERROR creating broadcast for ' + dateKey + ':\n' + broadcastResp.getContentText());
@@ -212,6 +243,7 @@ function ensureEightWeekBuffer() {
       if (!stream.id) {
         throw new Error('ERROR creating stream for ' + dateKey + ':\n' + streamResp.getContentText());
       }
+      Logger.log('Stream created for ' + dateKey + ': ' + stream.id);
 
       // 5c. Bind broadcast to stream
       var bindResp = UrlFetchApp.fetch(
@@ -222,6 +254,7 @@ function ensureEightWeekBuffer() {
       if (bindResp.getResponseCode() !== 200) {
         throw new Error('ERROR binding stream ' + dateKey + ':\n' + bindResp.getContentText());
       }
+      Logger.log('Bound broadcast and stream for ' + dateKey);
 
       // 5d. Set category (29 = Nonprofits & Activism)
       var catResp = UrlFetchApp.fetch(
@@ -236,45 +269,44 @@ function ensureEightWeekBuffer() {
       if (catResp.getResponseCode() !== 200) {
         throw new Error('ERROR setting category for ' + dateKey + ':\n' + catResp.getContentText());
       }
+      Logger.log('Set category to Nonprofits & Activism (29) for ' + dateKey);
 
       // 5e. Append to sheet (only if not already in sheet by Video ID)
       if (!existingIds[broadcast.id]) {
         var videoUrl = 'https://www.youtube.com/watch?v=' + broadcast.id;
-        sheet.appendRow([title, scheduledStart, videoUrl, broadcast.id]);
-        Logger.log('Appended to sheet: ' + videoUrl);
+        sheet.appendRow([title, formattedDate, videoUrl, broadcast.id]);
+        Logger.log('Appended to sheet: ' + videoUrl + ' with date ' + formattedDate);
       }
+      
+      createdCount++;
     });
 
-    Logger.log('ensureEightWeekBuffer complete.');
+    Logger.log('ensureEightWeekBuffer complete. Created ' + createdCount + ' new streams.');
     
   } catch (err) {
     var ownerEmail = 'tech@citylightbible.org';
     
-    // Construct a VERY clear error warning message
     var warningMessage = 
       "❌ URGENT: YouTube Livestream Automation Failed ❌\n\n" +
       "The script encountered an error while trying to create the upcoming 8-week buffer of streams.\n\n" +
       "DETAILS:\n" + err.message + "\n\n" +
       "HOW TO FIX THIS:\n" +
       "1. Go to the Script Editor: https://script.google.com\n" +
-      "2. Open the 'Youtube Links' project and check the Execution Log (View > Execution Log) to see the full context.\n" +
+      "2. Open the 'Youtube Links' project and check the Execution Log to see the full context.\n" +
       "3. IF 'Refresh Token Expired' or '401 Unauthorized' is mentioned:\n" +
       "   ➔ You must generate a new OAuth Refresh Token. See Section 4 of the 'Operations & Troubleshooting Runbook'.\n" +
       "4. IF it's a spreadsheet error:\n" +
       "   ➔ Make sure the Livestream Links sheet hasn't been renamed or deleted.\n" +
-      "5. IF it's a YouTube quota or permission error:\n" +
-      "   ➔ Ensure the Brand Account still has livestreaming enabled and no strikes.\n\n" +
+      "5. IF it's a YouTube quota or upload limit error:\n" +
+      "   ➔ If your channel is relatively new or unverified, YouTube may limit you to 1 new livestream creation per day. " +
+      "The script will run weekly and naturally build up to the 8-week buffer over time. Alternatively, you can run it manually once per day, or verify your channel to lift this limit.\n\n" +
       "Once fixed, you can manually run 'ensureEightWeekBuffer' from the script editor to verify.";
       
-    // Log it clearly so it shows up in Apps Script logs
     Logger.log("===============================");
     Logger.log(warningMessage);
     Logger.log("===============================");
     
-    // Alert the team immediately
     MailApp.sendEmail(ownerEmail, "🚨 YouTube Automation Failed", warningMessage);
-    
-    // Rethrow to mark execution as failed in the Apps Script dashboard
     throw err;
   }
 }
