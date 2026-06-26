@@ -63,11 +63,11 @@ var FORM_CONFIG = {
   },
   defaultEmailSections: ["summary", "requester", "setup", "tech", "childcare", "communications", "additional"],
   currentHeaders: {
-    eventName: "What's the name of your event?",
-    contactName: "Who is the main contact for this event",
-    contactEmail: "What is the main contact for this event's email address?",
+    eventName: "What is the name of your event?",
+    contactName: "Who is the main contact for your event?",
+    contactEmail: "What is the email for the main contact?",
     eventPurpose: "What is the purpose of your event?",
-    attendance: "How many people will you host at your event?",
+    attendance: "How many people are you expecting to host?",
     location: "Where will your event be held?",
     selfLockup: "Can you unlock and lock up the facility on your own?",
     eventType: "What type of event will be?",
@@ -162,6 +162,108 @@ function setupProject() {
   ensureTrackingColumns();
   ensureRoutingRulesSheet();
   installFormSubmitTrigger();
+}
+
+/**
+ * Re-sends notification emails for response sheet rows whose "Internal Status"
+ * column is set to "Resend".
+ *
+ * HOW TO USE:
+ *   1. Open the linked response spreadsheet ("Form Responses 1" tab).
+ *   2. Find the row(s) you want to resend.
+ *   3. In the "Internal Status" column for that row, type exactly:  Resend
+ *   4. Return to the Apps Script editor and run this function.
+ *   5. Each matched row will be re-processed through the full notification
+ *      pipeline and its "Internal Status" will be updated to "Resent ✓".
+ *
+ * SAFETY: only rows explicitly marked "Resend" are touched — all others are
+ * skipped. If routing errors exist they are reported to the admin alert email.
+ */
+function resendFailedNotifications() {
+  var sheet = getTrackingSheet_();
+  var data = sheet.getDataRange().getValues();
+
+  if (data.length < 2) {
+    Logger.log("No data rows found in the response sheet.");
+    return;
+  }
+
+  var headers = data[0];
+
+  // Locate the Internal Status column (case-insensitive)
+  var statusColIndex = -1;
+  for (var h = 0; h < headers.length; h++) {
+    if (normalizeString_(headers[h]) === "internal status") {
+      statusColIndex = h;
+      break;
+    }
+  }
+
+  if (statusColIndex === -1) {
+    Logger.log("Could not find an 'Internal Status' column. Please run setupProject() first.");
+    return;
+  }
+
+  var routingResult = loadRoutingRules_();
+  if (routingResult.errors.length > 0) {
+    Logger.log("Routing rule errors: " + routingResult.errors.join(" | "));
+    return;
+  }
+
+  var resendCount = 0;
+
+  for (var rowIndex = 1; rowIndex < data.length; rowIndex++) {
+    var row = data[rowIndex];
+    var status = normalizeString_(row[statusColIndex]);
+
+    if (status !== "resend") {
+      continue;
+    }
+
+    // Reconstruct namedValues from the header + row values
+    var namedValues = {};
+    for (var col = 0; col < headers.length; col++) {
+      var headerName = String(headers[col] || "").trim();
+      if (!headerName) {
+        continue;
+      }
+      // Skip internal tracking columns — they are not form questions
+      var isInternal = FORM_CONFIG.internalColumns.indexOf(headerName) !== -1;
+      if (isInternal) {
+        continue;
+      }
+      var cellValue = String(row[col] || "").trim();
+      namedValues[headerName] = [cellValue];
+    }
+
+    var answers = buildCanonicalAnswers_(normalizeNamedValues_(namedValues));
+    var matches = getMatchingRoutes_(answers, routingResult.rules);
+
+    for (var m = 0; m < matches.length; m++) {
+      sendNotificationEmail_(matches[m], answers);
+    }
+
+    logSubmission_(
+      answers,
+      matches,
+      matches.length,
+      "Resent",
+      "Manually resent from row " + (rowIndex + 1) + ". " +
+      (matches.length > 0 ? "Notifications delivered." : "No routing rules matched.")
+    );
+
+    // Update the cell in-place so the operator can see it was processed
+    sheet.getRange(rowIndex + 1, statusColIndex + 1).setValue("Resent \u2713");
+    resendCount++;
+
+    Logger.log("Row " + (rowIndex + 1) + " (" + (answers[FORM_CONFIG.canonicalQuestions.eventName] || "unknown event") + ") resent to " + matches.length + " role(s).");
+  }
+
+  if (resendCount === 0) {
+    Logger.log("No rows were marked 'Resend'. Set a row's Internal Status to 'Resend' to trigger a resend.");
+  } else {
+    Logger.log("Done. Resent notifications for " + resendCount + " row(s).");
+  }
 }
 
 function ensureRoutingRulesSheet() {
@@ -359,18 +461,18 @@ function exportQuestionsToCSV() {
 
 function testRoutingWithSampleData() {
   var sampleAnswers = buildCanonicalAnswers_(normalizeNamedValues_({
-    "What's the name of your event?": ["Spring Worship Night"],
-    "Who is the main contact for this event": ["Example Requester"],
-    "What is the main contact for this event's email address?": ["requester@example.com"],
+    "What is the name of your event?": ["Spring Worship Night"],
+    "Who is the main contact for your event?": ["Example Requester"],
+    "What is the email for the main contact?": ["requester@example.com"],
     "What is the purpose of your event?": ["Student worship and outreach night."],
-    "How many people will you host at your event?": ["75"],
+    "How many people are you expecting to host?": ["75"],
     "Where will your event be held?": ["Main Hall"],
-    "Can you unlock and lock up the facility on your own?": ["No"],
+    "Can you unlock and lock up the facility on your own?": ["Yes, I have access to the keys and know the procedure to open and close the site"],
     "What type of event will be?": ["Worship Night"],
     "When will your event start?": ["7:00 PM"],
     "When will your event end?": ["9:00 PM"],
     "Include the dates, start times, and end times": ["April 10, 2026 from 7:00 PM to 9:00 PM"],
-    "I want food at this event": ["No"],
+    "I want food at this event": ["Yes, I need help from admin team to coordinate"],
     "Will your event require tables?": ["Yes"],
     "How should the chairs be setup for your event?": ["Rows facing the stage"],
     "Any further clarifications on chair setup for the main room?": ["Leave center aisle open."],
@@ -394,7 +496,7 @@ function testRoutingWithSampleData() {
     "Request a photographer for this event?": ["Yes"],
     "Request a videographer for this event?": ["No"],
     "Request printed material (i.e. flyer, bulletin, pamphlet)?": ["No"],
-    "What ministry do you anticipate your event will reach?": ["Students, College"],
+    "What ministry do you anticipate your event will reach?": ["Students' Ministry (Middle/High School), College Ministry"],
     "Request childcare for this event?": ["No"],
     "How many children are anticipated?": [""]
   }));
@@ -493,12 +595,14 @@ function getMatchingRoutes_(answers, rules) {
 function sendNotificationEmail_(match, answers) {
   var subject = buildEmailSubject_(answers, match.role);
   var body = buildEmailBody_(match, answers);
+  var htmlBody = buildEmailHtmlBody_(match, answers);
 
   MailApp.sendEmail({
     to: match.role.emails.join(","),
     replyTo: answers[FORM_CONFIG.canonicalQuestions.contactEmail] || "",
     subject: subject,
     body: body,
+    htmlBody: htmlBody,
     name: "City Light Event Form"
   });
 }
@@ -518,20 +622,37 @@ function buildEmailSubject_(answers, role) {
 }
 
 function buildEmailBody_(match, answers) {
-  var introLines = match.reasonExplanations.length > 0
-    ? match.reasonExplanations
-    : ["You are receiving this message because your role was matched by the City Light event request workflow."];
+  var eventName = answers[FORM_CONFIG.canonicalQuestions.eventName] || "(not provided)";
+  var eventDate = answers[FORM_CONFIG.canonicalQuestions.eventDate] || "(not provided)";
+  var eventTime = buildEventTimeLine_(answers) || "";
+  var requesterName = answers[FORM_CONFIG.canonicalQuestions.contactName] || "(not provided)";
+  var requesterEmail = answers[FORM_CONFIG.canonicalQuestions.contactEmail] || "";
+  var requestingMinistry = answers[FORM_CONFIG.canonicalQuestions.requestingMinistry] || "";
+  var purpose = answers[FORM_CONFIG.canonicalQuestions.audience] || "";
+
+  var actionNeeded = hasTextValue_(match.role.actionNeeded)
+    ? match.role.actionNeeded
+    : "Review the event details below and follow up with the requester as needed.";
+  var matchedConditions = match.reasons.join("; ");
 
   var lines = [
-    introLines.join("\n"),
+    "========================================================",
+    "EVENT REQUEST: " + eventName,
+    "Date: " + eventDate + (eventTime ? " (" + eventTime.replace("Event Time: ", "") + ")" : ""),
+    "Requested By: " + requesterName + (requesterEmail ? " (" + requesterEmail + ")" : "") + (requestingMinistry ? " | Ministry: " + requestingMinistry : ""),
+    "========================================================",
     "",
-    hasTextValue_(match.role.actionNeeded)
-      ? "Action Needed: " + match.role.actionNeeded
-      : "Action Needed: Review the event details below and follow up with the requester as needed.",
+    "Action Needed: " + actionNeeded,
     "Role: " + match.role.role,
-    "Matched Conditions: " + match.reasons.join("; "),
+    "Matched Conditions: " + matchedConditions,
     ""
   ];
+
+  if (purpose) {
+    lines.push("Event Description:");
+    lines.push(purpose);
+    lines.push("");
+  }
 
   lines = lines.concat(buildEventSummaryLines_(answers, match.role.role));
   return lines.join("\n");
@@ -541,11 +662,8 @@ function buildEventSummaryLines_(answers, roleName) {
   var sections = getSectionsForRole_(roleName || "");
   var lines = [];
 
-  // "summary" — always shown; if missing from a role's list it still renders
-  // (Event Summary and Requester are never omitted)
+  // "summary" — Event Summary and Requester are never omitted
   var eventSummary = [
-    buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.eventName, "Event Name"),
-    buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.eventDate, "Event Date"),
     buildEventTimeLine_(answers),
     buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.location, "Location"),
     buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.attendance, "Estimated Attendance")
@@ -553,11 +671,9 @@ function buildEventSummaryLines_(answers, roleName) {
   appendSection_(lines, "Event Summary", eventSummary);
 
   var requester = [
-    buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.contactName, "Contact Name"),
-    buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.contactEmail, "Contact Email"),
     buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.requestingMinistry, "Requesting Ministry / Team")
   ];
-  appendSection_(lines, "Requester", requester);
+  appendSection_(lines, "Requester Details", requester);
 
   // "setup"
   if (sections.indexOf("setup") !== -1) {
@@ -629,7 +745,6 @@ function buildEventSummaryLines_(answers, roleName) {
   // "additional" — only for roles that need it (Admin Lead, Safety)
   if (sections.indexOf("additional") !== -1) {
     var addFields = [
-      buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.audience, "Who Is This Event For?"),
       buildFieldLine_(answers, FORM_CONFIG.canonicalQuestions.eventType, "Event Type"),
       buildMultilineField_(answers, FORM_CONFIG.canonicalQuestions.additionalDetails, "Additional Details We Should Know")
     ];
@@ -776,11 +891,11 @@ function buildCanonicalAnswers_(rawAnswers) {
     FORM_CONFIG.currentHeaders.contactEmail,
     FORM_CONFIG.canonicalQuestions.contactEmail
   );
-  answers[FORM_CONFIG.canonicalQuestions.requestingMinistry] = firstAnswer_(
+  answers[FORM_CONFIG.canonicalQuestions.requestingMinistry] = mapMinistriesToCanonical_(firstAnswer_(
     rawAnswers,
     FORM_CONFIG.currentHeaders.targetMinistries,
     FORM_CONFIG.canonicalQuestions.requestingMinistry
-  );
+  ));
   answers[FORM_CONFIG.canonicalQuestions.eventOwner] = firstAnswer_(
     rawAnswers,
     FORM_CONFIG.currentHeaders.contactName,
@@ -827,11 +942,11 @@ function buildCanonicalAnswers_(rawAnswers) {
     FORM_CONFIG.currentHeaders.eventPurpose,
     FORM_CONFIG.canonicalQuestions.audience
   );
-  answers[FORM_CONFIG.canonicalQuestions.targetMinistries] = firstAnswer_(
+  answers[FORM_CONFIG.canonicalQuestions.targetMinistries] = mapMinistriesToCanonical_(firstAnswer_(
     rawAnswers,
     FORM_CONFIG.currentHeaders.targetMinistries,
     FORM_CONFIG.canonicalQuestions.targetMinistries
-  );
+  ));
   answers[FORM_CONFIG.canonicalQuestions.setupSupport] = toYesNo_(
     anyTrue_(
       rawAnswers[FORM_CONFIG.currentHeaders.selfLockup] && !isYesValue_(rawAnswers[FORM_CONFIG.currentHeaders.selfLockup]),
@@ -863,11 +978,12 @@ function buildCanonicalAnswers_(rawAnswers) {
     FORM_CONFIG.currentHeaders.childcare,
     FORM_CONFIG.canonicalQuestions.childcare
   );
-  answers[FORM_CONFIG.canonicalQuestions.hospitality] = firstAnswer_(
+  var foodAnswer = firstAnswer_(
     rawAnswers,
     FORM_CONFIG.currentHeaders.foodNeeded,
     FORM_CONFIG.canonicalQuestions.hospitality
   );
+  answers[FORM_CONFIG.canonicalQuestions.hospitality] = (normalizeString_(foodAnswer).indexOf("yes, i need help") === 0) ? "Yes" : "No";
   answers[FORM_CONFIG.canonicalQuestions.safetyNotes] = "";
   answers[FORM_CONFIG.canonicalQuestions.anyTechSupport] = toYesNo_(
     anyTrue_(
@@ -1256,7 +1372,7 @@ function firstAnswer_(answers) {
 
 function isYesValue_(value) {
   var normalized = normalizeString_(value);
-  return normalized === "yes" || normalized === "true";
+  return normalized === "yes" || normalized === "true" || normalized.indexOf("yes") === 0;
 }
 
 function hasTextValue_(value) {
@@ -1530,4 +1646,233 @@ function getItemIndexById_(form, itemId) {
     }
   }
   return -1;
+}
+
+function mapMinistriesToCanonical_(value) {
+  if (!value) {
+    return "";
+  }
+  var parts = value.split(",").map(function(part) {
+    return part.trim();
+  });
+  var mapped = [];
+  for (var i = 0; i < parts.length; i++) {
+    var part = parts[i];
+    var normalized = normalizeString_(part);
+    if (normalized.indexOf("children") !== -1) {
+      mapped.push("Children");
+    } else if (normalized.indexOf("students") !== -1) {
+      mapped.push("Students");
+    } else if (normalized.indexOf("college") !== -1) {
+      mapped.push("College");
+    } else if (normalized.indexOf("young adults") !== -1) {
+      mapped.push("Young Adults");
+    } else if (normalized.indexOf("40s") !== -1) {
+      mapped.push("40s Plus");
+    } else {
+      mapped.push(part);
+    }
+  }
+  return mapped.join(", ");
+}
+
+function buildEmailHtmlBody_(match, answers) {
+  var roleName = match.role.role || "";
+  var sections = getSectionsForRole_(roleName);
+
+  var eventName = answers[FORM_CONFIG.canonicalQuestions.eventName] || "(not provided)";
+  var eventDate = answers[FORM_CONFIG.canonicalQuestions.eventDate] || "(not provided)";
+  var eventTime = buildEventTimeLine_(answers) || "";
+  var location = answers[FORM_CONFIG.canonicalQuestions.location] || "(not provided)";
+  var attendance = answers[FORM_CONFIG.canonicalQuestions.attendance] || "";
+
+  var requesterName = answers[FORM_CONFIG.canonicalQuestions.contactName] || "(not provided)";
+  var requesterEmail = answers[FORM_CONFIG.canonicalQuestions.contactEmail] || "";
+  var requestingMinistry = answers[FORM_CONFIG.canonicalQuestions.requestingMinistry] || "";
+  
+  var purpose = answers[FORM_CONFIG.canonicalQuestions.audience] || "";
+
+  var actionNeeded = hasTextValue_(match.role.actionNeeded)
+    ? match.role.actionNeeded
+    : "Review the event details below and follow up with the requester as needed.";
+  var matchedConditions = match.reasons.join("; ");
+
+  var html = [];
+  
+  // Style and Container
+  html.push('<div style="font-family: \'Segoe UI\', Roboto, Helvetica, Arial, sans-serif; color: #2D3748; line-height: 1.6; max-width: 650px; margin: 0 auto; padding: 20px; border: 1px solid #E2E8F0; border-radius: 8px; background-color: #F8FAFC;">');
+  
+  // Header Section
+  html.push('  <div style="background-color: #3B82F6; color: #FFFFFF; padding: 24px; border-radius: 6px 6px 0 0; margin-bottom: 20px;">');
+  html.push('    <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; font-weight: bold; opacity: 0.9; margin-bottom: 4px;">City Light Event Request</div>');
+  html.push('    <h1 style="font-size: 24px; font-weight: 800; margin: 0 0 12px 0; line-height: 1.2;">' + escapeHtml_(eventName) + '</h1>');
+  html.push('    <div style="font-size: 16px; font-weight: 600; margin-bottom: 12px;">');
+  html.push('      <span>🗓️ ' + escapeHtml_(eventDate) + (eventTime ? ' (' + escapeHtml_(eventTime.replace("Event Time: ", "")) + ')' : '') + '</span>');
+  html.push('    </div>');
+  html.push('    <div style="font-size: 14px; opacity: 0.95; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 10px; margin-top: 10px;">');
+  html.push('      <strong>Requested By:</strong> ' + escapeHtml_(requesterName) + (requesterEmail ? ' (<a href="mailto:' + escapeHtml_(requesterEmail) + '" style="color: #FFFFFF; text-decoration: underline;">' + escapeHtml_(requesterEmail) + '</a>)' : '') + (requestingMinistry ? ' | <strong>Ministry:</strong> ' + escapeHtml_(requestingMinistry) : ''));
+  html.push('    </div>');
+  html.push('  </div>');
+
+  // Metadata / Action Block
+  html.push('  <div style="background-color: #EFF6FF; border-left: 4px solid #3B82F6; padding: 16px; border-radius: 0 4px 4px 0; margin-bottom: 24px;">');
+  html.push('    <div style="margin-bottom: 6px; font-size: 15px;"><strong>Action Needed:</strong> <span style="color: #1E40AF; font-weight: 600;">' + escapeHtml_(actionNeeded) + '</span></div>');
+  html.push('    <div style="font-size: 13px; color: #4B5563;"><strong>Role:</strong> ' + escapeHtml_(roleName) + ' | <strong>Matched:</strong> ' + escapeHtml_(matchedConditions) + '</div>');
+  html.push('  </div>');
+
+  // Event Purpose/Description
+  if (purpose) {
+    html.push('  <div style="margin-bottom: 24px; background-color: #FFFFFF; padding: 16px; border: 1px solid #E2E8F0; border-radius: 6px;">');
+    html.push('    <h3 style="margin-top: 0; margin-bottom: 8px; color: #1E293B; font-size: 15px; font-weight: 700; border-bottom: 1px solid #F1F5F9; padding-bottom: 6px; text-transform: uppercase; letter-spacing: 0.02em;">Event Description</h3>');
+    html.push('    <p style="margin: 0; color: #475569; font-size: 14px; white-space: pre-wrap;">' + escapeHtml_(purpose) + '</p>');
+    html.push('  </div>');
+  }
+
+  // Helper to render sections as bold headers with tables
+  function renderSectionTable(title, fields) {
+    var validFields = [];
+    for (var i = 0; i < fields.length; i++) {
+      var val = getAnswerOrBlank_(answers, fields[i].key);
+      if (val) {
+        validFields.push({ label: fields[i].label, value: val, isMultiline: fields[i].isMultiline });
+      }
+    }
+    
+    if (validFields.length === 0) {
+      return '';
+    }
+
+    var sectionHtml = [];
+    sectionHtml.push('  <div style="margin-bottom: 24px;">');
+    sectionHtml.push('    <h3 style="margin-top: 0; margin-bottom: 12px; color: #1E293B; font-size: 15px; font-weight: 700; border-bottom: 2px solid #E2E8F0; padding-bottom: 4px; text-transform: uppercase; letter-spacing: 0.02em;">' + escapeHtml_(title) + '</h3>');
+    sectionHtml.push('    <table style="width: 100%; border-collapse: collapse; background-color: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 6px; overflow: hidden; font-size: 14px;">');
+    
+    for (var j = 0; j < validFields.length; j++) {
+      var field = validFields[j];
+      var rowBg = (j % 2 === 0) ? '#FFFFFF' : '#F8FAFC';
+      sectionHtml.push('      <tr style="background-color: ' + rowBg + '; border-bottom: 1px solid #F1F5F9;">');
+      sectionHtml.push('        <td style="padding: 10px 12px; font-weight: bold; width: 40%; color: #475569; vertical-align: top; border-right: 1px solid #F1F5F9;">' + escapeHtml_(field.label) + '</td>');
+      
+      if (field.isMultiline) {
+        sectionHtml.push('        <td style="padding: 10px 12px; color: #334155; vertical-align: top; white-space: pre-wrap;">' + escapeHtml_(field.value) + '</td>');
+      } else {
+        var valHtml = escapeHtml_(field.value);
+        var normVal = normalizeString_(field.value);
+        if (normVal === 'yes') {
+          valHtml = '<span style="background-color: #DCFCE7; color: #15803D; padding: 2px 8px; border-radius: 12px; font-weight: 600; font-size: 12px; display: inline-block;">Yes</span>';
+        } else if (normVal === 'no') {
+          valHtml = '<span style="background-color: #FEE2E2; color: #B91C1C; padding: 2px 8px; border-radius: 12px; font-weight: 600; font-size: 12px; display: inline-block;">No</span>';
+        }
+        sectionHtml.push('        <td style="padding: 10px 12px; color: #334155; vertical-align: top;">' + valHtml + '</td>');
+      }
+      sectionHtml.push('      </tr>');
+    }
+    
+    sectionHtml.push('    </table>');
+    sectionHtml.push('  </div>');
+    return sectionHtml.join('\n');
+  }
+
+  // Render sections
+  
+  // "summary" (Basic Details)
+  var summaryFields = [
+    { key: FORM_CONFIG.canonicalQuestions.location, label: "Location" },
+    { key: FORM_CONFIG.canonicalQuestions.attendance, label: "Estimated Attendance" }
+  ];
+  html.push(renderSectionTable("Basic Details", summaryFields));
+
+  // "setup"
+  if (sections.indexOf("setup") !== -1) {
+    var setupFields = [
+      { key: FORM_CONFIG.canonicalQuestions.setupSupport, label: "Setup Support Needed" },
+      { key: FORM_CONFIG.canonicalQuestions.roomLayout, label: "Room Layout Changes Needed" },
+      { key: FORM_CONFIG.canonicalQuestions.checkIn, label: "Check-In Or Registration Needed" },
+      { key: FORM_CONFIG.canonicalQuestions.setupDetails, label: "Setup Details", isMultiline: true }
+    ];
+    html.push(renderSectionTable("Setup & Logistics", setupFields));
+  }
+
+  // "hospitality"
+  if (sections.indexOf("hospitality") !== -1) {
+    var hospitalityFields = [
+      { key: FORM_CONFIG.canonicalQuestions.hospitality, label: "Hospitality Support Needed" },
+      { key: FORM_CONFIG.canonicalQuestions.additionalDetails, label: "Food & Meals Details", isMultiline: true }
+    ];
+    html.push(renderSectionTable("Hospitality & Food", hospitalityFields));
+  }
+
+  // "tech"
+  if (sections.indexOf("tech") !== -1) {
+    var techFields = [
+      { key: FORM_CONFIG.canonicalQuestions.anyTechSupport, label: "Any Tech Support Needed?" },
+      { key: FORM_CONFIG.canonicalQuestions.techRoles, label: "Tech Roles Needed" },
+      { key: FORM_CONFIG.canonicalQuestions.liveMusic, label: "Live Music Or Worship Support Needed" },
+      { key: FORM_CONFIG.canonicalQuestions.mediaCapture, label: "Media Capture Needed" },
+      { key: FORM_CONFIG.canonicalQuestions.additionalDetails, label: "Tech Notes & Details", isMultiline: true }
+    ];
+    html.push(renderSectionTable("Tech & Audio/Visual Needs", techFields));
+  }
+
+  // "childcare"
+  if (sections.indexOf("childcare") !== -1) {
+    var childcareFields = [
+      { key: FORM_CONFIG.canonicalQuestions.childcare, label: "Childcare Needed" },
+      { key: FORM_CONFIG.canonicalQuestions.additionalDetails, label: "Childcare Details", isMultiline: true }
+    ];
+    html.push(renderSectionTable("Childcare", childcareFields));
+  }
+
+  // "safety"
+  if (sections.indexOf("safety") !== -1) {
+    var safetyFields = [
+      { key: FORM_CONFIG.canonicalQuestions.safetyNotes, label: "Special Safety Considerations" }
+    ];
+    html.push(renderSectionTable("Safety Notes", safetyFields));
+  }
+
+  // "communications"
+  if (sections.indexOf("communications") !== -1) {
+    var commFields = [
+      { key: FORM_CONFIG.canonicalQuestions.targetMinistries, label: "Target Ministries For Announcement" },
+      { key: FORM_CONFIG.canonicalQuestions.planningCenter, label: "Planning Center Event Posting Needed" },
+      { key: FORM_CONFIG.canonicalQuestions.socialMedia, label: "Social Media Promotion Needed" },
+      { key: FORM_CONFIG.canonicalQuestions.announcementDetails, label: "Announcement Details" },
+      { key: FORM_CONFIG.canonicalQuestions.registrationDeadline, label: "Registration Deadline" }
+    ];
+    html.push(renderSectionTable("Communications & Announcements", commFields));
+  }
+
+  // "media"
+  if (sections.indexOf("media") !== -1) {
+    var mediaFields = [
+      { key: FORM_CONFIG.canonicalQuestions.mediaCapture, label: "Media Capture Needed" }
+    ];
+    html.push(renderSectionTable("Media Needs", mediaFields));
+  }
+
+  // "additional"
+  if (sections.indexOf("additional") !== -1) {
+    var addFields = [
+      { key: FORM_CONFIG.canonicalQuestions.audience, label: "Who Is This Event For?" },
+      { key: FORM_CONFIG.canonicalQuestions.eventType, label: "Event Type" },
+      { key: FORM_CONFIG.canonicalQuestions.additionalDetails, label: "Additional Details We Should Know", isMultiline: true }
+    ];
+    html.push(renderSectionTable("Additional Details", addFields));
+  }
+
+  html.push('</div>');
+  return html.join('\n');
+}
+
+function escapeHtml_(text) {
+  if (!text) {
+    return "";
+  }
+  return String(text)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
 }
