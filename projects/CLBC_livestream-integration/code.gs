@@ -246,11 +246,43 @@ function fetchUnlistedUpcomingStreams() {
 
     ensureHeaderRow_(sheet, headers);
 
-    var response = YouTube.LiveBroadcasts.list('id,snippet,status', {
-      broadcastStatus: 'upcoming',
-      broadcastType: 'all',
-      maxResults: 50
+    var props        = PropertiesService.getScriptProperties();
+    var clientId     = props.getProperty('YT_CLIENT_ID');
+    var clientSecret = props.getProperty('YT_CLIENT_SECRET');
+    var refreshToken = props.getProperty('YT_REFRESH_TOKEN');
+
+    if (!clientId || !clientSecret || !refreshToken) {
+      throw new Error("Missing OAuth credentials in Script Properties (YT_CLIENT_ID, YT_CLIENT_SECRET, or YT_REFRESH_TOKEN).");
+    }
+
+    var tokenResp = UrlFetchApp.fetch('https://oauth2.googleapis.com/token', {
+      method: 'post',
+      contentType: 'application/x-www-form-urlencoded',
+      payload: 'client_id='     + encodeURIComponent(clientId) +
+               '&client_secret=' + encodeURIComponent(clientSecret) +
+               '&refresh_token=' + encodeURIComponent(refreshToken) +
+               '&grant_type=refresh_token',
+      muteHttpExceptions: true
     });
+    
+    if (tokenResp.getResponseCode() !== 200) {
+      throw new Error("Failed to get OAuth token. Your Refresh Token may have expired. Response: " + tokenResp.getContentText());
+    }
+
+    var accessToken = JSON.parse(tokenResp.getContentText()).access_token;
+    var authHeader  = { Authorization: 'Bearer ' + accessToken };
+
+    var ytResp = UrlFetchApp.fetch(
+      'https://www.googleapis.com/youtube/v3/liveBroadcasts' +
+      '?part=id,snippet,status&broadcastStatus=upcoming&broadcastType=all&maxResults=50',
+      { headers: authHeader, muteHttpExceptions: true }
+    );
+    
+    if (ytResp.getResponseCode() !== 200) {
+      throw new Error("Failed to fetch upcoming broadcasts from YouTube API. Response: " + ytResp.getContentText());
+    }
+
+    var response = JSON.parse(ytResp.getContentText());
 
     if (!response.items || response.items.length === 0) {
       Logger.log('No upcoming broadcasts found. Check that the script is authorized for the Church Brand Account.');
