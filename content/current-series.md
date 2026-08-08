@@ -1,12 +1,12 @@
 ---
 title: Current Series
-description: The active study sequence for the group.
+description: The active study sequence for the small group.
 ---
 
 # Current Series
 
-We are currently walking through the Gospel of John.
+We are walking through the **Epistle of James** and **Gospel of Luke**.
 
-- Series: [[series/gospel-of-john]]
-- Start with: [[series/gospel-of-john/john-1-the-word-became-flesh]]
-- Most recent note: [[series/gospel-of-john/john-2-water-into-wine]]
+- **Active Expository Series**: [[series/James|Epistle of James]]
+- **Start With**: [[series/James/James 1_1-12|James 1:1-12 — Faith, Trials, and Wisdom]]
+- **Book Index**: [[Books of the Bible/James|James Study Index]]

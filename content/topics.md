@@ -1,9 +1,22 @@
 ---
-title: Topics
-description: Browse study notes by topic.
+title: Topics & Method Guides
+description: Browse small group study notes and guides by topic.
 ---
 
-# Topics
+# Topics & Method Guides
 
-- [[topics/incarnation]]
-- [[topics/signs]]
+## Guides & Hermeneutics
+
+- [[topics/How to Study the Bible|How to Study the Bible]]
+
+## Studies by Tag
+
+- [[thanksgiving|Thanksgiving]]
+- [[wisdom|Wisdom]]
+- [[confidence|Confidence]]
+- [[lament|Lament]]
+- [[epistle|Epistles]]
+- [[coronation|Coronation]]
+- [[pilgrimage-ascent|Pilgrimage & Ascent]]
+- [[history|History]]
+- [[imprecatory|Imprecatory]]

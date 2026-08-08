@@ -1,14 +1,11 @@
 ---
-title: John 1:1-18 | The Word Became Flesh
-description: Study notes on John 1:1-18 focused on the identity of Jesus as the eternal Word.
-date: 2026-03-20
+title: Luke 1
+description: Study notes on Luke 1 focused on the identity of Jesus as the eternal Word.
+date: 2026-09-20
 tags:
-  - john
-  - incarnation
-  - gospel-of-john
 ---
 
-# John 1:1-18 | The Word Became Flesh
+# Luke 1
 
 Passage: John 1:1-18
 
