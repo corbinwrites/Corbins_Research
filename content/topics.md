@@ -7,7 +7,7 @@ description: Browse small group study notes and guides by topic.
 
 ## Guides & Hermeneutics
 
-- [[topics/How to Study the Bible|How to Study the Bible]]
+- [[How to Study the Bible|How to Study the Bible]]
 
 ## Studies by Tag
 

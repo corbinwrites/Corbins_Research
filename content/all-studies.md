@@ -86,4 +86,4 @@ Welcome to the complete library of small group study notes, passage walkthroughs
 
 ## 🛠 Topics & Guides
 
-- [[topics/How to Study the Bible|How to Study the Bible]]
+- [[How to Study the Bible|How to Study the Bible]]

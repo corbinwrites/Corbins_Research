@@ -1,6 +1,6 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+// Custom styles for Corbin's Research
 
 :root[saved-theme="light"] {
   --study-banner: linear-gradient(135deg, rgba(122, 77, 33, 0.1), rgba(75, 106, 79, 0.1));
@@ -33,4 +33,42 @@ article img {
 
 .callout[data-callout="reading-path"] {
   border-left: 0.3rem solid var(--secondary);
+}
+
+// Explorer Menu Hierarchy & Non-Bold Child Items
+.explorer-content {
+  margin-top: 0.75rem;
+
+  // Folder header links & buttons
+  .folder-container div>button span,
+  .folder-container div>a {
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: -0.01em;
+    color: var(--secondary);
+  }
+
+  // Non-bold sub-items underneath folders
+  ul.explorer-ul li>a {
+    font-weight: 400 !important;
+    font-size: 0.9rem;
+    opacity: 0.85;
+    line-height: 1.6;
+    transition: opacity 0.15s ease, color 0.15s ease;
+
+    &:hover {
+      opacity: 1;
+      color: var(--secondary);
+      font-weight: 400 !important;
+    }
+  }
+
+  // Nested list borders and indentation
+  .folder-outer>ul {
+    border-left: 1.5px solid var(--lightgray);
+    margin-left: 0.4rem;
+    padding-left: 0.8rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.35rem;
+  }
 }
