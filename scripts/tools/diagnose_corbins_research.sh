@@ -7,8 +7,8 @@ set -euo pipefail
 
 DEFAULT_VAULT="/Users/corbin/Library/Mobile Documents/iCloud~md~obsidian/Documents/Corbin_Personal"
 VAULT="${CORBIN_VAULT_PATH:-$DEFAULT_VAULT}"
-REPO="/Users/corbin/Hal9000/Corbins_Research"
-ARCHIVE="/Users/corbin/Hal9000/Archived_Vault_Content/Corbin_Personal_2026-03-21"
+REPO="/Users/corbin/Hal9000/projects/Corbins_Research"
+ARCHIVE="/Users/corbin/Hal9000/archives/Archived_Vault_Content/Corbin_Personal_2026-03-21"
 
 echo "== Vault =="
 echo "Vault root: $VAULT"
@@ -47,7 +47,11 @@ fi
 
 echo
 echo "== Passage Frontmatter With Links =="
-rg -n '^Passage:.*\[\[' "$VAULT/Studies" || true
+if command -v rg >/dev/null 2>&1; then
+  rg -n '^Passage:.*\[\[' "$VAULT/Studies" || true
+else
+  grep -rn '^Passage:.*\[\[' "$VAULT/Studies" || true
+fi
 
 echo
 echo "== Repo =="

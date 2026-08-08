@@ -4,7 +4,7 @@ These helpers live in [`/Users/corbin/Hal9000/Scripts`](/Users/corbin/Hal9000/Sc
 
 ## `push_corbins_research.sh`
 
-Pushes the Quartz repo at [`/Users/corbin/Hal9000/Corbins_Research`](/Users/corbin/Hal9000/Corbins_Research).
+Pushes the Quartz repo at [`/Users/corbin/Hal9000/projects/Corbins_Research`](/Users/corbin/Hal9000/projects/Corbins_Research).
 
 Usage:
 
@@ -19,7 +19,7 @@ Suggested behavior:
 #!/usr/bin/env bash
 set -euo pipefail
 
-repo='/Users/corbin/Hal9000/Corbins_Research'
+repo='/Users/corbin/Hal9000/projects/Corbins_Research'
 message="${1:-Update Quartz site}"
 
 git -C "$repo" status --short
@@ -46,7 +46,7 @@ set -euo pipefail
 
 default_vault='/Users/corbin/Library/Mobile Documents/iCloud~md~obsidian/Documents/Corbin_Personal'
 vault="${CORBIN_VAULT_PATH:-$default_vault}"
-repo='/Users/corbin/Hal9000/Corbins_Research'
+repo='/Users/corbin/Hal9000/projects/Corbins_Research'
 archive='/Users/corbin/Hal9000/Archived_Vault_Content/Corbin_Personal_2026-03-21'
 
 echo "Vault: $vault"

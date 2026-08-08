@@ -17,7 +17,7 @@ This document describes the current migration and publishing setup for Corbin's 
 - Archived Notion import root: `/Users/corbin/Hal9000/Archived_Vault_Content/Corbin_Personal_2026-03-21`
 - Raw imported Bible notes should be treated as source material, not the final structure
 - Bible Linker is installed in `.obsidian/plugins/obsidian-bible-linker`
-- Quartz repo lives at `/Users/corbin/Hal9000/Corbins_Research`
+- Quartz repo lives at `/Users/corbin/Hal9000/projects/Corbins_Research`
 - Quartz build is configured for GitHub Pages project hosting at `https://clevercharlatan.github.io/Corbins_Research`
 
 ## Architecture
@@ -193,7 +193,7 @@ The earlier `com~apple~CloudDocs/Obsidian/...` path was not sufficient on this m
 ### Useful Paths
 
 - Vault root: `/Users/corbin/Library/Mobile Documents/iCloud~md~obsidian/Documents/Corbin_Personal`
-- Quartz repo: `/Users/corbin/Hal9000/Corbins_Research`
+- Quartz repo: `/Users/corbin/Hal9000/projects/Corbins_Research`
 - Backup snapshot: `/Users/corbin/Hal9000/Corbin_Personal_backup_2026-03-20T2359`
 
 ### Useful Commands
@@ -207,11 +207,11 @@ rg -n '^Passage:.*\[\[' '/Users/corbin/Library/Mobile Documents/iCloud~md~obsidi
 ```
 
 ```sh
-cd '/Users/corbin/Hal9000/Corbins_Research' && node ./quartz/bootstrap-cli.mjs build
+cd '/Users/corbin/Hal9000/projects/Corbins_Research' && npx quartz build
 ```
 
 ```sh
-git -C '/Users/corbin/Hal9000/Corbins_Research' status --short
+git -C '/Users/corbin/Hal9000/projects/Corbins_Research' status --short
 ```
 
 ## Working Rules

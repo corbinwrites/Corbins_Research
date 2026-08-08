@@ -3,9 +3,9 @@ set -euo pipefail
 
 # Usage:
 #   ./push_corbins_research.sh [commit message]
-# Defaults to committing all changes in /Users/corbin/Hal9000/Corbins_Research and pushing main.
+# Defaults to committing all changes in /Users/corbin/Hal9000/projects/Corbins_Research and pushing main.
 
-REPO="/Users/corbin/Hal9000/Corbins_Research"
+REPO="/Users/corbin/Hal9000/projects/Corbins_Research"
 DEFAULT_MSG="Update Quartz Bible study site"
 MSG="${1:-$DEFAULT_MSG}"
 
