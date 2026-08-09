@@ -6,14 +6,9 @@ Passage to Memorize: [[Bible/ESV/James/Jas 4#1|James 4:1-5]]
 
 # Questions
 
-1. **What was your favorite quote and why?**
-2. **How was it writing the gospel this week? What went well? What didn’t work as great? Were you able to evangelize this week?**
-3. **Researcher George Barna says that most Christians who witness to others come away feeling like failures. So, since they don’t like to fail, they redirect their efforts into spiritual activities in which they are more likely to be satisfied and successful. Have you found this to be true? Why or why not?**
-4. **What do the following verses reveal about evangelism?**
-   1. **[[Bible/ESV/Luke/Luke 24#27|Luke 24:27]] - **Jesus, himself, evangelized. How did he do it? He used scripture. His method was that he went to older verses an explained what they said about him. He showed how they pointed to the messiah and how he was that Messiah.
-   2. **[[Bible/ESV/John/John 20#21|John 20:21]] - **Jesus didn’t come to do all the evangelizing though! He came to send out his disciples. We, as believers, are also disciples. Granted are not apostles, but we are disciples, followers of our beloved teacher. So with that we must also go out an evangelize
-5. **Why is it necessary to communicate the gospel’s content in addition to living out its truths daily?**
-6. **Having read both the chapter and the article what do you learn about practicing evangelism? (Some helpful follow-up questions to get you thinking: Is there a difference between silence and listening? Is it possible to listen too much? Is it possible to be too eager to speak?)**
+1. **What was your favorite quote and why?** 2.**How was it writing the gospel this week? What went well? What didn’t work as great? Were you able to evangelize this week?** 3.**Researcher George Barna says that most Christians who witness to others come away feeling like failures. So, since they don’t like to fail, they redirect their efforts into spiritual activities in which they are more likely to be satisfied and successful. Have you found this to be true? Why or why not?** 4.**What do the following verses reveal about evangelism?** 1.**[[Bible/ESV/Luke/Luke 24#27|Luke 24:27]] -** Jesus, himself, evangelized. How did he do it? He used scripture. His method was that he went to older verses an explained what they said about him. He showed how they pointed to the messiah and how he was that Messiah.
+   2. **[[Bible/ESV/John/John 20#21|John 20:21]] -** Jesus didn’t come to do all the evangelizing though! He came to send out his disciples. We, as believers, are also disciples. Granted are not apostles, but we are disciples, followers of our beloved teacher. So with that we must also go out an evangelize
+5. **Why is it necessary to communicate the gospel’s content in addition to living out its truths daily?** 6.**Having read both the chapter and the article what do you learn about practicing evangelism? (Some helpful follow-up questions to get you thinking: Is there a difference between silence and listening? Is it possible to listen too much? Is it possible to be too eager to speak?)**
    [[Bible/ESV/James/Jas 1#19|James 1:19]] - quick to hear, slow to speak, slow to anger.
    [[Bible/ESV/Proverbs/Prov 18#13|Proverbs 18:13]] - if one gives an answer before he hears, it is his folly and shame.
 

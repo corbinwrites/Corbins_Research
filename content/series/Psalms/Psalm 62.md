@@ -24,8 +24,7 @@ Book: Psalm
    ”People” - Israel
 4. **What is the intent of this psalm? How would it be used?**
    This psalm would be used to remind people of the futility of man’s efforts and the enduring unshakable nature of God
-5. **How does singing this in corporate worship shape the hearts of the covenant people?
-   **This would remind the congregation
+5. **How does singing this in corporate worship shape the hearts of the covenant people?** This would remind the congregation
 6. **What is the structure of this psalm?**
 
 <!-- Column 1 -->
@@ -59,7 +58,7 @@ John MacArthur
 
 ## Awaits the Lord (v. 1-2)
 
-**v. 1 - “**Alone” - Only
+**v. 1 - “** Alone” - Only
 
 For God only does my soul wait in silence.
 
@@ -69,7 +68,7 @@ For God only does my soul wait in silence.
 
 David, rightly attributes his salvation to God. I would argue that _is_ what David is waiting for, his salvation. Certainly in a sense for his soul, but even practically from his bad situation.
 
-**v. 2 - **David says that the Lord is his rock, salvation, a fortress.
+**v. 2 -** David says that the Lord is his rock, salvation, a fortress.
 
 > [!question] ❓
 > What’s the significance of God being a rock?
@@ -80,18 +79,12 @@ _A place of refuge that can repel any attack. All are safe inside. _
 
 Since the Lord is his refuge, his protection, David says he will not be shaken.
 
-## **Co**nfronts the Enemy (v. 3-4)
-
-**v. 3 - **speaking of
+## **Co** nfronts the Enemy (v. 3-4)**v. 3 -** speaking of
 
 > [!question] ❓
 > What is meant of like leaning wall, a tottering fence? What is the subject that is “like” this?
 
-**Option 1:** John Collins/ESV - Subject is “him”, the victim of the attack. He* feels* like he’s going to be knocked over, despite the previous statement that he will* “not be shaken.”*
-
-**Option 2: **John MacArthur - Subject is “you”, the perpetuator of the attack. The perpetuator is on shaky ground. The previous statement of the victim being “not greatly shaken” reigns true.
-
-**Option 3:** Rachelle Harris - Subject is “attack.” The attack is like a wall or tottering fence. The attack applies pressure to the victim, but worse yet, attempts to undermine the foundation it is attached to. That foundation could be “the people of God” and this attack is “sowing discord among the people”. This attack could be spreading falsehoods about the man in the high place, the king.
+**Option 1:** John Collins/ESV - Subject is “him”, the victim of the attack. He* feels *like he’s going to be knocked over, despite the previous statement that he will* “not be shaken.”***Option 2:** John MacArthur - Subject is “you”, the perpetuator of the attack. The perpetuator is on shaky ground. The previous statement of the victim being “not greatly shaken” reigns true.**Option 3:** Rachelle Harris - Subject is “attack.” The attack is like a wall or tottering fence. The attack applies pressure to the victim, but worse yet, attempts to undermine the foundation it is attached to. That foundation could be “the people of God” and this attack is “sowing discord among the people”. This attack could be spreading falsehoods about the man in the high place, the king.
 
 In all situations it is clear that the attack is bad for the victim and it is conducted by wicked men.
 
@@ -144,7 +137,7 @@ Let’s look at verse 9
 
 \*Think of scales used for measuring. You put something on the right side, and something on left side. You do this to see if they weigh the same.
 
-David puts people of low and high rank on one side. They rise on the scale, they are light, not heavy. They are lighter than a breath. We would \***\*not\*\*** value this. We value heavy things on the scale. \*
+David puts people of low and high rank on one side. They rise on the scale, they are light, not heavy. They are lighter than a breath. We would \***\*not\*\***value this. We value heavy things on the scale. \*
 
 > [!question] ❓
 > What’s on the other side of the scale?

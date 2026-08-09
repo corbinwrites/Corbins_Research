@@ -9,10 +9,7 @@ Tags:
 Book: Psalm
 ---
 
-# **Questions to Ask**
-
-1. **What is the structure of this psalm?
-   **Bless the King’s Rule (v. 1-7)
+# **Questions to Ask** 1.**What is the structure of this psalm?** Bless the King’s Rule (v. 1-7)
    Bless the King’s Dominion(v. 8-14)
    Grant the King Prosperity (v. 15-17)
    Doxology (v. 18-19)
@@ -24,14 +21,12 @@ A Compassionate Reign (12-14)
 A Prosperous Reign (15-17)
 A Glorious Reign (18-20)
 
-*Collins
-*I.  Let the King Judge Your People Justly (72:1–4)
+*Collins *I.  Let the King Judge Your People Justly (72:1–4)
 II.  May People Fear You Because of His Reign (72:5–7)
 III.  May All the Kings of the Earth Serve Him (72:8–11)
 IV.  He Brings Justice and Relief to the Poor and Needy (72:12–14)
 V.  May All Peoples Be Blessed in Him (72:15–17)
-VI.  Blessed Be the Lord: Doxology Concluding Book 2 (72:18–20) 2. **What kind of psalm is this?
-**Coronation, Praise 3. **If known, what is the historical context for this psalm? \***Of Solomon \*is a bit of a tricky situation. There is one of two ways we can go with this:
+VI.  Blessed Be the Lord: Doxology Concluding Book 2 (72:18–20) 2. **What kind of psalm is this?** Coronation, Praise 3.**If known, what is the historical context for this psalm? \***Of Solomon \*is a bit of a tricky situation. There is one of two ways we can go with this:
 
 1. Solomon has written this and is praying this blessing to future kings. He has received the blessings outlined in v. 10-11 (Kings of Tarshish _have_ given him tribute) and prays the same for those to come. This<u> does not connect </u>with the doxology at the end of the passage/end of book two
 2. David prays this _for Solomon_. Meaning the blessings that have come from Solomon are a result of this prayer that David has *for *him. This <u>does connect well </u>with the doxology at the end of the passage/end of book two. I like how this plays on [[Bible/ESV/James/Jas 5#16|James 5:16]], “the prayer of a righteous person has great power as it’s working.” As many of these prayers are answered _for Solomon_, but ultimately in Jesus.
@@ -39,11 +34,9 @@ VI.  Blessed Be the Lord: Doxology Concluding Book 2 (72:18–20) 2. **What ki
    He = The King
    Your, You = God
    People = People of Israel
-4. **What is the intent of this psalm? How would it be used?
-   **This Psalm would be used to pray for blessing for the King of Israel, that he would honor God in his rule.
+4. **What is the intent of this psalm? How would it be used?** This Psalm would be used to pray for blessing for the King of Israel, that he would honor God in his rule.
    We can also use this Psalm to look down the hallway of time to the coming of the final, true king of Israel, Jesus. Who *is *born of the line of David and carries out this in his enthronement.
-5. **How does singing this in corporate worship shape the hearts of the covenant people?
-   **This reminds the covenant people that the King is subjected to God and that his success is dependent on his fealty to God.
+5. **How does singing this in corporate worship shape the hearts of the covenant people?** This reminds the covenant people that the King is subjected to God and that his success is dependent on his fealty to God.
 
 ## Preamble on Jesus
 
@@ -60,7 +53,7 @@ With this covenant in mind, the Psalmist rather _boldly_ praises for some hefty 
 
 So what makes this Psalm interesting is that the Psalmist prays this, the Hebrew sings this, for a hope and understanding that the next king is this. They could sing this for every king that comes down the line, but they will fall short. So, in a distance sense, this prayer is only truly realized at the birth of Jesus. Who is the king that realizes each of these prayers at his final coronation, when he is seated as king over the remade world.
 
-So I give this preamble to say, this is not prophecy, but rather a prayer with near and far implications. F**or the Hebrew believer, they do pray this for the incoming king, whoever he may be, with the hope of him being the fulfillment of 2 Samuel 7. But in a far sense, their prayers \*\*\***are **\***answered in Jesus. \*\*
+So I give this preamble to say, this is not prophecy, but rather a prayer with near and far implications. F**or the Hebrew believer, they do pray this for the incoming king, whoever he may be, with the hope of him being the fulfillment of 2 Samuel 7. But in a far sense, their prayers \*\*\***are**\***answered in Jesus. \*\*
 
 While teaching tonight, I’ll refer to the main subject in the Psalm as, the King. It is completely fair for you to read me using that title for “King Jesus.” I’ll use that title simply because of the intriguing dual nature of this Psalm.
 
@@ -92,9 +85,7 @@ The king should be righteous and exemplify this quality. Because of *his *righte
 
 Said more simply, let the mountains bear prosperity to the people _when they are in a season of righteousness_. Much like the orchard bears fruit in the fall, so should the hills be white with harvest _when the people are righteous._
 
-**Justice used for defense and punishment**
-
-Finally, the Psalmist prays that the King will *defend *the cause of the poor and give deliverance to the needy.
+**Justice used for defense and punishment** Finally, the Psalmist prays that the King will *defend *the cause of the poor and give deliverance to the needy.
 
 > [!question] ❓
 > What does defend mean?
@@ -114,7 +105,7 @@ This universal reign starts with a small specific group:
 > Who is the “they” in verse 5?
 > *The children of the needy *tied in the Hebrew parallelism to the _poor of the people_
 
-**The people of God **is where this King’s reign starts. The psalmist prays that they will fear God as long as the sun and the moon endure, to make it more clear, the Psalmist interprets that one for you “for all generations!”
+**The people of God** is where this King’s reign starts. The psalmist prays that they will fear God as long as the sun and the moon endure, to make it more clear, the Psalmist interprets that one for you “for all generations!”
 
 > [!question] ❓
 > May he be like rain that falls on the mown grass, like showers that water the earth! What meaneth this?
@@ -137,7 +128,7 @@ Next the psalmist moves the scope into a **global** reign.
 
 ## A Compassionate Reign (12-14)
 
-Next we see that this not only **universal, **but compassionate as well.\*\* **We see the king not only help his people, but everyone. Notice that in verses 12-14 we do not see the phrase “of the people.” That means the king has arrived to help **all \*\*the needy, weak, and poor.
+Next we see that this not only **universal,** but compassionate as well.\*\***We see the king not only help his people, but everyone. Notice that in verses 12-14 we do not see the phrase “of the people.” That means the king has arrived to help** all \*\*the needy, weak, and poor.
 
 > [!question] ❓
 > What does the king do for the needy weak and poor in verses 12-14?
@@ -159,7 +150,7 @@ This king, who has the treasures of Sheba and Tarshish opened to him, finds the 
 
 The Psalmist similarly breaks out in praise at that comment as well!
 
-In the next three verses (15-17) the Psalmist prays the king has a **prosperous **reign and recaps many of things stated previously in the passage
+In the next three verses (15-17) the Psalmist prays the king has a **prosperous** reign and recaps many of things stated previously in the passage
 
 > [!question] ❓
 > What images, ideas, and themes are repeated in this section?

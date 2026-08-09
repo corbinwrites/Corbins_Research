@@ -9,9 +9,7 @@ Tags:
 Book: Psalm
 ---
 
-# **Questions to Ask**
-
-**What is the structure of this psalm?**
+# **Questions to Ask****What is the structure of this psalm?**
 
 - Pretty loose!
 
@@ -55,9 +53,7 @@ A reminder of how the Lord has continued to protect and care for us. Within a co
 
 As I’ve been reading this, this Psalmist comes across like Kramer from Seinfield. He bursts into the bible with lots of words and it’s just from the heart. Thankfully, this psalmist’s heart is filled with love, but that means the structure is super loose.
 
-## **Praise (v. 1-11)**
-
-**Praise Sandwich (v. 1-9)**
+## **Praise (v. 1-11)****Praise Sandwich (v. 1-9)**
 
 I’m going to skip around a bit in this first part, so prepare yourself.
 
@@ -65,13 +61,9 @@ v.1 - The Psalmist begins by proclaiming his love for the Lord because He (the L
 
 > [!question] ❓
 > What is his plea for mercy?
-> \*v. 3-4
-
-*What did the psalmist ask for mercy from?
+> \*v. 3-4 *What did the psalmist ask for mercy from?
 *Physical death, perhaps
-Certainly spiritual harm! He asks for the Lord to deliver his soul\*
-
-Yes, the psalmist’s pleas for mercy from death (spiritual and physical) were heard by they Lord. In verse 2, he expounds how the Lord heard him and the psalmist says that the Lord **inclined** his ear to him.
+Certainly spiritual harm! He asks for the Lord to deliver his soul\*Yes, the psalmist’s pleas for mercy from death (spiritual and physical) were heard by they Lord. In verse 2, he expounds how the Lord heard him and the psalmist says that the Lord**inclined** his ear to him.
 
 > [!question] ❓
 > What does inclined mean?
@@ -130,7 +122,7 @@ Admittedly the structure breaks up here. The psalmist in this outpouring of love
 
 Despite all the hardship he continued to believe. A lesson to us as well! Even in our trial, so should we follow this example and believe!
 
-## Payment** (v. 12-19)**
+## Payment**(v. 12-19)**
 
 From all of this, the Psalmist wants to repay the Lord for what he’s done (so much so he says it twice). However, this section opens up with a rhetorical question,
 
@@ -186,7 +178,7 @@ The Psalmist is no longer bound to death but instead is in servanthood to the tr
 
 With this section of praise complete, the psalmist repeats 13-14 once more in 17-18 with a small variation.
 
-The Psalmist is **serious about **this. He really wants to offer to the Lord a peace offering. He wants to sacrifice to the Lord for the work that God has done in his life.
+The Psalmist is **serious about** this. He really wants to offer to the Lord a peace offering. He wants to sacrifice to the Lord for the work that God has done in his life.
 
 And that’s the first question I want you to all think about tonight.
 

@@ -11,10 +11,7 @@ Tags:
 Book: Psalm
 ---
 
-# **Questions to Ask**
-
-1. **What is the structure of this psalm?
-   **3 Requests and Praise - Collins
+# **Questions to Ask** 1.**What is the structure of this psalm?** 3 Requests and Praise - Collins
    Deliver Me from the Plots of the Wicked (1-5)
    O Lord, My Strength, Hear Me (6-8)
    Let Their Schemes Recoil on Them! (9-11)
@@ -24,20 +21,15 @@ Book: Psalm
 _Complain, Prayer, Confident Hope of Relief_
 Concerning David (1-5)
 Concerning David’s Enemies (6-11)
-Concerning the Lord (12-13) 2. **What kind of psalm is this?
-**Imprecatory, Lament/Confidence 3. **If known, what is the historical context for this psalm?
-**None can be definitively matched 4. **Who are the subjects within the psalm?
-**David
+Concerning the Lord (12-13) 2. **What kind of psalm is this?** Imprecatory, Lament/Confidence 3.**If known, what is the historical context for this psalm?** None can be definitively matched 4.**Who are the subjects within the psalm?** David
 God
-The Wicked (could be fellow Israelites) [[Bible/ESV/Romans/Rom 3#13|Romans 3:13]] Paul uses verse 3 to share that Jews and Greeks are alike under sin. Since Paul is using this to show how Jews have sinned, we could ascertain that the enemies described here may have been unfaithful Israelites. 5. **What is the intent of this psalm? How would it be used?
-**To remember God’s persistence when facing persecution 6. **How does singing this in corporate worship shape the hearts of the covenant people?
-**“A priest in Israel should choose this individual lament for cases in which a member of his faithful flock is under threat from powerful and unfaithful members. This would strengthen the faith and courage of all the faithful and also strengthen the bond of mutual support tying the faithful together into a living community; it would also serve to warn the unfaithful of God’s attitude toward their exploitative schemes, which must eventually be punished if repentance is not forthcoming.” Collins
+The Wicked (could be fellow Israelites) [[Bible/ESV/Romans/Rom 3#13|Romans 3:13]] Paul uses verse 3 to share that Jews and Greeks are alike under sin. Since Paul is using this to show how Jews have sinned, we could ascertain that the enemies described here may have been unfaithful Israelites. 5. **What is the intent of this psalm? How would it be used?** To remember God’s persistence when facing persecution 6.**How does singing this in corporate worship shape the hearts of the covenant people?** “A priest in Israel should choose this individual lament for cases in which a member of his faithful flock is under threat from powerful and unfaithful members. This would strengthen the faith and courage of all the faithful and also strengthen the bond of mutual support tying the faithful together into a living community; it would also serve to warn the unfaithful of God’s attitude toward their exploitative schemes, which must eventually be punished if repentance is not forthcoming.” Collins
 
 # Lesson
 
 ## Thoughts on Imprecatory Psalms
 
-A question for you to not to answer out loud but to ponder: A*re some Psalms sinful? *We may first balk at a question like this when we consider serene Psalms such as [[Bible/ESV/Psalms/Ps 23|Psalm 23]] (The Lord is my Shepherd) or [[Bible/ESV/Psalms/Ps 51|Psalm 51]] (Create in Me a Clean Heart), but when we encounter imprecatory psalms the question can sound like it has some merit. **Are imprecatory psalms sinful?** Here in this passage David clearly calls judgement on the wicked. Aren’t we supposed to pray for them instead? Perhaps some Psalms operate in a similar way to how Judges depicts the sinful acts of Israel.
+A question for you to not to answer out loud but to ponder: A *re some Psalms sinful?*We may first balk at a question like this when we consider serene Psalms such as [[Bible/ESV/Psalms/Ps 23|Psalm 23]] (The Lord is my Shepherd) or [[Bible/ESV/Psalms/Ps 51|Psalm 51]] (Create in Me a Clean Heart), but when we encounter imprecatory psalms the question can sound like it has some merit. **Are imprecatory psalms sinful?** Here in this passage David clearly calls judgement on the wicked. Aren’t we supposed to pray for them instead? Perhaps some Psalms operate in a similar way to how Judges depicts the sinful acts of Israel.
 
 In the Lord’s providence Elliot Kang has been asked this question twice this year and I had the pleasure of talking through his answer and researching it on my own prior to tonight. Elliot and I share the same answer to this question: **No none of the Psalms are sinful, including this one. Let me give you a few reasons why.**
 
@@ -51,7 +43,7 @@ As I’ve mentioned previously with this passage in particular, Paul quotes vers
 
 ### The Subject of the Imprecatory Psalms
 
-Critical for us to remember as well is that the enemies mentioned in the Psalm is **God’s** enemies. We are not cursing ***our own ***enemies.
+Critical for us to remember as well is that the enemies mentioned in the Psalm is **God’s** enemies. We are not cursing***our own***enemies.
 
 > [!question] ❓
 > Is there a difference between an enemy of God and a personal enemy?
@@ -98,7 +90,7 @@ David needs help. He could be worried or weakened. He’s perceptive and sees th
 
 Speaking for myself here, I would be tempted to “just handle this one for God” if I saw so blatant a trap. I admire this quality in David.
 
-David takes a breath. _Selah_. The congregation singing takes a breath. *Selah. *Both of have sung of the wickedness that they see. Next both David and the congregation singing, move to ask for God’s help.
+David takes a breath. _Selah_. The congregation singing takes a breath. *Selah.*Both of have sung of the wickedness that they see. Next both David and the congregation singing, move to ask for God’s help.
 
 ## Grant Not the Desires of the Wicked (v. 6-8)
 
@@ -134,7 +126,7 @@ _Selah_. David takes a breath before carrying his final request…
 
 ## Let the Mischief of Their Lips Overwhelm Them! (v. 9-11)
 
-David focuses on a body part of the evil men once more. He returns back to their head, face, and lips. He’s previously mentioned their serpentine features in **verse 3. **His final request is for **justice**.
+David focuses on a body part of the evil men once more. He returns back to their head, face, and lips. He’s previously mentioned their serpentine features in **verse 3.** His final request is for**justice**.
 
 David asks the Lord that He will return the trouble they cause to return back to them. Which is a quite reasonable prayer, “God let them experience the actions of their consequences.”
 
@@ -145,7 +137,7 @@ David asks the Lord that He will return the trouble they cause to return back to
 > v. 5 - Entrapping the People of God (David)
 > v. 8 - Self-exaltation (even over God)
 
-So with their wickedness in mind, David asks for something to cover the wicked… **burning coals**. We could be led to believe there is purification imagery here, but we see it’s more of destruction as we see when David asks they be thrown “into fire” and is further proven by the idea that these men should not **rise again** (v. 10) and **not be established** (v.11).
+So with their wickedness in mind, David asks for something to cover the wicked… **burning coals**. We could be led to believe there is purification imagery here, but we see it’s more of destruction as we see when David asks they be thrown “into fire” and is further proven by the idea that these men should not** rise again**(v. 10) and** not be established** (v.11).
 
 To finish this third request David once again returns to the idea he started with
 

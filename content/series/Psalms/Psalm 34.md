@@ -14,16 +14,13 @@ Book: Psalm
 
 <!-- Column 1 -->
 
-1. **What is the structure of this psalm?
-   **This is an acrostic! An alphabet poem. From a logical stand point we can break this into two parts 1. Praise 2. Preaching
+1. **What is the structure of this psalm?** This is an acrostic! An alphabet poem. From a logical stand point we can break this into two parts 1. Praise 2. Preaching
 2. **What kind of psalm is this?**
    Primarily, Thanksgiving with elements of wisdom
-3. **If known, what is the historical context for this psalm?**
-   **1 Samuel 21:10-15**, worth noting that this tie is not _vital_ to interpretation, but a nice to know
+3. **If known, what is the historical context for this psalm?****1 Samuel 21:10-15**, worth noting that this tie is not _vital_ to interpretation, but a nice to know
    MacArthur has a helpful comment that “Abimelech” like the word “Pharaoh” is a designation of kingship, rather than a proper name.
 4. **Who are the subjects within the psalm?** 3. I - David 4. He - The LORD 5. His Saints, the righteous, his servants 6. Those who do evil, the wicked
-5. **What is the intent of this psalm? How would it be used?
-   **To praise the Lord for answered prayer and to share wisdom on how to receive the Lord’s blessing
+5. **What is the intent of this psalm? How would it be used?** To praise the Lord for answered prayer and to share wisdom on how to receive the Lord’s blessing
 6. **How does singing this in corporate worship shape the hearts of the covenant people?** 7. This reminds believers that the Lord provides. He is close to the afflicted and that he cares for his people.
    > \*“The logic is clear: by recounting the reasons for gratitude to God for his care, the members of God’s people encourage one another to still greater trust and faithfulness.”
 
@@ -35,7 +32,7 @@ Book: Psalm
 
 # Lesson
 
-**Main Idea: **Let us praise God! He provides, he is close to the afflicted and cares for those who fear him. By singing praise together, the members of God’s people encourage one another to still greater trust and faithfulness.
+**Main Idea:** Let us praise God! He provides, he is close to the afflicted and cares for those who fear him. By singing praise together, the members of God’s people encourage one another to still greater trust and faithfulness.
 
 ## Preamble
 
@@ -97,7 +94,7 @@ After this corporate “call to worship”, David reflects specifically on how t
 > v. 4 “I sought the Lord and he answered me
 > an delivered me from all my fears”
 
-Here David reflects on the experience he had with the king of Gath. The Lord saw fit to bless David’s ruse. As David sings this in confidence, so can we reflect on those words exactly as they appear on the page. A question for you to consider on you own, **has the Lord answered a prayer of yours and delivered you from the fear in that situation? **If so, you might feel like David does. Joyous! What a great thing to celebrate.
+Here David reflects on the experience he had with the king of Gath. The Lord saw fit to bless David’s ruse. As David sings this in confidence, so can we reflect on those words exactly as they appear on the page. A question for you to consider on you own, **has the Lord answered a prayer of yours and delivered you from the fear in that situation?** If so, you might feel like David does. Joyous! What a great thing to celebrate.
 
 > [!question] ❓
 > What does David mean in verse 5? What does it mean for a face to be radiant?
@@ -106,7 +103,7 @@ Here David reflects on the experience he had with the king of Gath. The Lord saw
 
 David invokes Moses imagery with this phrase.
 
-> **29 **When Moses came down from Mount Sinai, with the two tablets of the testimony in his hand as he came down from the mountain, Moses did not know that the skin of his face shone because he had been talking with God.[[a](https://www.biblegateway.com/passage/?search=Exodus%2034%3A29-35&version=ESV#fen-ESV-2526a)] **30 **Aaron and all the people of Israel saw Moses, and behold, the skin of his face shone, and they were afraid to come near him. **31 **But Moses called to them, and Aaron and all the leaders of the congregation returned to him, and Moses talked with them. **32 **Afterward all the people of Israel came near, and he commanded them all that the Lord had spoken with him in Mount Sinai. **33 **And when Moses had finished speaking with them, he put a veil over his face.
+> **29 ** When Moses came down from Mount Sinai, with the two tablets of the testimony in his hand as he came down from the mountain, Moses did not know that the skin of his face shone because he had been talking with God.[[a](https://www.biblegateway.com/passage/?search=Exodus%2034%3A29-35&version=ESV#fen-ESV-2526a)] **30 ** Aaron and all the people of Israel saw Moses, and behold, the skin of his face shone, and they were afraid to come near him. **31 ** But Moses called to them, and Aaron and all the leaders of the congregation returned to him, and Moses talked with them. **32 ** Afterward all the people of Israel came near, and he commanded them all that the Lord had spoken with him in Mount Sinai. **33 ** And when Moses had finished speaking with them, he put a veil over his face.
 [[Bible/ESV/Exodus/Exod 34#29|Exodus 34:29-35]]
 
 As we look at Exodus this idea of “looking” to God is not simply a glance, but a deep examination, a gaze. Moses spends _lots_ of time with God listening to his Word and faithfully carried it to Israel. He spent so much time, his face literally shone! In contrast is the “face of shame.”
@@ -115,9 +112,7 @@ Collins helpfully recaps this section
 
 > For the “face” to be “ashamed” is for someone to be disappointed at not finding what was hoped for. The faithful, though, will not find their prayers have been in vain.
 
-The way verse 4 and 5 build on each other are fascinating. To paraphrase the truth we are personally singing here, **If I seek the Lord, he will answer me. If I look to him (gaze at him) I will not be disappointed with the answer he gives me. **
-
-David defends his case further in **verses 6 and 7**
+The way verse 4 and 5 build on each other are fascinating. To paraphrase the truth we are personally singing here, **If I seek the Lord, he will answer me. If I look to him (gaze at him) I will not be disappointed with the answer he gives me.** David defends his case further in**verses 6 and 7**
 
 v.6, He praises the Lord for how He saved David from his trouble. Again, let’s think about singing these words as a congregation though. David describes himself as the poor man, but so do the people of Israel sing those same words, and can’t we as well. I am the poor man who cried, you are the poor man who cried. As New Testament believers and at a base level, the Lord has answered our prayers a differently than David and that has taken he form of Jesus Christ’s life, death, and resurrection.
 
@@ -192,7 +187,7 @@ Thankfully, David is a good teacher. In verses 15-22 he gives us reasons why we 
 > The Lord redeems the life of the righteous (v.22)
 > The Lord does not condemn the righteous (v.22)
 
-**Brokenhearted and Crushed in Spirit- **refer to people who are humbled before God, the pride and stubbornness in their hearts being subdued (John C Collins)
+**Brokenhearted and Crushed in Spirit-** refer to people who are humbled before God, the pride and stubbornness in their hearts being subdued (John C Collins)
 
 In contrast to those that are righteous are those who are wicked. Now keep in mind that David has equated those who fear the Lord to those who are righteous. So who would be wicked? Those who don’t fear the Lord. Those who do no obey, surrender, humble themselves before the Lord.
 
@@ -222,7 +217,7 @@ _The Death of Jesus_
 [28] After this, Jesus, knowing that all was now finished, said (to fulfill the Scripture), “I thirst.” [29] A jar full of sour wine stood there, so they put a sponge full of the sour wine on a hyssop branch and held it to his mouth. [30] When Jesus had received the sour wine, he said, “It is finished,” and he bowed his head and gave up his spirit.
 
 _Jesus’ Side Is Pierced_
-[31] Since it was the day of Preparation, and so that the bodies would not remain on the cross on the Sabbath (for that Sabbath was a high day), the Jews asked Pilate that their legs might be broken and that they might be taken away. [32] So the soldiers came and broke the legs of the first, and of the other who had been crucified with him. [33] But when they came to Jesus and saw that he was already dead, they did not break his legs. [34] But one of the soldiers pierced his side with a spear, and at once there came out blood and water. [35] He who saw it has borne witness—his testimony is true, and he knows that he is telling the truth—that you also may believe. **[36] For these things took place that the Scripture might be fulfilled\*: “Not one of his bones will be broken.” **[37] And again another Scripture says, “They will look on him whom they have pierced.”
+[31] Since it was the day of Preparation, and so that the bodies would not remain on the cross on the Sabbath (for that Sabbath was a high day), the Jews asked Pilate that their legs might be broken and that they might be taken away. [32] So the soldiers came and broke the legs of the first, and of the other who had been crucified with him. [33] But when they came to Jesus and saw that he was already dead, they did not break his legs. [34] But one of the soldiers pierced his side with a spear, and at once there came out blood and water. [35] He who saw it has borne witness—his testimony is true, and he knows that he is telling the truth—that you also may believe. **[36] For these things took place that the Scripture might be fulfilled\*: “Not one of his bones will be broken.”**[37] And again another Scripture says, “They will look on him whom they have pierced.”
 
 John includes this reference to [[Bible/ESV/Psalms/Ps 34|Psalm 34]] because the Psalm shows what a righteous person looks like. Jesus is the full realization, (John says fulfilled) of righteousness. If you wish to go even further into righteousness than what David writes, mimic the life of Jesus.
 

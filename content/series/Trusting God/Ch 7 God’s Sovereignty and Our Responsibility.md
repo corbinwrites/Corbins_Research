@@ -11,7 +11,7 @@ Men's Devotional: Jason Ruiz
 God’s Sovereignty (v. 1-2)
 
 - God is responsible for building the house
-  - If he desires for something to **not **be built it will not be built
+  - If he desires for something to **not** be built it will not be built
     - Example - Tower of Babel (Genesis 11:9)
   - If God desires for a city to be plundered, so it shall be
 - Solomon includes a section here about getting up early and going to bed late

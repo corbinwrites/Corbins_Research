@@ -34,8 +34,7 @@ _Wandering in the Wilderness, “For as many days as you have afflicted us”_
 
 _Israel - “our”, The LORD_
 
-5. **What is the intent of this psalm? How would it be used? \***It reads as a reflective, lament meant for Israel to sing and think on. A wisened Moses looks to the people and reminds them of the good, powerful God they serve.\*
-6. **How does singing this in corporate worship shape the hearts of the covenant people?**
+5. **What is the intent of this psalm? How would it be used? \***It reads as a reflective, lament meant for Israel to sing and think on. A wisened Moses looks to the people and reminds them of the good, powerful God they serve.\*6.**How does singing this in corporate worship shape the hearts of the covenant people?**
 
 _It humbles them. You are dust. You have a great and powerful God who serves you._
 
@@ -52,9 +51,7 @@ What’s this Psalm about?
 
 A Psalm around how time is short, but our God is eternal.
 
-**Purpose:** Acknowledge the short length of our lives, humbly submit those limited days to God and Rejoice in the eternity of God
-
-**Outline**
+**Purpose:** Acknowledge the short length of our lives, humbly submit those limited days to God and Rejoice in the eternity of God**Outline**
 
 7. Eternal God (V. 1-2) - Praise
 8. Temporary Man (V. 3-11) - Lament
@@ -64,7 +61,7 @@ A Psalm around how time is short, but our God is eternal.
 
 Moses is writing this after they have seen the promised land the first time and are in the 40 years of wandering, it’s possible it was after a major event (the snakes biting people) or the pillar of smoke and flame leaving the people (due to v. 13-14). Collins, and I, would place this late. I believe [[Bible/ESV/Deuteronomy/Deut 33|Deut 33]], a final lesson from Moses, inspired by the Spirit, to the people of Israel.
 
-**Eternal God **(V. 1-2) - Praise
+**Eternal God**(V. 1-2) - Praise
 
 - Dwelling place - a place of refuge, a home
 - He was the refuge, even before creation. From everlasting, eternity past, to everlasting, eternity to come.
@@ -103,7 +100,7 @@ _Why does Moses say the ends of life is “like a sigh?”_
 
 know God’s full power, at least in our current state, probably never.
 
-**Humble Request **(v. 12-17)
+**Humble Request**(v. 12-17)
 
 - With an understanding that we cannot make sense of his power, that we are weak, feeble, and dust. Moses transitions to what makes sense, supplication for the Lord to lend his power to his people, so that they may have a significant life
   - A heart of wisdom

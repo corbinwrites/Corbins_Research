@@ -19,13 +19,8 @@ Apply one meditation method in your bible reading this week.
 
 # Big Group Questions
 
-3. **What aspects of daily life distract you from concentrating your thoughts on God and his wisdom, and what will you do to overcome these distractions**
-4. **Sometimes Christians use verses incorrectly to prove a certain point. Why is it so important for people to understand the meaning of a particular verse in context before applying the verse to their life?**
-   [[Bible/ESV/2 Timothy/2 Tim 2#15|2 Timothy 2:15]] Do your best to present yourself to God as one approved, a worker who has no need to be ashamed, **rightly handling the word of truth.**
-5. **Why is an overall Bible intake through hearing, reading, studying, memorizing, and meditation on Scripture so important?** 1. **Read Matthew 4:1-11. How does Jesus’ confrontation with Satan illustrate the power of scripture that is committed to memory?
-   **Jesus is able to point to truth with confidence and not give way to temptation. Even when Satan himself quotes scripture (v. 5-6), Jesus knows the character of God from what he has memorized/meditated on and defends with a more appropriate verse for the situation
-6. **Read Proverbs 22:17-19. Why should we keep God’s Word within us and ready on our lips?
-   **”It will be pleasant” and “our trust may be in the Lord.” A wonderful way for us to fight anxiousness, fear, and sin.
+3. **What aspects of daily life distract you from concentrating your thoughts on God and his wisdom, and what will you do to overcome these distractions** 4.**Sometimes Christians use verses incorrectly to prove a certain point. Why is it so important for people to understand the meaning of a particular verse in context before applying the verse to their life?**[[Bible/ESV/2 Timothy/2 Tim 2#15|2 Timothy 2:15]] Do your best to present yourself to God as one approved, a worker who has no need to be ashamed,** rightly handling the word of truth.**5.** Why is an overall Bible intake through hearing, reading, studying, memorizing, and meditation on Scripture so important?**1.** Read Matthew 4:1-11. How does Jesus’ confrontation with Satan illustrate the power of scripture that is committed to memory?**Jesus is able to point to truth with confidence and not give way to temptation. Even when Satan himself quotes scripture (v. 5-6), Jesus knows the character of God from what he has memorized/meditated on and defends with a more appropriate verse for the situation
+6. **Read Proverbs 22:17-19. Why should we keep God’s Word within us and ready on our lips?** ”It will be pleasant” and “our trust may be in the Lord.” A wonderful way for us to fight anxiousness, fear, and sin.
 
 # Smaller Group Questions
 

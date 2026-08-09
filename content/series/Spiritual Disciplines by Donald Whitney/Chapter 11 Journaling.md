@@ -7,8 +7,7 @@ Passage to Memorize: [[Bible/ESV/James/Jas 4#1|James 4:1-10]]
 ## Apply
 
 1. Read your Bible everyday this week!
-2. Memorize** [[Bible/ESV/James/Jas 4#1|James 4:1-10]]**
-3. **Write a journal entry** (or several). Make sure that this journal entry is god-focused! Look to to the chapter for more ideas, but here are some ideas you can use for inspiration (you can even write on all of them):
+2. Memorize**[[Bible/ESV/James/Jas 4#1|James 4:1-10]]** 3.**Write a journal entry** (or several). Make sure that this journal entry is god-focused! Look to to the chapter for more ideas, but here are some ideas you can use for inspiration (you can even write on all of them):
    - Confess and repent of sin
    - Praise the Lord
    - Write your meditations on a passage of scripture (what do you learn about God or how you are becoming like Christ?)

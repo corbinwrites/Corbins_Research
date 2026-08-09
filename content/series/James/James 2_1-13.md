@@ -108,15 +108,7 @@ Before we dive in, I want to point out that this is an example. This example is 
 
 I want to use some “lenses” to examine verses 2-4. I use the phrase lens as analogy for how to examine this passage. Much in the same way that some one would wear a blue-tinted sunglass the lens blocks other colors and you see blue more richly. So can we put on one of these lenses to see something more clearly in this passage.
 
-**Partiality in Hospitality**
-
-Notice that the poor and rich person are described as “man”, not as a brother. This points to them joining the congregation of believers and being an “outsider.” This is reinforced by what is written about the rich being the ones who oppress and blaspheme (not typically Christian characteristics). We could think of this as someone visiting City Light for the first time. This partiality of wealth is expressed by helping the rich person to his seat, but the poor man is forced to sit on the floor. James writes that we are a judge with evil thoughts. We are making an internal judgement to show preferential treatment to one and not another. This forces us to think about partiality with who we choose to show hospitality to. **We should show it to \*\*\***all.\*_\*\* _ The man who is a bit dirty, as well as the woman who is put together.
-
-**Partiality in conflict (less probable but worth mentioning)**
-
-Instead of examining through the use of man, some commentators examine through the word judge and point out the use of the word “assembly” *(synagogue *in Greek) could mean this is a different type of meeting: A meeting to settle a dispute! The early church would call church-wide meetings to settle matters between members. These men walking in could be in dispute between each other and here before a word is spoken or an argument heard, preference is shown to the rich man, not to the poor man. I personally feel this application is a bit less defensible, however, I bring it to point out that when James writes “show no partiality” he does not only mean for all external factors, but also in **all situations**! In meeting new people or when witnessing conflict, we choose a side based on externals and we should not!
-
-**Partiality in pride**
+**Partiality in Hospitality** Notice that the poor and rich person are described as “man”, not as a brother. This points to them joining the congregation of believers and being an “outsider.” This is reinforced by what is written about the rich being the ones who oppress and blaspheme (not typically Christian characteristics). We could think of this as someone visiting City Light for the first time. This partiality of wealth is expressed by helping the rich person to his seat, but the poor man is forced to sit on the floor. James writes that we are a judge with evil thoughts. We are making an internal judgement to show preferential treatment to one and not another. This forces us to think about partiality with who we choose to show hospitality to.**We should show it to \*\*\***all.\*_\*\* _ The man who is a bit dirty, as well as the woman who is put together.**Partiality in conflict (less probable but worth mentioning)** Instead of examining through the use of man, some commentators examine through the word judge and point out the use of the word “assembly”*(synagogue *in Greek) could mean this is a different type of meeting: A meeting to settle a dispute! The early church would call church-wide meetings to settle matters between members. These men walking in could be in dispute between each other and here before a word is spoken or an argument heard, preference is shown to the rich man, not to the poor man. I personally feel this application is a bit less defensible, however, I bring it to point out that when James writes “show no partiality” he does not only mean for all external factors, but also in**all situations**! In meeting new people or when witnessing conflict, we choose a side based on externals and we should not!** Partiality in pride**
 
 Look at the character of “you” in this verse (you pay attention to the one who wears fine clothing, and you say to the poor man). Do you see the pride in this character. Here he sees himself as above the poor man, not offering his chair. Instead he demands he sit on the floor or against the back wall. This man thinks only of himself!
 
@@ -177,8 +169,7 @@ Instead of being law-breakers James encourages us to be law-keepers. To do so to
 James issues another two commands
 
 > [!question] ❓
-> **What does James command?**
-> To **speak** as those who are judged under the law
+> **What does James command?**> To** speak** as those who are judged under the law
 >
 > To **act** as those who are judged under the law
 

@@ -11,9 +11,7 @@ Tags:
 Book: Psalm
 ---
 
-## **Questions to Ask**
-
-1. **What is the structure of this psalm?**
+## **Questions to Ask** 1.**What is the structure of this psalm?**
    - Praise
    - Petition
    - Confession
@@ -24,8 +22,7 @@ Book: Psalm
    - Dependence
 2. **What kind of psalm is this?**
    History, Praise
-3. **If known, what is the historical context for this psalm?**
-   This Psalm spans Genesis - [[Bible/ESV/Judges/Judg 4|Judges 4]]. **Who are the subjects within the psalm?**
+3. **If known, what is the historical context for this psalm?** This Psalm spans Genesis - [[Bible/ESV/Judges/Judg 4|Judges 4]].**Who are the subjects within the psalm?**
    Fathers of Israel, “Modern” Israel, God, Phinehas, Moses, Aaron, Dathan, Abiram, Egyptians
 4. **What is the intent of this psalm? How would it be used?**
    This would be used to remind Israel of all that the Lord had done for them and there own sinfulness that resulted in God’s wrath.
@@ -34,7 +31,7 @@ Book: Psalm
 
 ## Preamble
 
-There are a few things that are a little funky on the chronology of events presented. Again, it’s important to note that this is a *song, *and that it’s being sung for a purpose. There’s a reason the Psalmist presents things in this order and why he mentions the events that he does. That reason is to illustrate the main core meaning of this Psalm, **God is faithful even when his people are not.**
+There are a few things that are a little funky on the chronology of events presented. Again, it’s important to note that this is a *song,*and that it’s being sung for a purpose. There’s a reason the Psalmist presents things in this order and why he mentions the events that he does. That reason is to illustrate the main core meaning of this Psalm, **God is faithful even when his people are not.**
 
 > [!question] ❓
 > What does it mean to be faithful?
@@ -94,15 +91,13 @@ The Psalmist continues, by showing us just as the way was made dry, so can it be
 
 > [!question] ❓
 > What is the response of Israel to this? Is it good or bad?
-> \*Good! They \***\*believe\*\*\*** **\*and they \*\***sing \*_\*\*(v.12)_
+> \*Good! They \***\*believe\*\*\*****\*and they \*\***sing \*_\*\*(v.12)_
 
 > [!question] ❓
 > Why is this response good?
 > _They acknowledge God’s mighty work and seek to praise him, give him thanks, for the work he has done for them._
 
-So we close this picture with a not so bad response. **Here Israel proves faithful, because they turn to God.** There is a bit of doubt, rebellion, at the Sea, but the people still acknowledge God. Nice!
-
-**Transition**
+So we close this picture with a not so bad response. **Here Israel proves faithful, because they turn to God.** There is a bit of doubt, rebellion, at the Sea, but the people still acknowledge God. Nice!**Transition**
 
 As we have the background singing of Israel fading out, the metaphorical instrumental music continues in a soaring major key and then suddenly changes to minor key. The Israelites have done something wrong… Verse 13 starts with a contrasting word, “but!” They’ve done the opposite of believing and singing praise!
 
@@ -112,7 +107,7 @@ Instead, the Israelites give into…
 
 ## Picture 2: Cravings on the Way to Canaan (v. 13-23)
 
-The Psalmist only specifies one craving here, but I’ve entitled it craving**s **because we see a few cravings.
+The Psalmist only specifies one craving here, but I’ve entitled it craving**s** because we see a few cravings.
 
 There’s a craving for meat when the Lord provides manna
 There’s a craving for more power when the lord designated Moses and Aaron to do the work
@@ -172,7 +167,7 @@ John MacArthur puts the numbers of times that Israel put God to the test to 10 t
 > What does Israel consistently crave on the way to Canaan?
 > _Their own way of living, which is sin. _
 
-Here, **Israel proves itself unfaithful, by turning towards their cravings rather than to God. **
+Here, **Israel proves itself unfaithful, by turning towards their cravings rather than to God.**
 
 ## Picture 3: Wandering in the Wilderness (v. 24-33)
 
@@ -250,9 +245,7 @@ _(Joshua - Judges)_
 
 The Psalmist moves into the lowest portion of the Psalm, the time between the end of Joshua and throughout Judges. None of the scenes are extremely specific here, but we should call out the outright wickedness of the people in this section.
 
-**They serve idols**, again look back to the episode with Baal. They have replaced God, but the Psalmist shows just how backward they are!
-
-**They sacrifice their children**, rather than sacrifice animals to the living God as atonement for sin. They accumulate sin by offering humans to a fake god.
+**They serve idols**, again look back to the episode with Baal. They have replaced God, but the Psalmist shows just how backward they are!** They sacrifice their children**, rather than sacrifice animals to the living God as atonement for sin. They accumulate sin by offering humans to a fake god.
 
 This is the lowest part Israel hits!
 
@@ -264,19 +257,17 @@ However, despite all of this God delivers them.
 
 If go back once more to the illustration of music, the orchestra has been playing in a minor key for _some time_ now. However, there’s a bit of silence and we hear it pick up with a major key once more. Small and quiet at first in 43, but swelling into 44-46.
 
-### **In the Past (v. 43-46)**
-
-Despite *all *the sin, God delivers them.
+### **In the Past (v. 43-46)** Despite *all *the sin, God delivers them.
 
 There are some interesting contrasts here:
 
-7. Where Israel was **deaf** to God’s admonishment, God **hears** their cry of distress
-8. While Israel had **forgot** God (v.21). God **remembered** them, and his covenant.
-9. When Israel twice **whored **after other gods. God had **steadfast love **that could not be broken.
+7. Where Israel was **deaf** to God’s admonishment, God**hears** their cry of distress
+8. While Israel had **forgot** God (v.21). God**remembered** them, and his covenant.
+9. When Israel twice **whored** after other gods. God had**steadfast love** that could not be broken.
 
 God had every reason to wipe Israel away, yet he shows them love. Steadfast love.
 
-**God is faithful, where Israel is unfaithful. **
+**God is faithful, where Israel is unfaithful.**
 
 God does not walk away even from a rebellious people.
 

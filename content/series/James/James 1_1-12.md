@@ -23,7 +23,7 @@ Outline:
 
 ## Trials are Tests (and thus a Joy)
 
-- “Count” note that the verb is on *you. *You must make the decision to to count it a joy. Joy means joy. It means that you feel excitement, anticipation for whatever it is. It may not be over top but it’s certainly present in your heart. A long-term happiness
+- “Count” note that the verb is on *you.*You must make the decision to to count it a joy. Joy means joy. It means that you feel excitement, anticipation for whatever it is. It may not be over top but it’s certainly present in your heart. A long-term happiness
 
 We feel that emotion when we face trials of various kinds. Helpful to note that trials are most likely _external_ in nature. Some external force is exerting pressure on us in a physical, emotional, mental, and/or spiritual way. (We’ll talk about _internal_ difficulties next week)
 
@@ -34,7 +34,7 @@ We feel that emotion when we face trials of various kinds. Helpful to note that 
 - We do not walk around with an artificial joy. In fact you really can’t. that word testing is very vivid about what it’s going to feel like. Testing is a metallurgical term. It refers to when gold and silver is melted down to remove the impurities. It’s hot. You can lose a lot of the mass of the original metal. But what comes out is pure. A good smith doesn’t leave any impurities at the top, but skims it off all the impurities so the precious, pure met is left.
 - Similarly, trials melt us down and show us our impurities. Our sinful anger, impatience, anxiousness, to name a few. These are ugly things that are skimmed off by the Divine Metalworker.
 - I also just like this word “test” Rachelle pointed out that there is a personal nature to it. It’s intentional. Just the metalworker refining one ore.
-- We don’t walk around with joy _because_ we’re being melted by fiery heat of trials. However, we _do_ walk around with joy in the midst of the fiery heat of trials *because of the outcome. *We rejoice _now_ in the trial, because we know in the future* we a purest gold.* In fact, we can be **thankful** for the trial, in the midst of the trial, because of this great outcome.
+- We don’t walk around with joy _because_ we’re being melted by fiery heat of trials. However, we _do_ walk around with joy in the midst of the fiery heat of trials *because of the outcome.*We rejoice _now_ in the trial, because we know in the future *we a purest gold.* In fact, we can be**thankful** for the trial, in the midst of the trial, because of this great outcome.
 
 ## Testing Leads to Steadfastness
 
@@ -65,7 +65,7 @@ Steadfastness is the solution to the impurities of the ore of our heart. Those u
 ## Tests Require Wisdom
 
 How do we reconcile having everything, but that we lack wisdom? Well we have everything we need to endure the trials, but not necessarily the way _through_ the trial.
-Analogy: We can think of trials as a storm and our spiritual life as a ship. This would make steadfastness the hull of our ship. Now that we have bolstered the hull, we have the ability to weather a fierce storm, however, we may not have an idea of where to go, where to turn. A ship needs a rudder, to guide the vessel through the storm. In a similar way does wisdom act as our rudder, our guidance to navigate through trial. **We must have wisdom! **
+Analogy: We can think of trials as a storm and our spiritual life as a ship. This would make steadfastness the hull of our ship. Now that we have bolstered the hull, we have the ability to weather a fierce storm, however, we may not have an idea of where to go, where to turn. A ship needs a rudder, to guide the vessel through the storm. In a similar way does wisdom act as our rudder, our guidance to navigate through trial. **We must have wisdom!**
 
 God is ready and willing to give us wisdom.
 
@@ -85,7 +85,7 @@ However, It is important to note that the delivery mechanism of wisdom can take 
 
 All we must do is pray for it. A few highlights within verse 5:
 
-1. **Verse 6 - **James, now commenting on prayer, expands his point on prayer beyond the boundaries of trial. He reminds us that whenever we pray to God, to ask without doubting.
+1. **Verse 6 -** James, now commenting on prayer, expands his point on prayer beyond the boundaries of trial. He reminds us that whenever we pray to God, to ask without doubting.
 
 > [!question] ❓
 > **In verse 6, James writes about how those who ask in faith should not doubt. What is the subject of the believer’s doubt? The situation? God? Something else? Support your answer from the text.**
@@ -98,7 +98,7 @@ James tells us to ask for what we must ask in **prayer with no doubt in God’s 
 
 James says, the person who doubts God, should not think that he/she will receive anything from God. This is in accordance with the lack of faith.
 
-> James’s teaching echoes several places in Jesus’ earthly ministry in which the Lord demanded faith of those who came to him. In Matthew 9:29, as Jesus touched the two blind men’s eyes, he said, “According to your faith be it done to you.” To the father of the demon-possessed child, who was wavering in unbelief, **Jesus said, “All things are possible for one who believes” (Mark 9:23)**. When Jesus was asked by his disciples why they could not cast out an evil spirit, he responded, **“Because of your little faith. For truly, I say to you, if you have faith like a grain of mustard seed, you will say to this mountain, ‘Move from here to there,’ and it will move, and nothing will be impossible for you” (Matt. 17:20). **Likewise, the author of Hebrews warns, **“Without faith it is impossible to please [God], for whoever would draw near to God must believe that he exists and that he rewards those who seek him” (Heb. 11:6).**
+> James’s teaching echoes several places in Jesus’ earthly ministry in which the Lord demanded faith of those who came to him. In Matthew 9:29, as Jesus touched the two blind men’s eyes, he said, “According to your faith be it done to you.” To the father of the demon-possessed child, who was wavering in unbelief, **Jesus said, “All things are possible for one who believes” (Mark 9:23)**. When Jesus was asked by his disciples why they could not cast out an evil spirit, he responded,** “Because of your little faith. For truly, I say to you, if you have faith like a grain of mustard seed, you will say to this mountain, ‘Move from here to there,’ and it will move, and nothing will be impossible for you” (Matt. 17:20).**Likewise, the author of Hebrews warns,** “Without faith it is impossible to please [God], for whoever would draw near to God must believe that he exists and that he rewards those who seek him” (Heb. 11:6).**
 > Robert L Plummer, ESV Expository Commentary
 
 James shares another conclusion about this doubting person. He explains that he is a double-minded man. This man is doing the hokey pokey. He has his right foot in, he has his left foot out. His mind is split between trust and doubt. This makes him unstable, inconsistent. At a moments notice this guy might be trusting God and then suddenly decide he’s not. “The wave is controlled by the wind, just as the person is controlled by the trial” -Rachelle
@@ -125,7 +125,7 @@ Cross reference Paul where boast in my weakness, boast in Christ (2 Cor 10:17)
 
 James bookends his writings on trials with a look at the ultimate outcome of trials, the crown of life.
 
-- **The crown of life** is the victor’s crown, the winner of the olympic games would receive a crown of laurels (Matt 10:22; Rev 2:10). This is evidence that this person has won the event. They ran the race and reached the end. - [[Bible/ESV/1 Corinthians/1 Cor 9#24|1 Cor 9:24-27]] - The crown is given to those who are **steadfast** under trial. As difficulties arise, if they continue to trust God, they will be shown to be **steadfast**. Their faith has not been shaken. - The crown is not **earned** by the work, rather it is given to those who love him. God had **promised** this in advance. - Indeed, even as the crown of life is set before us as a motivation for endurance, James tell us this crown has been “promised” on the basis not of performance but of relationship (i.e., “to those who love him”). Yet, true love evidences itself in behavior. God demands a loving heart in submission to him, which shows itself in outward obedience. Through the transforming power of the gospel of Christ, God “gives what he himself demands.” **That is, God demands that his people demonstrate love, but he himself saves them and transforms them into a loving community **(John 13:35).
+- **The crown of life** is the victor’s crown, the winner of the olympic games would receive a crown of laurels (Matt 10:22; Rev 2:10). This is evidence that this person has won the event. They ran the race and reached the end. - [[Bible/ESV/1 Corinthians/1 Cor 9#24|1 Cor 9:24-27]] - The crown is given to those who are**steadfast** under trial. As difficulties arise, if they continue to trust God, they will be shown to be**steadfast**. Their faith has not been shaken. - The crown is not** earned**by the work, rather it is given to those who love him. God had** promised**this in advance. - Indeed, even as the crown of life is set before us as a motivation for endurance, James tell us this crown has been “promised” on the basis not of performance but of relationship (i.e., “to those who love him”). Yet, true love evidences itself in behavior. God demands a loving heart in submission to him, which shows itself in outward obedience. Through the transforming power of the gospel of Christ, God “gives what he himself demands.”** That is, God demands that his people demonstrate love, but he himself saves them and transforms them into a loving community**(John 13:35).
   ESV Expository Commentary, Robert L. Plummer - This crown is given because Christ has loved us first and we have responded in obedience. Christ has done the work to allow us to even enter the race track (salvation), the crown of life is given because we worked to remain obedient and steadfast.
 
 # Small Group Questions

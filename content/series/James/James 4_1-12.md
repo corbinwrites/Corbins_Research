@@ -39,7 +39,7 @@ _March 1, 1945_
 
 A quote from the Lincoln Memorial
 
-…let us strive on to finish the work we are in; to bind up the nation’s wounds; to care for him who shall have borne the battle, and for his widow, and his orphan, to do all which may achieve and cherish a just,** and a lasting peace**, among ourselves, and with all nations.
+…let us strive on to finish the work we are in; to bind up the nation’s wounds; to care for him who shall have borne the battle, and for his widow, and his orphan, to do all which may achieve and cherish a just,**and a lasting peace**, among ourselves, and with all nations.
 
 _March 4, 1865 Second Inaugural Address_
 
@@ -105,7 +105,7 @@ Thankfully, he quickly gives us the root. Though it is a surprising one. It is o
 
 “Murder” - James could have the words of Jesus in mind (Matthew 5)
 
-_“You have heard that it was said to those of old, ‘You shall not murder; and whoever murders will be liable to judgment.’\***\* But I say to you that everyone who is angry with his brother will be liable to judgment; whoever insults his brother will be liable to the council; and whoever says, ‘You fool!’ will be liable to the hell of fire.\*\***”_
+_“You have heard that it was said to those of old, ‘You shall not murder; and whoever murders will be liable to judgment.’\***\*But I say to you that everyone who is angry with his brother will be liable to judgment; whoever insults his brother will be liable to the council; and whoever says, ‘You fool!’ will be liable to the hell of fire.\*\***”_
 
 With this interpretation, we would conclude that believers were most likely not killing each other to gain possession of something desired, but rather were “murdering in their hearts.”
 
@@ -211,21 +211,15 @@ What follows next is an extensive list of commands and promises to show us how t
 - Humble yourself before the Lord and he will exalt you
 
 > [!question] ❓
-> **Find the commands in verse 7-10 and give a practical example of how you would follow that command.**
-
-**How would you explain each of the commands you can find in verses 7-10?**
-
-- **Submit yourselves**: follow God’s instruction. Even when I want to do something else I should do what he desires.
+> **Find the commands in verse 7-10 and give a practical example of how you would follow that command.****How would you explain each of the commands you can find in verses 7-10?**-** Submit yourselves**: follow God’s instruction. Even when I want to do something else I should do what he desires.
 - **Resist the devil**: Reminder: Diabalos is the Greek translation for the “slanderer” or “accuser.” This can be as specific as don’t give any ground to doubt, slanderous thoughts towards God, accusations towards God. This can be as broad as don’t give into temptation
-- **Draw near to God: **Spend time with God. Read your bible, pray, meditate, sing, dance, “Whether you eat or drink seek to glorify God in all you do.”
-- **Cleanse your hands: **Cease your sinning. Wipe the sin off your hands. Clean them with the blood of Christ and have them be made as white as snow.
-- **Purify your hearts: **The subject for this command helps us understand this one better, “double-minded.” James is telling us to purify those desires that pull us to the world. Does that mean we have *no *desires? Absolutely not. A single man can still desire a wife, that is good and Godly. However to desire a relationship _only_ to satisfy sexual cravings is double-minded. Also note: Temple language!
-- **Be wretched and mourn and weep: **What is the context of this response? No joy ever? No! This builds off the cleansing and purification. We should feel remorse over our sin.
+- **Draw near to God:** Spend time with God. Read your bible, pray, meditate, sing, dance, “Whether you eat or drink seek to glorify God in all you do.”
+- **Cleanse your hands:** Cease your sinning. Wipe the sin off your hands. Clean them with the blood of Christ and have them be made as white as snow.
+- **Purify your hearts:** The subject for this command helps us understand this one better, “double-minded.” James is telling us to purify those desires that pull us to the world. Does that mean we have *no *desires? Absolutely not. A single man can still desire a wife, that is good and Godly. However to desire a relationship _only_ to satisfy sexual cravings is double-minded. Also note: Temple language!
+- **Be wretched and mourn and weep:** What is the context of this response? No joy ever? No! This builds off the cleansing and purification. We should feel remorse over our sin.
   > [!note]+ [[Bible/ESV/1 John/1 John 1#8|1 John 1:8-10]]
   > [8] If we say we have no sin, we deceive ourselves, and the truth is not in us. [9] If we confess our sins, he is faithful and just to forgive us our sins and to cleanse us from all unrighteousness. [10] If we say we have not sinned, we make him a liar, and his word is not in us.
-- **Humble yourselves before the Lord: **James bookends this section with another word for submit. Though this is slightly different! Submission being living in accordance with the rule in question. Humility is in agreement.
-
-**What is significant about the promises in verses 7-10?**
+- **Humble yourselves before the Lord:** James bookends this section with another word for submit. Though this is slightly different! Submission being living in accordance with the rule in question. Humility is in agreement.**What is significant about the promises in verses 7-10?**
 
 - Resist the devil and he will flee from you: Though we can feel sometimes that we cannot escape the grip of Satan and he may have us for a longer time, we have assurance that he will flee at some point. We even see this with Job.
 - Draw near to God and he will draw near to you: Feel far from God, spend time with him.
@@ -252,7 +246,7 @@ James gives the final command for this section in simple terms in verse 11,
 
 The LSB renders this as “slander.” Which is a good, but more narrow translation. Slander describes “giving someone a bad name.” This could be through gossip or complaint and typically implies that person is not in the room with you.
 
-However, “speak evil” is more broad. The person could be in the room with you and you could be berating to their face. Speaking evil, speaks to the* intent *of the speech. You intend evil, no matter if they present or not.
+However, “speak evil” is more broad. The person could be in the room with you and you could be berating to their face. Speaking evil, speaks to the *intent *of the speech. You intend evil, no matter if they present or not.
 
 **Remember we’re talking about peace. If you want to keep peace, don’t speak evil!**
 

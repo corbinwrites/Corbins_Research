@@ -17,9 +17,7 @@ Missionary in China (?) who’s family was captured by hostile people and was hu
 
 Difference between a cry of anguish and accusation. The psalmist is in anguish. Job was too… until he was accusational! Then God responds.
 
-## **Questions to Ask**
-
-1. **What is the structure of this psalm?**
+## **Questions to Ask** 1.**What is the structure of this psalm?**
    - First Cry to the Lord: Troubled Soul (v. 1-9)
    - Second Cry to the Lord: Do they dead praise you? (v. 9-12)
    - Third Cry to the Lord: I continue to pray but feel no reply (v.13-18)
@@ -27,8 +25,7 @@ Difference between a cry of anguish and accusation. The psalmist is in anguish. 
    Lament
    Additionally given that it is a Maskil, that means it is a “wise saying” or a psalm of “contemplation.” May or may not have actually happened to Heman.
    Author: Heman who is PROBABLY the wise man in the court of Solomon, especially given that it’s tied with Ethan the Ezrahite, author of [[Bible/ESV/Psalms/Ps 89|Psalm 89]]. He’s mentioned in 1 Kings 4:31
-3. **If known, what is the historical context for this psalm?**
-4. **Who are the subjects within the psalm?**
+3. **If known, what is the historical context for this psalm?** 4.**Who are the subjects within the psalm?**
    The afflicted one, the dead, God, the afflicted one’s friends
 5. **What is the intent of this psalm? How would it be used?**
    How to worship in grieving/suffering, he says this to the Lord.
@@ -43,9 +40,9 @@ Difference between a cry of anguish and accusation. The psalmist is in anguish. 
 
 While preparing for this lesson, **I struggled with this passage for an entire week**, I only really broke ground with it on Saturday. I would sit down, pray, and examine the text. For a week I highlighted, drew lines, wrote notes, and thought about this passage. I had many questions come to mind, and I would sit and pray and think on them. I gave time to the Lord to provide answers and to get more and more familiar with the text. On Saturday, I talked it out with Rachelle and gained more ground than I had previously.
 
-Why do I share this story? I wanted to share with you two things that helped me in my study this week: **I gave ample time in the passage for the Lord to reveal it** and **I talked it out with a friend**. When you encounter difficult passages in the bible, I’d encourage you to do the same. Find someone in the group, bug your roommate, or talk with a mentor. I guarantee it will be a time filled with discovery and delight.
+Why do I share this story? I wanted to share with you two things that helped me in my study this week: **I gave ample time in the passage for the Lord to reveal it** and**I talked it out with a friend**. When you encounter difficult passages in the bible, I’d encourage you to do the same. Find someone in the group, bug your roommate, or talk with a mentor. I guarantee it will be a time filled with discovery and delight.
 
-Only after Rachelle and I, roughed out an outline (it was an ok one), attempted to answer the Psalm questions, and interpreted the passage did we **open up our commentaries**. There was _so much joy_ to find that the theologians we read had come to similar conclusions! There answers were, understandably, more refined and helpful to teaching tonight’s lesson, but **by waiting until we were at our wit’s end to seek their help did we get to experience the “delight of the Law of the Lord” (Psalm 1).**
+Only after Rachelle and I, roughed out an outline (it was an ok one), attempted to answer the Psalm questions, and interpreted the passage did we **open up our commentaries**. There was _so much joy_ to find that the theologians we read had come to similar conclusions! There answers were, understandably, more refined and helpful to teaching tonight’s lesson, but** by waiting until we were at our wit’s end to seek their help did we get to experience the “delight of the Law of the Lord” (Psalm 1).**
 
 ### Thoughts on Lament
 
@@ -57,13 +54,12 @@ By God’s providence I was listening to a podcast today and the topic was on pa
 
 The hosts go on to talk about the prophetic description of Jesus in [[Bible/ESV/Isaiah/Isa 53#3|Isaiah 53:3]]
 
-> **[[Bible/ESV/Isaiah/Isa 53#3|Isaiah 53:3-5]]**
-> 3 He was despised and rejected by men, **a man of sorrows and acquainted with grief**; and as one from whom men hide their faces he was despised, and we esteemed him not. 4 Surely he has borne our griefs and carried our sorrows; yet we esteemed him stricken, smitten by God, and afflicted. 5 But he was pierced for our transgressions; he was crushed for our iniquities; upon him was the chastisement that brought us peace, and with his wounds we are healed.
+> **[[Bible/ESV/Isaiah/Isa 53#3|Isaiah 53:3-5]]**> 3 He was despised and rejected by men,** a man of sorrows and acquainted with grief**; and as one from whom men hide their faces he was despised, and we esteemed him not. 4 Surely he has borne our griefs and carried our sorrows; yet we esteemed him stricken, smitten by God, and afflicted. 5 But he was pierced for our transgressions; he was crushed for our iniquities; upon him was the chastisement that brought us peace, and with his wounds we are healed.
 
 And in the New Testament we see this plainly. Even Jesus, by his own admission, is a man stricken with sorrow. For example when he is in the garden of Gethsemane he says,
 
 > **[[Bible/ESV/Matthew/Matt 26#36|Matthew 26:36-45]]
-> **36 Then Jesus went with them to a place called Gethsemane, and he said to his disciples, "Sit here, while I go over there and pray." 37 And taking with him Peter and the two sons of Zebedee, he began to be sorrowful and troubled. 38 Then he said to them, "**My soul is very sorrowful, even to death; remain here, and watch with me.**" 39 And going a little farther he fell on his face and prayed, saying, "My Father, if it be possible, let this cup pass from me; nevertheless, not as I will, but as you will."
+> **36 Then Jesus went with them to a place called Gethsemane, and he said to his disciples, "Sit here, while I go over there and pray." 37 And taking with him Peter and the two sons of Zebedee, he began to be sorrowful and troubled. 38 Then he said to them, "** My soul is very sorrowful, even to death; remain here, and watch with me.**" 39 And going a little farther he fell on his face and prayed, saying, "My Father, if it be possible, let this cup pass from me; nevertheless, not as I will, but as you will."
 
 As the hosts of these podcasts wisely noted, sorrow is not only a good emotion, but a _christlike_ attribute. One that can be turned into worship to God that expresses our dependence on him.
 
@@ -92,7 +88,7 @@ He _does_:
 - Call upon the Lord _frequently_ (v. 1,9,13)
 - Express frustration with God (v. 10-12)
 
-**Despite his misery, his faith does not waiver**. This is implicit throughout the entire Psalm. Note that he carries up his prayer to God three times throughout the Psalm. We confidently know that he implicitly trusts the Lord. **If he had no faith, why would he even pray,** let alone pray “day and night?”
+**Despite his misery, his faith does not waiver**. This is implicit throughout the entire Psalm. Note that he carries up his prayer to God three times throughout the Psalm. We confidently know that he implicitly trusts the Lord.** If he had no faith, why would he even pray,** let alone pray “day and night?”
 
 # **Outline**
 
@@ -104,7 +100,7 @@ Charles Spurgeon says the title “God of my Salvation” is
 
 I’d agree with him. This is a key phrase that Heman includes for us to anchor our perspective on the Psalm to follow. We know the Psalmist recognizes the Lord as his sole (soul) savior and we must keep that in mind as we go into the depths of his lament.
 
-His first lament is on how his **soul is troubled. **
+His first lament is on how his **soul is troubled.**
 
 > [!question] ❓
 > What is the Psalmist’s soul troubled by?
@@ -139,7 +135,7 @@ That being said, this afflicted man turns his gaze from his own sorry state to t
 
 He first begins with metaphor. It’s non-specific, but they are factually what he is feeling. In the dark, overwhelmed. We are given a sense of despair, perhaps even frustration with God.
 
-**Selah **This afflicted man stops for a moment to gather himself, before he gets more personal.
+**Selah** This afflicted man stops for a moment to gather himself, before he gets more personal.
 
 He cries out, God you have even taken away my friends. I’m appalling to them. Grotesque.
 

@@ -39,10 +39,10 @@ III.  Contrasting Outcomes of Their Lives (1:5–6)
   - Someone who does not take counsel from wicked, stands alongside sinners, and scoffs.
   - The imagery of walking, standing, and sitting is very interesting here. _Why do you think the Psalmist uses that imagery?_
     - Charles Spurgeon had some helpful thoughts here:
-      - “When people are living in sin they go from bad to worse. At first **they merely walk in the counsel of the careless and ungodly**, who forget God - the evil is rather practical than habitual - but after that they become habituated to evil, and **they stand in the way of open sinners who willfully violate God's commandments**; and if let alone, they go one step further, and become themselves pestilent teachers and** tempters of others**, and thus **they sit in the seat of the scornful**. They have taken their degree in vice, and as true Doctors of Damnation they are installed, and are looked up to by others as Masters in Satan. But the blessed man, the man to whom all the blessings of God belong, can hold no communion with such characters as these.”
+      - “When people are living in sin they go from bad to worse. At first **they merely walk in the counsel of the careless and ungodly**, who forget God - the evil is rather practical than habitual - but after that they become habituated to evil, and** they stand in the way of open sinners who willfully violate God's commandments**; and if let alone, they go one step further, and become themselves pestilent teachers and** tempters of others**, and thus** they sit in the seat of the scornful**. They have taken their degree in vice, and as true Doctors of Damnation they are installed, and are looked up to by others as Masters in Satan. But the blessed man, the man to whom all the blessings of God belong, can hold no communion with such characters as these.”
   - Note: the very helpful contrasting word here: “but!”
     - So we know a blessed person does _not_ do the previously mentioned things. Instead this person will
-      - **Delight** in the law of the Lord and **meditate** on it.
+      - **Delight** in the law of the Lord and**meditate** on it.
         - Yes, even Chronicles!
         - That could look like:
           - Scripture memorization

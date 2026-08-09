@@ -19,7 +19,7 @@ Book: James
 
 The year is 335 BC, a class of students are eagerly waiting around for the their teacher to arrive. The teacher has been putting together groundbreaking information on the nature of communication and language, he calls it Rhetoric. This study combined with logic and dialectics would go on to make the study of philosophy, but that doesn’t concern us tonight. Rhetoric is a tool for practical debate, persuading a general audience using probably knowledge to resolve practical issues, his lesson for the day would be on _Antithesis_.
 
-Antithesis, from an Aristotelean mindset is the idea of strengthening an argument by using exact opposites or simply contrasting ideas. They make a sentence or concept more memorable through the balance. An example from [[Bible/ESV/Matthew/Matt 10#34|Matthew 10:34]], “I came not to bring **peace** but a **sword**.” We see this idea of peace being contrasted with the instrument of war. It makes the line memorable since it has the large contrasts.
+Antithesis, from an Aristotelean mindset is the idea of strengthening an argument by using exact opposites or simply contrasting ideas. They make a sentence or concept more memorable through the balance. An example from [[Bible/ESV/Matthew/Matt 10#34|Matthew 10:34]], “I came not to bring **peace** but a ** sword**.” We see this idea of peace being contrasted with the instrument of war. It makes the line memorable since it has the large contrasts.
 
 > [!question] ❓
 > **Where do you see antithesis in this passage? What concepts or themes are contrasted from one another?**
@@ -30,7 +30,7 @@ Antithesis, from an Aristotelean mindset is the idea of strengthening an argumen
 > - indulgence and patience
 > - fraud and honesty
 
-Tonight, we will find that James practices _antithesis_ to highlight the** Pearl that is Patience**. The true prize within this passage, and an area of application we will focus on tonight, is for us to take away is verse 7, we were are commanded to be patient until the coming of the Lord. A good jeweler sets a gem upon a bed of black velvet to make it shine, in a similar way James sets the pearl of patience on a black velvet bed of depravity. We’ll look at this passage in two major sections:
+Tonight, we will find that James practices _antithesis_ to highlight the**Pearl that is Patience**. The true prize within this passage, and an area of application we will focus on tonight, is for us to take away is verse 7, we were are commanded to be patient until the coming of the Lord. A good jeweler sets a gem upon a bed of black velvet to make it shine, in a similar way James sets the pearl of patience on a black velvet bed of depravity. We’ll look at this passage in two major sections:
 
 1. Wrath for the Rich 5:1-6
 2. Prize of Patience 5:7-12
@@ -39,11 +39,11 @@ Tonight, we will find that James practices _antithesis_ to highlight the** Pearl
 
 As we start James sets the scene with a look at utter depravity, this is the black velvet for our pearl tonight. The dark part that makes the latter part, shine.
 
-Note that unlike verse 7, the phrase “brothers” is not used here indicating they are non-believers. For these non-believers, we can see that there is **decisive, guaranteed language **of “miseries” coming for the rich here.
+Note that unlike verse 7, the phrase “brothers” is not used here indicating they are non-believers. For these non-believers, we can see that there is **decisive, guaranteed language** of “miseries” coming for the rich here.
 
-v. 2, “Your riches **have** rotted”, “your garments **are** moth-eaten”
+v. 2, “Your riches **have** rotted”, “your garments**are** moth-eaten”
 
-v. 3, “Your gold and silver **have** corroded”, “**will be **evidence against you”, “**will** eat your flesh”
+v. 3, “Your gold and silver **have** corroded”, “**will be** evidence against you”, “**will** eat your flesh”
 
 Plummer points out that there is no hope of repentance, it is final judgement. This passage functions similarly to how Old testament prophets condemned nearby countries. The countries of Tyre and Sidon and Egypt were most likely not reading the old testament, yet there were prophets testifying against them. Why?
 
@@ -219,11 +219,11 @@ but this patience is more active than simply being a grape on a vine. We are com
 > - Innermost being
 > - Our internal thoughts, emotions, actions the thing that motivates our outward behaviors
 
-> “The Bible uses “heart” to describe the inner person. Scripture divides the human being into two parts, the inner and outer being. The outer person is your physical self; the inner person is your spiritual self (Eph 3:16). The synonym the Bible most often uses for the inner being is the heart. **It encompasses all the other terms and functions used to describe the inner person (spirit, soul, mind, emotions, will, etc.)** These other terms do not describe something different from the heart. Rather they are aspects of it, parts or functions of the inner person. **The “heart” is the real you.** It is the essential core of who you are. Though we put a tremendous amount of effort on the outer person, we all recognize that the true person is the person within.” - P.59 _Instruments in the Redeemer’s Hands by Paul David Tripp_
+> “The Bible uses “heart” to describe the inner person. Scripture divides the human being into two parts, the inner and outer being. The outer person is your physical self; the inner person is your spiritual self (Eph 3:16). The synonym the Bible most often uses for the inner being is the heart. **It encompasses all the other terms and functions used to describe the inner person (spirit, soul, mind, emotions, will, etc.)** These other terms do not describe something different from the heart. Rather they are aspects of it, parts or functions of the inner person.**The “heart” is the real you.** It is the essential core of who you are. Though we put a tremendous amount of effort on the outer person, we all recognize that the true person is the person within.” - P.59 _Instruments in the Redeemer’s Hands by Paul David Tripp_
 
 Using Paul David Tripp’s helpful definition we can think of establish our heart as strengthening, fortifying, our spirit, soul, mind and emotions. We do this because we have some storms to endure. We do this because we need to wait for our Lord to return. He will bring true justice.
 
-> “By “heart” James refers to the innermost part of the person, which will be tempted to wither in resignation or strike out in retribution. Instead, the internal compass of a Christian should be set on the “due north” of the Lord’s return. We can be strong internally, not because we have the means to effect our own justice but because of the imminent “coming” of the all-powerful Judge who is also our Lord (v. 8). **A child abused by a bully on the playground will stand taller when he sees the school’s principal approaching.**” -Plummer
+> “By “heart” James refers to the innermost part of the person, which will be tempted to wither in resignation or strike out in retribution. Instead, the internal compass of a Christian should be set on the “due north” of the Lord’s return. We can be strong internally, not because we have the means to effect our own justice but because of the imminent “coming” of the all-powerful Judge who is also our Lord (v. 8). **A child abused by a bully on the playground will stand taller when he sees the school’s principal approaching.** ” -Plummer
 
 > [!question] ❓
 > **What are some practical ways we can join with these Christians and establish our own hearts?**
@@ -232,7 +232,7 @@ Using Paul David Tripp’s helpful definition we can think of establish our hear
 > - Reading Psalms
 > - Thinking about, reading about, talking about Heaven and Jesus’ Return (the precious fruit)
 
-James pivots to another element of patience.\*\* \*\*
+James pivots to another element of patience.\*\*\*\*
 
 ### Patience with one another!
 
@@ -251,9 +251,7 @@ So James in a similar way says, hey Jesus is watching. Don’t grumble!
 
 James, in his signature way, pivots and expands to being
 
-### **Patient in trial**
-
-First we are to be patient with each other, fellow believers inside the church, but we are also to be patient with *external *events, trials, outside of the church.
+### **Patient in trial** First we are to be patient with each other, fellow believers inside the church, but we are also to be patient with *external *events, trials, outside of the church.
 
 > [!question] ❓
 > **In verse 10, James, speaking about a good example of suffering and patience, recalls prophets who spoke the name of the Lord. What are some examples you have? How do they show that?**
@@ -270,7 +268,7 @@ God is compassionate and merciful. He seeks to love you. He will give mercy to y
 
 ### Patiently remain honest
 
-James finishes with a final command that** runs antithetical to the rich**. Instead of fraud, James encourages us to be honest.
+James finishes with a final command that**runs antithetical to the rich**. Instead of fraud, James encourages us to be honest.
 
 > [!question] ❓
 > **How do you interpret the command in verse 12?**

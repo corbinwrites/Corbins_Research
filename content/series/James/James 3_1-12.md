@@ -38,7 +38,7 @@ We’re going to take a look at:
 James first starts by warning the entire church, not many should become teachers. (Note the “my brothers” part).
 
 > [!question] ❓
-> **Does James want no one to teach the bible? **
+> **Does James want no one to teach the bible?**
 > No
 > **Then why does he have this section here? What’s the significance?**
 >
@@ -60,7 +60,7 @@ Then he also points out how we all stumble. This is an explanation of why restra
 
 James to conclude this warning focuses on one area in which we can stumble, our speech. “If anyone does not stumble in what he _says._” It makes sense for James to hone in on speech for the teacher. Teachers say a lot of words. The more words you say, the easier it is to stumble and say something regrettable. However, James has a word for those who can practice restraint. He says _“anyone who does not stumble in what he says, is a perfect man”_
 
-Perfect. Commentators are a little split on this interpretation. Some claim “perfect” (**téleios **in Greek) means perfect. Meaning, only one man has done this perfectly, Jesus. Which means no one can fully do this other than Jesus.
+Perfect. Commentators are a little split on this interpretation. Some claim “perfect” (**téleios** in Greek) means perfect. Meaning, only one man has done this perfectly, Jesus. Which means no one can fully do this other than Jesus.
 
 Others argue the better interpretation here is “complete” or “mature” like how James uses “perfect” in 1:4, “perfect and complete.” It would mean a mature believer. I’d advocate for this understanding of “perfect” here.
 
@@ -103,7 +103,7 @@ Sadly the opposite is true too. If we lose focus, we let off the reigns or take 
 James continues describing the power of tongue, but how this power can get out of control! He compares it to a small spark that can set on fire an entire forest. He calls it a “world of unrighteousness.” Our speech can be a be sinful!
 
 > [!question] ❓
-> **What are some of the sins of our speech? **
+> **What are some of the sins of our speech?**
 >
 > - Gossip
 > - Slander
@@ -128,7 +128,7 @@ Robert Plummer writes, \*\*“Even a wicked person, who has perhaps cursed or ha
 So what are we to do?
 
 > [!question] ❓
-> **James says no one can tame the tongue, so what’s the point? Is James being defeatist? **
+> **James says no one can tame the tongue, so what’s the point? Is James being defeatist?**
 > v. 10, “these things out not to be so.” Seems to indicate that it is undesirable for this way to continue.
 >
 > v. 10-12 point to the need to wrangle our speech and to be consistent with our Christ-like character

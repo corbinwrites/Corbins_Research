@@ -69,7 +69,7 @@ So there are literal birds building literal nests by the altars in the temple
 > *Why would the Psalmist include this detail about birds and their nests?
 > *A symbol of protection, safety, comfort
 
-Notice **protection** and the Psalmist reiterates the title here **the Lord of Hosts**! The Psalmist here, tying the safety of the birds and the title of God is making a point that there is a feeling of comfort, safety, closeness in the house of the Lord.
+Notice **protection** and the Psalmist reiterates the title here**the Lord of Hosts**! The Psalmist here, tying the safety of the birds and the title of God is making a point that there is a feeling of comfort, safety, closeness in the house of the Lord.
 
 Verse 4
 
@@ -85,7 +85,7 @@ Almost as if the Psalmist says, The birds are to be envied for their special nes
 
 Transition
 
-The Psalmist ends with a Selah to breakup the Psalm for our benefit. And so honoring the Selah break we look to our next section with fresh eyes! The Psalmist turns his eyes from the temple to those walking into Jerusalem for the feast. They are _ascending_ Jerusalem\* \*to the temple, walking through a valley.
+The Psalmist ends with a Selah to breakup the Psalm for our benefit. And so honoring the Selah break we look to our next section with fresh eyes! The Psalmist turns his eyes from the temple to those walking into Jerusalem for the feast. They are _ascending_ Jerusalem\*\*to the temple, walking through a valley.
 
 The Psalmist, in the next 3 verses will talk about…
 
@@ -106,7 +106,7 @@ The Psalmist next confers blessings to another group of people, those whose stre
 > _What does he mean by, “In whose heart are the highways to Zion?”
 > He’s probably referring to the Jewish believer who desires to be at Jerusalem to be with God! Probably to worship and celebrate God._
 
-The Psalmist drops a little wisdom on the Hebrew believer here. Blessed are you who find **strength in God** and **those of you who desire to be with him**. He’s not wrong! Moses had certainly written this many centuries earlier
+The Psalmist drops a little wisdom on the Hebrew believer here. Blessed are you who find **strength in God** and**those of you who desire to be with him**. He’s not wrong! Moses had certainly written this many centuries earlier
 
 > You shall love the Lord your God with all your heart and with all your soul and with all your might.
 > [[Bible/ESV/Deuteronomy/Deut 6#4|Deut 6:4]]
@@ -131,11 +131,11 @@ J. Mac. says the pilgrims make it a valley filled with joy! Which I like. It spe
 
 Verse 7
 
-The pilgrims go from strength to strength. They are not weary, they are filled with** joy and excitement** to worship the Lord. **This joy to be with the Lord is the drive** that puts them through a dusty valley. **This love for God spills out of their hearts **and fills the dusty valley with metaphorical springs of life
+The pilgrims go from strength to strength. They are not weary, they are filled with**joy and excitement** to worship the Lord.**This joy to be with the Lord is the drive** that puts them through a dusty valley.**This love for God spills out of their hearts** and fills the dusty valley with metaphorical springs of life
 
 Verse 8
 
-As we come into verse 8, note the selah break. So that would indicate that verse 8 would be tied to verses 5-7. The Psalmist prays that the Lord will hear the prayer of what* he just said*. In this final verse of the section the Psalmist artfully adds another layer to the pre-established statement of fact. Yes, those that have strength and desire for the Lord of are blessed.
+As we come into verse 8, note the selah break. So that would indicate that verse 8 would be tied to verses 5-7. The Psalmist prays that the Lord will hear the prayer of what *he just said*. In this final verse of the section the Psalmist artfully adds another layer to the pre-established statement of fact. Yes, those that have strength and desire for the Lord of are blessed.
 The Psalmist say, but, Lord, I pray that you _will_ bless them as well! Make this come to pass. May the pilgrim coming to Zion be strong! May they all come with joy!
 It seems as if the Psalmist makes the section a statement *and *a prayer. Very cool.
 

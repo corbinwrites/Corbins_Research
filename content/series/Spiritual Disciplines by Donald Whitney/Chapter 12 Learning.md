@@ -9,8 +9,7 @@ Teaching: Emily
 ## Apply
 
 1. Make sure to read your bible daily!
-2. Memorize **[[Bible/ESV/James/Jas 4#1|James 4:1-11]]**
-3. **Learn something **this week! Find an answer to an ongoing question you have had about God/His Word and be prepared to _briefly_ share what you have learned. Some helpful resources for your study:
+2. Memorize **[[Bible/ESV/James/Jas 4#1|James 4:1-11]]** 3.**Learn something** this week! Find an answer to an ongoing question you have had about God/His Word and be prepared to _briefly_ share what you have learned. Some helpful resources for your study:
    - [Desiring God](https://www.desiringgod.org/), a ministry of John Piper
    - [Ligonier Ministries](https://www.ligonier.org/), a ministry of the late R.C. Sproul
    - [Tabletalk](https://tabletalkmagazine.com/), Ligonier’s Magazine
@@ -65,7 +64,7 @@ Teaching: Emily
 
 [Spotify](https://open.spotify.com/show/1Nz5qhkuLv2I1Dd9fXJDQ3?si=da98cbd772344505) | [Website](https://www.renewingyourmind.org/)
 
-**The Bible Project** - Videos, Podcasts, and so many resources aimed to teaching you the bible and themes within it. Jon Collins comes from Western Seminary. I think the bible project does an amazing job of covering Universal Church concepts (things that all churches agree on), but you’ll find you might have some disagreements with some interpretations here and there given our different interpretive framework. It’s a great way to encounter a different point of view and use as a point of friction to sharpen what *you *believe and how scripture supports your viewpoint.
+**The Bible Project**- Videos, Podcasts, and so many resources aimed to teaching you the bible and themes within it. Jon Collins comes from Western Seminary. I think the bible project does an amazing job of covering Universal Church concepts (things that all churches agree on), but you’ll find you might have some disagreements with some interpretations here and there given our different interpretive framework. It’s a great way to encounter a different point of view and use as a point of friction to sharpen what *you *believe and how scripture supports your viewpoint.
 
 [Spotify](https://open.spotify.com/show/6f2oD3RtQY1rOeyfF2OeOa?si=9fe64d3afc19473a) | [Website](https://bibleproject.com/podcasts/the-bible-project-podcast/)
 

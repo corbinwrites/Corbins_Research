@@ -21,13 +21,34 @@ const explorerConfig = {
   folderClickBehavior: "collapse" as const,
   useSavedState: true,
   mapFn: (node: any) => {
-    if (node.name === "series") {
-      node.displayName = "Study Series"
-    } else if (node.name === "Books of the Bible") {
-      node.displayName = "Books of the Bible"
-    } else if (node.name === "topics") {
-      node.displayName = "Topics & Guides"
+    const titleCase = (value: string) => {
+      const minorWords = new Set(["a", "an", "and", "as", "at", "but", "by", "for", "in", "nor", "of", "on", "or", "the", "to", "vs", "with"])
+      const words = value.replace(/[-_]+/g, " ").replace(/\s+/g, " ").trim().split(" ")
+
+      return words
+        .map((word, index) => {
+          const lower = word.toLowerCase()
+          const isEdgeWord = index === 0 || index === words.length - 1
+
+          if (!isEdgeWord && minorWords.has(lower)) {
+            return lower
+          }
+
+          return lower.replace(/^\p{L}/u, (letter) => letter.toUpperCase())
+        })
+        .join(" ")
     }
+
+    if (node.slugSegment === "series") {
+      node.displayName = "Series"
+    } else if (node.slugSegment === "topics") {
+      node.displayName = "Topics & Method Guides"
+    } else if (node.slugSegment === "books-of-the-bible" || node.displayName === "Books of the Bible") {
+      node.displayName = "Books of the Bible"
+    } else if (node.displayName) {
+      node.displayName = titleCase(node.displayName)
+    }
+
     return node
   },
   sortFn: (a: any, b: any) => {
