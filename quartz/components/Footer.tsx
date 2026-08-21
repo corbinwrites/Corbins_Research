@@ -1,5 +1,7 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import style from "./styles/footer.scss"
+// @ts-ignore
+import calScript from "./scripts/cal.inline"
 import { version } from "../../package.json"
 import { i18n } from "../i18n"
 
@@ -29,5 +31,6 @@ export default ((opts?: Options) => {
   }
 
   Footer.css = style
+  Footer.afterDOMLoaded = calScript
   return Footer
 }) satisfies QuartzComponentConstructor

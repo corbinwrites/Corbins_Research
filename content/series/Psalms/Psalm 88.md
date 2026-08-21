@@ -18,20 +18,22 @@ Missionary in China (?) who’s family was captured by hostile people and was hu
 Difference between a cry of anguish and accusation. The psalmist is in anguish. Job was too… until he was accusational! Then God responds.
 
 ## **Questions to Ask** 1.**What is the structure of this psalm?**
-   - First Cry to the Lord: Troubled Soul (v. 1-9)
-   - Second Cry to the Lord: Do they dead praise you? (v. 9-12)
-   - Third Cry to the Lord: I continue to pray but feel no reply (v.13-18)
+
+- First Cry to the Lord: Troubled Soul (v. 1-9)
+- Second Cry to the Lord: Do they dead praise you? (v. 9-12)
+- Third Cry to the Lord: I continue to pray but feel no reply (v.13-18)
+
 2. **What kind of psalm is this?**
    Lament
    Additionally given that it is a Maskil, that means it is a “wise saying” or a psalm of “contemplation.” May or may not have actually happened to Heman.
    Author: Heman who is PROBABLY the wise man in the court of Solomon, especially given that it’s tied with Ethan the Ezrahite, author of [[Bible/ESV/Psalms/Ps 89|Psalm 89]]. He’s mentioned in 1 Kings 4:31
 3. **If known, what is the historical context for this psalm?** 4.**Who are the subjects within the psalm?**
    The afflicted one, the dead, God, the afflicted one’s friends
-5. **What is the intent of this psalm? How would it be used?**
+4. **What is the intent of this psalm? How would it be used?**
    How to worship in grieving/suffering, he says this to the Lord.
    Despite the fact that he suffers this affliction from God, he does not allow this to hold back from carrying his prayers, his hope, his request to God.
    The major theme is suffering from an unknown reason.
-6. **How does singing this in corporate worship shape the hearts of the covenant people?**
+5. **How does singing this in corporate worship shape the hearts of the covenant people?**
    An intense time of grieving and mourning in the community.
 
 # **Overview**

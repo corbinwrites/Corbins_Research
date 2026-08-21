@@ -7,6 +7,7 @@ Passage to Memorize: [[Bible/ESV/James/Jas 4#1|James 4:1-6]]
 Jason and Livia Teaching
 
 # **Homework** 1. Memorize **[[Bible/ESV/James/Jas 4#1|James 4:1-6]]** 2.**Read your Bible every day** this week
+
 3. **Evaluate how you are currently serving**:
    1. For those** who currently** serve in a ministry (or ministries) at City Light:
       1. Why do you serve in that ministry (or ministries)?

@@ -17,7 +17,7 @@ Book: Psalm
 1. **What is the structure of this psalm?** This is an acrostic! An alphabet poem. From a logical stand point we can break this into two parts 1. Praise 2. Preaching
 2. **What kind of psalm is this?**
    Primarily, Thanksgiving with elements of wisdom
-3. **If known, what is the historical context for this psalm?****1 Samuel 21:10-15**, worth noting that this tie is not _vital_ to interpretation, but a nice to know
+3. **If known, what is the historical context for this psalm?\*\***1 Samuel 21:10-15\*\*, worth noting that this tie is not _vital_ to interpretation, but a nice to know
    MacArthur has a helpful comment that “Abimelech” like the word “Pharaoh” is a designation of kingship, rather than a proper name.
 4. **Who are the subjects within the psalm?** 3. I - David 4. He - The LORD 5. His Saints, the righteous, his servants 6. Those who do evil, the wicked
 5. **What is the intent of this psalm? How would it be used?** To praise the Lord for answered prayer and to share wisdom on how to receive the Lord’s blessing

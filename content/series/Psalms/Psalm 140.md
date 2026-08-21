@@ -12,10 +12,11 @@ Book: Psalm
 ---
 
 # **Questions to Ask** 1.**What is the structure of this psalm?** 3 Requests and Praise - Collins
-   Deliver Me from the Plots of the Wicked (1-5)
-   O Lord, My Strength, Hear Me (6-8)
-   Let Their Schemes Recoil on Them! (9-11)
-   I Am Confident that the Lord Will Protect Me (12-13)
+
+Deliver Me from the Plots of the Wicked (1-5)
+O Lord, My Strength, Hear Me (6-8)
+Let Their Schemes Recoil on Them! (9-11)
+I Am Confident that the Lord Will Protect Me (12-13)
 
 3 Areas of Interest - MacArthur
 _Complain, Prayer, Confident Hope of Relief_

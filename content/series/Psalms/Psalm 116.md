@@ -9,7 +9,7 @@ Tags:
 Book: Psalm
 ---
 
-# **Questions to Ask****What is the structure of this psalm?**
+# **Questions to Ask\*\***What is the structure of this psalm?\*\*
 
 - Pretty loose!
 
@@ -53,7 +53,7 @@ A reminder of how the Lord has continued to protect and care for us. Within a co
 
 As I’ve been reading this, this Psalmist comes across like Kramer from Seinfield. He bursts into the bible with lots of words and it’s just from the heart. Thankfully, this psalmist’s heart is filled with love, but that means the structure is super loose.
 
-## **Praise (v. 1-11)****Praise Sandwich (v. 1-9)**
+## **Praise (v. 1-11)\*\***Praise Sandwich (v. 1-9)\*\*
 
 I’m going to skip around a bit in this first part, so prepare yourself.
 
@@ -62,8 +62,8 @@ v.1 - The Psalmist begins by proclaiming his love for the Lord because He (the L
 > [!question] ❓
 > What is his plea for mercy?
 > \*v. 3-4 *What did the psalmist ask for mercy from?
-*Physical death, perhaps
-Certainly spiritual harm! He asks for the Lord to deliver his soul\*Yes, the psalmist’s pleas for mercy from death (spiritual and physical) were heard by they Lord. In verse 2, he expounds how the Lord heard him and the psalmist says that the Lord**inclined** his ear to him.
+> *Physical death, perhaps
+> Certainly spiritual harm! He asks for the Lord to deliver his soul\*Yes, the psalmist’s pleas for mercy from death (spiritual and physical) were heard by they Lord. In verse 2, he expounds how the Lord heard him and the psalmist says that the Lord**inclined** his ear to him.
 
 > [!question] ❓
 > What does inclined mean?

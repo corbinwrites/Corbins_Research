@@ -81,8 +81,8 @@ David gives us two illustrations to expand how God meets our wants.
 > [!question] ❓
 > What does David mean by “paths of righteousness?”
 > \*Right-living, uprightness, the Christian walk *Not a reading comprehension question: Is the “path of righteousness” good for us? Why?
-*Yes
-_[_[[Bible/ESV/Psalms/Ps 16#11|Psalm 16:11]]_](https://www.biblegateway.com/passage/?search=Psalm%2016%3A11&version=ESV)_ You make known to me the path of life; in your presence there is fullness of joy; at your right hand are pleasures forevermore.\*We know this path is good for us, as we’ve explored, but we see**the shepherd leads us on the path for \*\*\***his**\***name’s sake**. Note that t** he shepherd is walking in front of us here.\*\* He is showing us the way to walk, where to navigate. The shepherd steps to the right to stay on the path, the sheep takes a right as well. He steps left to stay on the path and avoid a thicket that has grown off the side of the path, the sheep follows and also avoids the barbed stems of the bush. The sheep takes the same steps as the shepherd and easily follows Him down the trail
+> *Yes
+> _[_[[Bible/ESV/Psalms/Ps 16#11|Psalm 16:11]]_](https://www.biblegateway.com/passage/?search=Psalm%2016%3A11&version=ESV)_ You make known to me the path of life; in your presence there is fullness of joy; at your right hand are pleasures forevermore.\*We know this path is good for us, as we’ve explored, but we see**the shepherd leads us on the path for \*\*\***his**\***name’s sake**. Note that t** he shepherd is walking in front of us here.\*\* He is showing us the way to walk, where to navigate. The shepherd steps to the right to stay on the path, the sheep takes a right as well. He steps left to stay on the path and avoid a thicket that has grown off the side of the path, the sheep follows and also avoids the barbed stems of the bush. The sheep takes the same steps as the shepherd and easily follows Him down the trail
 
 But **what if we don’t follow the shepherd.** He stays on the path and walks around the thicket and we plunge headfirst into it. The LORD has continued to lead us well, but alas, we did not heed our Shepherd’s instruction. The shepherd is not bad or less caring, but**we have selfishly proceeded with our own plan.** I mention the opposite of this verse so that we may have it in mind when we encounter this phrase at the end of verse 3 ]where it says he leads us for, “_his name’s sake.”_**Which essentially means that he leads us for\*\*\***his**\***glory, not our glory.\*\* Let’s say this sheep follows the shepherd excellently. This this sheep would be well-fed, restored, and fully reliant on the shepherd. This would ascribe glory to the shepherd! Look how healthy and good the sheep is! This because the sheep is reliant on his shepherd and the shepherd so excellent leads and tends the sheep.
 
@@ -109,7 +109,7 @@ Spurgeon points out that the sheep _walks_ through the valley,
 > Psalms Volume I
 > Charles Spurgeon
 
-Commentator David Gibson expands on Spurgeon’s point in Lord of [[Bible/ESV/Psalms/Ps 23|Psalm 23]], to point out that **the shepherd’s position has shifted.****He is no longer \*\*\***leading**\***but instead walking**\***alongside**\***. \*\*
+Commentator David Gibson expands on Spurgeon’s point in Lord of [[Bible/ESV/Psalms/Ps 23|Psalm 23]], to point out that **the shepherd’s position has shifted.\*\***He is no longer \*\*\***leading**\***but instead walking**\***alongside**\*\*\*. \*\*
 
 “You are with me.”
 

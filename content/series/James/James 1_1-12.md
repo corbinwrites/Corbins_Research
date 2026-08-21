@@ -34,7 +34,7 @@ We feel that emotion when we face trials of various kinds. Helpful to note that 
 - We do not walk around with an artificial joy. In fact you really can’t. that word testing is very vivid about what it’s going to feel like. Testing is a metallurgical term. It refers to when gold and silver is melted down to remove the impurities. It’s hot. You can lose a lot of the mass of the original metal. But what comes out is pure. A good smith doesn’t leave any impurities at the top, but skims it off all the impurities so the precious, pure met is left.
 - Similarly, trials melt us down and show us our impurities. Our sinful anger, impatience, anxiousness, to name a few. These are ugly things that are skimmed off by the Divine Metalworker.
 - I also just like this word “test” Rachelle pointed out that there is a personal nature to it. It’s intentional. Just the metalworker refining one ore.
-- We don’t walk around with joy _because_ we’re being melted by fiery heat of trials. However, we _do_ walk around with joy in the midst of the fiery heat of trials *because of the outcome.*We rejoice _now_ in the trial, because we know in the future *we a purest gold.* In fact, we can be**thankful** for the trial, in the midst of the trial, because of this great outcome.
+- We don’t walk around with joy _because_ we’re being melted by fiery heat of trials. However, we _do_ walk around with joy in the midst of the fiery heat of trials *because of the outcome.*We rejoice _now_ in the trial, because we know in the future _we a purest gold._ In fact, we can be**thankful** for the trial, in the midst of the trial, because of this great outcome.
 
 ## Testing Leads to Steadfastness
 

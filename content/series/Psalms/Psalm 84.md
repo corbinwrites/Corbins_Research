@@ -135,7 +135,7 @@ The pilgrims go from strength to strength. They are not weary, they are filled w
 
 Verse 8
 
-As we come into verse 8, note the selah break. So that would indicate that verse 8 would be tied to verses 5-7. The Psalmist prays that the Lord will hear the prayer of what *he just said*. In this final verse of the section the Psalmist artfully adds another layer to the pre-established statement of fact. Yes, those that have strength and desire for the Lord of are blessed.
+As we come into verse 8, note the selah break. So that would indicate that verse 8 would be tied to verses 5-7. The Psalmist prays that the Lord will hear the prayer of what _he just said_. In this final verse of the section the Psalmist artfully adds another layer to the pre-established statement of fact. Yes, those that have strength and desire for the Lord of are blessed.
 The Psalmist say, but, Lord, I pray that you _will_ bless them as well! Make this come to pass. May the pilgrim coming to Zion be strong! May they all come with joy!
 It seems as if the Psalmist makes the section a statement *and *a prayer. Very cool.
 

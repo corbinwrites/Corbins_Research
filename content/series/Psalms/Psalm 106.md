@@ -12,14 +12,16 @@ Book: Psalm
 ---
 
 ## **Questions to Ask** 1.**What is the structure of this psalm?**
-   - Praise
-   - Petition
-   - Confession
-     - Picture 1: Red Sea
-     - Picture 2: Journey to Canaan
-     - Picture 3: 40 Years in the Wilderness
-     - Picture 4: Unpleasant people in a pleasant land (Joshua - Judges)
-   - Dependence
+
+- Praise
+- Petition
+- Confession
+  - Picture 1: Red Sea
+  - Picture 2: Journey to Canaan
+  - Picture 3: 40 Years in the Wilderness
+  - Picture 4: Unpleasant people in a pleasant land (Joshua - Judges)
+- Dependence
+
 2. **What kind of psalm is this?**
    History, Praise
 3. **If known, what is the historical context for this psalm?** This Psalm spans Genesis - [[Bible/ESV/Judges/Judg 4|Judges 4]].**Who are the subjects within the psalm?**
@@ -91,7 +93,7 @@ The Psalmist continues, by showing us just as the way was made dry, so can it be
 
 > [!question] ❓
 > What is the response of Israel to this? Is it good or bad?
-> \*Good! They \***\*believe\*\*\*****\*and they \*\***sing \*_\*\*(v.12)_
+> \*Good! They \***\*believe\*\*\*\*\***\*and they \*\*\*\*sing \*_\*\*(v.12)_
 
 > [!question] ❓
 > Why is this response good?

@@ -211,7 +211,8 @@ What follows next is an extensive list of commands and promises to show us how t
 - Humble yourself before the Lord and he will exalt you
 
 > [!question] ❓
-> **Find the commands in verse 7-10 and give a practical example of how you would follow that command.****How would you explain each of the commands you can find in verses 7-10?**-** Submit yourselves**: follow God’s instruction. Even when I want to do something else I should do what he desires.
+> **Find the commands in verse 7-10 and give a practical example of how you would follow that command.\*\***How would you explain each of the commands you can find in verses 7-10?**-** Submit yourselves\*\*: follow God’s instruction. Even when I want to do something else I should do what he desires.
+
 - **Resist the devil**: Reminder: Diabalos is the Greek translation for the “slanderer” or “accuser.” This can be as specific as don’t give any ground to doubt, slanderous thoughts towards God, accusations towards God. This can be as broad as don’t give into temptation
 - **Draw near to God:** Spend time with God. Read your bible, pray, meditate, sing, dance, “Whether you eat or drink seek to glorify God in all you do.”
 - **Cleanse your hands:** Cease your sinning. Wipe the sin off your hands. Clean them with the blood of Christ and have them be made as white as snow.

@@ -10,9 +10,10 @@ Book: Psalm
 ---
 
 # **Questions to Ask** 1.**What is the structure of this psalm?** Bless the King’s Rule (v. 1-7)
-   Bless the King’s Dominion(v. 8-14)
-   Grant the King Prosperity (v. 15-17)
-   Doxology (v. 18-19)
+
+Bless the King’s Dominion(v. 8-14)
+Grant the King Prosperity (v. 15-17)
+Doxology (v. 18-19)
 
 _J Mac_
 A Just Reign (1-4)

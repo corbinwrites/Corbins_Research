@@ -19,7 +19,7 @@ Men's Devotional: Corbin
 > Jesus chooses to encourage the disciples, because the reality is scary!
 >
 > - V.17 - **Flog** you in synagogues
-> - V.18 - **Dragged** before governors (lead to a court hearing - S *trong’s*)
+> - V.18 - **Dragged** before governors (lead to a court hearing - S _trong’s_)
 > - V.22 - **Hated** for my name’s sake.
 >
 > With all of that fear in mind, Jesus gives a command in 28 before the encouragement in 29-31,
