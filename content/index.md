@@ -13,7 +13,7 @@ Hey! Welcome to my site for all things bible. You can check in weekly during the
 ## Connect with Me
 
 <div class="connect-container">
-  <a href="https://cal.com/corbin-harris-9v9hmi/video-chat-or-call" target="_blank" rel="noopener noreferrer" class="connect-card" data-cal-link="corbin-harris-9v9hmi/video-chat-or-call" data-cal-namespace="video-chat-or-call" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
+  <a href="https://cal.com/corbin-harris-9v9hmi/video-chat-or-call" class="connect-card" data-cal-link="corbin-harris-9v9hmi/video-chat-or-call" data-cal-namespace="video-chat-or-call" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
     <div class="card-header">
       <div class="card-icon">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-video"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
@@ -24,7 +24,7 @@ Hey! Welcome to my site for all things bible. You can check in weekly during the
     <div class="card-action">Book a call <span class="arrow">→</span></div>
   </a>
 
-  <a href="https://cal.com/corbin-harris-9v9hmi/meetup" target="_blank" rel="noopener noreferrer" class="connect-card" data-cal-link="corbin-harris-9v9hmi/meetup" data-cal-namespace="meetup" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
+  <a href="https://cal.com/corbin-harris-9v9hmi/meetup" class="connect-card" data-cal-link="corbin-harris-9v9hmi/meetup" data-cal-namespace="meetup" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
     <div class="card-header">
       <div class="card-icon">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
