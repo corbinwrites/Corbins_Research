@@ -21,7 +21,16 @@ const explorerConfig = {
   folderClickBehavior: "collapse" as const,
   useSavedState: true,
   mapFn: (node: any) => {
-    const titleCase = (value: string) => {
+    if (node.slugSegment === "series") {
+      node.displayName = "Series"
+    } else if (node.slugSegment === "topics") {
+      node.displayName = "Topics & Method Guides"
+    } else if (
+      node.slugSegment === "books-of-the-bible" ||
+      node.displayName === "Books of the Bible"
+    ) {
+      node.displayName = "Books of the Bible"
+    } else if (node.displayName) {
       const minorWords = new Set([
         "a",
         "an",
@@ -41,33 +50,17 @@ const explorerConfig = {
         "vs",
         "with",
       ])
-      const words = value.replace(/[-_]+/g, " ").replace(/\s+/g, " ").trim().split(" ")
-
-      return words
-        .map((word, index) => {
+      const words = node.displayName.replace(/[-_]+/g, " ").replace(/\s+/g, " ").trim().split(" ")
+      node.displayName = words
+        .map((word: string, index: number) => {
           const lower = word.toLowerCase()
           const isEdgeWord = index === 0 || index === words.length - 1
-
           if (!isEdgeWord && minorWords.has(lower)) {
             return lower
           }
-
-          return lower.replace(/^\p{L}/u, (letter) => letter.toUpperCase())
+          return lower.replace(/^\p{L}/u, (letter: string) => letter.toUpperCase())
         })
         .join(" ")
-    }
-
-    if (node.slugSegment === "series") {
-      node.displayName = "Series"
-    } else if (node.slugSegment === "topics") {
-      node.displayName = "Topics & Method Guides"
-    } else if (
-      node.slugSegment === "books-of-the-bible" ||
-      node.displayName === "Books of the Bible"
-    ) {
-      node.displayName = "Books of the Bible"
-    } else if (node.displayName) {
-      node.displayName = titleCase(node.displayName)
     }
 
     return node
