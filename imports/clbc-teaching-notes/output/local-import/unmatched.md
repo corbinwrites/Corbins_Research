@@ -1,0 +1,44 @@
+# Unmatched / Low-Confidence Imports
+
+- **1 Peter 1_3-5 (City Light, Easter 2025).pdf** — match: `unmatched`, schedule: _—_
+- **1 Thessalonians 2_13-16 (City Light).doc** — match: `unmatched`, schedule: _—_
+- **1 Thessalonians 2_17-3_8 (City Light, 2nd Anniversary).pdf** — match: `unmatched`, schedule: _—_
+- **1 Thessalonians 3_9-13 (City Light).pdf** — match: `unmatched`, schedule: _—_
+- **1 Thessalonians 4_1-8 (City Light).pdf** — match: `unmatched`, schedule: _—_
+- **1 Thessalonians 4_13-18 (City Light).pdf** — match: `unmatched`, schedule: _—_
+- **1 Thessalonians 4_9-12 (City Light).pdf** — match: `unmatched`, schedule: _—_
+- **1 Thessalonians 5_1-7 (City Light).pdf** — match: `unmatched`, schedule: _—_
+- **1 Thessalonians 5_12-13 (City Light).pdf** — match: `unmatched`, schedule: _—_
+- **1 Thessalonians 5_14-18 (City Light).pdf** — match: `unmatched`, schedule: _—_
+- **1 Thessalonians 5_19-22 (City Light).pdf** — match: `unmatched`, schedule: _—_
+- **1 Thessalonians 5_23-28 (City Light).pdf** — match: `unmatched`, schedule: _—_
+- **1 Thessalonians 5_8-11 (City Light).pdf** — match: `unmatched`, schedule: _—_
+- **2 Thessalonians 1_1-4; 11-12.pdf** — match: `unmatched`, schedule: _—_
+- **2 Thessalonians 1_5-10.pdf** — match: `unmatched`, schedule: _—_
+- **2 Thessalonians 2_1-8.pdf** — match: `unmatched`, schedule: _—_
+- **2 Thessalonians 2_13-17 (City Light).pdf** — match: `unmatched`, schedule: _—_
+- **2 Thessalonians 2_9-12.pdf** — match: `unmatched`, schedule: _—_
+- **2 Thessalonians 3_1-5 (City Light).pdf** — match: `unmatched`, schedule: _—_
+- **2 Thessalonians 3_6; 14-15 (City Light).pdf** — match: `unmatched`, schedule: _—_
+- **2 Thessalonians 3_7-13; 16-18 (City Light).pdf** — match: `unmatched`, schedule: _—_
+- **9-20 outline.docx** — match: `unmatched`, schedule: _—_
+- **Evangelism 2- Motivation (City Light).pdf** — match: `unmatched`, schedule: _—_
+- **Friendship (City Light).doc** — match: `unmatched`, schedule: _—_
+- **Genesis 4 1-16 (City Light, new year 2025).pdf** — match: `unmatched`, schedule: _—_
+- **Have a Great Summer (City Light).docx** — match: `unmatched`, schedule: _—_
+- **Hell Part 1 (City Light).pdf** — match: `unmatched`, schedule: _—_
+- **Hell Part 2 (City Light).pdf** — match: `unmatched`, schedule: _—_
+- **John 10_1-30 (City Light).pdf** — match: `unmatched`, schedule: _—_
+- **John 10_7-10 (City Light).pdf** — match: `unmatched`, schedule: _—_
+- **John 6_1-71 (City Light).pdf** — match: `unmatched`, schedule: _—_
+- **John 9 1-41 (City Light).pdf** — match: `unmatched`, schedule: _—_
+- **Luke 16_19-31 (City Light).pdf** — match: `unmatched`, schedule: _—_
+- **Psalm 19 (City Light).pdf** — match: `unmatched`, schedule: _—_
+- **Psalm 27 (City Light).pdf** — match: `unmatched`, schedule: _—_
+- **Rev 21_1-4, Part 1 (City Light).pdf** — match: `unmatched`, schedule: _—_
+- **Rev 21_1-4, Part 2 (City Light).pdf** — match: `unmatched`, schedule: _—_
+- **Revelation 21_19-22_5 (City Light).pdf** — match: `unmatched`, schedule: _—_
+- **Revelation 21_5-8 (City Light).pdf** — match: `unmatched`, schedule: _—_
+- **Revelation 22_7-14 (City Light).pdf** — match: `unmatched`, schedule: _—_
+- **Romans- Why Study Romans (City Light).pdf** — match: `unmatched`, schedule: _—_
+- **Work (2 Thess 3_6-18 introduction).pdf** — match: `unmatched`, schedule: _—_
