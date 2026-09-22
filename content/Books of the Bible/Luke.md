@@ -2,8 +2,9 @@
 title: Luke
 description: Study notes connected to the Gospel according to Luke.
 ---
-# Passage Studies
-* *Forthcoming*
+# Chapter Studies
+- [Luke 1](obsidian://open?vault=Corbins_Research&file=content%2FSeries%2FLuke%2FLuke%201)
+
 # Resources I'm Using
 - **[[How to Study The Gospels]]** - Rachelle Harris
 - **[From the Manger to the Throne](https://www.crossway.org/customer/library/detail/from-the-manger-to-the-throne-ebook/)**- Benjamin L. Gladd
@@ -41,7 +42,7 @@ Most closely aligns to ancient *biographies*. Though modern biographies today ar
 
 While the Gospel accounts have the hallmarks of a narrative and it can be tempting to view each story in the classic narrative structure, it's important to keep in mind that is modern convention being applied to a text that predates it. Careful exegesis and an understanding of the history will serve us helpful companions while using literary analysis to study a gospel!`
 
-## Sources Used
+## Major Source
 [An Introduction to the New Testament](https://zondervanacademic.com/products/an-introduction-to-the-new-testament) by D.A. Carson and Douglas Moo. 
 
 ## Major Themes

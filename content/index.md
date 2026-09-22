@@ -4,11 +4,11 @@ description: Bible study notes, series, and reference indexes for Corbin's small
 ---
 
 <div class="hero-card">
-Hey! Welcome to my site for all things bible. You can check in weekly during the small group season for the latest updates on my notes and see questions to answer for homework each week!
+Hey! Welcome to my site for all things Bible. You can check in weekly during the small group season for the latest updates on my notes and see questions to answer for homework each week!
 </div>
 
 > [!Current Members]
-> The quickest way to read up is to open [[current-series]] and then use the next study link from there.
+> The current study we're going through is the Gospel of Luke! You can find the introduction to Luke [here](obsidian://open?vault=Corbins_Research&file=content%2FBooks%20of%20the%20Bible%2FLuke) and the current chapter we're studying [here](obsidian://open?vault=Corbins_Research&file=content%2FSeries%2FLuke). Glance ahead for questions for the upcoming week and look at previous weeks for my study notes. 
 
 ## Connect with Me
 
@@ -56,12 +56,6 @@ Hey! Welcome to my site for all things bible. You can check in weekly during the
 - [[all-studies]]
 - [[books-of-the-bible]]
 - [[topics]]
-
-## Latest Notes
-
-- [[Psalms]]
-- [[john-2-water-into-wine]]
-- [[topics/incarnation]]
 
 # Small Group Member Description (2026-2027)
 

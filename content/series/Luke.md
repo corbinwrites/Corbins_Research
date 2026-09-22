@@ -3,10 +3,10 @@ title: Gospel of Luke
 description: A running index of notes from the small group study in the Gospel of Luke.
 ---
 
-# Gospel of Luke
+# The Gospel According to Luke
 
-Walkthrough of the Gospel of Luke.
+You can find the introduction to the book of Luke [here](obsidian://open?vault=Corbins_Research&file=content%2FBooks%20of%20the%20Bible%2FLuke)
 
-## Studies
+## Chapters
 
-- [[series/Luke/Luke 1|Luke 1 — The Birth of John the Baptist Foretold]]
+- [[series/Luke/Luke 1|Luke 1]]
