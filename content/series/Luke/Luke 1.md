@@ -9,5 +9,6 @@ tags:
 
 ## Study Questions
 
-1. What do we learn about God's character in this chapter?
-2. What do we 
+1. What "episodes" are present in this chapter? 
+2. What does each episode show us about God and his character?
+3. What is Luke attempting communicate by collecting these episodes together?
