@@ -1,0 +1,7 @@
+@use "../../styles/variables.scss" as *;
+
+.sidebar-toggle-container-right {
+  @media all and not ($desktop) {
+    display: none;
+  }
+}

@@ -1,5 +1,6 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import { classNames } from "../util/lang"
+import style from "./styles/rightSidebarToggle.scss"
 
 const RightSidebarToggle: QuartzComponent = ({ displayClass }: QuartzComponentProps) => {
   return (
@@ -33,5 +34,7 @@ const RightSidebarToggle: QuartzComponent = ({ displayClass }: QuartzComponentPr
     </div>
   )
 }
+
+RightSidebarToggle.css = style
 
 export default (() => RightSidebarToggle) satisfies QuartzComponentConstructor
