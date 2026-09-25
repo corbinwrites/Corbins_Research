@@ -8,7 +8,7 @@ Hey! Welcome to my site for all things Bible. You can check in weekly during the
 </div>
 
 > [!Current Members]
-> The current study we're going through is the Gospel of Luke! You can find the introduction to Luke [here](obsidian://open?vault=Corbins_Research&file=content%2FBooks%20of%20the%20Bible%2FLuke) and the current chapter we're studying [here](obsidian://open?vault=Corbins_Research&file=content%2FSeries%2FLuke). Glance ahead for questions for the upcoming week and look at previous weeks for my study notes. 
+> The current study we're going through is the Gospel of Luke! You can find the introduction to Luke [here](https://corbinwrites.github.io/Corbins_Research/Books-of-the-Bible/Luke) and the current chapter we're studying [here](https://corbinwrites.github.io/Corbins_Research/series/Luke/). Glance ahead for questions for the upcoming week and look at previous weeks for my study notes. 
 
 ## Connect with Me
 
