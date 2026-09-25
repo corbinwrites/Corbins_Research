@@ -31,14 +31,14 @@ Contemporary scholars employee three areas of critical analysis though at differ
 **Redaction Criticism** is the observation that Matthew, Mark, and Luke are distinct authors writing to a distinct audience. As an author each man, being led by the Holy Spirit, would tailor the Gospel in a way that taught that people best. This is by far the most popular critical lens in the modern era. We should carefully handle this critical lens and not over correct our vision as to receive a headache or to not apply it at all and continue to not see at all.
 **Overcorrection:** We read *too* deeply into an omission or addition from Luke and to claim there is theological motivation. It *could* be the case, but it we should be careful to declare that so.
 
-> [!An Example of Redaction Overcorrection]
+> [!example] An Example of Redaction Overcorrection
 > In Matthew 8 there are two men which are in Gerasenes when Jesus send Legion into the pigs. In Luke 8, the author only mentions one. Clearly this is because Matthew is trying to show that within us are two spirits, two wolves if you will, and Jesus is able to overcome them both. The spirit and the flesh. 
 > **No!** Matthew mentions _both_ men who were present, while Mark and Luke focus exclusively on the single, more vocal individual who spoke with Jesus and later went on to preach throughout the Decapolis.
 
 **Undercorrection:** We claim that the author has *not* tailored the message and thus the omissions and additions make for an "inferior" Gospel that we cannot trust. We *can* trust that he author has tailored this message for us and that is helpful and good. He has done so in a way that has handled the historicity well and still truly represents Jesus.
 **Conclusion:** Helpful! Use the previous two criticisms and don't overly lean on this!
 
-> [!An example of redaction undercorrection]
+> [!example] An Example of Redaction Undercorrection
 > Luke omits Jesus walking on the water on the Sea of Galilee. So this is an inferior Gospel, it's inaccurate and should be thrown out.
 > **No**, Mark existed first. Why rehash what Mark already wrote?
 

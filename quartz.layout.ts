@@ -101,6 +101,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Explorer(explorerConfig),
   ],
   right: [
+    Component.RightSidebarToggle(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Graph({
       localGraph: {
@@ -149,5 +150,5 @@ export const defaultListPageLayout: PageLayout = {
     }),
     Component.Explorer(explorerConfig),
   ],
-  right: [Component.Graph()],
+  right: [Component.RightSidebarToggle(), Component.Graph()],
 }

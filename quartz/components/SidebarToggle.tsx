@@ -8,7 +8,14 @@ const SidebarToggle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzC
   const baseDir = pathToRoot(fileData.slug!)
   return (
     <div class={classNames(displayClass, "sidebar-toggle-container")}>
-      <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle Sidebar">
+      <button
+        class="sidebar-toggle sidebar-toggle-left"
+        data-sidebar-toggle="left"
+        aria-controls="left-sidebar"
+        aria-label="Hide navigation sidebar"
+        aria-expanded="true"
+        title="Hide navigation sidebar"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -35,25 +42,42 @@ const SidebarToggle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzC
 
 SidebarToggle.beforeDOMLoaded = `
   document.addEventListener("nav", () => {
-    const toggle = document.getElementById("sidebar-toggle")
     const page = document.querySelector(".page")
-    
-    if (toggle && page) {
-      toggle.addEventListener("click", () => {
-        page.classList.toggle("sidebar-collapsed")
-        
-        // Save state to localStorage
-        const isCollapsed = page.classList.contains("sidebar-collapsed")
-        localStorage.setItem("sidebar-collapsed", isCollapsed ? "true" : "false")
-      })
-      
-      // Load state from localStorage on initial load
-      const savedState = localStorage.getItem("sidebar-collapsed")
-      if (savedState === "true") {
-        page.classList.add("sidebar-collapsed")
-      } else {
-        page.classList.remove("sidebar-collapsed")
+    if (!page) return
+
+    for (const toggle of document.querySelectorAll("[data-sidebar-toggle]")) {
+      const side = toggle.getAttribute("data-sidebar-toggle")
+      if (side !== "left" && side !== "right") continue
+
+      const stateClass = "sidebar-" + side + "-collapsed"
+      const storageKey = "sidebar-" + side + "-collapsed"
+      let savedState = localStorage.getItem(storageKey)
+
+      // Preserve the state saved by the original single-sidebar control.
+      if (side === "left" && savedState === null) {
+        savedState = localStorage.getItem("sidebar-collapsed")
       }
+
+      page.classList.toggle(stateClass, savedState === "true")
+
+      const updateToggle = () => {
+        const isCollapsed = page.classList.contains(stateClass)
+        const label = isCollapsed ? "Show" : "Hide"
+        const sidebarName = side === "left" ? "navigation sidebar" : "reading sidebar"
+        toggle.setAttribute("aria-expanded", String(!isCollapsed))
+        toggle.setAttribute("aria-label", label + " " + sidebarName)
+        toggle.setAttribute("title", label + " " + sidebarName)
+      }
+
+      updateToggle()
+      const handleToggle = () => {
+        page.classList.toggle(stateClass)
+        localStorage.setItem(storageKey, page.classList.contains(stateClass) ? "true" : "false")
+        updateToggle()
+      }
+
+      toggle.addEventListener("click", handleToggle)
+      window.addCleanup(() => toggle.removeEventListener("click", handleToggle))
     }
   })
 `
@@ -64,6 +88,7 @@ SidebarToggle.css = `
   align-items: center;
   gap: 0.5rem;
   margin: 0;
+  min-width: 2.75rem;
 }
 
 .sidebar-toggle-container h2.page-title {
@@ -77,11 +102,13 @@ SidebarToggle.css = `
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0;
+  padding: 0.5rem;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
   color: var(--darkgray);
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   transition: color 0.2s ease;
 }
 
@@ -94,9 +121,9 @@ SidebarToggle.css = `
   height: 24px;
 }
 
-/* Ensure it is hidden on mobile where the native mobile menu is used */
+/* The Explorer supplies the native left navigation toggle on mobile. */
 @media all and (max-width: 800px) {
-  .sidebar-toggle {
+  .sidebar-toggle-left {
     display: none !important;
   }
 }
@@ -106,44 +133,117 @@ SidebarToggle.css = `
 }
 
 @media all and (min-width: 1200px) {
-  .page.sidebar-collapsed > #quartz-body {
-    grid-template-columns: 3rem auto 320px !important;
+  .page.sidebar-left-collapsed > #quartz-body {
+    grid-template-columns: 3rem minmax(0, 1fr) 320px !important;
+  }
+
+  .page.sidebar-right-collapsed > #quartz-body {
+    grid-template-columns: 320px minmax(0, 1fr) 3rem !important;
+  }
+
+  .page.sidebar-left-collapsed.sidebar-right-collapsed {
+    max-width: none;
+    margin: 0;
+  }
+
+  .page.sidebar-left-collapsed.sidebar-right-collapsed > #quartz-body {
+    grid-template-columns: 3rem minmax(0, 1fr) 3rem !important;
   }
 }
 
 @media all and (min-width: 800px) and (max-width: 1200px) {
-  .page.sidebar-collapsed > #quartz-body {
-    grid-template-columns: 3rem auto !important;
+  .page.sidebar-left-collapsed > #quartz-body {
+    grid-template-columns: 3rem minmax(0, 1fr) !important;
   }
 }
 
-.sidebar.left {
-  transition: padding 0.3s ease;
-  overflow-x: hidden;
+@media all and (min-width: 800px) {
+  .sidebar.left,
+  .sidebar.right {
+    transition: padding 0.3s ease;
+    overflow-x: hidden;
+  }
+
+  .page.sidebar-left-collapsed > #quartz-body .sidebar.left {
+    padding-right: 2px;
+    padding-left: 2px;
+  }
+
+  .page.sidebar-right-collapsed > #quartz-body .sidebar.right {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  .page.sidebar-left-collapsed .sidebar-toggle-container,
+  .page.sidebar-right-collapsed .sidebar-toggle-container {
+    width: 44px;
+    min-width: 44px;
+  }
+
+  .page.sidebar-left-collapsed .sidebar-toggle-container h2.page-title {
+    display: none;
+  }
+
+  .page.sidebar-right-collapsed .sidebar.right .sidebar-toggle-container {
+    justify-content: center;
+  }
+
+  .sidebar.left > *:not(.sidebar-toggle-container) {
+    transition: opacity 0.2s ease, transform 0.3s ease;
+    min-width: 250px;
+    transform: translateX(0);
+  }
+
+  .sidebar.right > *:not(.sidebar-toggle-container) {
+    transition: opacity 0.2s ease, transform 0.3s ease;
+    min-width: 250px;
+    transform: translateX(0);
+  }
+
+  .page.sidebar-left-collapsed .sidebar.left > *:not(.sidebar-toggle-container) {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-100%);
+  }
+
+  .page.sidebar-right-collapsed .sidebar.right > *:not(.sidebar-toggle-container) {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100%);
+  }
+
 }
 
-.page.sidebar-collapsed .sidebar.left {
-  padding-right: 0;
-  padding-left: 0.5rem;
+.sidebar.right .sidebar-toggle-container {
+  justify-content: flex-end;
 }
 
-/* We need to apply transitions to the children of the sidebar so they slide out nicely */
-.sidebar.left > *:not(.sidebar-toggle-container) {
-  transition: opacity 0.2s ease, transform 0.3s ease;
-  min-width: 250px;
-  transform: translateX(0);
-}
+@media all and (max-width: 1199px) {
+  .sidebar.right .sidebar-toggle-container {
+    position: fixed;
+    top: 0.75rem;
+    right: 0.75rem;
+    z-index: 3;
+    padding: 0.2rem;
+    border: 1px solid var(--lightgray);
+    border-radius: 6px;
+    background: var(--light);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
 
-.page.sidebar-collapsed .sidebar.left > *:not(.sidebar-toggle-container) {
-  opacity: 0;
-  pointer-events: none;
-  transform: translateX(-100%);
-}
+  .sidebar.right > *:not(.sidebar-toggle-container) {
+    overflow: hidden;
+    transition: opacity 0.2s ease, transform 0.3s ease, max-height 0.3s ease;
+  }
 
-.page.sidebar-collapsed .sidebar-toggle-container h2.page-title {
-  opacity: 0;
-  pointer-events: none;
-  transform: translateX(-100%);
+  .page.sidebar-right-collapsed .sidebar.right > *:not(.sidebar-toggle-container) {
+    flex: 0 0 0 !important;
+    max-height: 0 !important;
+    margin: 0;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100%);
+  }
 }
 `
 

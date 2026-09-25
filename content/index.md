@@ -7,7 +7,7 @@ description: Bible study notes, series, and reference indexes for Corbin's small
 Hey! Welcome to my site for all things Bible. You can check in weekly during the small group season for the latest updates on my notes and see questions to answer for homework each week!
 </div>
 
-> [!Current Members]
+> [!note] Current Members
 > The current study we're going through is the Gospel of Luke! You can find the introduction to Luke [here](https://corbinwrites.github.io/Corbins_Research/Books-of-the-Bible/Luke) and the current chapter we're studying [here](https://corbinwrites.github.io/Corbins_Research/series/Luke/). Glance ahead for questions for the upcoming week and look at previous weeks for my study notes. 
 
 ## Connect with Me
