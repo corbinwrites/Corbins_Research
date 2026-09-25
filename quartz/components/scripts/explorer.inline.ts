@@ -278,6 +278,11 @@ document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
     const mobileExplorer = explorer.querySelector(".mobile-explorer")
     if (!mobileExplorer) return
 
+    // Must remove hide-until-loaded before checking visibility, since that
+    // class itself hides the button and would make checkVisibility() report
+    // false even on mobile.
+    mobileExplorer.classList.remove("hide-until-loaded")
+
     if (mobileExplorer.checkVisibility()) {
       explorer.classList.add("collapsed")
       explorer.setAttribute("aria-expanded", "false")
@@ -285,8 +290,6 @@ document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
       // Allow <html> to be scrollable when mobile explorer is collapsed
       document.documentElement.classList.remove("mobile-no-scroll")
     }
-
-    mobileExplorer.classList.remove("hide-until-loaded")
   }
 })
 
