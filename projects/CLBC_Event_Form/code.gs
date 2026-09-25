@@ -59,7 +59,11 @@ var FORM_CONFIG = {
     "Student's Ministries":   ["summary", "requester", "communications"],
     "College Lead":           ["summary", "requester", "communications"],
     "Young Adults Lead":      ["summary", "requester", "communications"],
-    "40s Plus":               ["summary", "requester", "communications"]
+    "40s Plus":               ["summary", "requester", "communications"],
+    "Photography":            ["summary", "requester", "media"],
+    "Videography":            ["summary", "requester", "media"],
+    "Social Media":           ["summary", "requester", "communications"],
+    "Printed Material":       ["summary", "requester", "communications", "media"]
   },
   defaultEmailSections: ["summary", "requester", "setup", "tech", "childcare", "communications", "additional"],
   currentHeaders: {
@@ -135,6 +139,10 @@ var FORM_CONFIG = {
     techRoles: "Tech Roles Needed",
     liveMusic: "Live Music Or Worship Support Needed",
     mediaCapture: "Media Capture Needed",
+    recordingRequested: "Recording Requested",
+    photographyRequested: "Photography Requested",
+    videographyRequested: "Videography Requested",
+    printedMaterialRequested: "Printed Material Requested",
     planningCenter: "Planning Center Event Posting Needed",
     socialMedia: "Social Media Promotion Needed",
     announcementDetails: "Announcement Details",
@@ -989,7 +997,10 @@ function buildCanonicalAnswers_(rawAnswers) {
     anyTrue_(
       isYesValue_(rawAnswers[FORM_CONFIG.currentHeaders.avRequest]),
       hasTextValue_(buildCurrentTechRoles_(rawAnswers)),
-      isYesValue_(rawAnswers[FORM_CONFIG.currentHeaders.worshipRequest])
+      isYesValue_(rawAnswers[FORM_CONFIG.currentHeaders.worshipRequest]),
+      // Sermon/talk recording belongs to Tech, not Media
+      isYesValue_(rawAnswers[FORM_CONFIG.currentHeaders.techAudioRecording]),
+      isYesValue_(rawAnswers[FORM_CONFIG.currentHeaders.techVideoRecording])
     )
   );
   answers[FORM_CONFIG.canonicalQuestions.techRoles] = buildCurrentTechRoles_(rawAnswers);
@@ -999,13 +1010,35 @@ function buildCanonicalAnswers_(rawAnswers) {
       isYesValue_(rawAnswers[FORM_CONFIG.currentHeaders.techLiveMusic])
     )
   );
+  // mediaCapture: social photography/videography only (photos and video for socials)
   answers[FORM_CONFIG.canonicalQuestions.mediaCapture] = toYesNo_(
     anyTrue_(
       isYesValue_(rawAnswers[FORM_CONFIG.currentHeaders.photographer]),
-      isYesValue_(rawAnswers[FORM_CONFIG.currentHeaders.videographer]),
+      isYesValue_(rawAnswers[FORM_CONFIG.currentHeaders.videographer])
+    )
+  );
+  // recordingRequested: sermon/talk recording — routes to Tech, not Media
+  answers[FORM_CONFIG.canonicalQuestions.recordingRequested] = toYesNo_(
+    anyTrue_(
       isYesValue_(rawAnswers[FORM_CONFIG.currentHeaders.techAudioRecording]),
       isYesValue_(rawAnswers[FORM_CONFIG.currentHeaders.techVideoRecording])
     )
+  );
+  // Granular media sub-roles
+  answers[FORM_CONFIG.canonicalQuestions.photographyRequested] = firstAnswer_(
+    rawAnswers,
+    FORM_CONFIG.currentHeaders.photographer,
+    FORM_CONFIG.canonicalQuestions.photographyRequested
+  );
+  answers[FORM_CONFIG.canonicalQuestions.videographyRequested] = firstAnswer_(
+    rawAnswers,
+    FORM_CONFIG.currentHeaders.videographer,
+    FORM_CONFIG.canonicalQuestions.videographyRequested
+  );
+  answers[FORM_CONFIG.canonicalQuestions.printedMaterialRequested] = firstAnswer_(
+    rawAnswers,
+    FORM_CONFIG.currentHeaders.printedMaterial,
+    FORM_CONFIG.canonicalQuestions.printedMaterialRequested
   );
   answers[FORM_CONFIG.canonicalQuestions.planningCenter] = firstAnswer_(
     rawAnswers,
@@ -1060,7 +1093,12 @@ function buildDefaultRoutingRules_() {
     buildDefaultRule_("Safety", "Dylan Caulboy", "dycaulboy@gmail.com", "greater_or_equal", FORM_CONFIG.canonicalQuestions.attendance, "30", "You are receiving this because expected attendance is 30 or more.", "Review safety needs and determine whether additional planning is required.", "Safety"),
     buildDefaultRule_("Media Lead", "SRP", "srp15cc@gmail.com", "equals", FORM_CONFIG.canonicalQuestions.mediaCapture, "Yes", "You are receiving this because media capture was requested.", "Review photography or video needs and confirm coverage.", "Media"),
     buildDefaultRule_("40s Plus", "Paul Brown", "paul.brown@southbaybiblicalcounseling.org", "contains", FORM_CONFIG.canonicalQuestions.targetMinistries, "40s Plus", "You are receiving this because the event is intended for 40s Plus ministry.", "Review whether this event should be communicated within 40s Plus.", "40s Plus"),
-    buildDefaultRule_("Planning Center Events", "Laurel Villar", "laurelvillar@gmail.com", "equals", FORM_CONFIG.canonicalQuestions.planningCenter, "Yes", "You are receiving this because the event needs to be posted on the City Light Events page.", "Create or update the Planning Center event entry using the details below.", "Planning Center")
+    buildDefaultRule_("Planning Center Events", "Laurel Villar", "laurelvillar@gmail.com", "equals", FORM_CONFIG.canonicalQuestions.planningCenter, "Yes", "You are receiving this because the event needs to be posted on the City Light Events page.", "Create or update the Planning Center event entry using the details below.", "Planning Center"),
+    // --- Communications / Media granular roles ---
+    buildDefaultRule_("Photography", "Josh Millet", "94stejosh@gmail.com", "equals", FORM_CONFIG.canonicalQuestions.photographyRequested, "Yes", "You are receiving this because a photographer was requested for this event.", "Review the photography needs and confirm you can cover this event.", "Media"),
+    buildDefaultRule_("Videography", "Sarah Campbell", "srp15cc@gmail.com", "equals", FORM_CONFIG.canonicalQuestions.videographyRequested, "Yes", "You are receiving this because a videographer was requested for this event.", "Review the videography needs and confirm you can cover this event.", "Media"),
+    buildDefaultRule_("Social Media", "Jason Ruiz", "jasonaruiz10@gmail.com", "equals", FORM_CONFIG.canonicalQuestions.socialMedia, "Yes", "You are receiving this because social media promotion was requested for this event.", "Review the event details and schedule social media promotion if appropriate.", "Social"),
+    buildDefaultRule_("Printed Material", "Sarah Campbell", "srp15cc@gmail.com", "equals", FORM_CONFIG.canonicalQuestions.printedMaterialRequested, "Yes", "You are receiving this because printed materials (flyer, bulletin, pamphlet, etc.) were requested for this event.", "Review the printed material needs and coordinate design and production.", "Media")
   ];
 }
 
