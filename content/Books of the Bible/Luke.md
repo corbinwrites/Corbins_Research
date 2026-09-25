@@ -3,7 +3,7 @@ title: Luke
 description: Study notes connected to the Gospel according to Luke.
 ---
 # Passage Studies
-* *Forthcoming*
+* [Chapter 1](https://corbinwrites.github.io/Corbins_Research/series/Luke/Luke-1)
 
 # Resources I'm Using
 - **[[How to Study The Gospels]]** - Rachelle Harris
