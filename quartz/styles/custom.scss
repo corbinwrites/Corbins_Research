@@ -183,24 +183,3 @@ article img {
   }
 }
 
-// Collapse Sidebar Layout Override
-.page.sidebar-collapsed {
-  & > #quartz-body {
-    grid-template-areas: 
-      "grid-header grid-sidebar-right"
-      "grid-center grid-sidebar-right"
-      "grid-footer grid-sidebar-right" !important;
-    grid-template-columns: auto 320px !important;
-  }
-}
-
-@media all and (max-width: 1200px) {
-  .page.sidebar-collapsed > #quartz-body {
-    grid-template-columns: auto !important;
-    grid-template-areas: 
-      "grid-header"
-      "grid-center"
-      "grid-sidebar-right"
-      "grid-footer" !important;
-  }
-}

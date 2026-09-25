@@ -43,19 +43,37 @@ SidebarToggle.beforeDOMLoaded = `
 `
 
 SidebarToggle.css = `
+.sidebar.left {
+  position: relative;
+}
+
 .sidebar-toggle {
-  background: none;
-  border: none;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 50%;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0.25rem;
   color: var(--darkgray);
+  position: absolute;
+  top: 5.5rem;
+  right: -0.5rem;
+  z-index: 999;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
+  transition: transform 0.2s ease, color 0.2s ease, right 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
+
 .sidebar-toggle:hover {
   color: var(--secondary);
+  border-color: var(--secondary);
+  transform: scale(1.05);
+}
+
+.sidebar-toggle svg {
+  width: 18px;
+  height: 18px;
 }
 
 .sidebar-toggle .icon-expand {
@@ -74,6 +92,25 @@ SidebarToggle.css = `
   .sidebar-toggle {
     display: none;
   }
+}
+
+.page > #quartz-body {
+  transition: grid-template-columns 0.3s ease;
+}
+
+.page.sidebar-collapsed > #quartz-body {
+  grid-template-columns: 0px auto 320px !important;
+}
+
+.sidebar.left > *:not(.sidebar-toggle) {
+  transition: opacity 0.2s ease, transform 0.3s ease;
+  width: 250px;
+}
+
+.page.sidebar-collapsed .sidebar.left > *:not(.sidebar-toggle) {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-50px);
 }
 `
 
