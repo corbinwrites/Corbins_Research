@@ -1,19 +1,35 @@
+import { pathToRoot } from "../util/path"
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import { classNames } from "../util/lang"
+import { i18n } from "../i18n"
 
-const SidebarToggle: QuartzComponent = ({ displayClass }: QuartzComponentProps) => {
+const SidebarToggle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzComponentProps) => {
+  const title = cfg?.pageTitle ?? i18n(cfg.locale).propertyDefaults.title
+  const baseDir = pathToRoot(fileData.slug!)
   return (
-    <button class={classNames(displayClass, "sidebar-toggle")} id="sidebar-toggle" aria-label="Toggle Sidebar">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-collapse">
-        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-        <line x1="9" y1="3" x2="9" y2="21"></line>
-      </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-expand">
-        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-        <line x1="9" y1="3" x2="9" y2="21"></line>
-        <polyline points="13 8 17 12 13 16"></polyline>
-      </svg>
-    </button>
+    <div class={classNames(displayClass, "sidebar-toggle-container")}>
+      <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle Sidebar">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide-menu"
+        >
+          <line x1="4" x2="20" y1="12" y2="12" />
+          <line x1="4" x2="20" y1="6" y2="6" />
+          <line x1="4" x2="20" y1="18" y2="18" />
+        </svg>
+      </button>
+      <h2 class="page-title">
+        <a href={baseDir}>{title}</a>
+      </h2>
+    </div>
   )
 }
 
@@ -43,54 +59,45 @@ SidebarToggle.beforeDOMLoaded = `
 `
 
 SidebarToggle.css = `
-.sidebar.left {
-  position: relative;
+.sidebar-toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.sidebar-toggle-container h2.page-title {
+  font-size: 1.75rem;
+  margin: 0;
+  font-family: var(--titleFont);
+  transition: opacity 0.2s ease, transform 0.3s ease;
 }
 
 .sidebar-toggle {
-  background: var(--light);
-  border: 1px solid var(--lightgray);
-  border-radius: 50%;
+  background: none;
+  border: none;
   cursor: pointer;
-  padding: 0.25rem;
+  padding: 0;
   color: var(--darkgray);
-  position: absolute;
-  top: 5.5rem;
-  right: -0.5rem;
-  z-index: 999;
   display: flex;
   align-items: center;
-  justify-content: center;
-  transition: transform 0.2s ease, color 0.2s ease, right 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  justify-content: flex-start;
+  transition: color 0.2s ease;
 }
 
 .sidebar-toggle:hover {
   color: var(--secondary);
-  border-color: var(--secondary);
-  transform: scale(1.05);
 }
 
 .sidebar-toggle svg {
-  width: 18px;
-  height: 18px;
+  width: 24px;
+  height: 24px;
 }
 
-.sidebar-toggle .icon-expand {
-  display: none;
-}
-
-.page.sidebar-collapsed .sidebar-toggle .icon-collapse {
-  display: none;
-}
-
-.page.sidebar-collapsed .sidebar-toggle .icon-expand {
-  display: block;
-}
-
-@media all and (max-width: 1200px) {
+/* Ensure it is hidden on mobile where the native mobile menu is used */
+@media all and (max-width: 800px) {
   .sidebar-toggle {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -98,19 +105,45 @@ SidebarToggle.css = `
   transition: grid-template-columns 0.3s ease;
 }
 
-.page.sidebar-collapsed > #quartz-body {
-  grid-template-columns: 0px auto 320px !important;
+@media all and (min-width: 1200px) {
+  .page.sidebar-collapsed > #quartz-body {
+    grid-template-columns: 3rem auto 320px !important;
+  }
 }
 
-.sidebar.left > *:not(.sidebar-toggle) {
+@media all and (min-width: 800px) and (max-width: 1200px) {
+  .page.sidebar-collapsed > #quartz-body {
+    grid-template-columns: 3rem auto !important;
+  }
+}
+
+.sidebar.left {
+  transition: padding 0.3s ease;
+  overflow-x: hidden;
+}
+
+.page.sidebar-collapsed .sidebar.left {
+  padding-right: 0;
+  padding-left: 0.5rem;
+}
+
+/* We need to apply transitions to the children of the sidebar so they slide out nicely */
+.sidebar.left > *:not(.sidebar-toggle-container) {
   transition: opacity 0.2s ease, transform 0.3s ease;
-  width: 250px;
+  min-width: 250px;
+  transform: translateX(0);
 }
 
-.page.sidebar-collapsed .sidebar.left > *:not(.sidebar-toggle) {
+.page.sidebar-collapsed .sidebar.left > *:not(.sidebar-toggle-container) {
   opacity: 0;
   pointer-events: none;
-  transform: translateX(-50px);
+  transform: translateX(-100%);
+}
+
+.page.sidebar-collapsed .sidebar-toggle-container h2.page-title {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-100%);
 }
 `
 
