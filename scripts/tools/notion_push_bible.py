@@ -5,8 +5,8 @@ import requests
 from bible_linker import fetch_passage, parse_reference, get_verses_from_file
 
 # Configuration - You can set these as environment variables or paste them here
-NOTION_TOKEN = os.getenv("NOTION_TOKEN", "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")
-PAGE_ID = os.getenv("NOTION_PAGE_ID", "32965e4381b280b0b2b1e24b4b150217")
+NOTION_TOKEN = os.getenv("NOTION_TOKEN", "")
+PAGE_ID = os.getenv("NOTION_PAGE_ID", "")
 
 def push_to_notion(reference):
     if NOTION_TOKEN == "ntn_...HERE" or PAGE_ID == "YOUR_PAGE_ID_HERE":
