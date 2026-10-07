@@ -1,0 +1,25 @@
+{
+  "name": "clbc-teaching-notes",
+  "version": "1.0.0",
+  "description": "Sermon Import Pipeline for Obsidian",
+  "main": "src/cli.mjs",
+  "type": "module",
+  "bin": {
+    "sermon-import": "./bin/sermon-import.mjs"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "keywords": [
+    "obsidian",
+    "sermon",
+    "bible-linker"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mammoth": "^1.12.2",
+    "pdf-parse": "^1.1.1",
+    "xlsx": "^0.18.5"
+  }
+}

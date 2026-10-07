@@ -1,0 +1,26 @@
+# Configuration template for Tabletalk Magazine → Obsidian Pipeline (v3)
+
+ligonier:
+  email: "" # Or export LIGONIER_EMAIL
+  password: "" # kept only for the optional 'archive' EPUB command
+
+anthropic:
+  api_key: "" # Or export ANTHROPIC_API_KEY — used by 'tabletalk sync --enrich'
+
+obsidian:
+  vault_path: "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Corbin_Personal"
+  notes_folder: "Ministry/Church/Devotionals/Tabletalk"
+  authors_as_wikilinks: false  # set true to render author names as [[wikilinks]]
+
+cache:
+  dir: "~/.cache/tabletalk"   # raw HTTP cache + ledger.db live here
+
+options:
+  max_articles: 0             # 0 = no limit
+  include_posts: false        # true to include /posts/ online exclusives
+  tags:
+    - tabletalk
+  enrich: false               # AI enrichment: off by default in backfill
+  request_delay: 1.0          # seconds between requests
+  concurrency: 2
+  parser_version: 1

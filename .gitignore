@@ -1,7 +1,17 @@
+# OS files
+.DS_Store
+*.DS_Store
+
 # Local agent and cache directories
 .claude/
 .gemini/
 __pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+node_modules/
 
 # Generated artifacts and disposable local runtime state
 artifacts/
@@ -12,3 +22,11 @@ archives/
 # Local-only secrets
 secrets/
 projects/obsidian-bible-linker-plugin
+
+# Project runtime caches and outputs
+projects/**/node_modules/
+projects/**/__pycache__/
+projects/**/.pytest_cache/
+projects/**/*.egg-info/
+projects/sermon-obsidian-pipeline/output/
+

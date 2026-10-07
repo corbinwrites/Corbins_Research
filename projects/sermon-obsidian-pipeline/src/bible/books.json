@@ -1,0 +1,403 @@
+[
+  {
+    "name": "Genesis",
+    "folder": "Genesis",
+    "abbrev": "Gen",
+    "aliases": ["Genesis", "Gen", "Ge", "Gn"]
+  },
+  {
+    "name": "Exodus",
+    "folder": "Exodus",
+    "abbrev": "Exod",
+    "aliases": ["Exodus", "Exod", "Exo", "Ex"]
+  },
+  {
+    "name": "Leviticus",
+    "folder": "Leviticus",
+    "abbrev": "Lev",
+    "aliases": ["Leviticus", "Lev", "Le", "Lv"]
+  },
+  {
+    "name": "Numbers",
+    "folder": "Numbers",
+    "abbrev": "Num",
+    "aliases": ["Numbers", "Num", "Nu", "Nm", "Nb"]
+  },
+  {
+    "name": "Deuteronomy",
+    "folder": "Deuteronomy",
+    "abbrev": "Deut",
+    "aliases": ["Deuteronomy", "Deut", "De", "Dt"]
+  },
+  {
+    "name": "Joshua",
+    "folder": "Joshua",
+    "abbrev": "Josh",
+    "aliases": ["Joshua", "Josh", "Jos", "Jsh"]
+  },
+  {
+    "name": "Judges",
+    "folder": "Judges",
+    "abbrev": "Judg",
+    "aliases": ["Judges", "Judg", "Jdg", "Jdgs", "Judgp"]
+  },
+  {
+    "name": "Ruth",
+    "folder": "Ruth",
+    "abbrev": "Ruth",
+    "aliases": ["Ruth", "Rth", "Ru"],
+    "ambiguous": true
+  },
+  {
+    "name": "1 Samuel",
+    "folder": "1 Samuel",
+    "abbrev": "1 Sam",
+    "aliases": ["1 Samuel", "1 Sam", "1Sam", "1 Sa", "1Sa", "1 S", "1S", "I Samuel", "I Sam", "I Sa", "First Samuel", "1st Samuel"]
+  },
+  {
+    "name": "2 Samuel",
+    "folder": "2 Samuel",
+    "abbrev": "2 Sam",
+    "aliases": ["2 Samuel", "2 Sam", "2Sam", "2 Sa", "2Sa", "2 S", "2S", "II Samuel", "II Sam", "II Sa", "Second Samuel", "2nd Samuel"]
+  },
+  {
+    "name": "1 Kings",
+    "folder": "1 Kings",
+    "abbrev": "1 Kgs",
+    "aliases": ["1 Kings", "1 Kgs", "1Kgs", "1 Kin", "1Kin", "1 Ki", "1Ki", "1 K", "1K", "I Kings", "I Kgs", "I Ki", "First Kings", "1st Kings"]
+  },
+  {
+    "name": "2 Kings",
+    "folder": "2 Kings",
+    "abbrev": "2 Kgs",
+    "aliases": ["2 Kings", "2 Kgs", "2Kgs", "2 Kin", "2Kin", "2 Ki", "2Ki", "2 K", "2K", "II Kings", "II Kgs", "II Ki", "Second Kings", "2nd Kings"]
+  },
+  {
+    "name": "1 Chronicles",
+    "folder": "1 Chronicles",
+    "abbrev": "1 Chr",
+    "aliases": ["1 Chronicles", "1 Chr", "1Chr", "1 Chron", "1Chron", "1 Ch", "1Ch", "I Chronicles", "I Chr", "I Chron", "First Chronicles", "1st Chronicles"]
+  },
+  {
+    "name": "2 Chronicles",
+    "folder": "2 Chronicles",
+    "abbrev": "2 Chr",
+    "aliases": ["2 Chronicles", "2 Chr", "2Chr", "2 Chron", "2Chron", "2 Ch", "2Ch", "II Chronicles", "II Chr", "II Chron", "Second Chronicles", "2nd Chronicles"]
+  },
+  {
+    "name": "Ezra",
+    "folder": "Ezra",
+    "abbrev": "Ezr",
+    "aliases": ["Ezra", "Ezr", "Ez"]
+  },
+  {
+    "name": "Nehemiah",
+    "folder": "Nehemiah",
+    "abbrev": "Neh",
+    "aliases": ["Nehemiah", "Neh", "Ne"]
+  },
+  {
+    "name": "Esther",
+    "folder": "Esther",
+    "abbrev": "Esth",
+    "aliases": ["Esther", "Esth", "Es"]
+  },
+  {
+    "name": "Job",
+    "folder": "Job",
+    "abbrev": "Job",
+    "aliases": ["Job", "Jb"],
+    "ambiguous": true
+  },
+  {
+    "name": "Psalms",
+    "folder": "Psalms",
+    "abbrev": "Ps",
+    "aliases": ["Psalms", "Psalm", "Ps", "Psa", "Psm", "Pss"]
+  },
+  {
+    "name": "Proverbs",
+    "folder": "Proverbs",
+    "abbrev": "Prov",
+    "aliases": ["Proverbs", "Prov", "Pro", "Pr", "Prv"]
+  },
+  {
+    "name": "Ecclesiastes",
+    "folder": "Ecclesiastes",
+    "abbrev": "Eccl",
+    "aliases": ["Ecclesiastes", "Eccl", "Ecc", "Ec", "Qoh"]
+  },
+  {
+    "name": "Song of Solomon",
+    "folder": "Song of Solomon",
+    "abbrev": "Song",
+    "aliases": ["Song of Solomon", "Song of Songs", "Song", "So", "Canticle of Canticles", "Canticles"]
+  },
+  {
+    "name": "Isaiah",
+    "folder": "Isaiah",
+    "abbrev": "Isa",
+    "aliases": ["Isaiah", "Isa", "Is"]
+  },
+  {
+    "name": "Jeremiah",
+    "folder": "Jeremiah",
+    "abbrev": "Jer",
+    "aliases": ["Jeremiah", "Jer", "Je", "Jr"]
+  },
+  {
+    "name": "Lamentations",
+    "folder": "Lamentations",
+    "abbrev": "Lam",
+    "aliases": ["Lamentations", "Lam", "La"]
+  },
+  {
+    "name": "Ezekiel",
+    "folder": "Ezekiel",
+    "abbrev": "Ezek",
+    "aliases": ["Ezekiel", "Ezek", "Eze", "Ezk"]
+  },
+  {
+    "name": "Daniel",
+    "folder": "Daniel",
+    "abbrev": "Dan",
+    "aliases": ["Daniel", "Dan", "Da", "Dn"]
+  },
+  {
+    "name": "Hosea",
+    "folder": "Hosea",
+    "abbrev": "Hos",
+    "aliases": ["Hosea", "Hos", "Ho"]
+  },
+  {
+    "name": "Joel",
+    "folder": "Joel",
+    "abbrev": "Joel",
+    "aliases": ["Joel", "Joe", "Jl"]
+  },
+  {
+    "name": "Amos",
+    "folder": "Amos",
+    "abbrev": "Amos",
+    "aliases": ["Amos", "Am"],
+    "ambiguous": true
+  },
+  {
+    "name": "Obadiah",
+    "folder": "Obadiah",
+    "abbrev": "Obad",
+    "aliases": ["Obadiah", "Obad", "Ob"]
+  },
+  {
+    "name": "Jonah",
+    "folder": "Jonah",
+    "abbrev": "Jonah",
+    "aliases": ["Jonah", "Jnh", "Jon"]
+  },
+  {
+    "name": "Micah",
+    "folder": "Micah",
+    "abbrev": "Mic",
+    "aliases": ["Micah", "Mic", "Mc"]
+  },
+  {
+    "name": "Nahum",
+    "folder": "Nahum",
+    "abbrev": "Nah",
+    "aliases": ["Nahum", "Nah", "Na"]
+  },
+  {
+    "name": "Habakkuk",
+    "folder": "Habakkuk",
+    "abbrev": "Hab",
+    "aliases": ["Habakkuk", "Hab", "Hb"]
+  },
+  {
+    "name": "Zephaniah",
+    "folder": "Zephaniah",
+    "abbrev": "Zeph",
+    "aliases": ["Zephaniah", "Zeph", "Zep", "Zp"]
+  },
+  {
+    "name": "Haggai",
+    "folder": "Haggai",
+    "abbrev": "Hag",
+    "aliases": ["Haggai", "Hag", "Hg"]
+  },
+  {
+    "name": "Zechariah",
+    "folder": "Zechariah",
+    "abbrev": "Zech",
+    "aliases": ["Zechariah", "Zech", "Zec", "Zc"]
+  },
+  {
+    "name": "Malachi",
+    "folder": "Malachi",
+    "abbrev": "Mal",
+    "aliases": ["Malachi", "Mal", "Ml"]
+  },
+  {
+    "name": "Matthew",
+    "folder": "Matthew",
+    "abbrev": "Matt",
+    "aliases": ["Matthew", "Matt", "Mat", "Mt"]
+  },
+  {
+    "name": "Mark",
+    "folder": "Mark",
+    "abbrev": "Mark",
+    "aliases": ["Mark", "Mrk", "Mk", "Mr"],
+    "ambiguous": true
+  },
+  {
+    "name": "Luke",
+    "folder": "Luke",
+    "abbrev": "Luke",
+    "aliases": ["Luke", "Luk", "Lk", "Lu"]
+  },
+  {
+    "name": "John",
+    "folder": "John",
+    "abbrev": "John",
+    "aliases": ["John", "Joh", "Jhn", "Jn"]
+  },
+  {
+    "name": "Acts",
+    "folder": "Acts",
+    "abbrev": "Acts",
+    "aliases": ["Acts", "Act", "Ac"],
+    "ambiguous": true
+  },
+  {
+    "name": "Romans",
+    "folder": "Romans",
+    "abbrev": "Rom",
+    "aliases": ["Romans", "Rom", "Ro", "Rm"]
+  },
+  {
+    "name": "1 Corinthians",
+    "folder": "1 Corinthians",
+    "abbrev": "1 Cor",
+    "aliases": ["1 Corinthians", "1 Cor", "1Cor", "1 Co", "1Co", "I Corinthians", "I Cor", "I Co", "First Corinthians", "1st Corinthians"]
+  },
+  {
+    "name": "2 Corinthians",
+    "folder": "2 Corinthians",
+    "abbrev": "2 Cor",
+    "aliases": ["2 Corinthians", "2 Cor", "2Cor", "2 Co", "2Co", "II Corinthians", "II Cor", "II Co", "Second Corinthians", "2nd Corinthians"]
+  },
+  {
+    "name": "Galatians",
+    "folder": "Galatians",
+    "abbrev": "Gal",
+    "aliases": ["Galatians", "Gal", "Ga"]
+  },
+  {
+    "name": "Ephesians",
+    "folder": "Ephesians",
+    "abbrev": "Eph",
+    "aliases": ["Ephesians", "Ephes", "Eph", "Ep"]
+  },
+  {
+    "name": "Philippians",
+    "folder": "Philippians",
+    "abbrev": "Phil",
+    "aliases": ["Philippians", "Phil", "Php", "Pp"]
+  },
+  {
+    "name": "Colossians",
+    "folder": "Colossians",
+    "abbrev": "Col",
+    "aliases": ["Colossians", "Col", "Co"]
+  },
+  {
+    "name": "1 Thessalonians",
+    "folder": "1 Thessalonians",
+    "abbrev": "1 Thess",
+    "aliases": ["1 Thessalonians", "1 Thess", "1Thess", "1 Th", "1Th", "1 Thes", "1Thes", "I Thessalonians", "I Thess", "I Th", "First Thessalonians", "1st Thessalonians"]
+  },
+  {
+    "name": "2 Thessalonians",
+    "folder": "2 Thessalonians",
+    "abbrev": "2 Thess",
+    "aliases": ["2 Thessalonians", "2 Thess", "2Thess", "2 Th", "2Th", "2 Thes", "2Thes", "II Thessalonians", "II Thess", "II Th", "Second Thessalonians", "2nd Thessalonians"]
+  },
+  {
+    "name": "1 Timothy",
+    "folder": "1 Timothy",
+    "abbrev": "1 Tim",
+    "aliases": ["1 Timothy", "1 Tim", "1Tim", "1 Ti", "1Ti", "I Timothy", "I Tim", "I Ti", "First Timothy", "1st Timothy"]
+  },
+  {
+    "name": "2 Timothy",
+    "folder": "2 Timothy",
+    "abbrev": "2 Tim",
+    "aliases": ["2 Timothy", "2 Tim", "2Tim", "2 Ti", "2Ti", "II Timothy", "II Tim", "II Ti", "Second Timothy", "2nd Timothy"]
+  },
+  {
+    "name": "Titus",
+    "folder": "Titus",
+    "abbrev": "Titus",
+    "aliases": ["Titus", "Tit", "Ti"]
+  },
+  {
+    "name": "Philemon",
+    "folder": "Philemon",
+    "abbrev": "Phlm",
+    "aliases": ["Philemon", "Phlm", "Phm", "Pm"]
+  },
+  {
+    "name": "Hebrews",
+    "folder": "Hebrews",
+    "abbrev": "Heb",
+    "aliases": ["Hebrews", "Heb", "He"]
+  },
+  {
+    "name": "James",
+    "folder": "James",
+    "abbrev": "Jas",
+    "aliases": ["James", "Jas", "Jm", "Ja"]
+  },
+  {
+    "name": "1 Peter",
+    "folder": "1 Peter",
+    "abbrev": "1 Pet",
+    "aliases": ["1 Peter", "1 Pet", "1Pet", "1 Pe", "1Pe", "1 Pt", "1Pt", "1 P", "1P", "I Peter", "I Pet", "I Pe", "First Peter", "1st Peter"]
+  },
+  {
+    "name": "2 Peter",
+    "folder": "2 Peter",
+    "abbrev": "2 Pet",
+    "aliases": ["2 Peter", "2 Pet", "2Pet", "2 Pe", "2Pe", "2 Pt", "2Pt", "2 P", "2P", "II Peter", "II Pet", "II Pe", "Second Peter", "2nd Peter"]
+  },
+  {
+    "name": "1 John",
+    "folder": "1 John",
+    "abbrev": "1 John",
+    "aliases": ["1 John", "1 Jn", "1Jn", "1 Jo", "1Jo", "1 J", "1J", "1 Joh", "1Joh", "I John", "I Jn", "First John", "1st John"]
+  },
+  {
+    "name": "2 John",
+    "folder": "2 John",
+    "abbrev": "2 John",
+    "aliases": ["2 John", "2 Jn", "2Jn", "2 Jo", "2Jo", "2 J", "2J", "2 Joh", "2Joh", "II John", "II Jn", "Second John", "2nd John"]
+  },
+  {
+    "name": "3 John",
+    "folder": "3 John",
+    "abbrev": "3 John",
+    "aliases": ["3 John", "3 Jn", "3Jn", "3 Jo", "3Jo", "3 J", "3J", "3 Joh", "3Joh", "III John", "III Jn", "Third John", "3rd John"]
+  },
+  {
+    "name": "Jude",
+    "folder": "Jude",
+    "abbrev": "Jude",
+    "aliases": ["Jude", "Jud", "Jd"]
+  },
+  {
+    "name": "Revelation",
+    "folder": "Revelation",
+    "abbrev": "Rev",
+    "aliases": ["Revelation", "Revelations", "Rev", "Re", "The Revelation"]
+  }
+]
