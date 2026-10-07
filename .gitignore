@@ -2,25 +2,34 @@
 .DS_Store
 *.DS_Store
 
-# Local agent and cache directories
-.claude/
-.gemini/
+# Dependency and cache directories
+node_modules/
 __pycache__/
 *.pyc
 *.egg-info/
 .pytest_cache/
 .venv/
 venv/
-node_modules/
+.quartz-cache
+tsconfig.tsbuildinfo
+public/
+prof/
 
-# Generated artifacts and disposable local runtime state
+# Local agent and cache directories
+.claude/
+.gemini/
 artifacts/
 
-# Archived backups and seeds
+# Local archive and backup content
+Archived_Vault_Content/
+Corbin_Personal_backup_*/
+vault_seed/
 archives/
 
-# Local-only secrets
+# Local-only secrets and release artifacts
 secrets/
+Secrets/
+obsidian-bible-linker-release/
 projects/obsidian-bible-linker-plugin
 
 # Project runtime caches and outputs
@@ -29,4 +38,3 @@ projects/**/__pycache__/
 projects/**/.pytest_cache/
 projects/**/*.egg-info/
 projects/sermon-obsidian-pipeline/output/
-
