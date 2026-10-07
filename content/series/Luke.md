@@ -10,3 +10,4 @@ You can find the introduction to the book of Luke [here](obsidian://open?vault=C
 ## Chapters
 
 - [[series/Luke/Luke 1|Luke 1]]
+- [Luke 2](https://corbinwrites.github.io/Corbins_Research/series/Luke/Luke-2)
