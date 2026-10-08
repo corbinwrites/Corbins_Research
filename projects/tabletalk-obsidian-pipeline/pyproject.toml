@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tabletalk"
+version = "0.1.0"
+description = "Sync Tabletalk Magazine to an Obsidian vault"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+    "httpx>=0.27",
+    "selectolax>=0.3",
+    "pyyaml>=6.0",
+    "pydantic>=2.0",
+    "typer>=0.12",
+    "rich>=13.0",
+    "tenacity>=8.0",
+    "anthropic>=0.30",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov",
+]
+
+[project.scripts]
+tabletalk = "tabletalk.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["tabletalk*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tabletalk/tests"]
+python_files = ["test_*.py"]
+
+[tool.coverage.run]
+source = ["tabletalk"]
+omit = ["tabletalk/tests/*"]

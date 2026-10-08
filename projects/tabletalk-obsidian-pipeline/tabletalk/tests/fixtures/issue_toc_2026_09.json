@@ -1,0 +1,42 @@
+{
+  "issue_title": "Assurance of Salvation",
+  "issue_date": "September 2026",
+  "issue_link": "https://tabletalkmagazine.com/issue/2026/09/assurance-of-salvation/",
+  "articles_sans_dailies": [
+    {
+      "title": "Secure in Christ",
+      "content_type": "column:",
+      "before": "Coram Deo",
+      "after": "Thomas  Brewer",
+      "url": "https://tabletalkmagazine.com/article/2026/09/secure-in-christ/"
+    },
+    {
+      "title": "Assurance of Salvation in Scripture and the Spirit's Witness",
+      "content_type": "feature",
+      "before": null,
+      "after": "Cornelis P. Venema",
+      "url": "https://tabletalkmagazine.com/article/2026/09/assurance-of-salvation-in-scripture-and-the-spirits-witness/"
+    },
+    {
+      "title": "The Ultimate Ground of Assurance",
+      "content_type": "feature",
+      "before": null,
+      "after": "R. Carlton  Wynne",
+      "url": "https://tabletalkmagazine.com/article/2026/09/the-ultimate-ground-of-assurance/"
+    }
+  ],
+  "daily_studies": [
+    {"daily_title": "Writing That You May Know", "post_day": "01", "introduction": false},
+    {"daily_title": "That Which Was from the Beginning", "post_day": "02", "introduction": false},
+    {"daily_title": "Fellowship with the Father", "post_day": "03", "introduction": false},
+    {"daily_title": "Whoever Loves His Brother", "post_day": "29", "introduction": false, "post_link": "https://tabletalkmagazine.com/daily-study/2026/09/whoever-loves-his-brother/"}
+  ],
+  "daily_studies_featured": [
+    {
+      "daily_title": "Walking in the Light",
+      "post_day": "01",
+      "introduction": true,
+      "post_link": "https://tabletalkmagazine.com/daily-study/2026/09/walking-in-the-light/"
+    }
+  ]
+}

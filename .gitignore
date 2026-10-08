@@ -1,11 +1,40 @@
+# OS files
 .DS_Store
-.gitignore
-node_modules
-public
-prof
-tsconfig.tsbuildinfo
-.obsidian
+*.DS_Store
+
+# Dependency and cache directories
+node_modules/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
 .quartz-cache
-private/
-.replit
-replit.nix
+tsconfig.tsbuildinfo
+public/
+prof/
+
+# Local agent and cache directories
+.claude/
+.gemini/
+artifacts/
+
+# Local archive and backup content
+Archived_Vault_Content/
+Corbin_Personal_backup_*/
+vault_seed/
+archives/
+
+# Local-only secrets and release artifacts
+secrets/
+Secrets/
+obsidian-bible-linker-release/
+projects/obsidian-bible-linker-plugin
+
+# Project runtime caches and outputs
+projects/**/node_modules/
+projects/**/__pycache__/
+projects/**/.pytest_cache/
+projects/**/*.egg-info/
+projects/sermon-obsidian-pipeline/output/

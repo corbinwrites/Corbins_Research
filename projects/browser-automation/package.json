@@ -1,0 +1,10 @@
+{
+  "name": "browser-automation-skill",
+  "version": "1.0.0",
+  "description": "Dependencies for the browser automation skill",
+  "type": "module",
+  "dependencies": {
+    "puppeteer-core": "^21.0.0",
+    "minimist": "^1.2.8"
+  }
+}

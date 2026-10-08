@@ -1,0 +1,16 @@
+[discovery]
+latitude = 37.3541
+longitude = -121.9552
+radius_miles = 35
+
+[scoring]
+threshold = 70
+model = "claude-haiku-4-5-20251001"
+batch_size = 20
+cache_ttl_hrs = 24
+max_description_words = 1500
+
+[ingestion]
+rate_limit_ms = 500
+timeout_seconds = 30
+user_agent = "jobsearch/0.1"
