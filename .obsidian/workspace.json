@@ -1,0 +1,266 @@
+{
+  "main": {
+    "id": "e9a5bfe1b13763a6",
+    "type": "split",
+    "children": [
+      {
+        "id": "1843079ee1189c84",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a8c9211bba8792c6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Series/Luke/Luke 1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Luke 1"
+            }
+          },
+          {
+            "id": "da399f6145c44f90",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Series/Luke/Luke 2.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Luke 2"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2fb37072d130b7cd",
+    "type": "split",
+    "children": [
+      {
+        "id": "ab91de1eefc99f89",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "35658f6a319d737c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "7284de382f01ba02",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "c784061229ec6edb",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "4eb6b3027d0f2499",
+    "type": "split",
+    "children": [
+      {
+        "id": "d2e27d3adeb8ecef",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9d0c4401cace75dc",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "content/topics.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for topics"
+            }
+          },
+          {
+            "id": "96bf929d9b65d588",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "content/topics.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from topics"
+            }
+          },
+          {
+            "id": "8ff8ebe1301cb95e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "b44dc7b4c34fe8aa",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "a39616cc9d8fffe7",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "content/topics.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of topics"
+            }
+          },
+          {
+            "id": "c3a8f130069b5a93",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "content/index.md"
+              },
+              "icon": "lucide-info",
+              "title": "File properties for index"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "35658f6a319d737c",
+  "lastOpenFiles": [
+    "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/@inquirer/core/dist/esm/types/lib/utils.d.mts",
+    "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/@inquirer/core/dist/esm/types/lib/screen-manager.d.mts",
+    "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/@inquirer/core/dist/esm/types/lib/prefix.d.mts",
+    "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/@inquirer/core/dist/esm/types/lib/options.d.mts",
+    "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/@inquirer/core/dist/esm/types/lib/key.d.mts",
+    "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/@inquirer/core/dist/cjs/types/lib/options.d.ts",
+    "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/@inquirer/core/dist/cjs/types/lib/prefix.d.ts",
+    "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/@inquirer/core/dist/esm/types/lib/Separator.d.mts",
+    "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/@inquirer/core/dist/cjs/types/lib/utils.d.ts",
+    "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/@inquirer/core/dist/cjs/types/lib/screen-manager.d.ts",
+    "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/@inquirer/core/dist/cjs/types/lib/key.d.ts",
+    "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/@inquirer/core/node_modules/figures/readme.md",
+    "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/@inquirer/core/README.md",
+    "scripts/tools/city_light_event_form/node_modules/@google/clasp/docs/Gitpod/README.md",
+    "scripts/tools/city_light_event_form/node_modules/wrap-ansi/node_modules/strip-ansi/readme.md",
+    "scripts/tools/city_light_event_form/node_modules/wrap-ansi/node_modules/emoji-regex/README.md",
+    "scripts/tools/city_light_event_form/node_modules/wrap-ansi/node_modules/ansi-regex/readme.md",
+    "scripts/tools/city_light_event_form/node_modules/wrap-ansi/node_modules/string-width/readme.md",
+    "scripts/tools/city_light_event_form/node_modules/wrap-ansi/node_modules/is-fullwidth-code-point/readme.md",
+    "scripts/tools/city_light_event_form/node_modules/wrap-ansi/node_modules/ansi-styles/readme.md",
+    "scripts/tools/city_light_event_form/node_modules/ora/node_modules/is-unicode-supported/readme.md",
+    "scripts/tools/city_light_event_form/node_modules/micromatch/node_modules/picomatch/README.md",
+    "scripts/tools/city_light_event_form/node_modules/micromatch/node_modules/picomatch/CHANGELOG.md",
+    "scripts/tools/city_light_event_form/node_modules/loud-rejection/node_modules/signal-exit/README.md",
+    "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/ansi-regex/readme.md",
+    "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/escape-string-regexp/readme.md",
+    "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/strip-ansi/readme.md",
+    "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/mute-stream/README.md",
+    "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/run-async/README.md",
+    "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/chalk/readme.md",
+    "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/ansi-styles/readme.md",
+    "scripts/tools/city_light_event_form/node_modules/ansi-escapes/node_modules/type-fest/readme.md",
+    "scripts/tools/city_light_event_form/node_modules/@google/clasp/docs/run.md",
+    "scripts/tools/city_light_event_form/node_modules/@google/clasp/docs/config-files.md",
+    "scripts/tools/city_light_event_form/node_modules/@google/clasp/docs/README.md",
+    "scripts/tools/city_light_event_form/node_modules/url-template/uritemplate-test/README.md",
+    "imports/clbc-teaching-notes/node_modules/xlsx/legend.png",
+    "imports/clbc-teaching-notes/node_modules/xlsx/formats.png",
+    "imports/clbc-teaching-notes/node_modules/pdf-parse/lib/pdf.js/v1.10.88/web/images/treeitem-expanded@2x.png",
+    "imports/clbc-teaching-notes/node_modules/pdf-parse/lib/pdf.js/v1.10.88/web/images/treeitem-expanded.png",
+    "imports/clbc-teaching-notes/node_modules/pdf-parse/lib/pdf.js/v1.10.88/web/images/treeitem-collapsed@2x.png",
+    "imports/clbc-teaching-notes/node_modules/pdf-parse/lib/pdf.js/v1.10.88/web/images/treeitem-collapsed.png",
+    "imports/clbc-teaching-notes/node_modules/pdf-parse/lib/pdf.js/v1.10.88/web/images/treeitem-collapsed-rtl@2x.png",
+    "imports/clbc-teaching-notes/node_modules/pdf-parse/lib/pdf.js/v1.10.88/web/images/treeitem-collapsed-rtl.png",
+    "imports/clbc-teaching-notes/node_modules/pdf-parse/lib/pdf.js/v1.10.88/web/images/toolbarButton-zoomOut@2x.png",
+    "imports/clbc-teaching-notes/node_modules/pdf-parse/lib/pdf.js/v1.10.88/web/images/toolbarButton-zoomOut.png"
+  ]
+}
