@@ -216,6 +216,7 @@
   },
   "active": "35658f6a319d737c",
   "lastOpenFiles": [
+    "test-transactions.csv",
     "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/@inquirer/core/dist/esm/types/lib/utils.d.mts",
     "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/@inquirer/core/dist/esm/types/lib/screen-manager.d.mts",
     "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/@inquirer/core/dist/esm/types/lib/prefix.d.mts",
@@ -226,7 +227,6 @@
     "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/@inquirer/core/dist/esm/types/lib/Separator.d.mts",
     "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/@inquirer/core/dist/cjs/types/lib/utils.d.ts",
     "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/@inquirer/core/dist/cjs/types/lib/screen-manager.d.ts",
-    "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/@inquirer/core/dist/cjs/types/lib/key.d.ts",
     "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/@inquirer/core/node_modules/figures/readme.md",
     "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/@inquirer/core/README.md",
     "scripts/tools/city_light_event_form/node_modules/@google/clasp/docs/Gitpod/README.md",
