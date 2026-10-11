@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Series/Luke/Luke 2.md",
+                "file": "content/Series/Luke/Luke 3.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Luke 2"
+              "title": "Luke 3"
             }
           }
         ],
@@ -214,8 +214,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "35658f6a319d737c",
+  "active": "da399f6145c44f90",
   "lastOpenFiles": [
+    "content/Series/Luke/Luke 2.md",
+    "content/Series/Luke/Luke 3.md",
     "test-transactions.csv",
     "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/@inquirer/core/dist/esm/types/lib/utils.d.mts",
     "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/@inquirer/core/dist/esm/types/lib/screen-manager.d.mts",
@@ -226,7 +228,6 @@
     "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/@inquirer/core/dist/cjs/types/lib/prefix.d.ts",
     "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/@inquirer/core/dist/esm/types/lib/Separator.d.mts",
     "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/@inquirer/core/dist/cjs/types/lib/utils.d.ts",
-    "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/@inquirer/core/dist/cjs/types/lib/screen-manager.d.ts",
     "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/@inquirer/core/node_modules/figures/readme.md",
     "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/@inquirer/core/README.md",
     "scripts/tools/city_light_event_form/node_modules/@google/clasp/docs/Gitpod/README.md",
@@ -251,7 +252,6 @@
     "scripts/tools/city_light_event_form/node_modules/@google/clasp/docs/run.md",
     "scripts/tools/city_light_event_form/node_modules/@google/clasp/docs/config-files.md",
     "scripts/tools/city_light_event_form/node_modules/@google/clasp/docs/README.md",
-    "scripts/tools/city_light_event_form/node_modules/url-template/uritemplate-test/README.md",
     "imports/clbc-teaching-notes/node_modules/xlsx/legend.png",
     "imports/clbc-teaching-notes/node_modules/xlsx/formats.png",
     "imports/clbc-teaching-notes/node_modules/pdf-parse/lib/pdf.js/v1.10.88/web/images/treeitem-expanded@2x.png",
