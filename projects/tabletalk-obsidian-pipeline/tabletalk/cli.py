@@ -9,38 +9,54 @@ Commands
   tabletalk verify            Ledger vs sitemap + lint report.
   tabletalk doctor            Config, vault path, connectivity, UA check.
   tabletalk archive --epub    Save EPUB to Attachments (optional).
+
+Global flag: ``tabletalk -v <command>`` shows INFO-level logs.
+
+CHANGES vs previous version
+  - Sitemap and REST daily-study records are fetched ONCE per run (not once per
+    month), with a progress bar.
+  - ``sync`` now has a per-issue progress bar and force-refreshes the sitemap
+    and REST pages (otherwise cached data would hide new/updated content).
+  - ``backfill`` keeps using the cache so it stays resumable.
 """
 
 from __future__ import annotations
 
 import logging
-import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional
 
 import typer
 from rich.console import Console
-from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn, TimeElapsedColumn
+from rich.progress import (
+    BarColumn,
+    Progress,
+    SpinnerColumn,
+    TextColumn,
+    TimeElapsedColumn,
+)
 from rich.table import Table
 
 from .config import load_config
 from .discover import (
-    fetch_sitemap,
+    SitemapEntry,
+    fetch_all_daily_studies,
     fetch_issue_id,
     fetch_issue_toc,
-    fetch_all_daily_studies,
+    fetch_sitemap,
 )
-from .extract_rest import RestExtractor
 from .extract_html import ArticleHtmlExtractor
+from .extract_rest import RestExtractor
 from .http import TtClient, verify_subscription
+from .ids import stable_id
 from .ledger import Ledger
-from .lint import lint_article, lint_batch, lint_coverage
+from .lint import lint_article
 from .model import Article
 from .render import (
+    issue_folder_name,
     write_article_note,
     write_issue_index,
-    issue_folder_name,
 )
 
 app = typer.Typer(
@@ -50,6 +66,14 @@ app = typer.Typer(
 )
 console = Console()
 err = Console(stderr=True)
+
+
+@app.callback()
+def _root(
+    verbose: bool = typer.Option(False, "--verbose", "-v", help="Show INFO-level logs"),
+):
+    if verbose:
+        logging.getLogger().setLevel(logging.INFO)
 
 
 # ── Shared setup ──────────────────────────────────────────────────────────────
@@ -72,6 +96,91 @@ def _make_client(cfg) -> TtClient:
     )
 
 
+# ── Progress helpers ──────────────────────────────────────────────────────────
+
+def _fetch_rest_with_progress(client: TtClient, *, force: bool) -> list[dict]:
+    """Fetch every daily-study REST record, showing a live page-by-page bar."""
+    with Progress(
+        SpinnerColumn(),
+        TextColumn("{task.description}"),
+        BarColumn(),
+        TextColumn("[progress.percentage]{task.percentage:>3.0f}%"),
+        TimeElapsedColumn(),
+        console=console,
+        transient=True,
+    ) as progress:
+        task = progress.add_task("Daily studies (REST)", total=None)
+
+        def on_page(page: int, total: int | None) -> None:
+            progress.update(
+                task,
+                completed=page,
+                total=total,
+                description=f"Daily studies (REST) page {page}/{total or '?'}",
+            )
+
+        records = fetch_all_daily_studies(client, force=force, on_page=on_page)
+
+    console.print(f"[green]✓[/green] {len(records)} daily-study records loaded")
+    return records
+
+
+def _run_months(
+    client: TtClient,
+    cfg,
+    ledger: Ledger,
+    months: list[str],
+    *,
+    dry_run: bool,
+    enrich: bool,
+    refresh: bool,
+    fail_code: int,
+) -> int:
+    """
+    Shared driver for sync/backfill. Fetches sitemap + REST once, then
+    processes each month under a progress bar. Returns an exit code.
+
+    ``refresh=True`` bypasses the raw cache for sitemap + REST pages.
+    """
+    with console.status("Fetching sitemap…"):
+        sitemap = fetch_sitemap(client, force=refresh)
+    console.print(f"[green]✓[/green] Sitemap: {len(sitemap)} URLs")
+
+    rest_records = _fetch_rest_with_progress(client, force=refresh)
+
+    exit_code = 0
+    with Progress(
+        SpinnerColumn(),
+        TextColumn("{task.description}"),
+        BarColumn(),
+        TextColumn("{task.completed}/{task.total}"),
+        TimeElapsedColumn(),
+        console=console,
+    ) as progress:
+        task = progress.add_task("Issues", total=len(months))
+        for issue_month in months:
+            progress.update(task, description=f"[cyan]{issue_month}[/cyan]")
+            try:
+                result = _process_issue_month(
+                    client, cfg, ledger, issue_month,
+                    sitemap=sitemap,
+                    rest_records=rest_records,
+                    dry_run=dry_run,
+                    enrich=enrich,
+                )
+                if result == "partial":
+                    exit_code = max(exit_code, 1)
+                elif result == "error":
+                    exit_code = max(exit_code, 2)
+            except Exception as exc:
+                err.print(f"[red]Error processing {issue_month}: {exc}[/red]")
+                exit_code = max(exit_code, fail_code)
+            finally:
+                progress.advance(task)
+
+    return exit_code
+
+
 # ── doctor ────────────────────────────────────────────────────────────────────
 
 @app.command()
@@ -84,7 +193,7 @@ def doctor(
     cfg, ledger = _setup(config)
 
     # Config
-    console.print(f"[green]✓[/green] Config loaded")
+    console.print("[green]✓[/green] Config loaded")
     console.print(f"  Email     : {cfg.ligonier_email or '[dim](not set)[/dim]'}")
     console.print(f"  Vault     : {cfg.vault_root}")
     console.print(f"  Notes     : {cfg.notes_root}")
@@ -92,7 +201,7 @@ def doctor(
 
     # Vault
     if cfg.vault_root.exists():
-        console.print(f"[green]✓[/green] Vault path exists")
+        console.print("[green]✓[/green] Vault path exists")
     else:
         console.print(f"[yellow]⚠[/yellow] Vault path does not exist: {cfg.vault_root}")
 
@@ -150,24 +259,16 @@ def sync(
 
     console.print(f"[bold blue]Syncing months: {', '.join(months)}[/bold blue]")
 
-    exit_code = 0
     with _make_client(cfg) as client:
         if cfg.ligonier_email:
             verify_subscription(client, cfg.ligonier_email)
 
-        for issue_month in months:
-            try:
-                result = _process_issue_month(
-                    client, cfg, ledger, issue_month,
-                    dry_run=dry_run, enrich=enrich,
-                )
-                if result == "partial":
-                    exit_code = max(exit_code, 1)
-                elif result == "error":
-                    exit_code = max(exit_code, 2)
-            except Exception as exc:
-                err.print(f"[red]Error processing {issue_month}: {exc}[/red]")
-                exit_code = 2
+        exit_code = _run_months(
+            client, cfg, ledger, months,
+            dry_run=dry_run, enrich=enrich,
+            refresh=True,       # sync must see new/updated content
+            fail_code=2,
+        )
 
     raise typer.Exit(exit_code)
 
@@ -182,6 +283,7 @@ def backfill(
     dry_run: bool = typer.Option(False, "--dry-run"),
     enrich: bool = typer.Option(False, "--enrich"),
     year: Optional[int] = typer.Option(None, "--year", help="Process a single year"),
+    refresh: bool = typer.Option(False, "--refresh", help="Bypass the raw cache for sitemap + REST"),
 ):
     """Resumable full-archive backfill, chunked by month."""
     cfg, ledger = _setup(config)
@@ -210,31 +312,16 @@ def backfill(
     months = _month_range(from_month, to_month)
     console.print(f"[bold blue]Backfill: {from_month} → {to_month} ({len(months)} months)[/bold blue]")
 
-    exit_code = 0
     with _make_client(cfg) as client:
         if cfg.ligonier_email:
             verify_subscription(client, cfg.ligonier_email)
 
-        with Progress(
-            SpinnerColumn(), TextColumn("{task.description}"),
-            BarColumn(), TextColumn("[progress.percentage]{task.percentage:>3.0f}%"),
-            TimeElapsedColumn(), console=console,
-        ) as progress:
-            task = progress.add_task("Backfill", total=len(months))
-            for issue_month in months:
-                progress.update(task, description=f"[cyan]{issue_month}[/cyan]")
-                try:
-                    result = _process_issue_month(
-                        client, cfg, ledger, issue_month,
-                        dry_run=dry_run, enrich=enrich,
-                    )
-                    if result == "partial":
-                        exit_code = max(exit_code, 1)
-                except Exception as exc:
-                    err.print(f"[red]Error {issue_month}: {exc}[/red]")
-                    exit_code = max(exit_code, 1)
-                finally:
-                    progress.advance(task)
+        exit_code = _run_months(
+            client, cfg, ledger, months,
+            dry_run=dry_run, enrich=enrich,
+            refresh=refresh,
+            fail_code=1,
+        )
 
     raise typer.Exit(exit_code)
 
@@ -271,7 +358,8 @@ def verify(
     console.print("[bold blue]Verify: Ledger vs Sitemap[/bold blue]")
 
     with _make_client(cfg) as client:
-        entries = fetch_sitemap(client)
+        with console.status("Fetching sitemap…"):
+            entries = fetch_sitemap(client)
 
     sitemap_daily = {e.url for e in entries if e.kind == "daily-study"}
     sitemap_article = {e.url for e in entries if e.kind == "article"}
@@ -296,12 +384,12 @@ def verify(
     console.print(table)
 
     if missing_daily:
-        console.print(f"\n[yellow]Missing dailies (first 10):[/yellow]")
+        console.print("\n[yellow]Missing dailies (first 10):[/yellow]")
         for url in sorted(missing_daily)[:10]:
             console.print(f"  {url}")
 
     if errored:
-        console.print(f"\n[red]Errors:[/red]")
+        console.print("\n[red]Errors:[/red]")
         for row in errored[:10]:
             console.print(f"  {row['url']}: {row['error']}")
 
@@ -334,9 +422,20 @@ def archive(
     import httpx
     with httpx.stream("GET", url, follow_redirects=True) as r:
         r.raise_for_status()
-        with open(out_path, "wb") as f:
-            for chunk in r.iter_bytes(chunk_size=65536):
-                f.write(chunk)
+        total = int(r.headers.get("content-length", 0)) or None
+        with Progress(
+            SpinnerColumn(),
+            TextColumn("{task.description}"),
+            BarColumn(),
+            TextColumn("[progress.percentage]{task.percentage:>3.0f}%"),
+            TimeElapsedColumn(),
+            console=console,
+        ) as progress:
+            task = progress.add_task(out_path.name, total=total)
+            with open(out_path, "wb") as f:
+                for chunk in r.iter_bytes(chunk_size=65536):
+                    f.write(chunk)
+                    progress.advance(task, len(chunk))
     console.print(f"[green]✓[/green] Saved to {out_path}")
 
 
@@ -348,6 +447,8 @@ def _process_issue_month(
     ledger: Ledger,
     issue_month: str,
     *,
+    sitemap: list[SitemapEntry] | None = None,
+    rest_records: list[dict] | None = None,
     dry_run: bool = False,
     enrich: bool = False,
 ) -> str:
@@ -356,19 +457,23 @@ def _process_issue_month(
 
     1. Find sitemap entry for this month
     2. Fetch issue page → data-issue-id → TOC
-    3. Fetch daily studies via REST
+    3. Filter daily studies from the pre-fetched REST records
     4. Fetch articles via HTML
     5. Lint
     6. Render + write notes
     7. Upsert ledger
+
+    ``sitemap`` and ``rest_records`` are fetched once per run by the caller;
+    if omitted they're fetched here (slow — avoid in loops).
 
     Returns "ok" | "partial" | "error"
     """
     yyyy, mm = issue_month.split("-")
     issue_url_prefix = f"https://tabletalkmagazine.com/issue/{yyyy}/{mm}/"
 
-    # ── Find issue URL from sitemap (cached) ─────────────────────────────────
-    sitemap = fetch_sitemap(client)
+    # ── Find issue URL from sitemap ──────────────────────────────────────────
+    if sitemap is None:
+        sitemap = fetch_sitemap(client)
     issue_entry = next(
         (e for e in sitemap if e.kind == "issue" and e.url.startswith(issue_url_prefix)),
         None,
@@ -391,8 +496,9 @@ def _process_issue_month(
     all_articles: list[Article] = []
     errors = 0
 
-    # ── Daily studies via REST ─────────────────────────────────────────────────
-    rest_records = fetch_all_daily_studies(client)
+    # ── Daily studies via REST (pre-fetched) ───────────────────────────────────
+    if rest_records is None:
+        rest_records = fetch_all_daily_studies(client)
     month_records = [
         r for r in rest_records
         if str(r.get("acf", {}).get("display_date", "")).startswith(f"{yyyy}{mm}")
@@ -414,14 +520,13 @@ def _process_issue_month(
     # ── Features and columns via HTML ─────────────────────────────────────────
     html_extractor = ArticleHtmlExtractor()
     for ta in toc.articles:
-        # Check if we need an update
         try:
             html = client.get(ta.url)
             kind = "column" if "column" in ta.content_type.lower() else "feature"
             article = html_extractor.extract(
                 html,
                 url=ta.url,
-                post_id=0,       # will be 0 until we resolve from HTML or REST
+                post_id=stable_id(ta.url),  # deterministic; HTML items have no WP ID
                 kind=kind,
                 rubric=ta.rubric,
                 authors=[ta.author] if ta.author else None,
@@ -461,7 +566,7 @@ def _process_issue_month(
                     authors_as_wikilinks=cfg.obsidian.authors_as_wikilinks,
                 )
                 ledger.upsert(
-                    post_id=article.post_id or hash(article.url),
+                    post_id=article.post_id or stable_id(article.url),
                     url=article.url,
                     kind=article.kind,
                     issue=article.issue,

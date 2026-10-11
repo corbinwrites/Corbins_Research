@@ -4,6 +4,12 @@ disk cache, and ETag support.
 
 The raw cache stores responses on disk keyed by a URL-derived filename so
 parser changes can re-render from cache without hitting the network.
+
+CHANGES vs previous version
+  - Cache key now includes query params (previously ?page=1, ?page=2, ... all
+    collided on one key, causing an infinite pagination loop).
+  - Captures X-WP-TotalPages into ``client.last_total_pages`` (also persisted
+    in the cache) so callers can show an accurate progress bar.
 """
 
 from __future__ import annotations
@@ -15,6 +21,7 @@ import os
 import time
 from pathlib import Path
 from typing import Any
+from urllib.parse import urlencode
 
 import httpx
 from tenacity import (
@@ -76,7 +83,7 @@ class TtClient:
     Thin wrapper around httpx that:
       - Applies a descriptive User-Agent (falls back to curl-style on 403)
       - Enforces per-request delay + concurrency guard
-      - Caches raw responses (JSON or HTML text) keyed by URL
+      - Caches raw responses (JSON or HTML text) keyed by URL + params
       - Stores and sends ETag / Last-Modified on re-checks
       - Retries transient errors with exponential backoff
     """
@@ -96,6 +103,8 @@ class TtClient:
         self._fallback_ua = fallback_user_agent
         self._using_fallback_ua = False
         self._session: httpx.Client | None = None
+        # Set by get(): X-WP-TotalPages of the most recent GET (None if absent)
+        self.last_total_pages: int | None = None
 
     # ── Context manager ───────────────────────────────────────────────────────
 
@@ -149,8 +158,15 @@ class TtClient:
         Handles ETag/If-None-Match and 304 Not Modified.
         """
         full_url = url if url.startswith("http") else f"{self.BASE_URL}{url}"
-        cache_key = _cache_key(full_url)
 
+        # FIX: params MUST be part of the cache key, or every page of a
+        # paginated endpoint resolves to the same cached body.
+        keyed_url = (
+            f"{full_url}?{urlencode(sorted(params.items()))}" if params else full_url
+        )
+        cache_key = _cache_key(keyed_url)
+
+        self.last_total_pages = None
         cached = _read_cache(self._cache_dir, cache_key) if cache else None
 
         etag = cached.get("etag") if cached else None
@@ -158,11 +174,12 @@ class TtClient:
 
         # If we have cached content and aren't forcing refresh, return it
         if cached and not force:
-            logger.debug("Cache HIT: %s", url)
+            logger.debug("Cache HIT: %s", keyed_url)
+            self.last_total_pages = cached.get("total_pages")
             return cached["body"]
 
         self._rl.wait()
-        logger.debug("GET %s", url)
+        logger.debug("GET %s", keyed_url)
 
         headers = {}
         if etag:
@@ -172,19 +189,26 @@ class TtClient:
 
         response = self._fetch_with_ua_fallback("GET", full_url, params=params, headers=headers)
 
-        if response.status_code == 304:
-            logger.debug("304 Not Modified: %s", url)
+        if response.status_code == 304 and cached:
+            logger.debug("304 Not Modified: %s", keyed_url)
+            self.last_total_pages = cached.get("total_pages")
             return cached["body"]
 
         response.raise_for_status()
         body = response.text
 
+        tp = response.headers.get("x-wp-totalpages")
+        total_pages = int(tp) if tp and tp.isdigit() else None
+        self.last_total_pages = total_pages
+
         if cache:
-            payload = {"body": body, "url": full_url}
-            if etag := response.headers.get("etag"):
-                payload["etag"] = etag
+            payload: dict[str, Any] = {"body": body, "url": keyed_url}
+            if resp_etag := response.headers.get("etag"):
+                payload["etag"] = resp_etag
             if lm := response.headers.get("last-modified"):
                 payload["last_modified"] = lm
+            if total_pages is not None:
+                payload["total_pages"] = total_pages
             _write_cache(self._cache_dir, cache_key, payload)
 
         return body
@@ -202,8 +226,7 @@ class TtClient:
 
         body_str = ""
         if data:
-            import urllib.parse
-            body_str = urllib.parse.urlencode(data)
+            body_str = urlencode(data)
         elif json_body:
             body_str = json.dumps(json_body)
 

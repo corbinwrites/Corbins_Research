@@ -7,6 +7,17 @@ Features:
   - Machine-owned body with preserved <!-- tt:end --> user region
   - Issue folder + 00 Issue.md from the TOC manifest ordering
   - Atomic writes (write to temp file, rename)
+
+CHANGES vs previous version
+  - render_note_path is now deterministic: if a note with the expected name
+    already exists AND belongs to the same article (matched by source URL), it
+    is reused (overwritten, user region preserved). A new name is only chosen
+    when the existing file belongs to a *different* article.
+    Previously every re-run created "Note-2.md" duplicates.
+  - Filenames containing a period ("Dr. Sproul") no longer get truncated by
+    Path.with_suffix().
+  - write_note only preserves the user region if the existing file has the
+    marker; otherwise it writes the full new content (marker included).
 """
 
 from __future__ import annotations
@@ -16,7 +27,6 @@ import os
 import re
 import tempfile
 from pathlib import Path
-from typing import Sequence
 
 import yaml
 
@@ -46,23 +56,36 @@ def safe_filename(name: str, max_len: int = _MAX_FILENAME_LEN) -> str:
     return name
 
 
-def _unique_path(base: Path, extension: str, post_id: int | None = None) -> Path:
+def _note_belongs_to(path: Path, article: Article) -> bool:
+    """True if the existing note at ``path`` was written for this article."""
+    try:
+        head = path.read_text(encoding="utf-8")[:4000]
+    except OSError:
+        return False
+    return bool(article.url) and article.url in head
+
+
+def _resolve_note_path(base: Path, article: Article) -> Path:
     """
-    Return a path that does not yet exist.
-    On collision, appends -<post_id> or a counter.
+    Pick the path for an article's note.
+
+    Reuse a candidate if it doesn't exist yet or already holds this article.
+    Otherwise (a different article owns the name) try -<post_id>, then -2, -3…
     """
-    candidate = base.with_suffix(extension)
-    if not candidate.exists():
-        return candidate
-    if post_id:
-        candidate = base.parent / f"{base.name}-{post_id}{extension}"
-        if not candidate.exists():
-            return candidate
+    parent, stem = base.parent, base.name
+    candidates = [parent / f"{stem}.md"]
+    if article.post_id:
+        candidates.append(parent / f"{stem}-{article.post_id}.md")
+
+    for cand in candidates:
+        if not cand.exists() or _note_belongs_to(cand, article):
+            return cand
+
     counter = 2
     while True:
-        candidate = base.parent / f"{base.name}-{counter}{extension}"
-        if not candidate.exists():
-            return candidate
+        cand = parent / f"{stem}-{counter}.md"
+        if not cand.exists() or _note_belongs_to(cand, article):
+            return cand
         counter += 1
 
 
@@ -312,12 +335,11 @@ def render_note_path(
 ) -> Path:
     """
     Compute the absolute path for an article's note file.
-    Does NOT write anything.
+    Does NOT write anything. Deterministic across re-runs for the same article.
     """
     base_name = _article_base_filename(article)
-    issue_dir = notes_root / issue_folder
-    base = issue_dir / base_name
-    return _unique_path(base, ".md", post_id=article.post_id)
+    base = notes_root / issue_folder / base_name
+    return _resolve_note_path(base, article)
 
 
 # ── Issue folder name ─────────────────────────────────────────────────────────
@@ -331,12 +353,15 @@ def issue_folder_name(issue: str, title: str) -> str:
 
 def write_note(path: Path, content: str) -> None:
     """
-    Write a note to disk, preserving the user region if the file already exists.
-    Uses an atomic write.
+    Write a note to disk, preserving the user region if the file already exists
+    and contains the user-region marker. Uses an atomic write.
     """
     if path.exists():
         existing = path.read_text(encoding="utf-8")
-        content = _preserve_user_region(existing, content.split(_USER_REGION_MARKER)[0])
+        if _USER_REGION_MARKER in existing:
+            content = _preserve_user_region(
+                existing, content.split(_USER_REGION_MARKER, 1)[0]
+            )
     _atomic_write(path, content)
     logger.debug("Wrote %s", path)
 
