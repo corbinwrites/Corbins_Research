@@ -3,6 +3,11 @@ extract_rest.py — Extracts Article records from WordPress REST API responses.
 
 Daily studies are fetched in bulk (100/page) and have rich ACF fields.
 This extractor handles both modern (2026) and historical (2009+) shapes.
+
+CHANGES vs previous version
+  - _parse_reference_list is null-safe: ACF can return null for list_item (or
+    for an individual group/entry), which crashed the featured intro study.
+  - extract_daily logs the full traceback on failure.
 """
 
 from __future__ import annotations
@@ -20,15 +25,22 @@ logger = logging.getLogger(__name__)
 
 # ── Reference list helpers ────────────────────────────────────────────────────
 
-def _parse_reference_list(ref_list: list[dict]) -> list[str]:
+def _parse_reference_list(ref_list: list[dict] | None) -> list[str]:
     """
     Extract items from the ACF reference_list_left / _right structure.
 
     Shape: [{"list_header": "For further study", "list_item": [{"item": "Matt 5:21–24"}, …]}]
+
+    ACF may return null for the list, a group, ``list_item``, or an entry, so
+    every level tolerates None / wrong types.
     """
     items: list[str] = []
     for group in (ref_list or []):
-        for entry in group.get("list_item", []):
+        if not isinstance(group, dict):
+            continue
+        for entry in (group.get("list_item") or []):
+            if not isinstance(entry, dict):
+                continue
             val = (entry.get("item") or "").strip()
             if val:
                 items.append(val)
@@ -100,7 +112,11 @@ class RestExtractor:
             return self._extract_daily_inner(raw)
         except Exception as exc:
             post_id = raw.get("id", 0)
-            logger.error("RestExtractor.extract_daily(%d) failed: %s", post_id, exc)
+            logger.error(
+                "RestExtractor.extract_daily(%s, %s) failed: %s",
+                post_id, raw.get("link", ""), exc,
+                exc_info=True,
+            )
             return None
 
     def _extract_daily_inner(self, raw: dict[str, Any]) -> Article:
@@ -134,8 +150,8 @@ class RestExtractor:
         coram_deo_md = fragment_to_md(raw_coram) if raw_coram else ""
 
         # ── Reference lists ───────────────────────────────────────────────────
-        further_study = _parse_reference_list(acf.get("reference_list_left") or [])
-        bible_in_a_year = _parse_reference_list(acf.get("reference_list_right") or [])
+        further_study = _parse_reference_list(acf.get("reference_list_left"))
+        bible_in_a_year = _parse_reference_list(acf.get("reference_list_right"))
 
         # ── Authors ───────────────────────────────────────────────────────────
         authors = _resolve_authors(acf)

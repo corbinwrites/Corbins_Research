@@ -74,6 +74,7 @@ def _root(
 ):
     if verbose:
         logging.getLogger().setLevel(logging.INFO)
+        logging.getLogger("httpx").setLevel(logging.WARNING)  # one line per request is noise
 
 
 # ── Shared setup ──────────────────────────────────────────────────────────────
