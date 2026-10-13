@@ -13,7 +13,7 @@ from __future__ import annotations
 import logging
 import re
 from dataclasses import dataclass, field
-from typing import Generator
+from typing import Callable, Generator
 
 from selectolax.lexbor import LexborHTMLParser as HTMLParser
 
@@ -89,13 +89,13 @@ def _classify_url(url: str) -> SitemapEntry:
     return SitemapEntry(url, "other", None, None)
 
 
-def fetch_sitemap(client: TtClient) -> list[SitemapEntry]:
+def fetch_sitemap(client: TtClient, *, force: bool = False) -> list[SitemapEntry]:
     """
     Fetch and parse sitemap.xml (and any sub-sitemaps).
-    Returns all entries classified by kind.
+    Returns all entries classified by kind. ``force=True`` bypasses the raw cache.
     """
     logger.info("Fetching sitemap…")
-    xml = client.get(SITEMAP_URL)
+    xml = client.get(SITEMAP_URL, force=force)
 
     urls: list[str] = []
 
@@ -104,7 +104,7 @@ def fetch_sitemap(client: TtClient) -> list[SitemapEntry]:
         sub_urls = re.findall(r"<loc>(https?://[^<]+)</loc>", xml)
         for sub_url in sub_urls:
             logger.debug("Fetching sub-sitemap: %s", sub_url)
-            sub_xml = client.get(sub_url)
+            sub_xml = client.get(sub_url, force=force)
             urls.extend(re.findall(r"<loc>(https?://[^<]+)</loc>", sub_xml))
     else:
         urls = re.findall(r"<loc>(https?://[^<]+)</loc>", xml)
@@ -221,11 +221,14 @@ def iter_rest_pages(
     per_page: int = 100,
     modified_after: str | None = None,
     extra_params: dict | None = None,
+    force: bool = False,
+    on_page: Callable[[int, int | None], None] | None = None,
 ) -> Generator[dict, None, None]:
     """
     Yield individual REST items from a paginated collection endpoint.
 
-    Handles X-WP-TotalPages header to stop iteration automatically.
+    ``force`` bypasses the raw cache. ``on_page(page, total)`` is called after each page
+    is fetched (``total`` is None: the total page count isn't exposed by get_json).
     """
     page = 1
     while True:
@@ -238,13 +241,16 @@ def iter_rest_pages(
         # We need the response headers for pagination info; use get_json for body
         # but also check total pages from a prior call
         try:
-            items = client.get_json(endpoint, params=params)
+            items = client.get_json(endpoint, params=params, force=force)
         except Exception as exc:
             logger.error("REST %s page %d failed: %s", endpoint, page, exc)
             break
 
         if not items:
             break
+
+        if on_page:
+            on_page(page, None)
 
         for item in items:
             yield item
@@ -261,10 +267,16 @@ def fetch_all_daily_studies(
     client: TtClient,
     *,
     modified_after: str | None = None,
+    force: bool = False,
+    on_page: Callable[[int, int | None], None] | None = None,
 ) -> list[dict]:
     """Return all daily-study REST records (may take ~57 requests for full archive)."""
     logger.info("Fetching all daily studies from REST (modified_after=%s)…", modified_after)
-    items = list(iter_rest_pages(client, REST_DAILY, modified_after=modified_after))
+    items = list(
+        iter_rest_pages(
+            client, REST_DAILY, modified_after=modified_after, force=force, on_page=on_page
+        )
+    )
     logger.info("Fetched %d daily-study records", len(items))
     return items
 

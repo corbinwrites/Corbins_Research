@@ -153,3 +153,14 @@ def test_relink_vault_derives_issue_link_from_folder(tmp_path):
     assert 'issue: "[[Ministry/Tabletalk/2026-10 Faith and Work/00 Issue]]"' in f.read_text(
         encoding="utf-8"
     )
+
+
+def test_existing_note_without_marker_is_replaced_and_gains_marker(tmp_path):
+    a = _feature()
+    p = render_note_path(a, tmp_path, "f")
+    p.parent.mkdir(parents=True)
+    p.write_text(f"old note for {a.url}\n", encoding="utf-8")
+    write_article_note(a, tmp_path, "f")
+    out = p.read_text(encoding="utf-8")
+    assert "<!-- tt:end -->" in out and "old note" not in out
+    assert len(list(p.parent.glob("*.md"))) == 1

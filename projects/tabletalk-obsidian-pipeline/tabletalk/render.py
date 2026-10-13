@@ -93,7 +93,10 @@ def _same_note(path: Path, article: Article) -> bool:
     except OSError:
         return False
     m = _SOURCE_URL_RE.search(head)
-    return bool(m) and m.group(1).strip("'\"").rstrip("/") == article.url.rstrip("/")
+    if m:
+        return m.group(1).strip("'\"").rstrip("/") == article.url.rstrip("/")
+    # No frontmatter source_url (old or hand-made note): fall back to "mentions the URL"
+    return article.url.rstrip("/") in head
 
 
 # ── Atomic write ──────────────────────────────────────────────────────────────
@@ -391,7 +394,9 @@ def write_note(path: Path, content: str) -> None:
     """
     if path.exists():
         existing = path.read_text(encoding="utf-8")
-        content = _preserve_user_region(existing, content.split(_USER_REGION_MARKER)[0])
+        if _USER_REGION_MARKER in existing:
+            content = _preserve_user_region(existing, content.split(_USER_REGION_MARKER)[0])
+        # else: no user region to keep; the new content (which ends with the marker) replaces it
     _atomic_write(path, content)
     logger.debug("Wrote %s", path)
 

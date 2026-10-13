@@ -142,6 +142,7 @@ def sync(
     config: Optional[Path] = typer.Option(None, "--config", "-c"),
     dry_run: bool = typer.Option(False, "--dry-run", help="Print what would change without writing"),
     enrich: bool = typer.Option(False, "--enrich", help="Run AI enrichment (slow, costs API credits)"),
+    refresh: bool = typer.Option(False, "--refresh", help="Bypass the raw cache for sitemap + REST pages"),
 ):
     """Sync the current and previous month's issues."""
     cfg, ledger = _setup(config)
@@ -159,24 +160,14 @@ def sync(
 
     console.print(f"[bold blue]Syncing months: {', '.join(months)}[/bold blue]")
 
-    exit_code = 0
     with _make_client(cfg) as client:
         if cfg.ligonier_email:
             verify_subscription(client, cfg.ligonier_email)
 
-        for issue_month in months:
-            try:
-                result = _process_issue_month(
-                    client, cfg, ledger, issue_month,
-                    dry_run=dry_run, enrich=enrich,
-                )
-                if result == "partial":
-                    exit_code = max(exit_code, 1)
-                elif result == "error":
-                    exit_code = max(exit_code, 2)
-            except Exception as exc:
-                err.print(f"[red]Error processing {issue_month}: {exc}[/red]")
-                exit_code = 2
+        exit_code = _run_months(
+            client, cfg, ledger, months,
+            dry_run=dry_run, enrich=enrich, refresh=refresh, fail_code=2,
+        )
 
     raise typer.Exit(exit_code)
 
@@ -191,6 +182,7 @@ def backfill(
     dry_run: bool = typer.Option(False, "--dry-run"),
     enrich: bool = typer.Option(False, "--enrich"),
     year: Optional[int] = typer.Option(None, "--year", help="Process a single year"),
+    refresh: bool = typer.Option(False, "--refresh", help="Bypass the raw cache for sitemap + REST pages"),
 ):
     """Resumable full-archive backfill, chunked by month."""
     cfg, ledger = _setup(config)
@@ -219,31 +211,14 @@ def backfill(
     months = _month_range(from_month, to_month)
     console.print(f"[bold blue]Backfill: {from_month} → {to_month} ({len(months)} months)[/bold blue]")
 
-    exit_code = 0
     with _make_client(cfg) as client:
         if cfg.ligonier_email:
             verify_subscription(client, cfg.ligonier_email)
 
-        with Progress(
-            SpinnerColumn(), TextColumn("{task.description}"),
-            BarColumn(), TextColumn("[progress.percentage]{task.percentage:>3.0f}%"),
-            TimeElapsedColumn(), console=console,
-        ) as progress:
-            task = progress.add_task("Backfill", total=len(months))
-            for issue_month in months:
-                progress.update(task, description=f"[cyan]{issue_month}[/cyan]")
-                try:
-                    result = _process_issue_month(
-                        client, cfg, ledger, issue_month,
-                        dry_run=dry_run, enrich=enrich,
-                    )
-                    if result == "partial":
-                        exit_code = max(exit_code, 1)
-                except Exception as exc:
-                    err.print(f"[red]Error {issue_month}: {exc}[/red]")
-                    exit_code = max(exit_code, 1)
-                finally:
-                    progress.advance(task)
+        exit_code = _run_months(
+            client, cfg, ledger, months,
+            dry_run=dry_run, enrich=enrich, refresh=refresh, fail_code=1,
+        )
 
     raise typer.Exit(exit_code)
 
@@ -387,6 +362,91 @@ def archive(
     console.print(f"[green]✓[/green] Saved to {out_path}")
 
 
+# ── Progress helpers ──────────────────────────────────────────────────────────
+
+def _fetch_rest_with_progress(client: TtClient, *, force: bool) -> list[dict]:
+    """Fetch every daily-study REST record, showing a live page-by-page bar."""
+    with Progress(
+        SpinnerColumn(),
+        TextColumn("{task.description}"),
+        BarColumn(),
+        TextColumn("[progress.percentage]{task.percentage:>3.0f}%"),
+        TimeElapsedColumn(),
+        console=console,
+        transient=True,
+    ) as progress:
+        task = progress.add_task("Daily studies (REST)", total=None)
+
+        def on_page(page: int, total: int | None) -> None:
+            progress.update(
+                task,
+                completed=page,
+                total=total,
+                description=f"Daily studies (REST) page {page}/{total or '?'}",
+            )
+
+        records = fetch_all_daily_studies(client, force=force, on_page=on_page)
+
+    console.print(f"[green]✓[/green] {len(records)} daily-study records loaded")
+    return records
+
+
+def _run_months(
+    client: TtClient,
+    cfg,
+    ledger: Ledger,
+    months: list[str],
+    *,
+    dry_run: bool,
+    enrich: bool,
+    refresh: bool,
+    fail_code: int,
+) -> int:
+    """
+    Shared driver for sync/backfill. Fetches sitemap + REST once, then
+    processes each month under a progress bar. Returns an exit code.
+
+    ``refresh=True`` bypasses the raw cache for sitemap + REST pages.
+    """
+    with console.status("Fetching sitemap…"):
+        sitemap = fetch_sitemap(client, force=refresh)
+    console.print(f"[green]✓[/green] Sitemap: {len(sitemap)} URLs")
+
+    rest_records = _fetch_rest_with_progress(client, force=refresh)
+
+    exit_code = 0
+    with Progress(
+        SpinnerColumn(),
+        TextColumn("{task.description}"),
+        BarColumn(),
+        TextColumn("{task.completed}/{task.total}"),
+        TimeElapsedColumn(),
+        console=console,
+    ) as progress:
+        task = progress.add_task("Issues", total=len(months))
+        for issue_month in months:
+            progress.update(task, description=f"[cyan]{issue_month}[/cyan]")
+            try:
+                result = _process_issue_month(
+                    client, cfg, ledger, issue_month,
+                    sitemap=sitemap,
+                    rest_records=rest_records,
+                    dry_run=dry_run,
+                    enrich=enrich,
+                )
+                if result == "partial":
+                    exit_code = max(exit_code, 1)
+                elif result == "error":
+                    exit_code = max(exit_code, 2)
+            except Exception as exc:
+                err.print(f"[red]Error processing {issue_month}: {exc}[/red]")
+                exit_code = max(exit_code, fail_code)
+            finally:
+                progress.advance(task)
+
+    return exit_code
+
+
 # ── Internal processing ────────────────────────────────────────────────────────
 
 def _process_issue_month(
@@ -395,11 +455,15 @@ def _process_issue_month(
     ledger: Ledger,
     issue_month: str,
     *,
+    sitemap: list,
+    rest_records: list[dict],
     dry_run: bool = False,
     enrich: bool = False,
 ) -> str:
     """
     Process a single YYYY-MM issue month.
+
+    ``sitemap`` and ``rest_records`` are fetched once by _run_months and shared.
 
     1. Find sitemap entry for this month
     2. Fetch issue page → data-issue-id → TOC
@@ -414,8 +478,7 @@ def _process_issue_month(
     yyyy, mm = issue_month.split("-")
     issue_url_prefix = f"https://tabletalkmagazine.com/issue/{yyyy}/{mm}/"
 
-    # ── Find issue URL from sitemap (cached) ─────────────────────────────────
-    sitemap = fetch_sitemap(client)
+    # ── Find issue URL from the shared sitemap ───────────────────────────────
     issue_entry = next(
         (e for e in sitemap if e.kind == "issue" and e.url.startswith(issue_url_prefix)),
         None,
@@ -441,8 +504,7 @@ def _process_issue_month(
     all_articles: list[Article] = []
     errors = 0
 
-    # ── Daily studies via REST ─────────────────────────────────────────────────
-    rest_records = fetch_all_daily_studies(client)
+    # ── Daily studies via REST (already fetched once for all months) ───────────
     month_records = [
         r for r in rest_records
         if str(r.get("acf", {}).get("display_date", "")).startswith(f"{yyyy}{mm}")
