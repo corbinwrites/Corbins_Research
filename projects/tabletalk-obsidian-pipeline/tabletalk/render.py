@@ -7,17 +7,9 @@ Features:
   - Machine-owned body with preserved <!-- tt:end --> user region
   - Issue folder + 00 Issue.md from the TOC manifest ordering
   - Atomic writes (write to temp file, rename)
-
-CHANGES vs previous version
-  - render_note_path is now deterministic: if a note with the expected name
-    already exists AND belongs to the same article (matched by source URL), it
-    is reused (overwritten, user region preserved). A new name is only chosen
-    when the existing file belongs to a *different* article.
-    Previously every re-run created "Note-2.md" duplicates.
-  - Filenames containing a period ("Dr. Sproul") no longer get truncated by
-    Path.with_suffix().
-  - write_note only preserves the user region if the existing file has the
-    marker; otherwise it writes the full new content (marker included).
+  - Optional Bible linking (BibleLinker): passage callout title, inline refs in
+    daily body / Coram Deo, and inline refs in feature + column bodies.
+    "For further study" and "The Bible in a year" are never linked.
 """
 
 from __future__ import annotations
@@ -27,11 +19,13 @@ import os
 import re
 import tempfile
 from pathlib import Path
+from typing import Sequence
 
 import yaml
 
 from .model import Article
 from .discover import IssueToc
+from .refs import BibleLinker
 
 logger = logging.getLogger(__name__)
 
@@ -56,37 +50,50 @@ def safe_filename(name: str, max_len: int = _MAX_FILENAME_LEN) -> str:
     return name
 
 
-def _note_belongs_to(path: Path, article: Article) -> bool:
-    """True if the existing note at ``path`` was written for this article."""
+def _unique_path(
+    base: Path,
+    extension: str,
+    post_id: int | None = None,
+    is_same=None,
+) -> Path:
+    """
+    Return the path to write.
+
+    A candidate is usable if it does not exist, or if ``is_same(path)`` says it already
+    holds this article (so re-syncing updates the note instead of making a duplicate).
+    On a genuine collision (different article, same title) appends -<post_id> or a counter.
+
+    NOTE: never use Path.with_suffix here; it truncates names like "Feature - Rev. Smith".
+    """
+    def usable(p: Path) -> bool:
+        return not p.exists() or (is_same is not None and is_same(p))
+
+    candidate = base.parent / f"{base.name}{extension}"
+    if usable(candidate):
+        return candidate
+    if post_id:
+        candidate = base.parent / f"{base.name}-{post_id}{extension}"
+        if usable(candidate):
+            return candidate
+    counter = 2
+    while True:
+        candidate = base.parent / f"{base.name}-{counter}{extension}"
+        if usable(candidate):
+            return candidate
+        counter += 1
+
+
+_SOURCE_URL_RE = re.compile(r"^source_url:\s*(\S+)\s*$", re.M)
+
+
+def _same_note(path: Path, article: Article) -> bool:
+    """True if the note at ``path`` was written for this article (matched on source_url)."""
     try:
         head = path.read_text(encoding="utf-8")[:4000]
     except OSError:
         return False
-    return bool(article.url) and article.url in head
-
-
-def _resolve_note_path(base: Path, article: Article) -> Path:
-    """
-    Pick the path for an article's note.
-
-    Reuse a candidate if it doesn't exist yet or already holds this article.
-    Otherwise (a different article owns the name) try -<post_id>, then -2, -3…
-    """
-    parent, stem = base.parent, base.name
-    candidates = [parent / f"{stem}.md"]
-    if article.post_id:
-        candidates.append(parent / f"{stem}-{article.post_id}.md")
-
-    for cand in candidates:
-        if not cand.exists() or _note_belongs_to(cand, article):
-            return cand
-
-    counter = 2
-    while True:
-        cand = parent / f"{stem}-{counter}.md"
-        if not cand.exists() or _note_belongs_to(cand, article):
-            return cand
-        counter += 1
+    m = _SOURCE_URL_RE.search(head)
+    return bool(m) and m.group(1).strip("'\"").rstrip("/") == article.url.rstrip("/")
 
 
 # ── Atomic write ──────────────────────────────────────────────────────────────
@@ -152,16 +159,19 @@ def render_daily(
     *,
     tags: list[str] | None = None,
     authors_as_wikilinks: bool = False,
+    linker: BibleLinker | None = None,
+    issue_link: str = "00 Issue",
 ) -> str:
     """
     Render a daily-study Article to Markdown with frontmatter.
 
     Body layout:
-      > [!quote] scripture text
-      study body
-      ## Coram Deo
-      ## For further study
-      ## The Bible in a year
+      > [!quote] <passage link>
+      > scripture text
+      study body            (refs linked)
+      ## Coram Deo          (refs linked)
+      ## For further study  (never linked)
+      ## The Bible in a year (never linked)
       <!-- tt:end -->
       (user notes below)
     """
@@ -172,7 +182,7 @@ def render_daily(
         "post_id": article.post_id,
         "title": article.title,
         "date": article.study_date,
-        "issue": "[[00 Issue]]",
+        "issue": f"[[{issue_link}]]",
         "passage": article.passage,
         "further_study": article.further_study,
         "bible_in_a_year": article.bible_in_a_year,
@@ -188,17 +198,31 @@ def render_daily(
     if article.authors:
         fm["authors"] = _authors_field(article.authors, authors_as_wikilinks)
 
+    # Context is seeded with the study passage so "vv. 9–11" resolves correctly.
+    ctx = linker.new_context(article.passage) if linker else None
+
     body_parts: list[str] = []
 
     if article.scripture_text_md:
-        body_parts.append(article.scripture_text_md)
+        quote = article.scripture_text_md
+        if linker and article.passage:
+            title = linker.link_markdown(article.passage)
+            if "[[" in title and quote.startswith("> [!quote]"):
+                quote = quote.replace("> [!quote]", f"> [!quote] {title}", 1)
+        body_parts.append(quote)
 
     if article.body_md:
-        body_parts.append(article.body_md)
+        body_parts.append(
+            linker.link_markdown(article.body_md, ctx) if linker else article.body_md
+        )
 
     if article.coram_deo_md:
-        body_parts.append("## Coram Deo\n\n" + article.coram_deo_md)
+        coram = (
+            linker.link_markdown(article.coram_deo_md, ctx) if linker else article.coram_deo_md
+        )
+        body_parts.append("## Coram Deo\n\n" + coram)
 
+    # Reference lists are intentionally left as plain text.
     if article.further_study:
         refs = "\n".join(f"- {r}" for r in article.further_study)
         body_parts.append("## For further study\n\n" + refs)
@@ -220,6 +244,8 @@ def render_article(
     *,
     tags: list[str] | None = None,
     authors_as_wikilinks: bool = False,
+    linker: BibleLinker | None = None,
+    issue_link: str = "00 Issue",
 ) -> str:
     """Render a feature or column Article to Markdown."""
     tags = tags or ["tabletalk"]
@@ -229,7 +255,7 @@ def render_article(
         "kind": article.kind,
         "post_id": article.post_id,
         "title": article.title,
-        "issue": "[[00 Issue]]",
+        "issue": f"[[{issue_link}]]",
         "authors": _authors_field(article.authors, authors_as_wikilinks),
         "rubric": article.rubric,
         "source": article.source,
@@ -240,7 +266,11 @@ def render_article(
         "tags": tags,
     }
 
-    body_parts = [article.body_md, _USER_REGION_MARKER]
+    body = (
+        linker.link_markdown(article.body_md, linker.new_context())
+        if linker else article.body_md
+    )
+    body_parts = [body, _USER_REGION_MARKER]
     content = _dump_frontmatter(fm) + "\n" + "\n\n".join(body_parts) + "\n"
     return content
 
@@ -335,11 +365,14 @@ def render_note_path(
 ) -> Path:
     """
     Compute the absolute path for an article's note file.
-    Does NOT write anything. Deterministic across re-runs for the same article.
+    Does NOT write anything.
     """
     base_name = _article_base_filename(article)
-    base = notes_root / issue_folder / base_name
-    return _resolve_note_path(base, article)
+    issue_dir = notes_root / issue_folder
+    base = issue_dir / base_name
+    return _unique_path(
+        base, ".md", post_id=article.post_id, is_same=lambda p: _same_note(p, article)
+    )
 
 
 # ── Issue folder name ─────────────────────────────────────────────────────────
@@ -353,15 +386,12 @@ def issue_folder_name(issue: str, title: str) -> str:
 
 def write_note(path: Path, content: str) -> None:
     """
-    Write a note to disk, preserving the user region if the file already exists
-    and contains the user-region marker. Uses an atomic write.
+    Write a note to disk, preserving the user region if the file already exists.
+    Uses an atomic write.
     """
     if path.exists():
         existing = path.read_text(encoding="utf-8")
-        if _USER_REGION_MARKER in existing:
-            content = _preserve_user_region(
-                existing, content.split(_USER_REGION_MARKER, 1)[0]
-            )
+        content = _preserve_user_region(existing, content.split(_USER_REGION_MARKER)[0])
     _atomic_write(path, content)
     logger.debug("Wrote %s", path)
 
@@ -394,17 +424,29 @@ def write_article_note(
     *,
     tags: list[str] | None = None,
     authors_as_wikilinks: bool = False,
+    linker: BibleLinker | None = None,
+    issue_link: str = "00 Issue",
 ) -> Path:
     """
     Render and write a single article note. Returns the path.
-    Preserves user region on re-run.
+    Preserves user region on re-run and overwrites the existing note for the same article.
+
+    ``issue_link`` is the wikilink target for the issue index. Use the vault-relative path
+    (e.g. "Ministry/.../2026-10 Faith and Work/00 Issue") because every issue folder has a
+    note called "00 Issue" and a bare name is ambiguous in Obsidian.
     """
     path = render_note_path(article, notes_root, issue_folder)
 
     if article.kind == "daily":
-        content = render_daily(article, tags=tags, authors_as_wikilinks=authors_as_wikilinks)
+        content = render_daily(
+            article, tags=tags, authors_as_wikilinks=authors_as_wikilinks,
+            linker=linker, issue_link=issue_link,
+        )
     else:
-        content = render_article(article, tags=tags, authors_as_wikilinks=authors_as_wikilinks)
+        content = render_article(
+            article, tags=tags, authors_as_wikilinks=authors_as_wikilinks,
+            linker=linker, issue_link=issue_link,
+        )
 
     write_note(path, content)
     return path

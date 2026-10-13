@@ -1,264 +1,259 @@
-# 📚 Tabletalk Magazine Obsidian Pipeline
+# Tabletalk → Obsidian Pipeline
 
-An automated, high-performance tool that fetches, parses, formats, and syncs Ligonier Ministries' **Tabletalk Magazine** issues (daily devotionals, articles, study questions, and series) directly into your Obsidian vault.
+Fetches Ligonier's **Tabletalk Magazine** (daily studies, features, columns) and writes clean Markdown notes into an Obsidian vault, with scripture references linked for the [Bible Linker](https://github.com/kuchejak/obsidian-bible-linker-plugin) plugin so every passage shows backlinks.
 
 ```bash
-tabletalk sync
+tabletalk sync       # pull the current + previous month
+tabletalk relink     # refresh links/frontmatter on notes you already have
 ```
 
 ---
 
-## 🌟 What This Tool Does
+## What it does
 
-When you run `tabletalk`, the pipeline automates the entire download, parsing, and Obsidian vault creation process:
-
-1. **📰 Issue & Article Discovery**: Automatically scans Ligonier's Tabletalk sitemaps and API endpoints to find current, recent, or archival magazine issues.
-2. **🧼 Clean Text Extraction & Markdown Conversion**: Strips web clutter, navigation elements, and HTML artifacts to produce clean, beautifully structured Markdown text.
-3. **🔗 Smart Bible Scripture Reference Linking**: Parses scripture references throughout devotionals and articles (e.g., `Genesis 1:1–5`, `Romans 8:28`, `John 3:16`) and converts them into clickable Obsidian wikilinks (`[[Gen 1#v1|Genesis 1:1–5]]`).
-4. **📂 Obsidian Vault Sync**:
-   * Places rendered notes into your vault under `Ministry/Church/Devotionals/Tabletalk/YYYY-MM - Month Year/`.
-   * Automatically creates issue index notes (`_Issue Index - YYYY-MM.md`) summarizing the month's devotionals and articles.
-   * Attaches YAML frontmatter (`tags`, `date`, `author`, `scripture`, `issue`, `source_url`).
-5. **⚡ Smart Resumable Ledger & Caching**: Tracks processed articles in a local SQLite database (`~/.cache/tabletalk/ledger.db`). It will never re-download pages unnecessarily.
-6. **🤖 Optional AI Enrichment**: Uses Anthropic's Claude API to generate article summaries and key takeaways when `--enrich` is passed.
-7. **🔄 Offline Re-rendering**: Allows you to re-render all notes from local raw cache (`tabletalk rebuild`) instantly without making network requests.
+1. **Discovers** issues from the sitemap and the issue TOC endpoint.
+2. **Extracts** daily studies from the WordPress REST API and features/columns from page HTML.
+3. **Cleans** everything to plain Markdown (no HTML, NBSP, or template artifacts) and **lints** it.
+4. **Links scripture** (see [Bible linking](#bible-linking)).
+5. **Writes** notes into the vault, preserving anything you type below `<!-- tt:end -->`.
+6. **Tracks** processed items in a SQLite ledger and caches raw responses.
+7. Optionally adds **AI summaries** (`--enrich`, Claude API).
 
 ---
 
-## ⚡ Quick Start (3 Steps)
+## Install
 
-### Step 1: Run Pre-Flight Doctor Check
-Check that your configuration, vault path, and site connectivity are ready:
+Requires Python 3.11+.
 
 ```bash
+cd ~/Hal9000/projects/tabletalk-obsidian-pipeline
+python3 -m venv .venv && source .venv/bin/activate
+pip install -e ".[dev]"
+cp config.example.yaml config.yaml     # then edit
 tabletalk doctor
 ```
 
-### Step 2: Sync the Latest Issues
-Fetch and format the current and previous month's Tabletalk issues:
+`config.yaml` is git-ignored because it can hold credentials. `config.example.yaml` is the tracked template.
 
-```bash
-tabletalk sync
-```
+Config lookup order: `--config <path>` → `$TABLETALK_CONFIG` → `./config.yaml` → `~/.config/tabletalk/config.yaml`.
 
-### Step 3: Open in Obsidian
-Open Obsidian and navigate to:
-`Ministry/Church/Devotionals/Tabletalk/`
-
----
-
-## 🛠️ Installation & Setup
-
-### System Requirements
-* **Python**: `3.11` or higher
-* **OS**: macOS, Linux, or Windows
-
-### Step-by-Step Installation
-
-1. **Navigate to project directory**:
-   ```bash
-   cd ~/Hal9000/projects/tabletalk-obsidian-pipeline
-   ```
-
-2. **Install the package in editable mode**:
-
-   *Using standard Python environment:*
-   ```bash
-   pip3 install -e . --break-system-packages
-   ```
-
-   *Or using a virtual environment:*
-   ```bash
-   python3 -m venv .venv
-   source .venv/bin/activate
-   pip install -e .
-   ```
-
-3. **Verify the global command**:
-   ```bash
-   tabletalk --help
-   ```
+| Env var | Overrides |
+|---|---|
+| `TABLETALK_VAULT` | `obsidian.vault_path` |
+| `ANTHROPIC_API_KEY` | `anthropic.api_key` |
+| `LIGONIER_EMAIL` | `ligonier.email` |
+| `TABLETALK_CONFIG` | config file path |
 
 ---
 
-## ⚙️ Configuration (`config.yaml`)
-
-The pipeline looks for a configuration file in the following order:
-1. File path supplied via `--config <path>` argument.
-2. File path in environment variable `TABLETALK_CONFIG`.
-3. `./config.yaml` in the current working directory.
-4. `~/.config/tabletalk/config.yaml`.
-
-### Configuration Template
-
-```yaml
-ligonier:
-  email: ""                    # Optional Ligonier subscriber email
-  password: ""                 # Kept for optional 'archive' EPUB downloader
-
-anthropic:
-  api_key: ""                  # Optional: API key for AI enrichment (--enrich)
-
-obsidian:
-  vault_path: "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Corbin_Personal"
-  notes_folder: "Ministry/Church/Devotionals/Tabletalk"
-  authors_as_wikilinks: false  # Set true to format author names as [[Author Name]]
-
-cache:
-  dir: "~/.cache/tabletalk"    # Directory for raw HTTP cache & ledger.db SQLite database
-
-options:
-  max_articles: 0              # Maximum articles to process (0 = no limit)
-  include_posts: false         # Set true to include /posts/ online articles
-  tags:
-    - tabletalk
-  enrich: false                # AI enrichment off by default
-  request_delay: 1.0           # Seconds pause between web requests (polite rate limiting)
-  concurrency: 2
-```
-
-### Environment Variable Overrides
-You can override configuration defaults using standard environment variables:
-
-| Variable | Description |
-|----------|-------------|
-| `TABLETALK_VAULT` | Overrides `obsidian.vault_path` |
-| `ANTHROPIC_API_KEY` | Overrides `anthropic.api_key` |
-| `LIGONIER_EMAIL` | Overrides `ligonier.email` |
-| `TABLETALK_CONFIG` | Specifies path to a custom `config.yaml` file |
-
----
-
-## 💡 Command Reference & Examples
+## Commands
 
 | Goal | Command |
-|------|---------|
-| **Check environment & connectivity** | `tabletalk doctor` |
-| **Sync current + previous month's issues** | `tabletalk sync` |
-| **Preview sync without writing files (Dry Run)** | `tabletalk sync --dry-run` |
-| **Sync with AI summaries (Claude API)** | `tabletalk sync --enrich` |
-| **Backfill full archive (resumable)** | `tabletalk backfill` |
-| **Backfill specific month range** | `tabletalk backfill --start 2024-01 --end 2024-12` |
-| **Re-render vault notes offline from cache** | `tabletalk rebuild` |
-| **Audit coverage vs sitemap & print lint report** | `tabletalk verify` |
-| **Download issue EPUB to Attachments folder** | `tabletalk archive --issue 2026-03` |
+|---|---|
+| Check config, vault, connectivity | `tabletalk doctor` |
+| Sync current + previous month | `tabletalk sync` |
+| Preview without writing | `tabletalk sync --dry-run` |
+| Sync with AI summaries | `tabletalk sync --enrich` |
+| Backfill the archive (resumable) | `tabletalk backfill --from 2024-01 --to 2024-12` |
+| Backfill one year | `tabletalk backfill --year 2025` |
+| **Refresh links + frontmatter on existing notes** | `tabletalk relink` |
+| Preview a relink | `tabletalk relink --dry-run` |
+| Relink one issue | `tabletalk relink --issue 2026-09` |
+| Coverage + lint report | `tabletalk verify` |
+| Download an issue EPUB | `tabletalk archive --epub 2026-03` |
 
-### Detailed Subcommand Options
-
-#### `tabletalk sync`
-Syncs the active month and previous month.
-* `--config / -c <path>`: Custom configuration file path.
-* `--dry-run`: Performs discovery and parsing without writing `.md` files to disk.
-* `--enrich`: Enables AI summarization using Anthropic Claude API.
-
-#### `tabletalk backfill`
-Processes archive issues starting from current date backwards or within a specified date range.
-* `--start YYYY-MM`: Start date for backfill (e.g. `2020-01`).
-* `--end YYYY-MM`: End date for backfill (e.g. `2026-03`).
-* `--enrich`: Enable AI enrichment during backfill.
-
-#### `tabletalk rebuild`
-Re-generates Markdown files in your Obsidian vault directly from local cached HTML/JSON responses.
-* Zero network calls made.
-* Ideal after editing note templates, changing tag options, or updating Bible ref formatting rules.
-
-#### `tabletalk verify`
-Runs quality assurance and coverage lint checks:
-* Compares sitemap article URLs against recorded entries in `ledger.db`.
-* Reports missing articles, unparsed Bible references, or broken metadata.
+Exit codes for `sync`: `0` ok, `1` partial, `2` failure. `rebuild` (re-render from raw cache) is a stub and not implemented yet; use `relink` to refresh existing notes.
 
 ---
 
-## 📁 Obsidian Vault Folder Structure
+## Bible linking
 
-When notes are rendered to your vault, they are structured cleanly by month:
+### Format
+
+Links follow the Bible Linker plugin: one note per chapter, verses marked by headings.
+
+| Text in the article | Written as |
+|---|---|
+| `Romans 8:28` | `[[Rom 8#v28\|Romans 8:28]]` |
+| `Romans 8` | `[[Rom 8\|Romans 8]]` |
+| `1 John 2:9–11` | `[[1 John 2#v9\|1 John 2:9–11]][[1 John 2#v10\|]][[1 John 2#v11\|]]` |
+| `Isaiah 18–20` | `[[Isa 18\|Isaiah 18–20]][[Isa 19\|]][[Isa 20\|]]` |
+| `vv. 9–11` (after a 1 John 2 reference) | `[[1 John 2#v9\|vv. 9–11]]…` |
+| `(2:2)`, `; 13:4`, `and 2:15–17` | linked against the book already in context |
+| `Gen. 1:3, 6, 9` / `vv. 4, 10 and 12` | each verse linked |
+
+- The alias is always the text exactly as written, so unlinking is lossless.
+- The empty-alias links (`[[Gen 1#v2|]]`) are what the plugin's *Copy* command writes. They are invisible in reading view, but give every verse in a range a backlink. Turn off with `link_range_verses: false`. Ranges are capped at 40 extra links; cross-chapter ranges (`3:16–4:2`) link the first verse only.
+
+### Where links go
+
+| Content | Linked? |
+|---|---|
+| Daily study: passage (callout title `> [!quote] [[…]]`) | Yes |
+| Daily study body and Coram Deo | Yes |
+| Feature and column bodies | Yes |
+| **For further study** | **Never** |
+| **The Bible in a year** (and "Related Scripture") | **Never** |
+| The scripture quotation itself, headings, code, existing links, URLs | No |
+| Frontmatter (`passage`, `further_study`, …) | No (stays plain text for Dataview) |
+
+### Match your vault (required once)
+
+The plugin builds links from your **actual file and heading names**. Set these three in `config.yaml` so they match:
+
+| Your chapter notes | Your verse headings | `chapter_note` | `verse_prefix` |
+|---|---|---|---|
+| `Gen 1` | `###### v1` | `"{book} {chapter}"` (default) | `"#v"` (default) |
+| `Gen-01` | `###### v1` | `"{book}-{chapter:02d}"` | `"#v"` |
+| `Genesis 1` | `###### 1` | `"{book_full} {chapter}"` | `"#"` |
+
+Different abbreviations? Override per book: `abbreviations: {"Psalm": "Psa", "1 John": "1Jn"}`. Keys are canonical names (`Genesis`, `1 Samuel`, `Psalm`, `Song of Solomon`, …).
+
+**Test it:** `tabletalk relink --dry-run`, then relink one issue (`--issue 2026-10`), open a note, and click a verse link. It should land on the right heading. If not, adjust the settings and run `relink` again; it rewrites links in whatever format you choose.
+
+---
+
+## Refreshing existing notes: `tabletalk relink`
+
+Offline (no network, no cache). For every Tabletalk note in `notes_folder`:
+
+**Body** (above `<!-- tt:end -->`)
+1. Removes existing scripture links and invisible range links.
+2. Re-links using your current `bible:` settings.
+
+**Frontmatter** (a line is only touched if it's wrong)
+- `issue: [[00 Issue]]` → `[[<vault-relative folder>/00 Issue]]`
+- `authors: Roland  Mathews` → `Roland Mathews`
+- `post_id` on features/columns → stable ID derived from `source_url`
+
+Anything you wrote below `<!-- tt:end -->` is preserved byte-for-byte. Re-running is safe. Run it after changing any `bible:` setting.
+
+---
+
+## Vault layout
 
 ```
 Ministry/Church/Devotionals/Tabletalk/
-└── 2026-03 - March 2026/
-    ├── _Issue Index - 2026-03.md
-    ├── 2026-03-01 - Living by Faith.md
-    ├── 2026-03-02 - The Promises of God.md
-    ├── 2026-03-03 - Grace in Suffering.md
-    └── ...
+└── 2026-10 Faith and Work/
+    ├── 00 Issue.md
+    ├── Daily - 2026-10-12 - Abide in Him.md
+    ├── Feature - Work After the Fall.md
+    ├── Column - Coram Deo - Worthwhile Work.md
+    └── …
 ```
 
-### Sample Rendered Note Frontmatter & Body
+Daily study note:
 
 ```markdown
 ---
-title: "Living by Faith"
-date: 2026-03-01
-author: "Burk Parsons"
-issue: "2026-03"
-passage: "Habakkuk 2:4"
-tags:
-  - tabletalk
-  - devotional
-source_url: "https://tabletalkmagazine.com/posts/living-by-faith/"
+type: tabletalk-daily-study
+post_id: 32770
+title: Abide in Him
+date: 2026-10-12
+issue: "[[Ministry/Church/Devotionals/Tabletalk/2026-10 Faith and Work/00 Issue]]"
+passage: 1 John 2:28
+further_study: [Matthew 24:42–44, Romans 13:11–14]
+bible_in_a_year: [Isaiah 51–53, 1 Thessalonians 3:6–13]
+weekend: false
+source: rest
+tags: [tabletalk]
 ---
 
-# Living by Faith
+> [!quote] [[1 John 2#v28|1 John 2:28]]
+> “And now, little children, abide in him…”
 
-**Passage:** [[Hab 2#v4|Habakkuk 2:4]]
-**Author:** Burk Parsons
+To abide in the Son and the Father… (1 John 2:24–27)…
 
-> "Behold, his soul is puffed up; it is not upright within him, but the righteous shall live by his faith." (Habakkuk 2:4)
+## Coram Deo
+…
+## For further study        ← plain text, never linked
+## The Bible in a year      ← plain text, never linked
 
-## Reflection
-
-Faith is not a mere intellectual assent to truth...
-
----
-*Synced from Tabletalk Magazine.*
+<!-- tt:end -->
+(your notes here are never overwritten)
 ```
 
 ---
 
-## 🏗️ Repository Architecture & Codebase Map
+## Fixes in this release
 
-The pipeline is packaged cleanly inside `tabletalk/`:
+| Bug | Effect | Fix |
+|---|---|---|
+| Feature/column `post_id` came from `hash(url)` | Python randomises string hashes per run, so IDs changed every sync and the ledger saw the same article as new | `util.stable_post_id` (SHA-1 of the URL) |
+| Author names had double spaces (`Roland  Mathews`) | Messy frontmatter and `[[wikilinks]]` | `util.clean_name` in `discover.py` and `cli.py` |
+| `issue: [[00 Issue]]` | Every issue folder has a note named `00 Issue`; the bare name is ambiguous in Obsidian | Full vault-relative path |
+| Re-sync created `-<id>` duplicate notes | Existing notes were never overwritten, so the user-region preservation never ran | Same-article detection by `source_url`; the note is updated in place |
+| `Path.with_suffix(".md")` on titles with periods | `Feature - Jesus vs. Caesar` was written as `Feature - Jesus vs.md` | Append the extension instead |
+| Scripture matcher | "his 3" matched Isaiah; "Matt." with a period missed; `(2:2)` and verse lists ignored, which also broke `v.` context | Rewritten `refs.py` |
+
+After upgrading, run `tabletalk relink` once to bring existing notes in line.
+
+---
+
+## Code map
 
 ```
-projects/tabletalk-obsidian-pipeline/
-├── README.md               # User guide and documentation
-├── config.yaml             # Working default configuration file
-├── pyproject.toml          # Build configuration & dependency definitions
-└── tabletalk/              # Core Python application package
-    ├── __init__.py         # Package initialization
-    ├── cli.py              # Typer CLI interface commands (doctor, sync, backfill, rebuild, verify, archive)
-    ├── config.py           # Pydantic configuration model and YAML loader
-    ├── discover.py         # Sitemap parser and issue TOC crawler
-    ├── extract_html.py     # HTML page scraper & element parser
-    ├── extract_rest.py     # Ligonier REST API article extractor
-    ├── http.py             # Rate-limited HTTP client with raw caching & UA rotation
-    ├── ledger.py           # SQLite database ledger tracking synced articles
-    ├── lint.py             # Lint diagnostics & coverage checking suite
-    ├── model.py            # Pydantic data models for Article and Issue data structures
-    ├── clean.py            # Text sanitization & HTML-to-Markdown formatting engine
-    ├── refs.py             # Scripture reference detector & Obsidian wikilink formatter
-    ├── render.py           # Markdown note & issue index template renderer
-    ├── enrich.py           # Anthropic Claude API enrichment handler
-    └── tests/              # Comprehensive test suite (80 unit & integration tests)
-        ├── test_clean.py
-        ├── test_discover.py
-        ├── test_extract_rest.py
-        ├── test_lint.py
-        └── test_render.py
+tabletalk/
+├── cli.py          Typer commands (doctor, sync, backfill, relink, rebuild, verify, archive)
+├── config.py       Pydantic config + loader (incl. bible: settings)
+├── discover.py     Sitemap, issue TOC, REST paging
+├── extract_rest.py Daily studies from the REST API
+├── extract_html.py Features/columns (and daily fallback) from page HTML
+├── clean.py        HTML → Markdown
+├── refs.py         Scripture detection + BibleLinker (link / unlink)
+├── relink.py       Refresh existing notes (body links + frontmatter)
+├── render.py       Notes, issue index, safe filenames, user-region preservation
+├── lint.py         Quality gate + coverage check
+├── ledger.py       SQLite ledger
+├── http.py         Rate-limited cached HTTP client
+├── enrich.py       Optional Claude summaries
+├── util.py         stable_post_id, clean_name
+├── model.py        Article dataclass
+└── tests/
 ```
 
 ---
 
-## 🧪 Testing & Development
-
-To run the complete unit and integration test suite:
+## Tests
 
 ```bash
 pytest
+pytest --cov=tabletalk
 ```
 
-To run test coverage report:
+---
+
+## Publishing to GitHub
+
+Run from the project folder. Check for secrets first: `config.yaml` is git-ignored, and `config.example.yaml` must contain no real credentials.
 
 ```bash
-pytest --cov=tabletalk
+cd ~/Hal9000/projects/tabletalk-obsidian-pipeline
+
+# 1. Make sure no secrets are about to be committed
+grep -nE '(password|api_key|email):\s*"[^"]+"' config.example.yaml || echo "example config clean"
+
+# 2. Initialise (skip if this is already a git repo)
+git init -b main
+
+# 3. If config.yaml was ever tracked, untrack it (keeps the local file)
+git rm --cached config.yaml 2>/dev/null || true
+
+# 4. Review, then commit
+git add .
+git status
+git commit -m "Add Bible Linker links, relink command, and fix IDs/authors/issue links/duplicate notes"
+
+# 5a. Create the repo with the GitHub CLI and push
+gh repo create tabletalk-obsidian-pipeline --private --source=. --remote=origin --push
+
+# 5b. …or, if you created the repo on github.com first
+git remote add origin git@github.com:corbinwrites/tabletalk-obsidian-pipeline.git
+git push -u origin main
+```
+
+Later changes:
+
+```bash
+git add -A && git commit -m "Describe the change" && git push
 ```

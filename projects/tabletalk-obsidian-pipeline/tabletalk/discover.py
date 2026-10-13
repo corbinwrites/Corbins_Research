@@ -6,11 +6,6 @@ Provides:
   - Issue page fetch → data-issue-id attribute
   - issue_toc AJAX call → structured manifest
   - REST bulk paging for daily studies and articles
-
-CHANGES vs previous version
-  - iter_rest_pages: stops on repeated page content, honours X-WP-TotalPages,
-    hard page cap, supports ``force`` and an ``on_page`` progress callback.
-  - fetch_all_daily_studies / fetch_sitemap: ``force`` (bypass cache) support.
 """
 
 from __future__ import annotations
@@ -18,11 +13,12 @@ from __future__ import annotations
 import logging
 import re
 from dataclasses import dataclass, field
-from typing import Callable, Generator
+from typing import Generator
 
 from selectolax.lexbor import LexborHTMLParser as HTMLParser
 
 from .http import TtClient
+from .util import clean_name
 
 logger = logging.getLogger(__name__)
 
@@ -30,12 +26,6 @@ SITEMAP_URL = "https://tabletalkmagazine.com/sitemap.xml"
 TOC_AJAX_URL = "/wp-admin/admin-ajax.php"
 REST_DAILY = "/wp-json/wp/v2/daily-study"
 REST_ARTICLE = "/wp-json/wp/v2/article"
-
-# Hard ceiling so a pagination bug can never loop forever (100/page → 20k items)
-MAX_REST_PAGES = 200
-
-# on_page(page_number, total_pages_or_None)
-PageCallback = Callable[[int, "int | None"], None]
 
 
 # ── Data structures ───────────────────────────────────────────────────────────
@@ -99,15 +89,13 @@ def _classify_url(url: str) -> SitemapEntry:
     return SitemapEntry(url, "other", None, None)
 
 
-def fetch_sitemap(client: TtClient, *, force: bool = False) -> list[SitemapEntry]:
+def fetch_sitemap(client: TtClient) -> list[SitemapEntry]:
     """
     Fetch and parse sitemap.xml (and any sub-sitemaps).
     Returns all entries classified by kind.
-
-    ``force=True`` bypasses the raw cache (use for ``sync`` so new issues show up).
     """
     logger.info("Fetching sitemap…")
-    xml = client.get(SITEMAP_URL, force=force)
+    xml = client.get(SITEMAP_URL)
 
     urls: list[str] = []
 
@@ -116,7 +104,7 @@ def fetch_sitemap(client: TtClient, *, force: bool = False) -> list[SitemapEntry
         sub_urls = re.findall(r"<loc>(https?://[^<]+)</loc>", xml)
         for sub_url in sub_urls:
             logger.debug("Fetching sub-sitemap: %s", sub_url)
-            sub_xml = client.get(sub_url, force=force)
+            sub_xml = client.get(sub_url)
             urls.extend(re.findall(r"<loc>(https?://[^<]+)</loc>", sub_xml))
     else:
         urls = re.findall(r"<loc>(https?://[^<]+)</loc>", xml)
@@ -188,8 +176,9 @@ def fetch_issue_toc(client: TtClient, issue_id: int, issue_url: str) -> IssueToc
                 title=a.get("title", ""),
                 url=a.get("url", ""),
                 content_type=a.get("content_type", "feature"),
-                rubric=(a.get("before") or "").strip(),
-                author=(a.get("after") or "").strip(),
+                # The site pads names with double spaces ("Roland  Mathews").
+                rubric=clean_name(a.get("before")),
+                author=clean_name(a.get("after")),
             )
         )
 
@@ -232,32 +221,24 @@ def iter_rest_pages(
     per_page: int = 100,
     modified_after: str | None = None,
     extra_params: dict | None = None,
-    force: bool = False,
-    on_page: PageCallback | None = None,
-    max_pages: int = MAX_REST_PAGES,
 ) -> Generator[dict, None, None]:
     """
     Yield individual REST items from a paginated collection endpoint.
 
-    Stops when ANY of these is true:
-      - an empty page / request error (WP returns 400 past the last page)
-      - a short page (< per_page items)
-      - page number reaches X-WP-TotalPages (when the server provides it)
-      - a page's first item ID equals the previous page's (stuck pagination)
-      - ``max_pages`` reached
+    Handles X-WP-TotalPages header to stop iteration automatically.
     """
     page = 1
-    prev_first_id = None
-
-    while page <= max_pages:
+    while True:
         params: dict = {"per_page": per_page, "page": page, "_embed": "false"}
         if modified_after:
             params["modified_after"] = modified_after
         if extra_params:
             params.update(extra_params)
 
+        # We need the response headers for pagination info; use get_json for body
+        # but also check total pages from a prior call
         try:
-            items = client.get_json(endpoint, params=params, force=force)
+            items = client.get_json(endpoint, params=params)
         except Exception as exc:
             logger.error("REST %s page %d failed: %s", endpoint, page, exc)
             break
@@ -265,52 +246,25 @@ def iter_rest_pages(
         if not items:
             break
 
-        total_pages = client.last_total_pages
-
-        # Guard: identical page content means pagination isn't advancing
-        first_id = items[0].get("id") if isinstance(items[0], dict) else None
-        if first_id is not None and first_id == prev_first_id:
-            logger.error(
-                "REST %s page %d repeated the previous page (id=%s); stopping",
-                endpoint, page, first_id,
-            )
-            break
-        prev_first_id = first_id
-
         for item in items:
             yield item
 
-        if on_page:
-            on_page(page, total_pages)
-
+        # WP REST sets X-WP-TotalPages; without headers we detect exhaustion by
+        # whether the page returned fewer items than requested.
         if len(items) < per_page:
-            break
-        if total_pages and page >= total_pages:
             break
 
         page += 1
-    else:
-        logger.error("REST %s hit max_pages=%d; stopping", endpoint, max_pages)
 
 
 def fetch_all_daily_studies(
     client: TtClient,
     *,
     modified_after: str | None = None,
-    force: bool = False,
-    on_page: PageCallback | None = None,
 ) -> list[dict]:
     """Return all daily-study REST records (may take ~57 requests for full archive)."""
     logger.info("Fetching all daily studies from REST (modified_after=%s)…", modified_after)
-    items = list(
-        iter_rest_pages(
-            client,
-            REST_DAILY,
-            modified_after=modified_after,
-            force=force,
-            on_page=on_page,
-        )
-    )
+    items = list(iter_rest_pages(client, REST_DAILY, modified_after=modified_after))
     logger.info("Fetched %d daily-study records", len(items))
     return items
 
@@ -319,7 +273,7 @@ def fetch_contributor_name(client: TtClient, contributor_id: int) -> str:
     """Fetch a contributor's display name by ID."""
     try:
         data = client.get_json(f"/wp-json/wp/v2/contributor/{contributor_id}")
-        return data.get("name") or data.get("title", {}).get("rendered", "")
+        return clean_name(data.get("name") or data.get("title", {}).get("rendered", ""))
     except Exception as exc:
         logger.warning("Could not fetch contributor %d: %s", contributor_id, exc)
         return ""

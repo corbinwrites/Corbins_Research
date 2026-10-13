@@ -13,6 +13,8 @@ from pathlib import Path
 import yaml
 from pydantic import BaseModel, Field
 
+from .refs import BibleLinker
+
 
 # ── Sub-models ────────────────────────────────────────────────────────────────
 
@@ -29,6 +31,19 @@ class ObsidianConfig(BaseModel):
     vault_path: str = "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Corbin_Personal"
     notes_folder: str = "Ministry/Church/Devotionals/Tabletalk"
     authors_as_wikilinks: bool = False
+
+
+class BibleConfig(BaseModel):
+    """Scripture linking (Bible Linker plugin / Bible Study Kit style)."""
+    enabled: bool = True
+    # Chapter note filename. {book}=abbreviation, {book_full}=full name, {chapter}
+    chapter_note: str = "{book} {chapter}"
+    # Anchor prefix before the verse number: "#v" -> [[Gen 1#v1]], "#" -> [[Gen 1#1]]
+    verse_prefix: str = "#v"
+    # Add invisible per-verse links after a range (plugin "Copy" style) so each verse gets backlinks
+    link_range_verses: bool = True
+    # Per-book abbreviation overrides keyed by canonical name, e.g. {"Psalm": "Psa"}
+    abbreviations: dict[str, str] = Field(default_factory=dict)
 
 
 class CacheConfig(BaseModel):
@@ -57,6 +72,7 @@ class Config(BaseModel):
     ligonier: LigonierConfig = Field(default_factory=LigonierConfig)
     anthropic: AnthropicConfig = Field(default_factory=AnthropicConfig)
     obsidian: ObsidianConfig = Field(default_factory=ObsidianConfig)
+    bible: BibleConfig = Field(default_factory=BibleConfig)
     cache: CacheConfig = Field(default_factory=CacheConfig)
     options: Options = Field(default_factory=Options)
 
@@ -81,6 +97,18 @@ class Config(BaseModel):
     @property
     def ligonier_email(self) -> str:
         return self.ligonier.email or os.environ.get("LIGONIER_EMAIL", "")
+
+    @property
+    def bible_linker(self) -> BibleLinker | None:
+        """Configured linker, or None when bible.enabled is false."""
+        if not self.bible.enabled:
+            return None
+        return BibleLinker(
+            chapter_note=self.bible.chapter_note,
+            verse_prefix=self.bible.verse_prefix,
+            abbreviations=self.bible.abbreviations,
+            range_links=self.bible.link_range_verses,
+        )
 
 
 # ── Loader ────────────────────────────────────────────────────────────────────

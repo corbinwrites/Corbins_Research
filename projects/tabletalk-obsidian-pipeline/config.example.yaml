@@ -1,0 +1,41 @@
+# Configuration template for Tabletalk Magazine → Obsidian Pipeline (v3)
+# Copy to config.yaml (git-ignored) and fill in what you need.
+
+ligonier:
+  email: "" # Or export LIGONIER_EMAIL
+  password: "" # kept only for the optional 'archive' EPUB command
+
+anthropic:
+  api_key: "" # Or export ANTHROPIC_API_KEY — used by 'tabletalk sync --enrich'
+
+obsidian:
+  vault_path: "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Corbin_Personal"
+  notes_folder: "Ministry/Church/Devotionals/Tabletalk"
+  authors_as_wikilinks: false  # set true to render author names as [[wikilinks]]
+
+# Scripture links, written to match the Obsidian "Bible Linker" plugin
+# (https://github.com/kuchejak/obsidian-bible-linker-plugin).
+# These three settings MUST match how your Bible chapter notes are named.
+bible:
+  enabled: true
+  chapter_note: "{book} {chapter}"  # chapter file name. {book}=abbrev, {book_full}, {chapter}
+                                    #   "Gen 1"  -> "{book} {chapter}"
+                                    #   "Gen-01" -> "{book}-{chapter:02d}"
+                                    #   "Genesis 1" -> "{book_full} {chapter}"
+  verse_prefix: "#v"                # heading anchor before the verse number
+                                    #   "###### v1" headings -> "#v"    "###### 1" -> "#"
+  link_range_verses: true           # plugin-style invisible links so every verse in a range gets backlinks
+  abbreviations: {}                 # per-book overrides, e.g. {"Psalm": "Psa", "1 John": "1Jn"}
+
+cache:
+  dir: "~/.cache/tabletalk"   # raw HTTP cache + ledger.db live here
+
+options:
+  max_articles: 0             # 0 = no limit
+  include_posts: false        # true to include /posts/ online exclusives
+  tags:
+    - tabletalk
+  enrich: false               # AI enrichment: off by default in backfill
+  request_delay: 1.0          # seconds between requests
+  concurrency: 2
+  parser_version: 1
