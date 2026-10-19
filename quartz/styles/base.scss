@@ -521,29 +521,35 @@ p {
   overflow-x: auto;
 
   & > table {
-    margin: 1rem;
-    padding: 1.5rem;
+    margin: 1rem 0;
     border-collapse: collapse;
+    width: 100%;
 
     th,
     td {
       min-width: 75px;
+      vertical-align: top;
+      word-break: break-word;
     }
 
     & > * {
-      line-height: 2rem;
+      line-height: 1.7rem;
     }
   }
 }
 
 th {
   text-align: left;
-  padding: 0.4rem 0.7rem;
+  padding: 0.5rem 0.75rem;
   border-bottom: 2px solid var(--gray);
+  background-color: var(--lightgray);
+  font-size: 0.9em;
 }
 
 td {
-  padding: 0.2rem 0.7rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9em;
+  line-height: 1.6;
 }
 
 tr {
