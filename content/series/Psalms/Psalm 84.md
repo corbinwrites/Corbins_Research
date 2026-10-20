@@ -109,7 +109,7 @@ The Psalmist next confers blessings to another group of people, those whose stre
 The Psalmist drops a little wisdom on the Hebrew believer here. Blessed are you who find **strength in God** and**those of you who desire to be with him**. He’s not wrong! Moses had certainly written this many centuries earlier
 
 > You shall love the Lord your God with all your heart and with all your soul and with all your might.
-> [[Bible/ESV/Deuteronomy/Deut 6#4|Deut 6:4]]
+> Deut 6:4
 
 Verse 6
 
@@ -211,6 +211,6 @@ The Psalmist concludes with a confident statement, those who trust in God are bl
 ## Application Questions
 
 4. The Psalmist finds comfort, protection, and joy in the temple of the Lord, but Jesus tore the curtain of the temple making way for us to enter the Holy of Holies anywhere on Earth (Hebrews 10:19-22). Just as the Psalmist finds these attributes in the temple, do we feel that same way about our relationship with Jesus right now?
-5. As a New Testament believer we no longer make pilgrimages for feasts, but we do take a longer journey, one to Heaven. Paul describes the christian journey as a race (1 Cor 9:24, [[Bible/ESV/2 Timothy/2 Tim 4#7|2 Tim 4:7]]), a bit of a faster journey with a final destination. Interpreting our pilgrimage more symbolically, how has the journey been for you?
+5. As a New Testament believer we no longer make pilgrimages for feasts, but we do take a longer journey, one to Heaven. Paul describes the christian journey as a race (1 Cor 9:24, 2 Tim 4:7), a bit of a faster journey with a final destination. Interpreting our pilgrimage more symbolically, how has the journey been for you?
    1. Are you walking with joy to reach our Heavenly Zion?
    2. Are you walking from strength to strength or are you weak?

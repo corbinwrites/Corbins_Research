@@ -9,14 +9,14 @@ Men's Devotional: Jason Ruiz
 ## Possible Devotional Verses
 
 - Lamentations 3:37
-- [[Bible/ESV/James/Jas 4#13|James 4:13-15]]
+- James 4:13-15
 - Ecclesiastes 7:13
 - Revelation 3:7
-- [[Bible/ESV/Psalms/Ps 115#3|Psalm 115:3]]
-- [[Bible/ESV/Isaiah/Isa 46#10|Isaiah 46:10]]
+- Psalm 115:3
+- Isaiah 46:10
 - Daniel 4:34-35
-- [[Bible/ESV/Isaiah/Isa 14#27|Isaiah 14:27]]; 43:13
-- [[Bible/ESV/Ephesians/Eph 1#11|Ephesians 1:11-12]]
+- Isaiah 14:27; 43:13
+- Ephesians 1:11-12
 
 ## Favorite quote?
 
@@ -67,16 +67,16 @@ Job requires upright words!” - Righteous words are powerful and painful
 
 ## Developing Trust
 
-2. God never permits people to act contrary to His sovereign will. How do the following verses support this statement? - [[Bible/ESV/Proverbs/Prov 16#9|Proverbs 16:9]] - [[Bible/ESV/Proverbs/Prov 19#21|Proverbs 19:21]] - Lamentations 3:37 - [[Bible/ESV/James/Jas 4#13|James 4:13-15]]
-   (For additional study see [[Bible/ESV/Proverbs/Prov 21#30|Proverbs 21:30]]; Ecclesiastes 7:13; and Revelation 3:7.)
-3. What conclusions about God and what He does can you draw from these verses? - Job 42:2 - [[Bible/ESV/Psalms/Ps 115#3|Psalm 115:3]] - [[Bible/ESV/Isaiah/Isa 46#10|Isaiah 46:10]] - Daniel 4:34-35
-   (For additional verses see [[Bible/ESV/Isaiah/Isa 14#27|Isaiah 14:27]]; 43:13; and [[Bible/ESV/Ephesians/Eph 1#11|Ephesians 1:11-12]].)
+2. God never permits people to act contrary to His sovereign will. How do the following verses support this statement? - Proverbs 16:9 - Proverbs 19:21 - Lamentations 3:37 - James 4:13-15
+   (For additional study see Proverbs 21:30; Ecclesiastes 7:13; and Revelation 3:7.)
+3. What conclusions about God and what He does can you draw from these verses? - Job 42:2 - Psalm 115:3 - Isaiah 46:10 - Daniel 4:34-35
+   (For additional verses see Isaiah 14:27; 43:13; and Ephesians 1:11-12.)
 
 ## Trust in Action
 
-Choose one of the following Bible characters and read his or her story. Briefly summarize how God guided the events in this person’s life. Remember that these stories were given to us for encouragement (see [[Bible/ESV/Romans/Rom 15#4|Romans 15:4]]). What God did for these people He will do for you.
+Choose one of the following Bible characters and read his or her story. Briefly summarize how God guided the events in this person’s life. Remember that these stories were given to us for encouragement (see Romans 15:4). What God did for these people He will do for you.
 
-- Joseph: [[Bible/ESV/Genesis/Gen 37|Genesis 37]]; 39–45
+- Joseph: Genesis 37; 39–45
 - Esther: Esther
 - Ruth: Ruth
 

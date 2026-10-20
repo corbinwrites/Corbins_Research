@@ -6,4 +6,4 @@ set -euo pipefail
 #   ./link_bible_refs.sh --file "/path/to/note.md"
 # Add --apply to write changes.
 
-python3 "/Users/corbin/Hal9000/Scripts/link_bible_refs.py" "$@"
+python3 "/Users/corbin/Hal9000/scripts/tools/link_bible_refs.py" "$@"

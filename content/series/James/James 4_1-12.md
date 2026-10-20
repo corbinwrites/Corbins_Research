@@ -83,19 +83,19 @@ Thankfully, he quickly gives us the root. Though it is a surprising one. It is o
 >
 > [17] I know, my God, that you test the heart and have pleasure in uprightness. In the uprightness of my heart I have freely offered all these things, and now I have seen your people, who are present here, offering freely and joyously to you.
 >
-> [[Bible/ESV/Psalms/Ps 147#11|Psalm 147:11]]
+> Psalm 147:11
 >
 > [11] but the LORD takes pleasure in those who fear him,
 > in those who hope in his steadfast love.
 >
 > Examples of good pleasure within humanity:
 >
-> [[Bible/ESV/Proverbs/Prov 10#23|Proverbs 10:23]]
+> Proverbs 10:23
 >
 > [23] Doing wrong is like a joke to a fool,
 > but wisdom is pleasure to a man of understanding.
 >
-> [[Bible/ESV/Psalms/Ps 16#11|Psalm 16:11]]
+> Psalm 16:11
 >
 > You make known to me the path of life;
 >
@@ -169,7 +169,7 @@ An appropriate illustration for this would be the idea of “No Man’s Land” 
 
 When we attempt to live with both our passions for non-God glorifying things and God glorifying things, we find ourselves squarely in the middle of No Man’s Land and we will be gunned down as an enemy of God and a friend of the world.
 
-So the temptation maybe for us to find “safety” in the trenches of “the world” however, [[Bible/ESV/Mark/Mark 16#33|Mark 16:33]] talks about how Jesus has already overcome the world and Revelation shares the picture of how Jesus will come to lay waste the earthly trenches. Sadly there is no safety even in the earthly trenches! We should instead choose friendship with God.
+So the temptation maybe for us to find “safety” in the trenches of “the world” however, Mark 16:33 talks about how Jesus has already overcome the world and Revelation shares the picture of how Jesus will come to lay waste the earthly trenches. Sadly there is no safety even in the earthly trenches! We should instead choose friendship with God.
 
 **Choosing friendship with God is our first step to peace with others.**
 
@@ -218,7 +218,7 @@ What follows next is an extensive list of commands and promises to show us how t
 - **Cleanse your hands:** Cease your sinning. Wipe the sin off your hands. Clean them with the blood of Christ and have them be made as white as snow.
 - **Purify your hearts:** The subject for this command helps us understand this one better, “double-minded.” James is telling us to purify those desires that pull us to the world. Does that mean we have *no *desires? Absolutely not. A single man can still desire a wife, that is good and Godly. However to desire a relationship _only_ to satisfy sexual cravings is double-minded. Also note: Temple language!
 - **Be wretched and mourn and weep:** What is the context of this response? No joy ever? No! This builds off the cleansing and purification. We should feel remorse over our sin.
-  > [!note]+ [[Bible/ESV/1 John/1 John 1#8|1 John 1:8-10]]
+  > [!note]+ 1 John 1:8-10
   > [8] If we say we have no sin, we deceive ourselves, and the truth is not in us. [9] If we confess our sins, he is faithful and just to forgive us our sins and to cleanse us from all unrighteousness. [10] If we say we have not sinned, we make him a liar, and his word is not in us.
 - **Humble yourselves before the Lord:** James bookends this section with another word for submit. Though this is slightly different! Submission being living in accordance with the rule in question. Humility is in agreement.**What is significant about the promises in verses 7-10?**
 

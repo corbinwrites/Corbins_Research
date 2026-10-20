@@ -1,7 +1,7 @@
 ---
 base: "[[Spiritual Disciplines by Donald Whitney.base]]"
 Date: 2025-03-03
-Passage to Memorize: [[Bible/ESV/James/Jas 4#1|James 4:1]]
+Passage to Memorize: James 4:1
 ---
 
 # Homework
@@ -19,7 +19,7 @@ Apply one meditation method in your bible reading this week.
 
 # Big Group Questions
 
-3. **What aspects of daily life distract you from concentrating your thoughts on God and his wisdom, and what will you do to overcome these distractions** 4.**Sometimes Christians use verses incorrectly to prove a certain point. Why is it so important for people to understand the meaning of a particular verse in context before applying the verse to their life?**[[Bible/ESV/2 Timothy/2 Tim 2#15|2 Timothy 2:15]] Do your best to present yourself to God as one approved, a worker who has no need to be ashamed,** rightly handling the word of truth.**5.** Why is an overall Bible intake through hearing, reading, studying, memorizing, and meditation on Scripture so important?**1.** Read Matthew 4:1-11. How does Jesus’ confrontation with Satan illustrate the power of scripture that is committed to memory?**Jesus is able to point to truth with confidence and not give way to temptation. Even when Satan himself quotes scripture (v. 5-6), Jesus knows the character of God from what he has memorized/meditated on and defends with a more appropriate verse for the situation
+3. **What aspects of daily life distract you from concentrating your thoughts on God and his wisdom, and what will you do to overcome these distractions** 4.**Sometimes Christians use verses incorrectly to prove a certain point. Why is it so important for people to understand the meaning of a particular verse in context before applying the verse to their life?**2 Timothy 2:15 Do your best to present yourself to God as one approved, a worker who has no need to be ashamed,** rightly handling the word of truth.**5.** Why is an overall Bible intake through hearing, reading, studying, memorizing, and meditation on Scripture so important?**1.** Read Matthew 4:1-11. How does Jesus’ confrontation with Satan illustrate the power of scripture that is committed to memory?**Jesus is able to point to truth with confidence and not give way to temptation. Even when Satan himself quotes scripture (v. 5-6), Jesus knows the character of God from what he has memorized/meditated on and defends with a more appropriate verse for the situation
 4. **Read Proverbs 22:17-19. Why should we keep God’s Word within us and ready on our lips?** ”It will be pleasant” and “our trust may be in the Lord.” A wonderful way for us to fight anxiousness, fear, and sin.
 
 # Smaller Group Questions
@@ -70,32 +70,32 @@ _Joshua 1:8 _- True success is promised to those who meditate on God’s word. -
 
 # Verses
 
-[[Bible/ESV/Psalms/Ps 119#11|Psalm 119:11]] | 39, 43, 264
+Psalm 119:11 | 39, 43, 264
 
-[[Bible/ESV/Colossians/Col 3#2|Colossians 3:2]] | 39, 160, 225
+Colossians 3:2 | 39, 160, 225
 
-[[Bible/ESV/Ephesians/Eph 6#17|Ephesians 6:17]] | 39, 43
+Ephesians 6:17 | 39, 43
 
-[[Bible/ESV/Psalms/Ps 119#24|Psalm 119:24]] | 41
+Psalm 119:24 | 41
 
-[[Bible/ESV/Psalms/Ps 119#97|Psalm 119:97]] | 41, 69, 307
+Psalm 119:97 | 41, 69, 307
 
-[[Bible/ESV/Acts/Acts 2#14|Acts 2:14-40]] | 41
+Acts 2:14-40 | 41
 
 1 Samuel 2:30 | 40
 
-[[Bible/ESV/Psalms/Ps 119#98|Psalm 119:98]] | 51
+Psalm 119:98 | 51
 
-[[Bible/ESV/Psalms/Ps 119#99|Psalm 119:99]] | 51, 307
+Psalm 119:99 | 51, 307
 
-[[Bible/ESV/Psalms/Ps 1#1|Psalm 1:1-3]] | 50, 70, 254
+Psalm 1:1-3 | 50, 70, 254
 
-[[Bible/ESV/Psalms/Ps 1#2|Psalm 1:2]] | 307
+Psalm 1:2 | 307
 
-[[Bible/ESV/Psalms/Ps 1#3|Psalm 1:3]] | 54
+Psalm 1:3 | 54
 
 Joshua 1:8 | 47, 49, 50, 53, 70, 254, 307
 
-[[Bible/ESV/Psalms/Ps 119#98|Psalm 119:98-99]] | 52
+Psalm 119:98-99 | 52
 
-[[Bible/ESV/James/Jas 1#22|James 1:22-25]] | 70
+James 1:22-25 | 70

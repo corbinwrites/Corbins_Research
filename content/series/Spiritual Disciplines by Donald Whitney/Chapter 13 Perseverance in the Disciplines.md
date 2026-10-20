@@ -1,7 +1,7 @@
 ---
 base: "[[Spiritual Disciplines by Donald Whitney.base]]"
 Date: 2025-06-02
-Passage to Memorize: [[Bible/ESV/James/Jas 4#1|James 4:1-12]]
+Passage to Memorize: James 4:1-12
 ---
 
 Teaching: Livia, Jason
@@ -35,14 +35,14 @@ I encourage you to note down others' chosen discipline(s) and ask them about it 
 
 Job 32:9
 
-[[Bible/ESV/1 Timothy/1 Tim 4#7|1 Timothy 4:7-8]]
+1 Timothy 4:7-8
 
-[[Bible/ESV/1 Timothy/1 Tim 4#10|1 Timothy 4:10]]
+1 Timothy 4:10
 
 Galatians 3:3
 
-[[Bible/ESV/1 Peter/1 Pet 5#8|1 Peter 5:8]]
+1 Peter 5:8
 
-[[Bible/ESV/2 Timothy/2 Tim 1#7|2 Timothy 1:7]]
+2 Timothy 1:7
 
-[[Bible/ESV/Romans/Rom 8#29|Romans 8:29]]
+Romans 8:29

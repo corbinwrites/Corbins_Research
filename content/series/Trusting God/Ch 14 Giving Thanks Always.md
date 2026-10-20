@@ -2,28 +2,28 @@
 base: "[[Trusting God Notes.base]]"
 Women's Devotional: Kim Dunne
 Date: 2024-05-20
-Group Devotional: [[Bible/ESV/Luke/Luke 17#11|Luke 17:11-19]]
+Group Devotional: Luke 17:11-19
 Men's Devotional: Ken Dunne
 ---
 
 # Group Homework Question
 
 1. Read Luke 17:11-19. What two human responses to a blessing are illustrated in this event?
-   1. According to [[Bible/ESV/Acts/Acts 17#24|Acts 17:24-25]] and 1 Corinthians 4:7, why should we be thankful?
+   1. According to Acts 17:24-25 and 1 Corinthians 4:7, why should we be thankful?
    2. Do you have a thankful attitude toward God most of the time, not often enough, or rarely? Explain.
    3. Write a prayer asking God to help you have a more grateful spirit.
 
 # Possible Devotional Verses
 
-- [[Bible/ESV/Romans/Rom 8#28|Romans 8:28]]
+- Romans 8:28
 - Job 1:13-21
 - 2 Corinthians 12:7
-- [[Bible/ESV/Isaiah/Isa 42#8|Isaiah 42:8]]
+- Isaiah 42:8
 - 1 Thessalonians 5:18
 
 ## Men’s Devotional
 
-_[[Bible/ESV/2 Corinthians/2 Cor 12#7|2 Cor 12:7-10]]_
+_2 Cor 12:7-10_
 
 Outline:
 
@@ -68,14 +68,14 @@ Questions:
 
 # Developing Trust
 
-8. What does [[Bible/ESV/Romans/Rom 8#28|Romans 8:28]] say about God working in our lives?
-   1. How does [[Bible/ESV/Romans/Rom 8#28|Romans 8:28]] help us fulfill 1 Thessalonians 5:18?
+8. What does Romans 8:28 say about God working in our lives?
+   1. How does Romans 8:28 help us fulfill 1 Thessalonians 5:18?
 9. What was Job’s reaction to the loss of his children and property? Read Job 1:13-21. 2. What is worship? (A Bible dictionary might be helpful.) 3. What specifically helps you to enter into a spirit of worship?
-10. Read 2 Corinthians 12:7. Why was Paul given a thorn in the flesh? 4. Has God ever used an adversity in your life to counteract your pride? If so, describe the situation. 5. Why does God cherish humility in us (see [[Bible/ESV/James/Jas 4#6|James 4:6]])? 6. What are major sources of pride in your life? 7. How can you change the areas where you are proud into areas of humility?
+10. Read 2 Corinthians 12:7. Why was Paul given a thorn in the flesh? 4. Has God ever used an adversity in your life to counteract your pride? If so, describe the situation. 5. Why does God cherish humility in us (see James 4:6)? 6. What are major sources of pride in your life? 7. How can you change the areas where you are proud into areas of humility?
 11. How does humility help us deal with mistreatment from other people? 8. Do you have a hard time forgiving others? Explain.
 12. What sort of attitude is pleasing to God when we pray for deliverance from some adversity? 9. Is there ever a point at which we need to stop praying for deliverance? If so, how do we know when we have reached that point? If not, why not?
 13. Of the six responses discussed in the chapter —thanksgiving, worship, humility, forgiveness, prayer, and a heart seeking only God’s glory—which one is the most difficult for you? Why is this so?
-14. Look at [[Bible/ESV/Isaiah/Isa 42#8|Isaiah 42:8]]. How can your actions better show that glorifying God is your top priority?
+14. Look at Isaiah 42:8. How can your actions better show that glorifying God is your top priority?
 15. What are the most important ideas you have gained from this study?
     # Trust in Action
     10. Write a prayer to God, expressing the ways you hope to trust Him more fully. If there is someone you need to forgive, or ask forgiveness from, make a point of doing it this week.

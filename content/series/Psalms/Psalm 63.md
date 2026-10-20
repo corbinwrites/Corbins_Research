@@ -73,7 +73,7 @@ Satisfaction in the Lord 63:5-8
 
 Confidence in the Lord 63:9-11
 
-7. Look at the confidence he has in the lord. [[Bible/ESV/Romans/Rom 12#14|Romans 12:14-20]] reminds us that vengeance is the Lords and he can deliver us judgement, but still gives us instructions on how to deal with enemies in the here and now.
+7. Look at the confidence he has in the lord. Romans 12:14-20 reminds us that vengeance is the Lords and he can deliver us judgement, but still gives us instructions on how to deal with enemies in the here and now.
 
 **Purpose**: Let us give thanks to the Lord confidentially even in times of trouble.
 

@@ -139,9 +139,13 @@ def rewrite_text(text: str) -> str:
     last = 0
     for match in REF_RE.finditer(text):
         # Skip matches that are already part of a Markdown link target or label.
-        if match.start() > 0 and text[match.start() - 1] == "(":
+        if match.start() > 1 and text[match.start() - 2:match.start()] == "](":
             continue
         if match.start() > 0 and text[match.start() - 1] == "]":
+            continue
+        # Also skip if already inside a wikilink [[...]]
+        preceding = text[:match.start()]
+        if preceding.rfind("[[") > preceding.rfind("]]"):
             continue
         out.append(text[last:match.start()])
         out.append(link_for_match(match))

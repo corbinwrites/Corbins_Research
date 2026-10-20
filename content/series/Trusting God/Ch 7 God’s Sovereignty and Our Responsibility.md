@@ -2,7 +2,7 @@
 base: "[[Trusting God Notes.base]]"
 Women's Devotional: Kristina Brown
 Date: 2024-04-01
-Group Devotional: [[Bible/ESV/Psalms/Ps 127#1|Psalm 127:1]]
+Group Devotional: Psalm 127:1
 Men's Devotional: Jason Ruiz
 ---
 
@@ -43,9 +43,9 @@ Our Prudence (v. 3-4)
 ## Possible Devotional Verses
 
 - Nehemiah 4:6-9
-- [[Bible/ESV/Philippians/Phil 4#6|Philippians 4:6-7]]
-- [[Bible/ESV/Acts/Acts 4#23|Acts 4:23-31]]
-- [[Bible/ESV/Acts/Acts 27#13|Acts 27:13-44]]
+- Philippians 4:6-7
+- Acts 4:23-31
+- Acts 27:13-44
 
 # Developing Trust
 
@@ -53,12 +53,12 @@ Our Prudence (v. 3-4)
    1. In what two ways did the Israelites respond to the threat of attack?
    2. What does their response indicate about their understanding of the relationship between prayer and prudence?
 2. Since God is in control and His purpose will inevitably prevail, why do we need to pray? 3. Why do we need to make every effort to act with wisdom?
-3. Read Acts 4:23-31. 4. What effect do you think this prayer had on the believers who were praying? 5. What specific requests did the believers make? 6. How does [[Bible/ESV/Matthew/Matt 28#19|Matthew 28:19-20]] help explain their confidence in prayer? 7. What specific applications to your own prayer life can you make from the example of this prayer?
-4. Read the account of a violent storm, recorded in [[Bible/ESV/Acts/Acts 27#13|Acts 27:13-44]]. 8. When God revealed that He would deliver Paul and all his shipmates, Paul trusted God and His promise of deliverance. Even so, Paul didn’t passively expect God to do the work that He had equipped the sailors to do. Make a list of all the actions that were taken that helped fulfill God’s promise that they would all reach land safely. 9. What relationship does this story show between God’s sovereignty and our responsibility?
+3. Read Acts 4:23-31. 4. What effect do you think this prayer had on the believers who were praying? 5. What specific requests did the believers make? 6. How does Matthew 28:19-20 help explain their confidence in prayer? 7. What specific applications to your own prayer life can you make from the example of this prayer?
+4. Read the account of a violent storm, recorded in Acts 27:13-44. 8. When God revealed that He would deliver Paul and all his shipmates, Paul trusted God and His promise of deliverance. Even so, Paul didn’t passively expect God to do the work that He had equipped the sailors to do. Make a list of all the actions that were taken that helped fulfill God’s promise that they would all reach land safely. 9. What relationship does this story show between God’s sovereignty and our responsibility?
 
 ## Men’s/Women’s Developing Trust
 
-5. Meditate on [[Bible/ESV/Philippians/Phil 4#6|Philippians 4:6-7]].
+5. Meditate on Philippians 4:6-7.
    1. Describe a time when you experienced a great deal of anxiety.
    2. When you are anxious, do you pray more or less than usual?
    3. Is this the way it should be? Explain.
@@ -70,4 +70,4 @@ Our Prudence (v. 3-4)
 8. Read through the book of Proverbs in a modern translation, looking for lessons on prudence. Copy into your journal those verses that especially speak to you.
 9. Memorize Philippians 4:6-7.
 10. Start a prayer notebook with your requests and God’s answers. This can be done very simply, with just a few words for each request. From time to time you may want to write out whole prayers to the Lord. The process of writing prayers causes us to think more seriously about what we are saying to God.
-11. Before you go to bed tonight, tell God that you entrust each of your current concerns to Him. Name them. Ask Him to give you wisdom in dealing with each one. Then read [[Bible/ESV/Psalms/Ps 127#1|Psalm 127:1-2]], and go to sleep.
+11. Before you go to bed tonight, tell God that you entrust each of your current concerns to Him. Name them. Ask Him to give you wisdom in dealing with each one. Then read Psalm 127:1-2, and go to sleep.

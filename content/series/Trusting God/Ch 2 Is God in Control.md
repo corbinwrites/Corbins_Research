@@ -2,7 +2,7 @@
 base: "[[Trusting God Notes.base]]"
 Women's Devotional: Rachelle
 Date: 2024-02-12
-Group Devotional: [[Bible/ESV/Matthew/Matt 10#29|Matthew 10:29-31]]
+Group Devotional: Matthew 10:29-31
 Men's Devotional: Corbin
 ---
 
@@ -10,7 +10,7 @@ Men's Devotional: Corbin
 
 > [!note]+ ## Group Homework Lesson
 >
-> > **[[Bible/ESV/Matthew/Matt 10#26|Matthew 10:26-33]]**
+> > **Matthew 10:26-33**
 > > Have No Fear
 > > [26] “So have no fear of them, for nothing is covered that will not be revealed, or hidden that will not be known. [27] What I tell you in the dark, say in the light, and what you hear whispered, proclaim on the housetops. [28] And do not fear those who kill the body but cannot kill the soul. Rather fear him who can destroy both soul and body in hell. [29] Are not two sparrows sold for a penny? And not one of them will fall to the ground apart from your Father. [30] But even the hairs of your head are all numbered. [31] Fear not, therefore; you are of more value than many sparrows. [32] So everyone who acknowledges me before men, I also will acknowledge before my Father who is in heaven, [33] but whoever denies me before men, I also will deny before my Father who is in heaven.
 >
@@ -52,16 +52,16 @@ Men's Devotional: Corbin
 >
 > With this small statement, we still fear, respect, appreciate God, but we also _trust_ God. This power is restrained and not used on us.
 >
-> [[Bible/ESV/Psalms/Ps 40#3|Psalm 40:3]] says, “Many will see and fear and put their trust in the Lord.”
+> Psalm 40:3 says, “Many will see and fear and put their trust in the Lord.”
 >
-> [[Bible/ESV/Proverbs/Prov 2#5|Proverbs 2:5]] says, “if you call out for insight and raise your voice for understanding… then you will understand the fear of the Lord and find the knowledge of God”
+> Proverbs 2:5 says, “if you call out for insight and raise your voice for understanding… then you will understand the fear of the Lord and find the knowledge of God”
 >
 > Trust of God can _start_ with fear, respect, appreciation for his power, for who he is. We see the Lord’s amazing display of power.
 
 ## Group Homework Question
 
 1. Restate Matthew 10:29-31 in your own words.
-   _You are of great value to the Lord, if even a small bird is with the Lord, you should not fear._ 1. Think about a person who sees chance or randomness as the explanation for all that happens. How would this philosophy affect his or her life? 2. What would such a person value? 3. How does [[Bible/ESV/Matthew/Matt 10#29|Matthew 10:29-31]] refute such a perspective?
+   _You are of great value to the Lord, if even a small bird is with the Lord, you should not fear._ 1. Think about a person who sees chance or randomness as the explanation for all that happens. How would this philosophy affect his or her life? 2. What would such a person value? 3. How does Matthew 10:29-31 refute such a perspective?
 
 ## Group Developing Trust Questions
 
@@ -69,7 +69,7 @@ Men's Devotional: Corbin
    1. What do you think about Rabbi Kushner’s conclusion?
    2. How do you reconcile God’s goodness and His sovereignty? That is, if God is able to prevent evil, and if He is committed to good, then why doesn’t He prevent evil?
 
-> [!note]+ ## Devotional - [[Bible/ESV/Acts/Acts 17#24|Acts 17:24-28]]
+> [!note]+ ## Devotional - Acts 17:24-28
 > Context: Paul has walked into Athens and is proclaiming Christ in the marketplace and synagogue. In his discussions he pulls the interest of some of the governing officials of the area who bring him to the Aeropagus, yes a physical location, but that’s the name of the council. So here Paul is standing before judges and he begins to evangelistically convince the council of Christ.
 >
 > In the passage selected by Jerry Bridges, Paul shares two points: who God is and Man’s response to God.
@@ -112,9 +112,9 @@ Men's Devotional: Corbin
 
 ## Trust in Action
 
-Choose one of the following Bible characters and read his or her story. Briefly summarize how God guided the events in this person’s life. Remember that these stories were given to us for encouragement (see [[Bible/ESV/Romans/Rom 15#4|Romans 15:4]]). What God did for these people He will do for you.
+Choose one of the following Bible characters and read his or her story. Briefly summarize how God guided the events in this person’s life. Remember that these stories were given to us for encouragement (see Romans 15:4). What God did for these people He will do for you.
 
-- Joseph: [[Bible/ESV/Genesis/Gen 37|Genesis 37]]; 39–45
+- Joseph: Genesis 37; 39–45
 - Esther: Esther
 - Ruth: Ruth
 

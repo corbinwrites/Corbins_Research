@@ -1,12 +1,12 @@
 ---
 base: "[[Spiritual Disciplines by Donald Whitney.base]]"
 Date: 2025-04-14
-Passage to Memorize: [[Bible/ESV/James/Jas 4#1|James 4:1-6]]
+Passage to Memorize: James 4:1-6
 ---
 
 Jason and Livia Teaching
 
-# **Homework** 1. Memorize **[[Bible/ESV/James/Jas 4#1|James 4:1-6]]** 2.**Read your Bible every day** this week
+# **Homework** 1. Memorize **James 4:1-6** 2.**Read your Bible every day** this week
 
 3. **Evaluate how you are currently serving**:
    1. For those** who currently** serve in a ministry (or ministries) at City Light:
@@ -28,28 +28,28 @@ Jason and Livia Teaching
 
 # Verses
 
-[[Bible/ESV/Deuteronomy/Deut 13#4|Deuteronomy 13:4]] | 144
+Deuteronomy 13:4 | 144
 
-[[Bible/ESV/Psalms/Ps 100#2|Psalm 100:2]] | 144, 146
+Psalm 100:2 | 144, 146
 
 1 Samuel 12:24 | 145
 
 Nehemiah 2:2 | 146
 
-[[Bible/ESV/Psalms/Ps 84#10|Psalm 84:10]] | 147
+Psalm 84:10 | 147
 
-[[Bible/ESV/Isaiah/Isa 6#6|Isaiah 6:6-8]] | 148
+Isaiah 6:6-8 | 148
 
-[[Bible/ESV/John/John 13#12|John 13:12-16]] | 149
+John 13:12-16 | 149
 
 Galatians 5:13 | 150
 
-[[Bible/ESV/Ephesians/Eph 4#7|Ephesians 4:7-13]] | 151
+Ephesians 4:7-13 | 151
 
-[[Bible/ESV/1 Corinthians/1 Cor 12#5|1 Corinthians 12:5-11]] | 151
+1 Corinthians 12:5-11 | 151
 
-[[Bible/ESV/Mark/Mark 12#28|Mark 12:28-31]] | 151
+Mark 12:28-31 | 151
 
-[[Bible/ESV/Romans/Rom 12#4|Romans 12:4-8]] | 151
+Romans 12:4-8 | 151
 
-[[Bible/ESV/1 Corinthians/1 Cor 12#27|1 Corinthians 12:27-31]] | 151
+1 Corinthians 12:27-31 | 151

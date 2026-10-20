@@ -10,11 +10,11 @@ Why does Luke put these episodes together?
 What is significant about the genealogy? Do you see any significant names in the list?
 
 # Episodes
-1. John the Baptist's Ministry ([[Luke 3#1|Luke 3:1]][[Luke 3#2|]][[Luke 3#3|]][[Luke 3#4|]][[Luke 3#5|]][[Luke 3#6|]][[Luke 3#7|]][[Luke 3#8|]][[Luke 3#9|]][[Luke 3#10|]][[Luke 3#11|]][[Luke 3#12|]][[Luke 3#13|]][[Luke 3#14|]][[Luke 3#15|]][[Luke 3#16|]][[Luke 3#17|]][[Luke 3#18|]][[Luke 3#19|]][[Luke 3#20|-20]])
-2. Jesus' Baptism ([[Luke 3#21|Luke 3:21]][[Luke 3#22|-22]])
-3. Jesus' Adoptive Genealogy ([[Luke 3#23|Luke 3:23]][[Luke 3#24|]][[Luke 3#25|]][[Luke 3#26|]][[Luke 3#27|]][[Luke 3#28|]][[Luke 3#29|]][[Luke 3#30|]][[Luke 3#31|]][[Luke 3#32|]][[Luke 3#33|]][[Luke 3#34|]][[Luke 3#35|]][[Luke 3#36|]][[Luke 3#37|]][[Luke 3#38|-38]])
+1. John the Baptist's Ministry (Luke 3:1-20)
+2. Jesus' Baptism (Luke 3:21-22)
+3. Jesus' Adoptive Genealogy (Luke 3:23-38)
 
-## John the Baptist's Ministry ([[Luke 3#1|Luke 3:1]][[Luke 3#2|]][[Luke 3#3|]][[Luke 3#4|]][[Luke 3#5|]][[Luke 3#6|]][[Luke 3#7|]][[Luke 3#8|]][[Luke 3#9|]][[Luke 3#10|]][[Luke 3#11|]][[Luke 3#12|]][[Luke 3#13|]][[Luke 3#14|]][[Luke 3#15|]][[Luke 3#16|]][[Luke 3#17|]][[Luke 3#18|]][[Luke 3#19|]][[Luke 3#20|-20]])
+## John the Baptist's Ministry (Luke 3:1-20)
 
 J.C. Ryle notes John is quite fierce in his declaration of Hell, "the coming wrath" and "the ax." He does not shrink back from boldly declaring the truth. 
 
@@ -37,12 +37,12 @@ v. 16 "baptize you with Holy Spirit and fire." - Ryle states it could be either 
 ### What happens?
 John begins his ministry and baptizing and instructing people for the repentance of sins
 
-## Jesus' Baptism ([[Luke 3#21|Luke 3:21]][[Luke 3#22|-22]])
+## Jesus' Baptism (Luke 3:21-22)
 
 ### What happens?
 Jesus is baptized and the Triune God verifies his standing as the Messiah and as God the Father's Son.
 
-## Jesus' Adoptive Genealogy ([[Luke 3#23|Luke 3:23]][[Luke 3#24|]][[Luke 3#25|]][[Luke 3#26|]][[Luke 3#27|]][[Luke 3#28|]][[Luke 3#29|]][[Luke 3#30|]][[Luke 3#31|]][[Luke 3#32|]][[Luke 3#33|]][[Luke 3#34|]][[Luke 3#35|]][[Luke 3#36|]][[Luke 3#37|]][[Luke 3#38|-38]])
+## Jesus' Adoptive Genealogy (Luke 3:23-38)
 
 The prevailing thought is that Matthew follows the royal line (who rights are given to whom) while Luke follows the biological line (who physically gave life to whom). Luke would follow the Levirate line. 
 
@@ -64,13 +64,13 @@ But John the Baptist (and Rachelle Harris) don't stop there. After exhortation i
 
 I would encourage you, when practicing exhortation to reflect on:
 
-[[Bible/ESV/Hebrews/Heb 3#13|Hebrews 3:13]] But exhort one another every day, as long as it is called "today," that none of you may be hardened by the deceitfulness of sin.  
+Hebrews 3:13 But exhort one another every day, as long as it is called "today," that none of you may be hardened by the deceitfulness of sin.  
 *We are commanded to do this*
 
-[[Bible/ESV/2 Timothy/2 Tim 4#2|2 Timothy 4:2]] preach the word; be ready in season and out of season; reprove, rebuke, and exhort, with complete patience and teaching.  
+2 Timothy 4:2 preach the word; be ready in season and out of season; reprove, rebuke, and exhort, with complete patience and teaching.  
 *We should do so with patience and a desire to teach (think on how John gives application)*
 
-[[Bible/ESV/Proverbs/Prov 15#1|Proverbs 15:1]] A soft answer turns away wrath, but a harsh word stirs up anger.  
+Proverbs 15:1 A soft answer turns away wrath, but a harsh word stirs up anger.  
 *We should do so with kindness and love*
 
 

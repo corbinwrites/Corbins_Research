@@ -1,7 +1,7 @@
 ---
 base: "[[Spiritual Disciplines by Donald Whitney.base]]"
 Date: 2025-04-28
-Passage to Memorize: [[Bible/ESV/James/Jas 4#1|James 4:1-7]]
+Passage to Memorize: James 4:1-7
 ---
 
 Teaching: Emily
@@ -34,12 +34,12 @@ Application Questions:
 
 Ecclesiastes 3:1 | 189
 
-[[Bible/ESV/James/Jas 1#19|James 1:19]] | 237
+James 1:19 | 237
 
-[[Bible/ESV/Colossians/Col 3#2|Colossians 3:2]] | 39, 160, 225
+Colossians 3:2 | 39, 160, 225
 
-[[Bible/ESV/Ephesians/Eph 5#15|Ephesians 5:15-16]] | 160
+Ephesians 5:15-16 | 160
 
-[[Bible/ESV/John/John 17#4|John 17:4]] | 160
+John 17:4 | 160
 
-[[Bible/ESV/Acts/Acts 19#23|Acts 19:23-20]]:1 | 160
+Acts 19:23-20:1 | 160

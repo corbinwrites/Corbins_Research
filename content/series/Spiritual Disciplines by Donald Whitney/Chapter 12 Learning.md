@@ -1,7 +1,7 @@
 ---
 base: "[[Spiritual Disciplines by Donald Whitney.base]]"
 Date: 2025-05-26
-Passage to Memorize: [[Bible/ESV/James/Jas 4#1|James 4:1-11]]
+Passage to Memorize: James 4:1-11
 ---
 
 Teaching: Emily
@@ -9,7 +9,7 @@ Teaching: Emily
 ## Apply
 
 1. Make sure to read your bible daily!
-2. Memorize **[[Bible/ESV/James/Jas 4#1|James 4:1-11]]** 3.**Learn something** this week! Find an answer to an ongoing question you have had about God/His Word and be prepared to _briefly_ share what you have learned. Some helpful resources for your study:
+2. Memorize **James 4:1-11** 3.**Learn something** this week! Find an answer to an ongoing question you have had about God/His Word and be prepared to _briefly_ share what you have learned. Some helpful resources for your study:
    - [Desiring God](https://www.desiringgod.org/), a ministry of John Piper
    - [Ligonier Ministries](https://www.ligonier.org/), a ministry of the late R.C. Sproul
    - [Tabletalk](https://tabletalkmagazine.com/), Ligonier’s Magazine
@@ -27,7 +27,7 @@ Teaching: Emily
 ### Discussion Questions
 
 6. Do you agree that we live in an anti-intellectual age? How and where do you see this
-7. [[Bible/ESV/Mark/Mark 12#29|Mark 12:29-31]] says we are to “love the Lord your God with all your heart and with all your soul and with all your mind and with all your strength”. What does it look like to love the Lord with only your heart or only your mind? Why is it important that all these exist together?
+7. Mark 12:29-31 says we are to “love the Lord your God with all your heart and with all your soul and with all your mind and with all your strength”. What does it look like to love the Lord with only your heart or only your mind? Why is it important that all these exist together?
 8. “He cannot have a taste of the sweetness and divine excellency of such and such things contained in divinity, unless he first have a notion that there are such things”. How does knowing about Godliness lead to growth in Godliness?
 9. “Those who are not trying to learn will only get spiritual and biblical knowledge by accident or convenience. Learning that’s mostly by accident does not lead to Godliness” Agree or disagree? How do we ensure we don’t fall into this?
 10. The truly wise are humble because they know they still have so much to learn. How is it possible “They can learn from anybody regardless of age or background”
@@ -70,10 +70,10 @@ Teaching: Emily
 
 # Verses
 
-[[Bible/ESV/Proverbs/Prov 9#9|Proverbs 9:9]] | 273
+Proverbs 9:9 | 273
 
-[[Bible/ESV/Proverbs/Prov 10#14|Proverbs 10:14]] | 273
+Proverbs 10:14 | 273
 
-[[Bible/ESV/Proverbs/Prov 18#15|Proverbs 18:15]] | 274
+Proverbs 18:15 | 274
 
-[[Bible/ESV/Colossians/Col 4#5|Colossians 4:5-6]] | 130
+Colossians 4:5-6 | 130

@@ -112,8 +112,8 @@ James gives us a small case study on tests
 
 > [!question] ❓
 > How is this brother exalted?
-> Most likely through the relationship and love of Christ for his people. This lowly brother has been elevated to being a child of God. In his salvation. Doug Moo draws a connection to [[Bible/ESV/Philippians/Phil 3#20|Phil 3:20-21]]
-> [[Bible/ESV/Philippians/Phil 3#20|Philippians 3:20-21]]
+> Most likely through the relationship and love of Christ for his people. This lowly brother has been elevated to being a child of God. In his salvation. Doug Moo draws a connection to Phil 3:20-21
+> Philippians 3:20-21
 >
 > [20] But our citizenship is in heaven, and from it we await a Savior, the Lord Jesus Christ, [21] who will transform our lowly body to be like his glorious body, by the power that enables him even to subject all things to himself.
 
@@ -125,7 +125,7 @@ Cross reference Paul where boast in my weakness, boast in Christ (2 Cor 10:17)
 
 James bookends his writings on trials with a look at the ultimate outcome of trials, the crown of life.
 
-- **The crown of life** is the victor’s crown, the winner of the olympic games would receive a crown of laurels (Matt 10:22; Rev 2:10). This is evidence that this person has won the event. They ran the race and reached the end. - [[Bible/ESV/1 Corinthians/1 Cor 9#24|1 Cor 9:24-27]] - The crown is given to those who are**steadfast** under trial. As difficulties arise, if they continue to trust God, they will be shown to be**steadfast**. Their faith has not been shaken. - The crown is not** earned**by the work, rather it is given to those who love him. God had** promised**this in advance. - Indeed, even as the crown of life is set before us as a motivation for endurance, James tell us this crown has been “promised” on the basis not of performance but of relationship (i.e., “to those who love him”). Yet, true love evidences itself in behavior. God demands a loving heart in submission to him, which shows itself in outward obedience. Through the transforming power of the gospel of Christ, God “gives what he himself demands.”** That is, God demands that his people demonstrate love, but he himself saves them and transforms them into a loving community**(John 13:35).
+- **The crown of life** is the victor’s crown, the winner of the olympic games would receive a crown of laurels (Matt 10:22; Rev 2:10). This is evidence that this person has won the event. They ran the race and reached the end. - 1 Cor 9:24-27 - The crown is given to those who are**steadfast** under trial. As difficulties arise, if they continue to trust God, they will be shown to be**steadfast**. Their faith has not been shaken. - The crown is not** earned**by the work, rather it is given to those who love him. God had** promised**this in advance. - Indeed, even as the crown of life is set before us as a motivation for endurance, James tell us this crown has been “promised” on the basis not of performance but of relationship (i.e., “to those who love him”). Yet, true love evidences itself in behavior. God demands a loving heart in submission to him, which shows itself in outward obedience. Through the transforming power of the gospel of Christ, God “gives what he himself demands.”** That is, God demands that his people demonstrate love, but he himself saves them and transforms them into a loving community**(John 13:35).
   ESV Expository Commentary, Robert L. Plummer - This crown is given because Christ has loved us first and we have responded in obedience. Christ has done the work to allow us to even enter the race track (salvation), the crown of life is given because we worked to remain obedient and steadfast.
 
 # Small Group Questions

@@ -2,7 +2,7 @@
 base: "[[Trusting God Notes.base]]"
 Women's Devotional: Dorian Jewett
 Date: 2024-03-25
-Group Devotional: [[Bible/ESV/John/John 9|John 9]]
+Group Devotional: John 9
 Men's Devotional: Chuck Jewett
 ---
 
@@ -13,12 +13,12 @@ Men's Devotional: Chuck Jewett
 
 ## Group Devotional
 
-In this chapter, Bridges emphasized how God can, and will, afflict us to simply to show his work. He helpfully provided [[Bible/ESV/John/John 9|John 9]] to prove this. I wanted to spend a bit more time in [[Bible/ESV/John/John 9|John 9]] just to emphasize how much God’s work shines in the blind man’s life.
+In this chapter, Bridges emphasized how God can, and will, afflict us to simply to show his work. He helpfully provided John 9 to prove this. I wanted to spend a bit more time in John 9 just to emphasize how much God’s work shines in the blind man’s life.
 
 The blind man’s life shines in a dark world. I was thinking of an example and thought of when I have been intently focused on a conversation or playing a game with someone that I hadn’t realized that it has grown dark? So someone will flip on the light or the streetlights will come on you realize how dark it had been. The work of God is similar. When God works in us it illuminates out from us, like a streetlight or “the big light.” The source of this light is God and it cuts through the darkness.
 
 3. **The Blind Man can physically see**
-   1. Note: he does not yet spiritually see. We see that in [[Bible/ESV/John/John 9#17|John 9:17]] (”prophet”) and 9:25 (”I don’t know if he is a sinner”)
+   1. Note: he does not yet spiritually see. We see that in John 9:17 (”prophet”) and 9:25 (”I don’t know if he is a sinner”)
    2. However, even without fully believing God’s work will already be on display. It will stand in contrast to:
       1. **Blind ignorance of his Neighbors (v. 8-12)**
          1. The work God has done stands in contrast to the ignorance to the neighbors.
@@ -48,34 +48,34 @@ The blind man’s life shines in a dark world. I was thinking of an example and 
 ## Possible Devotional Passages
 
 - Job 37:3, 6, 10-13
-- [[Bible/ESV/Psalms/Ps 147#8|Psalm 147:8]], 16-18
+- Psalm 147:8, 16-18
 - Jeremiah 10:13; 14:22
 - Amos 4:7-9
 - Habakkuk 3:17-19
-- [[Bible/ESV/Genesis/Gen 16#2|Genesis 16:2]]
-- [[Bible/ESV/Genesis/Gen 29#31|Genesis 29:31]]
-- [[Bible/ESV/Judges/Judg 13#3|Judges 13:3]]
+- Genesis 16:2
+- Genesis 29:31
+- Judges 13:3
 - 1 Samuel 1:5
-- [[Bible/ESV/Psalms/Ps 139#13|Psalm 139:13]]
+- Psalm 139:13
 
 ## **Developing Trust**
 
 11. Summarize in your own words what each of these verses says about God’s role in natural phenomena.
     - Job 37:3, 6, 10-13: These verses describe how God controls and directs natural phenomena like thunder, rain, snow, and clouds.
-    - [[Bible/ESV/Psalms/Ps 147#8|Psalm 147:8]], 16-18: This passage highlights how God provides for animals by giving them food, controlling the weather, and guiding migration patterns.
+    - Psalm 147:8, 16-18: This passage highlights how God provides for animals by giving them food, controlling the weather, and guiding migration patterns.
     - Jeremiah 10:13; 14:22: These verses emphasize that God is the one who brings rain and controls the seasons.
     - Amos 4:7-9: In this passage, God demonstrates His power by causing droughts, withholding rain, and sending destructive weather as a means of discipline.
 12. a. What is your usual attitude toward the weather? Do you tend to complain about it? Thank God for it? Feel that God isn’t responsible?
     - b. Is your attitude generally pleasing to God? Why or why not?
-13. a. What is God taking responsibility for in [[Bible/ESV/Exodus/Exod 4#11|Exodus 4:11]] and [[Bible/ESV/Isaiah/Isa 45#7|Isaiah 45:7]]?
+13. a. What is God taking responsibility for in Exodus 4:11 and Isaiah 45:7?
     - b. What are some possible responses to these passages?
     - c. Which response do you choose? Why?
 14. a. What does God teach us about the conception of children in these verses?
-    - [[Bible/ESV/Genesis/Gen 16#2|Genesis 16:2]]
-    - [[Bible/ESV/Genesis/Gen 29#31|Genesis 29:31]]
-    - [[Bible/ESV/Judges/Judg 13#3|Judges 13:3]]
+    - Genesis 16:2
+    - Genesis 29:31
+    - Judges 13:3
     - 1 Samuel 1:5
-    - [[Bible/ESV/Psalms/Ps 139#13|Psalm 139:13]]
+    - Psalm 139:13
     - b. If a couple is unable to have children, how can these verses help them maintain a trusting attitude toward God?
 
 ## **Men’s/Women’s Developing Trust**

@@ -2,7 +2,7 @@
 base: "[[Trusting God Notes.base]]"
 Women's Devotional: Livia Lim
 Date: 2024-03-04
-Group Devotional: [[Bible/ESV/2 Corinthians/2 Cor 8#16|2 Corinthians 8:16-17]]
+Group Devotional: 2 Corinthians 8:16-17
 Men's Devotional: Billy Nakamura
 ---
 
@@ -14,7 +14,7 @@ Read 2 Corinthians 8:16-17
 
 ## Group Devotional
 
-_[[Bible/ESV/2 Corinthians/2 Cor 8#16|2 Corinthians 8:16-17]]_
+_2 Corinthians 8:16-17_
 
 Context: Previously in Chapter 8 Paul is speaking about the generosity of the Macedonian churches. They were not only generous financially, but also generous in that that they were “giving” Titus to Corinth.
 
@@ -43,23 +43,23 @@ Finally, the most important part, God has put this heart into Titus. A strong te
 
 ## Possible Devotional Verses
 
-- [[Bible/ESV/Genesis/Gen 50#20|Genesis 50:20]]
-- [[Bible/ESV/Acts/Acts 4#27|Acts 4:27-28]]
+- Genesis 50:20
+- Acts 4:27-28
 - Revelation 17:15-18
 - Ezra 1:1, 5; 6:22
-- [[Bible/ESV/Proverbs/Prov 21#1|Proverbs 21:1]]
+- Proverbs 21:1
 - Daniel 1:9
-- [[Bible/ESV/Deuteronomy/Deut 2#30|Deuteronomy 2:30]]
+- Deuteronomy 2:30
 - Joshua 11:20
 
 ## Developing Trust Questions
 
 1. Examine the following Scriptures for evidence of God’s work in the hearts of believers and unbelievers. Record the key words used to describe His working.
    - Ezra 1:1, 5; 6:22 - stirred/caused
-   - [[Bible/ESV/Proverbs/Prov 21#1|Proverbs 21:1]] - turn heart
+   - Proverbs 21:1 - turn heart
    - Daniel 1:9 - gave favor
-   - [[Bible/ESV/2 Corinthians/2 Cor 8#16|2 Corinthians 8:16-17]] - put into his heart
-   - [[Bible/ESV/Deuteronomy/Deut 2#30|Deuteronomy 2:30]] - hardened his heart
+   - 2 Corinthians 8:16-17 - put into his heart
+   - Deuteronomy 2:30 - hardened his heart
    - Joshua 11:20 - hardened his
 2. Read Exodus 4:21 and 8:15.
    a. Who is given the responsibility for Pharaoh’s hard heart in each of these verses?
@@ -67,12 +67,12 @@ Finally, the most important part, God has put this heart into Titus. A strong te
 3. God’s restraining influence on people’s actions and decisions is seen in the following verses. Complete the chart.
    | Scripture | What action did God prevent? | What emotion did God influence? |
    | --- | --- | --- |
-   | [[Bible/ESV/Genesis/Gen 20#1|Gen 20:1-7]] | | |
-   | [[Bible/ESV/Genesis/Gen 35#5|Gen 35:5]] | | |
+   | Gen 20:1-7 | | |
+   | Gen 35:5 | | |
    | Exod 34:23-24 | | |
 4. According to the following verses, how do the sinful actions of man affect God’s purposes?
-   - [[Bible/ESV/Genesis/Gen 50#20|Genesis 50:20]]
-   - [[Bible/ESV/Acts/Acts 4#27|Acts 4:27-28]]
+   - Genesis 50:20
+   - Acts 4:27-28
    - Revelation 17:15-18
 5. Do you agree that a finite mind cannot comprehend an infinite Being beyond what He has expressly revealed? Why or why not?
 
@@ -95,7 +95,7 @@ Finally, the most important part, God has put this heart into Titus. A strong te
 
 ## Trust in Action
 
-- Memorize Deuteronomy 29:29 or [[Bible/ESV/Proverbs/Prov 21#1|Proverbs 21:1]].
+- Memorize Deuteronomy 29:29 or Proverbs 21:1.
 - Think of three people you know who need to turn to the Lord. Ask the Lord to work in their hearts.
 - Are there people who have treated you unfairly whom you have not forgiven? Spend some time with the Lord, asking Him to cleanse you of all bitterness toward others.
 - Pray Psalm 51:10.

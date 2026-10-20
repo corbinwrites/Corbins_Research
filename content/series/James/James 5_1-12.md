@@ -19,7 +19,7 @@ Book: James
 
 The year is 335 BC, a class of students are eagerly waiting around for the their teacher to arrive. The teacher has been putting together groundbreaking information on the nature of communication and language, he calls it Rhetoric. This study combined with logic and dialectics would go on to make the study of philosophy, but that doesn’t concern us tonight. Rhetoric is a tool for practical debate, persuading a general audience using probably knowledge to resolve practical issues, his lesson for the day would be on _Antithesis_.
 
-Antithesis, from an Aristotelean mindset is the idea of strengthening an argument by using exact opposites or simply contrasting ideas. They make a sentence or concept more memorable through the balance. An example from [[Bible/ESV/Matthew/Matt 10#34|Matthew 10:34]], “I came not to bring **peace** but a ** sword**.” We see this idea of peace being contrasted with the instrument of war. It makes the line memorable since it has the large contrasts.
+Antithesis, from an Aristotelean mindset is the idea of strengthening an argument by using exact opposites or simply contrasting ideas. They make a sentence or concept more memorable through the balance. An example from Matthew 10:34, “I came not to bring **peace** but a ** sword**.” We see this idea of peace being contrasted with the instrument of war. It makes the line memorable since it has the large contrasts.
 
 > [!question] ❓
 > **Where do you see antithesis in this passage? What concepts or themes are contrasted from one another?**
@@ -92,7 +92,7 @@ verse 4 also contains evidence of oppression. While the rich defrauding the harv
 
 Define: Unrestrained, Casual, without check or limitation, characterized by doing or tending to do exactly what one wants, especially when this involves pleasure or idleness. -Oxford dictionary
 
-This same phrase is used in [[Bible/ESV/1 Timothy/1 Tim 5#4|1 Tim 5:4-5]] and explicitly condemned. In fact it calls those living in this lifestyle as _dead_ even while they live.
+This same phrase is used in 1 Tim 5:4-5 and explicitly condemned. In fact it calls those living in this lifestyle as _dead_ even while they live.
 
 > [!question] ❓
 > **Where do we see the rich being self-indulgent in this passage?**
@@ -132,28 +132,28 @@ James is promising condemnation for those non-believers who fatten their hearts 
 >
 > Not necessarily, we are called to work hard and will be blessed for it.
 >
-> [[Bible/ESV/Proverbs/Prov 12#14|Proverbs 12:14]]
+> Proverbs 12:14
 > From the fruit of his mouth a man is satisfied with good,
 > and **the work of a man’s hand comes back to him. \***If you work hard, you are typically blessed for your efforts
 >
 > -
 >
-> [[Bible/ESV/Deuteronomy/Deut 8#18|Deuteronomy 8:18]]
+> Deuteronomy 8:18
 >
 > You shall remember the LORD your God, for it is he who gives you power to get wealth, that he may confirm his covenant that he swore to your fathers, as it is this day.
 >
-> [[Bible/ESV/Proverbs/Prov 10#22|Proverbs 10:22]]
+> Proverbs 10:22
 >
 > The blessing of the LORD makes rich,
 > and he adds no sorrow with it.
 >
 > However, our heart must be in the right place!
 >
-> [[Bible/ESV/Proverbs/Prov 11#4|Proverbs 11:4]]
+> Proverbs 11:4
 > Riches do not profit in the day of wrath,
 > but righteousness delivers from death.
 >
-> [[Bible/ESV/Matthew/Matt 6#24|Matthew 6:24]]
+> Matthew 6:24
 >
 > [24] “No one can serve two masters, for either he will hate the one and love the other, or he will be devoted to the one and despise the other. You cannot serve God and money.
 
@@ -161,7 +161,7 @@ James is promising condemnation for those non-believers who fatten their hearts 
 
 ### Repent, Non-believer
 
-If this is you, repent! If you always give way to your earthly desires. If you seek to harm others for your own gain. If you are continually seeking to lie for your own gain. It’s quite possible you may not be saved right now today. We know these qualities are sinful: fraud, oppression, and self-indulgence are condemned in [[Bible/ESV/Ephesians/Eph 5|Ephesians 5]], Galatians 5, [[Bible/ESV/Colossians/Col 3|Colossians 3]]. So turn away from it!
+If this is you, repent! If you always give way to your earthly desires. If you seek to harm others for your own gain. If you are continually seeking to lie for your own gain. It’s quite possible you may not be saved right now today. We know these qualities are sinful: fraud, oppression, and self-indulgence are condemned in Ephesians 5, Galatians 5, Colossians 3. So turn away from it!
 
 ### Don’t even be this a little, Christian
 

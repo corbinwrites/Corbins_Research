@@ -30,7 +30,7 @@ V.  May All Peoples Be Blessed in Him (72:15–17)
 VI.  Blessed Be the Lord: Doxology Concluding Book 2 (72:18–20) 2. **What kind of psalm is this?** Coronation, Praise 3.**If known, what is the historical context for this psalm? \***Of Solomon \*is a bit of a tricky situation. There is one of two ways we can go with this:
 
 1. Solomon has written this and is praying this blessing to future kings. He has received the blessings outlined in v. 10-11 (Kings of Tarshish _have_ given him tribute) and prays the same for those to come. This<u> does not connect </u>with the doxology at the end of the passage/end of book two
-2. David prays this _for Solomon_. Meaning the blessings that have come from Solomon are a result of this prayer that David has *for *him. This <u>does connect well </u>with the doxology at the end of the passage/end of book two. I like how this plays on [[Bible/ESV/James/Jas 5#16|James 5:16]], “the prayer of a righteous person has great power as it’s working.” As many of these prayers are answered _for Solomon_, but ultimately in Jesus.
+2. David prays this _for Solomon_. Meaning the blessings that have come from Solomon are a result of this prayer that David has *for *him. This <u>does connect well </u>with the doxology at the end of the passage/end of book two. I like how this plays on James 5:16, “the prayer of a righteous person has great power as it’s working.” As many of these prayers are answered _for Solomon_, but ultimately in Jesus.
 3. **Who are the subjects within the psalm?**
    He = The King
    Your, You = God

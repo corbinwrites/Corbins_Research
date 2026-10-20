@@ -29,7 +29,7 @@ Richelieu, upon hearing this, seats himself at his nearby writing desk and utter
 
 The playwright, Edward Bulwer-Lytton, was the first to write those iconic words and had defined a core truth that we have seen in many times in history. **Words are often more powerful than physical weapons.** But did you catch the last part of that quote, it’s a significant part. “*Take away the sword, states can be saved without it!” *Edward, through the character of Richelieu, correctly claims that without physical might entire nations can be still be saved or ruined simply by the use of words. Words are powerful.
 
-That is the focal point of **[[Bible/ESV/James/Jas 3#1|James 3:1-12]]**. The tongue, which is the source of the pen, is a powerful part of the body that must be used for good speech and not bad.
+That is the focal point of **James 3:1-12**. The tongue, which is the source of the pen, is a powerful part of the body that must be used for good speech and not bad.
 
 We’re going to take a look at:
 
@@ -54,7 +54,7 @@ Then he also points out how we all stumble. This is an explanation of why restra
 > **Why is it significant if a teacher “stumbles?”**
 > Given his or her position (women can teach women). It can influence the brother or sister’s spiritual life negatively.
 >
-> [[Bible/ESV/Matthew/Matt 18#6|Matthew 18:6]]
+> Matthew 18:6
 >
 > [6] but whoever causes one of these little ones who believe in me to sin, it would be better for him to have a great millstone fastened around his neck and to be drowned in the depth of the sea.
 
@@ -137,9 +137,9 @@ So what are we to do?
 
 James uses three illustrations to close this section on the tongue. A spring, plants, and pond. James asks if it possible for a sprint to have fresh and salt water pour forth. The answer is an obvious no. Certainly, even if the spring was “brackish” a little bit of salt water would ruin the fresh water.
 
-It recalls to mind [[Bible/ESV/1 Corinthians/1 Cor 5#6|1 Cor 5:6]] where Paul, talking about a sin of speech, says,
+It recalls to mind 1 Cor 5:6 where Paul, talking about a sin of speech, says,
 
-> _[[Bible/ESV/1 Corinthians/1 Cor 5#6|1 Corinthians 5:6]]
+> _1 Corinthians 5:6
 > [6] Your boasting is not good. Do you not know that a little leaven leavens the whole lump?_
 
 Even a small bit of yeast makes a bread rise. So does even a bit of salt water make the spring no longer fresh.
@@ -153,7 +153,7 @@ I enjoy Plummer’s conclusion on this,
 ## Small Group Questions
 
 4. What’s something you read and have a question about or had a thought you’d like to share?
-5. According to James where does the root of the problem of evil speech lie? (Isa 6:5, [[Bible/ESV/Matthew/Matt 15#11|Matt 15:11]], 16-17; [[Bible/ESV/Mark/Mark 7#20|Mark 7:20-23]])
+5. According to James where does the root of the problem of evil speech lie? (Isa 6:5, Matt 15:11, 16-17; Mark 7:20-23)
 6. Read Matthew 12:33-37. How does Jesus describe the relationship between the heart and the mouth? What eternal perspective does Jesus give on the consequences of our words?
 7. Robert Plummer in his commentary on James asks, Is it possible that sinful speech patterns have become so ingrained in our lives that we no longer notice them? Have calluses developed on our hearts from our corrupt speech patterns?
 8. What is an area of speech that you would like to work on in the coming week?

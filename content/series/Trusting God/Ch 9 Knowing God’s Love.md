@@ -74,21 +74,21 @@ Look at verses 31-36. This is a depiction of faithfulness. God will not cast off
 
 # Possible Devotional Verses
 
-- [[Bible/ESV/Psalms/Ps 103#11|Psalm 103:11]]
-- [[Bible/ESV/Isaiah/Isa 54#10|Isaiah 54:10]]
+- Psalm 103:11
+- Isaiah 54:10
 - Zephaniah 3:17
-- [[Bible/ESV/Romans/Rom 8#38|Romans 8:38-39]]
+- Romans 8:38-39
 - 1 John 4:9-10
-- [[Bible/ESV/Romans/Rom 5#6|Romans 5:6-8]]
+- Romans 5:6-8
 
 # Developing Trust
 
 2. What observations about God’s love can you make from these verses?
-   1. [[Bible/ESV/Psalms/Ps 103#11|Psalm 103:11]]
-   2. [[Bible/ESV/Isaiah/Isa 54#10|Isaiah 54:10]]
+   1. Psalm 103:11
+   2. Isaiah 54:10
    3. Zephaniah 3:17
-   4. [[Bible/ESV/Romans/Rom 8#38|Romans 8:38-39]]
-3. In what event do we see the supreme demonstration of God’s love for us? Read 1 [[Bible/ESV/John/John 4#9|John 4:9-10]]. 5. Restate Romans 5:6-8 in your own words.
+   4. Romans 8:38-39
+3. In what event do we see the supreme demonstration of God’s love for us? Read 1 John 4:9-10. 5. Restate Romans 5:6-8 in your own words.
 4. What experiences in your life have tempted you to doubt God’s love 6. When you have doubted God’s love, what has helped you regain your confidence in His love for you?
 5. God gives us the grace we need each day. We don’t have the grace today for the “what ifs” of tomorrow. 7. Describe a time when it was especially important for you to focus on God’s daily grace without looking ahead. 8. What happened when you tried to look down the road to see how you would cope tomorrow?
 

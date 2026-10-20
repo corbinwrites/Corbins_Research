@@ -20,7 +20,7 @@ _Corporate Lament_
 
 3. **If known, what is the historical context for this psalm?**
 
-_This is possibly at the end of Moses life, [[Bible/ESV/Deuteronomy/Deut 33|Deut 33]]._
+_This is possibly at the end of Moses life, Deut 33._
 
 _References to: Genesis, “Before the mountains were brought forth” which he had most likely written_
 
@@ -59,7 +59,7 @@ A Psalm around how time is short, but our God is eternal.
 
 **Historical Context**
 
-Moses is writing this after they have seen the promised land the first time and are in the 40 years of wandering, it’s possible it was after a major event (the snakes biting people) or the pillar of smoke and flame leaving the people (due to v. 13-14). Collins, and I, would place this late. I believe [[Bible/ESV/Deuteronomy/Deut 33|Deut 33]], a final lesson from Moses, inspired by the Spirit, to the people of Israel.
+Moses is writing this after they have seen the promised land the first time and are in the 40 years of wandering, it’s possible it was after a major event (the snakes biting people) or the pillar of smoke and flame leaving the people (due to v. 13-14). Collins, and I, would place this late. I believe Deut 33, a final lesson from Moses, inspired by the Spirit, to the people of Israel.
 
 **Eternal God**(V. 1-2) - Praise
 
@@ -118,7 +118,7 @@ know God’s full power, at least in our current state, probably never.
 
 10. _This Psalm reminds us that we are a flash-in-the pan? How does that make you want to live your life?_
 11. _How do we live as if we are numbering our days? What does it look like in your life to do that? Practically. How does that influence your faith walk?_
-12. _With a mindset of [[Bible/ESV/1 Corinthians/1 Cor 10#31|1 Cor 10:31]], where we we seek to glorify God in all things, is there a request that Moses makes that we need to ask for from God as well?_
+12. _With a mindset of 1 Cor 10:31, where we we seek to glorify God in all things, is there a request that Moses makes that we need to ask for from God as well?_
     - _Number our Days - Use Time Wisely_
     - _Satisfaction with his love_
     - _Glad/Joy throughout life’s “toil and trouble”_

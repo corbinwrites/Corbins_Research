@@ -35,7 +35,7 @@ Thanksgiving
 
 **If known, what is the historical context for this psalm?**
 
-No context for when it was written, but the context of when it was sung is known. Part of the Hallel “Praise” Psalms (113-118). [[Bible/ESV/Psalms/Ps 114|Psalm 114]] has a mention to exodus, so they are all traditionally sung at passover.
+No context for when it was written, but the context of when it was sung is known. Part of the Hallel “Praise” Psalms (113-118). Psalm 114 has a mention to exodus, so they are all traditionally sung at passover.
 
 **Who are the subjects within the psalm?**
 

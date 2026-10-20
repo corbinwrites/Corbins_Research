@@ -66,24 +66,24 @@ James commands that we do not show partiality, as we defined partiality making j
 > Yes, kind of…
 >
 > - Big Text
->   - [[Bible/ESV/Matthew/Matt 7#15|Matthew 7:15-20]] [15] “Beware of false prophets, who come to you in sheep’s clothing but inwardly are ravenous wolves. [16] You will recognize them by their fruits. Are grapes gathered from thornbushes, or figs from thistles? [17] So, every healthy tree bears good fruit, but the diseased tree bears bad fruit. [18] A healthy tree cannot bear bad fruit, nor can a diseased tree bear good fruit. [19] Every tree that does not bear good fruit is cut down and thrown into the fire. [20] Thus you will recognize them by their fruits.
+>   - Matthew 7:15-20 [15] “Beware of false prophets, who come to you in sheep’s clothing but inwardly are ravenous wolves. [16] You will recognize them by their fruits. Are grapes gathered from thornbushes, or figs from thistles? [17] So, every healthy tree bears good fruit, but the diseased tree bears bad fruit. [18] A healthy tree cannot bear bad fruit, nor can a diseased tree bear good fruit. [19] Every tree that does not bear good fruit is cut down and thrown into the fire. [20] Thus you will recognize them by their fruits.
 >   - Clearly we are making a distinction that this person has “good fruit” or “bad fruit.” Now there is a number of different ways that we continue forth if this person has bad fruit or good fruit, but I think it’s a bit out of the scope of our discussion tonight!
 >
 > > [!note]+ **Supporting thoughts for “rendering judgement”**
 > >
-> > - [[Bible/ESV/Matthew/Matt 7#15|Matthew 7:15-20]] [15]
+> > - Matthew 7:15-20 [15]
 > >   - Here Jesus very clearly gives us permission to “judge” someone based on their fruit. This wolf is wicked! Paul goes on in Titus to give a result for this person Titus 3:10; [10] As for a person who stirs up division, after warning him once and then twice, have nothing more to do with him, [11] knowing that such a person is warped and sinful; he is self-condemned.
 > > - Key Questions to ask
 > >   - First, is this person a Christian?
-> >     - [[Bible/ESV/1 Corinthians/1 Cor 5#12|1 Cor 5:12]], “[12] … Is it not those inside the church whom you are to judge?”.
+> >     - 1 Cor 5:12, “[12] … Is it not those inside the church whom you are to judge?”.
 > >     - If not then God will render judgement
-> >       - [[Bible/ESV/1 Corinthians/1 Cor 5#13|1 Cor 5:13]], “[13] God judges those outside. “Purge the evil person from among you.””
+> >       - 1 Cor 5:13, “[13] God judges those outside. “Purge the evil person from among you.””
 > >   - Second, are you rendering judgement from scripture or your own measure?
 > >     - From scripture, very good
-> >       - [[Bible/ESV/2 Timothy/2 Tim 3#16|2 Timothy 3:16]] [16] All Scripture is breathed out by God and profitable for teaching, for reproof, for correction, and for training in righteousness,
+> >       - 2 Timothy 3:16 [16] All Scripture is breathed out by God and profitable for teaching, for reproof, for correction, and for training in righteousness,
 > >         - The Christian is rendering good, Godly, prayerful judgement on a brother or sister and using scripture to teach, reproof, correct, and train.
 > >     - From your own measure, not good!
-> >       - [[Bible/ESV/Matthew/Matt 7#1|Matthew 7:1-2]] [1] “Judge not, that you be not judged. [2] For with the judgment you pronounce you will be judged, and with the measure you use it will be measured to you.
+> >       - Matthew 7:1-2 [1] “Judge not, that you be not judged. [2] For with the judgment you pronounce you will be judged, and with the measure you use it will be measured to you.
 
 A key point her is that following phrase:
 
@@ -126,12 +126,12 @@ You can hear the desperate plea, “Listen”
 
 Don’t we know that God has chosen the poor to be rich in the heaven of God? James here of course has in mind the beatitudes from Jesus:
 
-> _[[Bible/ESV/Matthew/Matt 5#3|Matthew 5:3]]
+> _Matthew 5:3
 > [3] “Blessed are the poor in spirit, for theirs is the kingdom of heaven._
 
 As well as Jesus’ lesson to the Rich Young Man:
 
-> _[[Bible/ESV/Matthew/Matt 19#23|Matthew 19:23-24]]
+> _Matthew 19:23-24
 > [23] And Jesus said to his disciples, “Truly, I say to you, only with difficulty will a rich person enter the kingdom of heaven. [24] Again I tell you, it is easier for a camel to go through the eye of a needle than for a rich person to enter the kingdom of God.”_
 
 We all know it is not impossible for the rich to enter Heaven (even James concedes this point with the phrase, _“He has promised to those who love him”_). However it is far easier for the poor to enter Heaven.
@@ -150,7 +150,7 @@ James doesn’t mince words when it comes to how serious this is as he talks abo
 
 ## Crime of Partiality (v. 8-11)
 
-We are called to “love our neighbor” here he quotes Leviticus 19 and Jesus in [[Bible/ESV/Mark/Mark 12#31|Mark 12:31]]. A high calling. In the same way that we look out for our own needs so should we look to do for others.
+We are called to “love our neighbor” here he quotes Leviticus 19 and Jesus in Mark 12:31. A high calling. In the same way that we look out for our own needs so should we look to do for others.
 
 Those that do not do this and show partiality are committing sin and are “convicted by the law as transgressors.” They are committing a crime against the Law. Which we know the Law to be, the Bible.
 
@@ -183,7 +183,7 @@ James reminds us how judgement is rendered. It is without mercy to one who has s
 
 > [!question] ❓
 > **What judgement is James talking about here?
-> **Final Judgement - [[Bible/ESV/Matthew/Matt 25#31|Matthew 25:31-46]] “Depart from me you cursed”
+> **Final Judgement - Matthew 25:31-46 “Depart from me you cursed”
 
 Yes, James explains that mercy will be withheld, not given, to those who do not show mercy. This thought links back to our idea of partiality and makes an interesting point.
 
@@ -202,7 +202,7 @@ The reward here? That mercy triumphs over judgement! God’s own mercy will triu
 # Smaller Group Question
 
 3. Think of a time when you have been partial to someone (shown favoritism). What motivated you to show partiality? Was that motivation sinful? Read Phillippians 2:3-4. Does this bring further thoughts to light?
-4. Read Matthew 25:31-46. Given that even as Christians we are recipients of judgement what must we do? How does [[Bible/ESV/Matthew/Matt 25#31|Matthew 25:31-46]] expand the definition of “mercy” beyond James?
+4. Read Matthew 25:31-46. Given that even as Christians we are recipients of judgement what must we do? How does Matthew 25:31-46 expand the definition of “mercy” beyond James?
 5. Read 1 Corinthians 13:4-7. When James, Jesus, and Moses tell us to love our neighbor, how does this definition of love in Corinthians inform our actions? Is it different than what the world says?
 6. How does friendship play into this? Is James saying we can never have friends?
 7. In what ways do you struggle with showing preferential treatment to some and prejudice to others? What are two specific ways you can love people as God does this week in your life (work, church, home, etc.)?

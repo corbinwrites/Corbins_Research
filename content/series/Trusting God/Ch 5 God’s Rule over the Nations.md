@@ -37,7 +37,7 @@ And then Daniel gives him a ray of hope in the vision. **Verse 26**, ‘In that 
 
 You know, that’s what the world has to recognize. The leaders of the world have to recognize that God rules and submit themselves to Him and obey Him and do His will as revealed in Holy Scripture. And that’s what Daniel says to his king. “‘Therefore, O king, may my advice be pleasing to you: break away now from your sins by doing righteousness and from your iniquities by showing mercy to the poor, in case there may be a prolonging of your prosperity.’” That’s an invitation. And you know what he’s saying? If you will repent and if you will go in the path of righteousness and acknowledge the true God, and it will be so genuine it will show up in a transformed life, which will be merciful rather than brutal as you have been. If you will turn from your sin, God will withhold the judgment. God will withhold the judgment.
 
-This is a warning with a promise of blessing for repentance. But the king must break with sin and enter a righteous relationship with God. That’s what we ought to be praying. You know it says in [[Bible/ESV/1 Timothy/1 Tim 2|1 Timothy 2]], “Pray for those that are over you. Pray for the rulers and the kings.” What are you praying? You should be praying for their salvation. You should be praying that they would hear the warnings of Scripture. You should be praying that they would turn from their sin and their wickedness and their unrighteousness to the living and true God. That’s what that text in [[Bible/ESV/1 Timothy/1 Tim 2|1 Timothy 2]] is saying. “For God our Savior is the mediator, the one mediator between God and man, the man Christ Jesus.” Pray for their salvation.
+This is a warning with a promise of blessing for repentance. But the king must break with sin and enter a righteous relationship with God. That’s what we ought to be praying. You know it says in 1 Timothy 2, “Pray for those that are over you. Pray for the rulers and the kings.” What are you praying? You should be praying for their salvation. You should be praying that they would hear the warnings of Scripture. You should be praying that they would turn from their sin and their wickedness and their unrighteousness to the living and true God. That’s what that text in 1 Timothy 2 is saying. “For God our Savior is the mediator, the one mediator between God and man, the man Christ Jesus.” Pray for their salvation.
 
 <u>**39:39**</u>
 
@@ -68,22 +68,22 @@ Daniel, rightly, points out that God had made commands not only of the *people *
 2. There are many events that took place during the life of Jesus that show how government officials, acting freely, fulfilled the purposes of God. Fill in the following chart.
    | Scripture | Name of ruler | Official action | Prophecy fulfilled |
    | --- | --- | --- | --- |
-   | [[Bible/ESV/Matthew/Matt 2#13|Matt 2:13-16]] (cf. Hosea 11:1) | | | |
-   | [[Bible/ESV/Matthew/Matt 2#17|Matt 2:17-18]] (cf. Jer 31:15) | | | |
-   | [[Bible/ESV/Matthew/Matt 2#21|Matt 2:21-23]] (cf. [[Bible/ESV/Isaiah/Isa 9#1|Isa 9:1]]) | | | |
-   | [[Bible/ESV/Luke/Luke 2#1|Luke 2:1-4]] (cf. Micah 5:2) | | | |
-   | [[Bible/ESV/Acts/Acts 4#27|Acts 4:27-28]] (cf. [[Bible/ESV/Isaiah/Isa 53#3|Isa 53:3-6]]) | | | |
+   | Matt 2:13-16 (cf. Hosea 11:1) | | | |
+   | Matt 2:17-18 (cf. Jer 31:15) | | | |
+   | Matt 2:21-23 (cf. Isa 9:1) | | | |
+   | Luke 2:1-4 (cf. Micah 5:2) | | | |
+   | Acts 4:27-28 (cf. Isa 53:3-6) | | | |
 3. What truths are taught about governments and rulers in the following verses?
-   - [[Bible/ESV/Proverbs/Prov 16#9|Proverbs 16:9]], 33
-   - [[Bible/ESV/Proverbs/Prov 21#31|Proverbs 21:31]]
-   - [[Bible/ESV/Isaiah/Isa 40#22|Isaiah 40:22-24]]
+   - Proverbs 16:9, 33
+   - Proverbs 21:31
+   - Isaiah 40:22-24
    - Daniel 4:17
    - Daniel 4:31-32
-   - [[Bible/ESV/Romans/Rom 13#1|Romans 13:1-4]]
+   - Romans 13:1-4
 
 4. What responsibilities do we have toward our government?
-   - [[Bible/ESV/Romans/Rom 13#1|Romans 13:1-7]]
-   - [[Bible/ESV/1 Timothy/1 Tim 2#1|1 Timothy 2:1-4]]
+   - Romans 13:1-7
+   - 1 Timothy 2:1-4
 
 ## **Men’s/Women’s Developing Trust**
 
@@ -93,7 +93,7 @@ Daniel, rightly, points out that God had made commands not only of the *people *
 6. a. Read 2 Samuel 15:1-16 and 16:20–17:14. Why did God want Absalom to follow Hushai’s advice?
    b. What might be God’s purpose in allowing rulers to make foolish decisions?
    c. Does God protect His people from the consequences of these poor decisions? Why or why not?
-7. a. What is promised in the following verses? - [[Bible/ESV/Matthew/Matt 28#18|Matthew 28:18-20]] - Revelation 7:9-10
+7. a. What is promised in the following verses? - Matthew 28:18-20 - Revelation 7:9-10
    b. How can you respond to these promises?
 8. a. What are your general thoughts about the present world situation?
    b. Did the truths in this chapter change your perspective on current events? If so, how?

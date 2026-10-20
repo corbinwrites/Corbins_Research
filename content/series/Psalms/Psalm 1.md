@@ -10,7 +10,7 @@ Tags:
 Book: Psalm
 ---
 
-**[[Bible/ESV/Psalms/Ps 1|Psalm 1]] Teaching Notes**
+**Psalm 1 Teaching Notes**
 
 _What’s the single meaning of this Psalm?_
 
@@ -84,7 +84,7 @@ _Why do you think the Psalmist uses these images?_
 
 **Resolution (v. 6)**
 
-- The Lord knows “with affection and approval” similar to the word “prefers.” (Amos 3:2, [[Bible/ESV/Genesis/Gen 18#19|Gen 18:19]]). According to C. John Collins. Spurgeon says, “[God] is constantly looking on their way and thought it may be often [to us] in mist and darkness, yet the Lord knows it.”
+- The Lord knows “with affection and approval” similar to the word “prefers.” (Amos 3:2, Gen 18:19). According to C. John Collins. Spurgeon says, “[God] is constantly looking on their way and thought it may be often [to us] in mist and darkness, yet the Lord knows it.”
 - In stark contrast is the wicked, which is plainly told to us that they will die. Yet not only them, but their way will die.
 
 “Not only will they perish themselves, but their way will perish too. The righteous carves his name upon the rock, but the wicked writes his remembrance in the sand. The righteous man plows the furrows of earth, and sows a harvest here which will never be fully reaped till he enters the enjoyments of eternity; but as for the wicked, he plows the sea, and though there may seem to be a shining trail behind his keel, yet the waves will pass over it, and the place that knew him will know him no more forever.” - Charles Spurgeon

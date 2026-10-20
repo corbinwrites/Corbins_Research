@@ -24,7 +24,7 @@ Book: Psalm
 
 2. **What kind of psalm is this?**
    History, Praise
-3. **If known, what is the historical context for this psalm?** This Psalm spans Genesis - [[Bible/ESV/Judges/Judg 4|Judges 4]].**Who are the subjects within the psalm?**
+3. **If known, what is the historical context for this psalm?** This Psalm spans Genesis - Judges 4.**Who are the subjects within the psalm?**
    Fathers of Israel, “Modern” Israel, God, Phinehas, Moses, Aaron, Dathan, Abiram, Egyptians
 4. **What is the intent of this psalm? How would it be used?**
    This would be used to remind Israel of all that the Lord had done for them and there own sinfulness that resulted in God’s wrath.
@@ -74,7 +74,7 @@ He starts this by confessing that the “modern” Israel is culpable for their 
 
 ## Picture 1: Rebellion at the Red Sea (v. 6-12)
 
-> [[Bible/ESV/Exodus/Exod 14#11|Exodus 14:11-12]]
+> Exodus 14:11-12
 > [*11] They said to Moses, “Is it because there are no graves in Egypt that you have taken us away to die in the wilderness? What have you done to us in bringing us out of Egypt? [12] Is not this what we said to you in Egypt: ‘Leave us alone that we may serve the Egyptians’? For it would have been better for us to serve the Egyptians than to die in the wilderness.”\*
 
 A definitive picture of unfaithfulness. The Israelites do _not_ hope in the Lord, but are instead sure they will die.
@@ -158,10 +158,10 @@ John MacArthur puts the numbers of times that Israel put God to the test to 10 t
 
 > [!note]+ ### Craving a New God (v. 19-23)
 >
-> > [[Bible/ESV/Exodus/Exod 32#1|Exodus 32:1-6]]
+> > Exodus 32:1-6
 > > [1] When the people saw that Moses delayed to come down from the mountain, the people gathered themselves together to Aaron and said to him, “Up, make us gods who shall go before us. As for this Moses, the man who brought us up out of the land of Egypt, we do not know what has become of him.” [2] So Aaron said to them, “Take off the rings of gold that are in the ears of your wives, your sons, and your daughters, and bring them to me.” [3] So all the people took off the rings of gold that were in their ears and brought them to Aaron. [4] And he received the gold from their hand and fashioned it with a graving tool and made a golden calf. And they said, “These are your gods, O Israel, who brought you up out of the land of Egypt!” [5] When Aaron saw this, he built an altar before it. And Aaron made a proclamation and said, “Tomorrow shall be a feast to the LORD.” [6] And they rose up early the next day and offered burnt offerings and brought peace offerings. And the people sat down to eat and drink and rose up to play.
 >
-> The people construct an idol. A fake god, created by their own hands. The thing about an idol is that it is _created_. Anything that is created is _subjected_ to the creator. By turning to something that *they *have created, in essence, Israel things they get to make the rules now. It’s evident in their behavior as they “break loose” later in [[Bible/ESV/Exodus/Exod 32|Exodus 32]]. They desire _truly_ is that they can live a life that they want.
+> The people construct an idol. A fake god, created by their own hands. The thing about an idol is that it is _created_. Anything that is created is _subjected_ to the creator. By turning to something that *they *have created, in essence, Israel things they get to make the rules now. It’s evident in their behavior as they “break loose” later in Exodus 32. They desire _truly_ is that they can live a life that they want.
 >
 > Note, also, the humor of the Psalmist in v. 20. The _glory_ of God compared to a _cud-chewing_ cow.
 

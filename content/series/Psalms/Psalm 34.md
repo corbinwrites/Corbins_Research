@@ -104,7 +104,7 @@ Here David reflects on the experience he had with the king of Gath. The Lord saw
 David invokes Moses imagery with this phrase.
 
 > **29 ** When Moses came down from Mount Sinai, with the two tablets of the testimony in his hand as he came down from the mountain, Moses did not know that the skin of his face shone because he had been talking with God.[[a](https://www.biblegateway.com/passage/?search=Exodus%2034%3A29-35&version=ESV#fen-ESV-2526a)] **30 ** Aaron and all the people of Israel saw Moses, and behold, the skin of his face shone, and they were afraid to come near him. **31 ** But Moses called to them, and Aaron and all the leaders of the congregation returned to him, and Moses talked with them. **32 ** Afterward all the people of Israel came near, and he commanded them all that the Lord had spoken with him in Mount Sinai. **33 ** And when Moses had finished speaking with them, he put a veil over his face.
-[[Bible/ESV/Exodus/Exod 34#29|Exodus 34:29-35]]
+Exodus 34:29-35
 
 As we look at Exodus this idea of “looking” to God is not simply a glance, but a deep examination, a gaze. Moses spends _lots_ of time with God listening to his Word and faithfully carried it to Israel. He spent so much time, his face literally shone! In contrast is the “face of shame.”
 
@@ -209,9 +209,9 @@ v. 21 & 22 - The wicked are condemned and the righteous are not condemned
 
 v. 18 & 20 - Those with crushed spirits (pride) will not have crushed bones.
 
-What David is writing about is a righteous person. Someone who seeks to be obedient to God and live a life that fears God, like we read in verses 11-12. We should strive for that. However, we have been given an ultimate example of what a righteous life looks like, and that is the life of Jesus. Let’s flip over to [[Bible/ESV/John/John 19#36|John 19:36]]…
+What David is writing about is a righteous person. Someone who seeks to be obedient to God and live a life that fears God, like we read in verses 11-12. We should strive for that. However, we have been given an ultimate example of what a righteous life looks like, and that is the life of Jesus. Let’s flip over to John 19:36…
 
-> [[Bible/ESV/John/John 19#28|John 19:28-37]]
+> John 19:28-37
 
 _The Death of Jesus_
 [28] After this, Jesus, knowing that all was now finished, said (to fulfill the Scripture), “I thirst.” [29] A jar full of sour wine stood there, so they put a sponge full of the sour wine on a hyssop branch and held it to his mouth. [30] When Jesus had received the sour wine, he said, “It is finished,” and he bowed his head and gave up his spirit.
@@ -219,7 +219,7 @@ _The Death of Jesus_
 _Jesus’ Side Is Pierced_
 [31] Since it was the day of Preparation, and so that the bodies would not remain on the cross on the Sabbath (for that Sabbath was a high day), the Jews asked Pilate that their legs might be broken and that they might be taken away. [32] So the soldiers came and broke the legs of the first, and of the other who had been crucified with him. [33] But when they came to Jesus and saw that he was already dead, they did not break his legs. [34] But one of the soldiers pierced his side with a spear, and at once there came out blood and water. [35] He who saw it has borne witness—his testimony is true, and he knows that he is telling the truth—that you also may believe. **[36] For these things took place that the Scripture might be fulfilled\*: “Not one of his bones will be broken.”**[37] And again another Scripture says, “They will look on him whom they have pierced.”
 
-John includes this reference to [[Bible/ESV/Psalms/Ps 34|Psalm 34]] because the Psalm shows what a righteous person looks like. Jesus is the full realization, (John says fulfilled) of righteousness. If you wish to go even further into righteousness than what David writes, mimic the life of Jesus.
+John includes this reference to Psalm 34 because the Psalm shows what a righteous person looks like. Jesus is the full realization, (John says fulfilled) of righteousness. If you wish to go even further into righteousness than what David writes, mimic the life of Jesus.
 
 What’s even more fascinating about this tie-in is that verse 22 is fully realized in this exact moment as well. In Jesus’ death, has made atonement, redeemed, the life of all his servants. The Hebrew believer looks forward to this point in time for their salvation (Romans 4:3), we look back to this point in time for our salvation (Romans 3:23-24). Both of us look to the Messiah for our redemption.
 

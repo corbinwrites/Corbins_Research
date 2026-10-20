@@ -3,6 +3,14 @@ import { QuartzTransformerPlugin } from "../types"
 export const ESVCrossReference: QuartzTransformerPlugin = () => {
   return {
     name: "ESVCrossReference",
+    textTransform(_ctx, src) {
+      let text = src.toString()
+      // 1. Remove invisible range links: [[Bible/ESV/...#17|]] or with escaped pipe
+      text = text.replaceAll(/\[\[[^\]\n]+(?:\\?\|)\s*\]\]/g, "")
+      // 2. Unwrap [[Bible/ESV/...|Label]] or [[Bible/ESV/...\|Label]] to plain Label
+      text = text.replaceAll(/\[\[Bible\/ESV\/[^\]\n]+?(?:\\?\|)([^\]\n]+?)\]\]/g, "$1")
+      return text
+    },
     externalResources() {
       return {
         js: [
@@ -40,3 +48,4 @@ export const ESVCrossReference: QuartzTransformerPlugin = () => {
     },
   }
 }
+

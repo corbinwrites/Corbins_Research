@@ -39,36 +39,36 @@ Passage to Memorize: ""
 
 # Verses
 
-[[Bible/ESV/Luke/Luke 11#28|Luke 11:28]] | 23
+Luke 11:28 | 23
 
-[[Bible/ESV/Romans/Rom 10#17|Romans 10:17]] | 24, 125, 126
+Romans 10:17 | 24, 125, 126
 
-[[Bible/ESV/1 Timothy/1 Tim 4#13|1 Timothy 4:13]] | 24-25
+1 Timothy 4:13 | 24-25
 
-[[Bible/ESV/1 Thessalonians/1 Thess 2#13|1 Thessalonians 2:13]] | 26
+1 Thessalonians 2:13 | 26
 
-[[Bible/ESV/2 Timothy/2 Tim 3#16|2 Timothy 3:16-17]] | 7
+2 Timothy 3:16-17 | 7
 
-[[Bible/ESV/Matthew/Matt 4#4|Matthew 4:4]] | 27, 217
+Matthew 4:4 | 27, 217
 
 Revelation 1:3 | 27
 
-[[Bible/ESV/Matthew/Matt 19#4|Matthew 19:4]] | 27
+Matthew 19:4 | 27
 
-[[Bible/ESV/Mark/Mark 12#10|Mark 12:10]] | 27
+Mark 12:10 | 27
 
-[[Bible/ESV/2 Peter/2 Pet 3#16|2 Peter 3:16]] | 32, 35, 69
+2 Peter 3:16 | 32, 35, 69
 
-[[Bible/ESV/Acts/Acts 17#11|Acts 17:11]] | 31
+Acts 17:11 | 31
 
 Ezra 7:10 | 31
 
-[[Bible/ESV/Acts/Acts 9#5|Acts 9:5]] | 32
+Acts 9:5 | 32
 
-[[Bible/ESV/Acts/Acts 14#10|Acts 14:10]] | 32
+Acts 14:10 | 32
 
-[[Bible/ESV/Acts/Acts 17#12|Acts 17:12]] | 32
+Acts 17:12 | 32
 
-[[Bible/ESV/2 Timothy/2 Tim 4#13|2 Timothy 4:13]] | 32
+2 Timothy 4:13 | 32
 
-[[Bible/ESV/John/John 17#17|John 17:17]] | 11, 33
+John 17:17 | 11, 33

@@ -9,7 +9,7 @@ Tags:
 Book: Psalm
 ---
 
-> [!note]+ ## [[Bible/ESV/Psalms/Ps 88|Psalm 88]] ESV
+> [!note]+ ## Psalm 88 ESV
 
 Illustration
 
@@ -26,7 +26,7 @@ Difference between a cry of anguish and accusation. The psalmist is in anguish. 
 2. **What kind of psalm is this?**
    Lament
    Additionally given that it is a Maskil, that means it is a “wise saying” or a psalm of “contemplation.” May or may not have actually happened to Heman.
-   Author: Heman who is PROBABLY the wise man in the court of Solomon, especially given that it’s tied with Ethan the Ezrahite, author of [[Bible/ESV/Psalms/Ps 89|Psalm 89]]. He’s mentioned in 1 Kings 4:31
+   Author: Heman who is PROBABLY the wise man in the court of Solomon, especially given that it’s tied with Ethan the Ezrahite, author of Psalm 89. He’s mentioned in 1 Kings 4:31
 3. **If known, what is the historical context for this psalm?** 4.**Who are the subjects within the psalm?**
    The afflicted one, the dead, God, the afflicted one’s friends
 4. **What is the intent of this psalm? How would it be used?**
@@ -54,13 +54,13 @@ By God’s providence I was listening to a podcast today and the topic was on pa
 
 > _“I believe that sadness is a healing emotion. Fear’s not, anger’s not. Sadness uniquely creates healing in the soul in a fallen world and that’s part of God’s plan.” _
 
-The hosts go on to talk about the prophetic description of Jesus in [[Bible/ESV/Isaiah/Isa 53#3|Isaiah 53:3]]
+The hosts go on to talk about the prophetic description of Jesus in Isaiah 53:3
 
-> **[[Bible/ESV/Isaiah/Isa 53#3|Isaiah 53:3-5]]**> 3 He was despised and rejected by men,** a man of sorrows and acquainted with grief**; and as one from whom men hide their faces he was despised, and we esteemed him not. 4 Surely he has borne our griefs and carried our sorrows; yet we esteemed him stricken, smitten by God, and afflicted. 5 But he was pierced for our transgressions; he was crushed for our iniquities; upon him was the chastisement that brought us peace, and with his wounds we are healed.
+> **Isaiah 53:3-5**> 3 He was despised and rejected by men,** a man of sorrows and acquainted with grief**; and as one from whom men hide their faces he was despised, and we esteemed him not. 4 Surely he has borne our griefs and carried our sorrows; yet we esteemed him stricken, smitten by God, and afflicted. 5 But he was pierced for our transgressions; he was crushed for our iniquities; upon him was the chastisement that brought us peace, and with his wounds we are healed.
 
 And in the New Testament we see this plainly. Even Jesus, by his own admission, is a man stricken with sorrow. For example when he is in the garden of Gethsemane he says,
 
-> **[[Bible/ESV/Matthew/Matt 26#36|Matthew 26:36-45]]
+> **Matthew 26:36-45
 > **36 Then Jesus went with them to a place called Gethsemane, and he said to his disciples, "Sit here, while I go over there and pray." 37 And taking with him Peter and the two sons of Zebedee, he began to be sorrowful and troubled. 38 Then he said to them, "** My soul is very sorrowful, even to death; remain here, and watch with me.**" 39 And going a little farther he fell on his face and prayed, saying, "My Father, if it be possible, let this cup pass from me; nevertheless, not as I will, but as you will."
 
 As the hosts of these podcasts wisely noted, sorrow is not only a good emotion, but a _christlike_ attribute. One that can be turned into worship to God that expresses our dependence on him.

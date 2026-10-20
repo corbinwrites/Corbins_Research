@@ -1,15 +1,15 @@
 ---
 base: "[[Spiritual Disciplines by Donald Whitney.base]]"
 Date: 2025-03-31
-Passage to Memorize: [[Bible/ESV/James/Jas 4#1|James 4:1-5]]
+Passage to Memorize: James 4:1-5
 ---
 
 # Questions
 
-1. **What was your favorite quote and why?** 2.**How was it writing the gospel this week? What went well? What didn’t work as great? Were you able to evangelize this week?** 3.**Researcher George Barna says that most Christians who witness to others come away feeling like failures. So, since they don’t like to fail, they redirect their efforts into spiritual activities in which they are more likely to be satisfied and successful. Have you found this to be true? Why or why not?** 4.**What do the following verses reveal about evangelism?** 1.**[[Bible/ESV/Luke/Luke 24#27|Luke 24:27]] -** Jesus, himself, evangelized. How did he do it? He used scripture. His method was that he went to older verses an explained what they said about him. He showed how they pointed to the messiah and how he was that Messiah. 2. **[[Bible/ESV/John/John 20#21|John 20:21]] -** Jesus didn’t come to do all the evangelizing though! He came to send out his disciples. We, as believers, are also disciples. Granted are not apostles, but we are disciples, followers of our beloved teacher. So with that we must also go out an evangelize
+1. **What was your favorite quote and why?** 2.**How was it writing the gospel this week? What went well? What didn’t work as great? Were you able to evangelize this week?** 3.**Researcher George Barna says that most Christians who witness to others come away feeling like failures. So, since they don’t like to fail, they redirect their efforts into spiritual activities in which they are more likely to be satisfied and successful. Have you found this to be true? Why or why not?** 4.**What do the following verses reveal about evangelism?** 1.**Luke 24:27 -** Jesus, himself, evangelized. How did he do it? He used scripture. His method was that he went to older verses an explained what they said about him. He showed how they pointed to the messiah and how he was that Messiah. 2. **John 20:21 -** Jesus didn’t come to do all the evangelizing though! He came to send out his disciples. We, as believers, are also disciples. Granted are not apostles, but we are disciples, followers of our beloved teacher. So with that we must also go out an evangelize
 2. **Why is it necessary to communicate the gospel’s content in addition to living out its truths daily?** 6.**Having read both the chapter and the article what do you learn about practicing evangelism? (Some helpful follow-up questions to get you thinking: Is there a difference between silence and listening? Is it possible to listen too much? Is it possible to be too eager to speak?)**
-   [[Bible/ESV/James/Jas 1#19|James 1:19]] - quick to hear, slow to speak, slow to anger.
-   [[Bible/ESV/Proverbs/Prov 18#13|Proverbs 18:13]] - if one gives an answer before he hears, it is his folly and shame.
+   James 1:19 - quick to hear, slow to speak, slow to anger.
+   Proverbs 18:13 - if one gives an answer before he hears, it is his folly and shame.
 
 # Gospel
 
@@ -19,22 +19,22 @@ Jesus is able to remove our sin because he is God. He came down from Heaven (at 
 
 # Verses
 
-[[Bible/ESV/Matthew/Matt 28#19|Matthew 28:19-20]] | 120, 128
+Matthew 28:19-20 | 120, 128
 
-[[Bible/ESV/Mark/Mark 16#15|Mark 16:15]] | 120
+Mark 16:15 | 120
 
-[[Bible/ESV/Luke/Luke 24#46|Luke 24:46-47]] | 120-121
+Luke 24:46-47 | 120-121
 
-[[Bible/ESV/Ephesians/Eph 4#11|Ephesians 4:11-12]] | 121
+Ephesians 4:11-12 | 121
 
-[[Bible/ESV/Acts/Acts 1#8|Acts 1:8]] | 66, 121, 124, 125
+Acts 1:8 | 66, 121, 124, 125
 
-[[Bible/ESV/1 Peter/1 Pet 2#9|1 Peter 2:9]] | 121
+1 Peter 2:9 | 121
 
-[[Bible/ESV/John/John 9|John 9]] | 122
+John 9 | 122
 
-[[Bible/ESV/Romans/Rom 1#16|Romans 1:16]] | 125, 134
+Romans 1:16 | 125, 134
 
-[[Bible/ESV/Romans/Rom 8#29|Romans 8:29-30]] | 126
+Romans 8:29-30 | 126
 
-[[Bible/ESV/2 Corinthians/2 Cor 2#14|2 Corinthians 2:14-17]] | 126
+2 Corinthians 2:14-17 | 126
