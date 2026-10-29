@@ -5,6 +5,8 @@ description: Study notes connected to the Gospel according to Luke.
 # Passage Studies
 * [Chapter 1](https://corbinwrites.github.io/Corbins_Research/series/Luke/Luke-1)
 * [Chapter 2](https://corbinwrites.github.io/Corbins_Research/series/Luke/Luke-2)
+* [Chapter 3](https://corbinwrites.github.io/Corbins_Research/series/Luke/Luke-3)
+* [Chapter 4](https://corbinwrites.github.io/Corbins_Research/series/Luke/Luke-4)
 # Resources I'm Using
 - **[[How to Study The Gospels]]** - Rachelle Harris
 - **[From the Manger to the Throne](https://www.crossway.org/customer/library/detail/from-the-manger-to-the-throne-ebook/)** - Benjamin L. Gladd

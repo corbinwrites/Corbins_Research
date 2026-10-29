@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Series/Luke/Luke 3.md",
+                "file": "content/current-series.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Luke 3"
+              "title": "current-series"
             }
           }
         ],
@@ -216,8 +216,12 @@
   },
   "active": "da399f6145c44f90",
   "lastOpenFiles": [
-    "content/Series/Luke/Luke 2.md",
+    "content/Series/Luke.md",
+    "content/current-series.md",
+    "content/Books of the Bible/Luke.md",
+    "content/Series/Luke/Luke 4.md",
     "content/Series/Luke/Luke 3.md",
+    "content/Series/Luke/Luke 2.md",
     "test-transactions.csv",
     "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/@inquirer/core/dist/esm/types/lib/utils.d.mts",
     "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/@inquirer/core/dist/esm/types/lib/screen-manager.d.mts",
@@ -248,10 +252,6 @@
     "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/run-async/README.md",
     "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/chalk/readme.md",
     "scripts/tools/city_light_event_form/node_modules/inquirer-autocomplete-standalone/node_modules/ansi-styles/readme.md",
-    "scripts/tools/city_light_event_form/node_modules/ansi-escapes/node_modules/type-fest/readme.md",
-    "scripts/tools/city_light_event_form/node_modules/@google/clasp/docs/run.md",
-    "scripts/tools/city_light_event_form/node_modules/@google/clasp/docs/config-files.md",
-    "scripts/tools/city_light_event_form/node_modules/@google/clasp/docs/README.md",
     "imports/clbc-teaching-notes/node_modules/xlsx/legend.png",
     "imports/clbc-teaching-notes/node_modules/xlsx/formats.png",
     "imports/clbc-teaching-notes/node_modules/pdf-parse/lib/pdf.js/v1.10.88/web/images/treeitem-expanded@2x.png",
