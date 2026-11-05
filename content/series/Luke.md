@@ -12,3 +12,4 @@ You can find the introduction to the book of Luke [here](obsidian://open?vault=C
 * [Chapter 2](https://corbinwrites.github.io/Corbins_Research/series/Luke/Luke-2)
 * [Chapter 3](https://corbinwrites.github.io/Corbins_Research/series/Luke/Luke-3)
 * [Chapter 4](https://corbinwrites.github.io/Corbins_Research/series/Luke/Luke-4)
+*  [Chapter 5](https://corbinwrites.github.io/Corbins_Research/series/Luke/Luke-5)
